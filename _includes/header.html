@@ -1,0 +1,72 @@
+<header class="header {{ page.header-class }}" id="header">
+
+	<div class="wrap">
+		<div id="head_logo">
+			<a href="{{ url }}/{{ site.data.settings.index.[page.lang] }}" class="header__logo">
+				<img src="/images/logo-black.gif" class="header__logo__img" id="site_logo">
+			</a>
+		</div>
+
+		<div class="menu">
+
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+
+			<div class="menu__wrap">
+				<a href="/" class="header__logo">
+					<img src="/images/logo-white.png" class="header__logo__img">
+				</a>
+
+				<ul class="menu__list" id="navlinks">
+					{% include socials.html %}
+					
+					{% if page.lang == 'fr' %}
+
+						{% for item in site.data.settings.menu_settings.menu_items_fr %}
+							<li class="menu__list__item">
+								<a href="{{ item.url }}" class="menu__list__item__link {% if item.url == page.url %}active-link{% endif %}">{{ item.title }}</a>
+							</li>
+						{% endfor %}
+
+					{% else %}
+
+						{% for item in site.data.settings.menu_settings.menu_items %}
+							<li class="menu__list__item">
+								<a href="{{ item.url }}" class="menu__list__item__link {% if item.url == page.url %}active-link{% endif %}">{{ item.title }}</a>
+							</li>
+						{% endfor %}
+
+					{% endif %}
+
+					<!-- Language Toggle -->
+
+					{% if page.lang %}
+
+						{% assign pages=site.html_pages | where:"ref", page.ref | where_exp:"item", "item.lang != page.lang" %}
+							
+						{% if pages.size > 0 %}
+							{% for page in pages %}
+								<li class="menu__list__item" id="lang">
+									<a href="{{ page.url }}" class="menu__list__item__link lang_toggle">{{ page.lang }}</a>
+								</li>
+							{% endfor %}
+						{% else %}
+							{% assign pages=site.documents | where:"ref", page.ref | where_exp:"item", "item.lang != page.lang" %}
+							{% for page in pages %}
+								<li class="menu__list__item" id="lang">
+									<a href="{{ page.url }}" class="menu__list__item__link lang_toggle">{{ page.lang }}</a>
+								</li>
+							{% endfor %}
+						{% endif %}
+
+					{% endif %}
+
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+</header>

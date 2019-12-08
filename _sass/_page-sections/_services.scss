@@ -1,0 +1,59 @@
+
+
+
+//  Services Section  //
+
+.services {
+
+	h1 {
+		text-align: center;
+	}
+
+	.icons {
+
+		@include mq(tabletp) {
+			display: flex;
+			justify-content: center;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+
+		div {
+			max-width: 300px;
+			margin: 0 auto;
+			margin-top: 40px;
+
+			@include mq(tabletp) {
+				margin: 40px 40px;
+			}
+
+			@include mq(tabletl) {
+				margin: 60px 120px;
+			}
+
+
+			h3 {
+				letter-spacing: 0px;
+				font-weight: 400;
+				text-align: center;
+
+
+				margin-top: 19px;
+			}
+
+			img {
+				height: 100px;
+				display: block;
+				margin: 0 auto;
+			}
+
+			p {
+				margin-top: 3px;
+				text-align: center;
+			}
+		}
+	}
+}
