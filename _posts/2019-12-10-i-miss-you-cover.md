@@ -11,6 +11,8 @@ tags: [cover art, music]
 ![](/images/blog/post2/cover.jpg)
 *Cover art for the song 'I miss you' by Yours Truly*
 
+[Listen to Yours Truly on Spotify](https://open.spotify.com/artist/2rFT993ScLaetNI6Kc4efq)
+
 ## Sketches
 Brainstorming is an essential part of my process and I almost always  sketch out a rough idea of what I want to do. Though they may not look like much, I have a vision in mind behind every rough draft. You can see I ended up going with my first idea. Sometimes it works, sometimes it doesn't, and that's just how it goes.
 
