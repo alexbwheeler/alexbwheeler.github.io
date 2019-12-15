@@ -51,6 +51,8 @@ defaults:
 
 markdown: kramdown
 
+future: true
+
 kramdown:
   input: GFM
   syntax_highlighter: rouge

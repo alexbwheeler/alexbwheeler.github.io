@@ -1,11 +1,11 @@
 ---
 title: 'I Miss You Cover Art'
-date: 2019-12-3 00:00:00
+date: 2019-12-10 00:00:00
 
 featured_image: '/images/blog/post2/cover.jpg'
 
 categories: [Graphic Design]
-tags: [cover art, music]
+tags: [cover art, music, client]
 ---
 
 ![](/images/blog/post2/cover.jpg)

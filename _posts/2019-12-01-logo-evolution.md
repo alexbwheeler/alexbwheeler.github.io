@@ -1,5 +1,5 @@
 ---
-title: 'Logo Evolution'
+title: 'Personal Logo Evolution'
 date: 2019-12-1 00:00:00
 
 featured_image: '/images/blog/post1/cover.jpg'
@@ -7,7 +7,7 @@ featured_image: '/images/blog/post1/cover.jpg'
 description: A little about how I created my personal logo and how it's changed over the years. I first created my logo back when I was still a student, and revamped my branding when I began to work full time as a designer.
 
 categories: [Branding]
-tags: [personal project, sketch, logo]
+tags: [personal project, logo, sketch]
 ---
 
 ![](/images/blog/post1/cover.jpg)
