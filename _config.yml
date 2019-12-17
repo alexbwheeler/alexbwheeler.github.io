@@ -65,11 +65,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-compress-images
 
-imageoptim:
-  pngout: true
-  svgo: false
-  verbose: true
-  allow_lossy: true
+# imageoptim:
+#   pngout: true
+#   svgo: false
+#   verbose: true
+#   allow_lossy: true
 
 paginate: 6
 paginate_path: "/blog/page:num/"

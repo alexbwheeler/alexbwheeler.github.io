@@ -15,11 +15,11 @@
 		padding-top: 25vh;
 	}
 
-	background-image: url("../images/manifesto/laptop.png"), url("../images/manifesto/sketchbook.png");
-
 	background-color: #f4e6db;
 	background-repeat: no-repeat;
+
 	background-image: url("../images/manifesto/laptop.png"), url("../images/manifesto/sketchbook.png");
+	background-image: url("../images/manifesto/laptop.webp"), url("../images/manifesto/sketchbook.webp");
 
 	background-size: calc(270px + (20vw - 50px)), calc(200px + (20vw - 50px));
 	background-position: -100px calc(70vh - 10vw), calc(70vw - 50px) calc(80vh - 10vw);
@@ -45,7 +45,6 @@
 		line-height: 0.7em;
 		
 		font-size: $h1-small;
-		font-weight: $h1-weight;
 		letter-spacing: $h1-spacing;
 
 		@include mq(tabletp) {

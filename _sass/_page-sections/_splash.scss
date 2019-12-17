@@ -91,42 +91,36 @@
 	
 // Showcase //
 
-#preload_splash {
-	background: 
-		url("../images/showcase/fabuleux/front.png"),
-		url("../images/showcase/fabuleux/back.jpg"),
-		url("../images/showcase/mcgill/front.png"),
-		url("../images/showcase/mcgill/back.jpg"),
-		url("../images/showcase/bacaro/front.png"),
-		url("../images/showcase/bacaro/back.jpg"),
-		url("../images/showcase/betabloc/front.png"),
-		url("../images/showcase/betabloc/back.jpg")
-	;
-
-	background-repeat: no-repeat;
-	background-position: 200vw 200vh;
-	height: 0;
-	width: 0;
-}
-
 .splash.slide1 {
 	.showcase_front { background-image: url("../images/showcase/fabuleux/front.png"); }
 	.showcase_back { background-image: url("../images/showcase/fabuleux/back.jpg"); }
+
+	.showcase_front { background-image: url("../images/showcase/fabuleux/front.webp"); }
+	.showcase_back { background-image: url("../images/showcase/fabuleux/back.webp"); }
 }
 
 .splash.slide2 {
 	.showcase_front { background-image: url("../images/showcase/mcgill/front.png"); }
 	.showcase_back { background-image: url("../images/showcase/mcgill/back.jpg"); }
+
+	.showcase_front { background-image: url("../images/showcase/mcgill/front.webp"); }
+	.showcase_back { background-image: url("../images/showcase/mcgill/back.webp"); }
 }
 
 .splash.slide3 {
 	.showcase_front { background-image: url("../images/showcase/bacaro/front.png"); }
 	.showcase_back { background-image: url("../images/showcase/bacaro/back.jpg"); }
+
+	.showcase_front { background-image: url("../images/showcase/bacaro/front.webp"); }
+	.showcase_back { background-image: url("../images/showcase/bacaro/back.webp"); }
 }
 
 .splash.slide4 {
 	.showcase_front { background-image: url("../images/showcase/betabloc/front.png"); }
 	.showcase_back { background-image: url("../images/showcase/betabloc/back.jpg"); }
+
+	.showcase_front { background-image: url("../images/showcase/betabloc/front.webp"); }
+	.showcase_back { background-image: url("../images/showcase/betabloc/back.webp"); }
 }
 
 .showcase_back {
