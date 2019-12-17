@@ -5,8 +5,22 @@
 
 .services {
 
-	h1 {
+	h2 {
 		text-align: center;
+
+		font-size: $h1-small;
+		font-weight: $h1-weight;
+		line-height: $h1-lineheight;
+		letter-spacing: $h1-spacing;
+
+		@include mq(tabletp) {
+			font-size: $h1-medium;
+		}
+
+		@include mq(laptop) {
+			font-size: $h1-large;
+		}
+
 	}
 
 	.icons {

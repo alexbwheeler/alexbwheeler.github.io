@@ -4,6 +4,8 @@ date: 2019-12-15 00:00:00
 
 featured_image: '/images/blog/post3/cover.jpg'
 
+description: Cover art for an up-and-coming Montreal rapper.
+
 categories: [Graphic Design]
 tags: [cover art, music, client]
 ---

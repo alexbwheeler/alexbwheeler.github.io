@@ -5,16 +5,23 @@
 
 .blog-header {
 
-	.title_image {
-		display: block;
-		max-width: 250px;
-		position: relative;
+	#aw_blog {
+		background: url(../images/blog/awblog.png) 0 0/100% no-repeat;
+		
+		display:block;
 
-		margin: 0 auto;
-		margin-top: 3.3em;
+	    height:60px;
+	    max-width: 250px;
+	    
+	    margin: 0 auto;
+		margin-top: 60px;
 
-		@include mq(tabletp) {
+		text-indent:-99999em;
+	    overflow:hidden;
+
+	    @include mq(tabletp) {
 			max-width: 400px;
+			height:96px;
 		}
 	}
 
