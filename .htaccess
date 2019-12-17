@@ -2,6 +2,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} off 
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-<FilesMatch ".(ico|pdf|flv|jpg|jpeg|webp|png|gif|js|css|swf|svg)$">
+
+# Cache most assets (images, fonts, ect.) for 1  year
+
+<FilesMatch ".(ico|pdf|flv|jpg|jpeg|webp|png|gif|js|css|swf|svg|otf)$">
     Header set Cache-Control "max-age=31536000, public"
 </FilesMatch>
