@@ -5,14 +5,6 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Cache most assets (images, fonts, ect.) for 1  year
 
-<FilesMatch ".(ico|pdf|flv|jpg|jpeg|webp|png|gif|js|css|swf|svg|otf)$">
+<FilesMatch ".(ico|pdf|flv|jpg|jpeg|webp|png|gif|js|css|swf|svg|font|otf)$">
     Header set Cache-Control "max-age=31536000, public"
 </FilesMatch>
-
-<Files "https://www.google-analytics.com/analytics.js">
-	Header set Cache-Control "max-age=31536000, public"
-</Files>
-
-<Files "https://alexwheeler.ca/fonts/brandon_grotesque/brandon_blk.otf">
-	Header set Cache-Control "max-age=31536000, public"
-</Files>
