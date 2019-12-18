@@ -2,27 +2,27 @@ RewriteEngine On
 RewriteCond %{HTTPS} off 
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Fonts
 # Add correct content-type for fonts
-AddType application/vnd.ms-fontobject .eot 
-AddType application/x-font-ttf .ttf
-AddType application/x-font-opentype .otf
-AddType application/x-font-woff .woff
+AddType application/vnd.ms-fontobject .eot
+AddType font/ttf .ttf
+AddType font/otf .otf
+AddType font/woff .woff
+AddType font/woff2 .woff2
 AddType image/svg+xml .svg
 
 # Compress compressible fonts
-# only uncomment if you dont have compression turned on already. Otherwise it will cause all other filestypes not to get compressed
-AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
+AddOutputFilterByType DEFLATE font/ttf font/otf image/svg+xml
 
 ExpiresActive on
 
 # Add a far future Expires header for fonts
 ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
-ExpiresByType application/x-font-ttf "access plus 1 year"
-ExpiresByType application/x-font-opentype "access plus 1 year"
-ExpiresByType application/x-font-woff "access plus 1 year"
+ExpiresByType font/ttf "access plus 1 year"
+ExpiresByType font/otf "access plus 1 year"
+ExpiresByType font/woff "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
 ExpiresByType image/svg+xml "access plus 1 year"
 
-<FilesMatch ".(ico|pdf|flv|jpg|jpeg|webp|png|gif|js|css|swf|svg|font|otf)$">
+<FilesMatch ".(ico|pdf|flv|jpg|jpeg|webp|png|gif|js|css|swf|svg|otf)$">
     Header set Cache-Control "max-age=31536000, public"
 </FilesMatch>
