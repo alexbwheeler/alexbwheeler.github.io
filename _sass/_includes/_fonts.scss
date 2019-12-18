@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'brandon';
-    src: url('../fonts/brandon_grotesque/brandon_blk.otf');
+    src: url('../fonts/brandon_grotesque/brandon_blk.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
 
@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'brandon';
-    src: url('../fonts/brandon_grotesque/brandon_bld.otf');
+    src: url('../fonts/brandon_grotesque/brandon_bld.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
 
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: 'brandon';
-    src: url('../fonts/brandon_grotesque/brandon_med.otf');
+    src: url('../fonts/brandon_grotesque/brandon_med.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 
@@ -27,7 +27,7 @@
 
 @font-face {
     font-family: 'brandon';
-    src: url('../fonts/brandon_grotesque/brandon_reg.otf');
+    src: url('../fonts/brandon_grotesque/brandon_reg.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
 
@@ -36,9 +36,29 @@
 
 @font-face {
     font-family: 'brandon';
-    src: url('../fonts/brandon_grotesque/brandon_light.otf');
+    src: url('../fonts/brandon_grotesque/brandon_light.otf') format('opentype');
     font-weight: 200;
     font-style: normal;
 
     font-display: swap;
 }
+
+// @font-face {
+//     font-family: 'Brandon Grotesque';
+//     src:
+//         url('../fonts/brandon_grotesque/brandon_blk.otf') format('truetype'),
+//         url('../fonts/brandon_grotesque/brandon_bld.otf') format('truetype'),
+//         url('../fonts/brandon_grotesque/brandon_med.otf') format('truetype'),
+//         url('../fonts/brandon_grotesque/brandon_reg.otf') format('truetype'),
+//         url('../fonts/brandon_grotesque/brandon_light.otf') format('truetype');
+//     font-weight:
+//         600,
+//         500,
+//         400,
+//         300,
+//         200;
+//     font-display: swap;
+//     font-style: normal;
+// }
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap');

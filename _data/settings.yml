@@ -89,8 +89,7 @@ color_settings:
   error_color: '#D64541'
 
 font_settings:
-  font_embed: 
-    '<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">'
+  font_embed:
   title_font: '"brandon", sans-serif'
   body_font: '"brandon", sans-serif'
   regular_weight: 200
