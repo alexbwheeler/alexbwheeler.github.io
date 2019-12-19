@@ -54,32 +54,6 @@
 	height: auto;
 }
 
-.header__title.hide {
-	display: none;
-}
-
-.header__title {
-	font-size: $sitetitle-small;
-	font-weight: $sitetitle-weight;
-	letter-spacing: $sitetitle-spacing;
-	line-height: 1;
-	color: $text-dark-color;
-	text-transform: uppercase;
-
-	margin-left: 15px;
-	margin-top: 4px;
-	display: inline-block;
-
-
-	@include mq(tabletp) {
-		font-size: $sitetitle-medium;
-	}
-
-	@include mq(laptop) {
-		font-size: $sitetitle-large;
-	}
-}
-
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Menu
 
@@ -266,7 +240,7 @@ $menu_show_delay6: 0.8s;
 
 @include keyframes(menu_show_up) {
 	0% { opacity: 0; position: relative; bottom: 5px;}
-	100% { opacity: 1; bottom: 0px;}
+	100% { opacity: 1; bottom: 0px; position: relative;}
 }
 
 @include keyframes(hide_me) {
@@ -274,34 +248,32 @@ $menu_show_delay6: 0.8s;
 	100% { opacity: 0;}
 }
 
+
 .menu__list__item__link {
 	font-size: $menu-small;
-	font-weight: 200;
+	font-weight: $menu-weight;
 	color: white;
 	text-transform: uppercase;
 
 	padding: 2px 5px;
-
-	&.lang_toggle {
-		font-weight: 300;
-	}
 
 	&:hover {
 		color: $overlay-accent-color;
 	}
 
 	@include mq(tabletl) {
-		padding: 0 0 3px;
+
 		font-size: $menu-medium;
+		font-weight: $menu-weight;
+		color: $text-dark-color;
+		@include box-shadow(0, 0, 0, $overlay-accent-color inset);
+
+		padding: 0 0 3px;
 		display: inline-block;
 		padding: 2px 7px;
 
-		font-weight: 400;
+		
 		text-transform: none;
-		color: $text-dark-color;
-
-		@include box-shadow(0, 0, 0, $overlay-accent-color inset);
-
 		position: relative;
 
 		&::after {

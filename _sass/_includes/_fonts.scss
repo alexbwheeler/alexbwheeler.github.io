@@ -1,54 +1,11 @@
-// @font-face {
-//     font-family: 'Brandon Grotesque';
-//     src: url('../fonts/brandon_grotesque/brandon_blk.otf') format('opentype');
-//     font-weight: 600;
-//     font-style: normal;
-
-//     font-display: swap;
-// }
-
-// @font-face {
-//     font-family: 'brandon';
-//     src: url('../fonts/brandon_grotesque/brandon_bld.otf') format('opentype');
-//     font-weight: 500;
-//     font-style: normal;
-
-//     font-display: swap;
-// }
-
-// @font-face {
-//     font-family: 'brandon';
-//     src: url('../fonts/brandon_grotesque/brandon_med.otf') format('opentype');
-//     font-weight: 400;
-//     font-style: normal;
-
-//     font-display: swap;
-// }
-
-// @font-face {
-//     font-family: 'brandon';
-//     src: url('../fonts/brandon_grotesque/brandon_reg.otf') format('opentype');
-//     font-weight: 300;
-//     font-style: normal;
-
-//     font-display: swap;
-// }
-
-// @font-face {
-//     font-family: 'brandon';
-//     src: url('../fonts/brandon_grotesque/brandon_light.otf') format('opentype');
-//     font-weight: 200;
-//     font-style: normal;
-
-//     font-display: swap;
-// }
-
 @font-face {
     font-family: Brandon Grotesque;
     src:
         url('../fonts/brandon_grotesque/brandon_blk.woff2') format('woff2'), 
         url('../fonts/brandon_grotesque/brandon_blk.woff') format('woff');
     font-weight: 600;
+    font-display: swap;
+
 }
 
 @font-face {
@@ -57,6 +14,7 @@
         url('../fonts/brandon_grotesque/brandon_bld.woff2') format('woff2'), 
         url('../fonts/brandon_grotesque/brandon_bld.woff') format('woff');
     font-weight: 500;
+    font-display: swap;
 }
 
 @font-face {
@@ -64,7 +22,8 @@
     src:
         url('../fonts/brandon_grotesque/brandon_med.woff2') format('woff2'), 
         url('../fonts/brandon_grotesque/brandon_med.woff') format('woff');
-    font-weight: 500;
+    font-weight: 400;
+    font-display: swap;
 }
 
 @font-face {
@@ -72,14 +31,17 @@
     src:
         url('../fonts/brandon_grotesque/brandon_reg.woff2') format('woff2'), 
         url('../fonts/brandon_grotesque/brandon_reg.woff') format('woff');
-    font-weight: 500;
+    font-weight: 300;
+    font-display: swap;
 }
+
 @font-face {
     font-family: Brandon Grotesque;
     src:
         url('../fonts/brandon_grotesque/brandon_light.woff2') format('woff2'), 
         url('../fonts/brandon_grotesque/brandon_light.woff') format('woff');
-    font-weight: 500;
+    font-weight: 200;
+    font-display: swap;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap');
