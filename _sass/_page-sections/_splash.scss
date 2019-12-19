@@ -11,12 +11,12 @@
 	grid-template-columns: 100vw;
   	grid-template-rows: auto 20vh 30vh;
 
-  	@include mq(tabletl) {
-		grid-template-columns: auto 55vw;
-  		grid-template-rows: auto 55vw;
+ //  	@include mq(tabletl) {
+	// 	grid-template-columns: auto 55vw;
+ //  		grid-template-rows: auto 55vw;
 
-  		overflow: hidden;
-	}
+ //  		overflow: hidden;
+	// }
 
 	@include mq(laptop) {
 		grid-template-columns: auto 80vmin;
@@ -57,6 +57,12 @@
 		text-transform: uppercase;
 		line-height: 0.9em;
 		margin-top: 0;
+
+		text-align: center;
+
+		@include mq(tabletl) {
+			text-align: left;
+		}
 	}
 
 	p {
@@ -64,7 +70,7 @@
 		font-size: 1.8em;
 		text-align: center;
 
-		@include mq(tabletp) {
+		@include mq(tabletl) {
 			font-size: 1.3em;
 			text-align: left;
 		}
@@ -129,10 +135,9 @@
 	grid-row-end: 4;
 	align-self: stretch;
 
-	//@include animation(' open_bubble 0.8s ease');
-	@include animation('invisible 0.6s, open_bubble 0.6s ease 0.6s');
+	
 
-	@include mq(tabletl) {
+	@include mq(laptop) {
 		grid-column-start: 2;
 		grid-column-end: 3;
 		grid-row-start: 2;
@@ -140,7 +145,7 @@
 
 		border-top-left-radius: 100%;
 
-		//@include animation('invisible 0.6s, open_bubble 0.8s ease 0.6s');
+		@include animation('invisible 0.6s, open_bubble 0.6s ease 0.6s');
 	}
 
 	background-size: cover;
@@ -155,16 +160,13 @@
 	grid-row-start: 2;
 	grid-row-end: 4;
 
-	//@include animation('slide_up 1.5s');
-	@include animation('invisible 1.5s, slide_up 0.3s ease 1.5s');
-
-	@include mq(tabletl) {
+	@include mq(laptop) {
 		grid-column-start: 2;
 		grid-column-end: 3;
 		grid-row-start: 2;
 		grid-row-end: 4;
 
-		//@include animation('invisible 1.5s, slide_up 0.3s ease 1.5s');
+		@include animation('invisible 1.5s, slide_up 0.3s ease 1.5s');
 	}
 
 	background-size: contain;
@@ -175,6 +177,13 @@
 }
 
 .splash .showcase-switch {
+
+	display: none;
+
+	@include mq(laptop) {
+		display: flex;
+	}
+
 	position: absolute;
 	bottom: 5vh;
 	right: 0;	
@@ -182,7 +191,6 @@
 	height: 40px;
 	width: 120px;
 
-	display: flex;
 	justify-content: flex-end;
 
 	background: black;
