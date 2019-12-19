@@ -41,26 +41,30 @@
 
 					<!-- Language Toggle -->
 
-					{% if page.lang %}
+					<li class="menu__list__item" id="lang">
 
-						{% assign pages=site.html_pages | where:"ref", page.ref | where_exp:"item", "item.lang != page.lang" %}
-							
-						{% if pages.size > 0 %}
-							{% for page in pages %}
-								<li class="menu__list__item" id="lang">
-									<a href="{{ page.url }}" class="menu__list__item__link lang_toggle">{{ page.lang }}</a>
-								</li>
-							{% endfor %}
-						{% else %}
-							{% assign pages=site.documents | where:"ref", page.ref | where_exp:"item", "item.lang != page.lang" %}
-							{% for page in pages %}
-								<li class="menu__list__item" id="lang">
-									<a href="{{ page.url }}" class="menu__list__item__link lang_toggle">{{ page.lang }}</a>
-								</li>
-							{% endfor %}
+						{% if page.lang %}
+
+								{% assign pages=site.html_pages | where:"ref", page.ref | where_exp:"item", "item.lang != page.lang" %}
+									
+								{% if pages.size > 0 %}
+									{% for page in pages %}
+										
+											<a href="{{ page.url }}" class="menu__list__item__link lang_toggle">{{ page.lang }}</a>
+										
+									{% endfor %}
+								{% else %}
+									{% assign pages=site.documents | where:"ref", page.ref | where_exp:"item", "item.lang != page.lang" %}
+									{% for page in pages %}
+										
+											<a href="{{ page.url }}" class="menu__list__item__link lang_toggle">{{ page.lang }}</a>
+												
+									{% endfor %}
+								{% endif %}
+
 						{% endif %}
 
-					{% endif %}
+					</li>	
 
 				</ul>
 			</div>

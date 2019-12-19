@@ -104,7 +104,7 @@ font_settings:
   h1:
     small_size: 60
     medium_size: 75
-    large_size: 120
+    large_size: 100
     weight: 900
     letter_spacing: -0.02
     line_height: 1.2

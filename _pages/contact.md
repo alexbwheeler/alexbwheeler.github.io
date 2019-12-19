@@ -1,7 +1,7 @@
 ---
 title: Contact
 
-header: Contact Me
+header: Contact
 
 subtitle: Get in touch to discuss your project.
 
