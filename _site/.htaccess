@@ -23,12 +23,6 @@ ExpiresByType font/woff "access plus 1 year"
 ExpiresByType font/woff2 "access plus 1 year"
 ExpiresByType image/svg+xml "access plus 1 year"
 
- ExpiresByType font/truetype "access plus 1 year"
- ExpiresByType font/opentype "access plus 1 year"
- ExpiresByType application/x-font-woff   "access plus 1 year"
- ExpiresByType image/svg+xml "access plus 1 year"
- ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
-
-<FilesMatch ".(ico|pdf|flv|jpg|jpeg|webp|png|gif|js|css|swf|svg|otf|ttf)$">
+<FilesMatch ".(ico|pdf|flv|jpg|jpeg|webp|png|gif|js|css|swf|svg|woff|woff2)$">
     Header set Cache-Control "max-age=31536000, public"
 </FilesMatch>

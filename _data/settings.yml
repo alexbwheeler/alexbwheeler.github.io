@@ -90,8 +90,8 @@ color_settings:
 
 font_settings:
   font_embed:
-  title_font: '"brandon", sans-serif'
-  body_font: '"brandon", sans-serif'
+  title_font: '"Brandon Grotesque", sans-serif'
+  body_font: '"Brandon Grotesque", sans-serif'
   regular_weight: 200
   bold_weight: 300
 
@@ -127,7 +127,7 @@ font_settings:
     small_size: 60
     medium_size: 75
     large_size: 120
-    weight: 600
+    weight: 900
     letter_spacing: -0.02
     line_height: 1.2
 
@@ -135,7 +135,7 @@ font_settings:
     small_size: 35
     medium_size: 45
     large_size: 50
-    weight: 500
+    weight: 700
     letter_spacing: -0.02
     line_height: 1
 
