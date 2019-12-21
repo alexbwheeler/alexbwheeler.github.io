@@ -5,56 +5,92 @@
 
 .blog-header {
 
-	#aw_blog {
-		background: url(../images/blog/awblog.png) 0 0/100% no-repeat;
-		
-		display:block;
-
-	    height:60px;
-	    max-width: 250px;
-	    
-	    margin: 0 auto;
-		margin-top: 60px;
-
-		text-indent:-99999em;
-	    overflow:hidden;
-
-	    @include mq(tabletp) {
-			max-width: 400px;
-			height:96px;
-		}
+	h1 {
+		text-align: center;
 	}
 
-	.title_sub {
+	h2 {
+		font-family:  Brandon Grotesque, sans-derif;
+
 		text-transform: uppercase;
 		font-weight: 300;
 		font-size: 0.9em;
 		letter-spacing: 3px;
 		text-align: center;
-		margin-top: 1em;
+		margin-top: 0.2em;
 
 		@include mq(tabletp) {
 			font-size: 1.1em;
 			letter-spacing: 5px;
 		}	
-	}
-
-	.content-wrap.blog {
-		max-width: 1000px;
-	}
-
-	.portfolio-item__info {
-		text-align: center;
-	}
+	}	
 }
 
-.blog {
-	@include narrow_wrap;
+
+// Catagories
+
+.post_catagories {
+
+	padding-top: $menu-padding-small;
+	padding-bottom: $menu-padding-small;
+
+	@include mq(tabletp) {
+		padding-top: $menu-padding-large;
+		padding-bottom: $menu-padding-large;
+	}
+
+	position: -webkit-sticky;
+  	position: sticky;
+  	top: 0;
+  	z-index: 2;
+
+  	background: white;
+
+	ul {
+
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+
+		padding: 7px 0 7px 0;
+		
+
+		text-align: center;
+
+		&, & * { @include transition(all .2s ease); }
+
+		li {
+			list-style-type: none;
+			display: inline-block;
+
+			padding: 0 1em 0 1em;
+
+			a {
+				font-weight: 200;
+
+				@mixin mq($media) {
+					color: rgba(0,0,0,0.5);
+				}
+			}
+		}
+	}
+
+	ul li a {
+		color: rgba(0,0,0,0.5);
+
+		&.active-link {
+			color: black;
+		}
+	}
+
+	ul:hover {
+
+		li:hover a{
+			color: black;
+		}
+	}
 }
 
 // - - - Blog - - - ///
-
-
 
 .blog-posts {
 	max-width: 1000px;
@@ -84,7 +120,7 @@
 	width: 100%;
 }
 
-.blog-post__content {
+.blog-post__content,{
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -112,3 +148,34 @@
 .pagination__next {
 	float: left;
 }
+
+// - - - Related Posts - - - //
+
+.related_posts {
+
+	@include narrow_wrap;
+
+	h2 {
+
+		font-style: italic;
+		font-weight: 400;
+		text-align: center;
+
+		padding: 0.2em 0;
+
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+
+		margin-bottom: 0.3em;
+	}
+
+	p {
+		margin-top: 0;
+		color: black;
+	}
+}
+
+
+
+
+

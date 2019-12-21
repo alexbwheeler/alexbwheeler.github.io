@@ -48,6 +48,7 @@ defaults:
     values:
       layout: "project"
 
+
 markdown: kramdown
 
 future: true
@@ -60,11 +61,37 @@ sass:
   style: compressed
 
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
 
-paginate: 6
-paginate_path: "/blog/page:num/"
+pagination:
+  enabled: true
+  per_page: 6
+  sort_field: 'date'
+  sort_reverse: true
+
+autopages:
+  enabled: true
+
+  categories: 
+    layouts: 
+       - 'category.html'
+    title: ':cat'
+    permalink: '/blog/:cat'
+    
+    slugify:
+      mode: raw
+      cased: true
+
+  collections:
+    layouts: 
+       - 'collection.html'
+  tags:
+    layouts: 
+       - 'tag.html'
+    title: ':tag'
+    permalink: '/tags/:tag'
+
 
 gallery_types:
   carousel: Carousel

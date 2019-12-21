@@ -4,7 +4,7 @@ date: 2019-12-10 00:00:00
 
 featured_image: '/images/blog/post2/cover.jpg'
 
-description: Cover art for a Yours Truly Music.
+description: Cover art for Yours Truly Music.
 
 categories: [Graphic Design]
 tags: [cover art, music, client]

@@ -13,8 +13,16 @@ layout: default
 
 </section>
 
-<section class="blog">
+<section class="double">
 
-	{{ page.content }}
+	<main class="main">
+		{{ page.content }}
 
+		{% include previous-next.html %}
+	</main>
+
+	<aside class="sidebar" data-aos="fade-left" data-aos-delay="600" data-aos-once="true">
+		{% include related-posts.html %}
+	</aside>
+	
 </section>

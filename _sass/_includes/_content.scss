@@ -6,7 +6,7 @@
 
 .intro {
 
-	padding-top: 118px;
+	padding-top: 10vh;
 	
 	h1 {
 
@@ -49,9 +49,35 @@
 	@include narrow_wrap;
 }
 
+.double {
+	margin-top: 10px;
+
+	@include narrow_wrap;
+
+	@include mq(desktop) {
+		@include wide_wrap;
+
+		display: flex;
+		justify-content: space-between;
+
+		.sidebar {
+			padding-top: 0;
+		}
+
+		.sidebar > *{
+			position: -webkit-sticky;
+  			position: sticky;
+  			
+		    top: 10%;
+		    right: 12.5%;
+		    width: 300px;
+		}
+	}
+}
+
 .single {
 
-	&>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>ul, &>ol {
+	&>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>ul, &>ol, &>a {
 		@include wide_wrap;
 	}
 
@@ -197,27 +223,32 @@
 			}
 		}
 	}
+
+	&>.image-wrap,
+	&>.video-wrap {
+		position: relative;
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+		@include narrow_wrap;
+
+		@include mq(tabletp) {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		@include mq(laptop) {
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
 }
 
-.image-wrap,
-.video-wrap {
-	position: relative;
-	margin: 10px auto;
 
-	@include wide_wrap;
-
-	@include mq(tabletp) {
-		margin: 30px auto;
-	}
-
-	@include mq(laptop) {
-		margin: 40px auto;
-	}
-
-	&:first-child {
-		margin-top: 0;
-	}
-}
 
 .image-wrap img {
 	margin: 0 auto;
@@ -235,4 +266,9 @@
 		width: 100%;
 		height: 100%;
 	}
+}
+
+.previous_next {
+	display: flex;
+	justify-content: space-between;
 }

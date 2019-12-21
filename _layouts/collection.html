@@ -1,0 +1,22 @@
+---
+layout: default
+sitemap: false
+---
+
+<section class="intro blog-header">
+	<h1>{% if page.autopages %}{{page.autopages.display_name}}{% endif %}</h1>
+</section>
+
+<section class="single">
+
+<p>
+
+{% for post in paginator.posts %}
+
+	<a href="{{ post.url }}">{{ post.title }}</a> <br><br>
+
+{% endfor %}
+
+</p>
+
+</section>

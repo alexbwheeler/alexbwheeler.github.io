@@ -4,19 +4,24 @@
 // - - - - - - - - - Mixins - - - - - - - - - //
 //                                            //
 
+$break-phonel: 480px;
+$break-tabletp: 768px;
+$break-tabletl: 1024px;
+$break-laptop: 1220px;
+$break-desktop: 1800px;
 
 // - - - Wrap - - - //
 // Usage: @include wide_wrap;
 
 @mixin wide_wrap{
   margin-left: auto; margin-right: auto;
-  padding: 0 20px;
+  padding-left: 20px; padding-right: 20px;
   width: 100%;
   max-width: 1600px;
 
   @include mq(tabletp) {
     width: 90%;
-    padding: 0;
+    padding-right: 0; padding-left: 0;
   }
 
   @include mq(tabletl) {
@@ -28,17 +33,15 @@
   }
 }
 
-// Usage: @include narrow_wrap;
-
 @mixin narrow_wrap{
   margin-left: auto; margin-right: auto;
-  padding: 0 20px;
+  padding-left: 20px; padding-right: 20px;
   width: 100%;
   max-width: 1000px;
 
   @include mq(tabletp) {
     width: 90%;
-    padding: 0;
+    padding-right: 0; padding-left: 0;
     margin-left: 5%
   }
 
@@ -56,12 +59,6 @@
 
 // - - - Responsive - - - //
 // Usage: @include mq(tabletp) {}
-
-$break-phonel: 480px;
-$break-tabletp: 768px;
-$break-tabletl: 1024px;
-$break-laptop: 1220px;
-$break-desktop: 1620px;
 
 @mixin mq($media) {
 	@if $media == phonel {

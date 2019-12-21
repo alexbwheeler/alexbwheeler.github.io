@@ -59,6 +59,8 @@ $menu-medium: {{ site.data.settings.font_settings.menu.medium_size }}px;
 $menu-large: {{ site.data.settings.font_settings.menu.large_size }}px;
 $menu-weight: {{ site.data.settings.font_settings.menu.weight }};
 $menu-spacing: {{ site.data.settings.font_settings.menu.letter_spacing }}em;
+$menu-padding-small: {{ site.data.settings.font_settings.menu.small_padding }}em;
+$menu-padding-large: {{ site.data.settings.font_settings.menu.large_padding }}em;
 
 $grid-item-title-small: {{ site.data.settings.font_settings.grid_item_title.small_size }}px;
 $grid-item-title-medium: {{ site.data.settings.font_settings.grid_item_title.medium_size }}px;

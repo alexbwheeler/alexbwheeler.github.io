@@ -24,11 +24,6 @@ body {
 	line-height: 1;
 	
 	color: $text-medium-color;
-
-	position: static;
-	min-height: calc(100vh - 150px);
-
-	padding-bottom: 150px;
 }
 
 
@@ -417,13 +412,16 @@ body.loading {
 .page__content {
 	clear: both;
 	width: 100%;
+
+	margin-bottom: 30px;
+
 }
 
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page sections
 
-section, div.section {
+section, div.section, aside {
 	padding-top: 20px;
 
 	@include mq(tabletp) {

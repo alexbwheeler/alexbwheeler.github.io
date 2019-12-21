@@ -1,54 +1,58 @@
 ---
 layout: default
-pagination: 
-  enabled: true
-autopages:
-  title: THECATTITLE
 ---
 
-<section class="blog blog--{{ site.data.settings.blog_settings.layout }}{% if site.data.settings.blog_settings.box_shadows %} blog--shadows{% endif %}">
+<section class="intro blog-header">
+	<h1>{% if page.autopages %}{{page.autopages.display_name}}{% endif %}</h1>
+</section>
 
-	<div class="wrap wrap--row">
+{% include blog-categories.html %}
 
-		<div class="column blog__posts">
+<section>
 
+	<div class="content-wrap blog-posts">
+				
 			{% for post in paginator.posts %}
 
-			<article class="blog-post">
+			<div class="portfolio-item">
 
-				<div class="blog-post__wrap">
+				<a class="portfolio-item__link" href="{{ post.url }}">
 
-					{% if post.featured_image %}
-					<a href="{{ post.url }}" class="blog-post__image" style="background-image: url('{{ post.featured_image  }}');">
-						<img src="{{ post.featured_image }}" alt="{{ post.title }}" class="blog-post__image__img">
-					</a>
-					{% endif %}
-
-					<div class="blog-post__content">
-						<h2 class="blog-post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-						<p class="blog-post__date">{{ post.date | date_to_long_string }}</p>
-						<p class="blog-post__description">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+					<div class="portfolio-item__image">
+						<img src="{{ post.featured_image  }}" alt="{{ post.title }}">
 					</div>
 
-				</div>
+					<div class="portfolio-item__content">
+						<div class="portfolio-item__info">
+							<h2 class="portfolio-item__title">{{ post.title }}</h2>
+							<p class="portfolio-item__subtitle">{{ post.categories }}</p>
+						</div>
+					</div>
 
-			</article>
+				</a>
+
+			</div>
 
 			{% endfor %}
-
-			{% if paginator.total_pages > 1 %}
-			<article class="blog-post blog-post--pagination">
-				{% if paginator.previous_page %}
-				<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="button button--light pagination-prev"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> <span>Newer Posts</span></a>
-				{% endif %}
-				{% if paginator.next_page %}
-				<a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="button button--light pagination-next"><span>Older Posts</span> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-				{% endif %}
-			</article>
-			{% endif %}
-
-		</div>
-
-		{% include sidebar.html %}
+	</div>
 
 </section>
+
+{% if paginator.total_pages > 1 %}
+
+<section class="pagination">
+
+	<div class="wrap">
+
+		{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="button button--light pagination__prev"><i class="fa fa-angle-left" aria-hidden="true"></i> <span>Newer Posts</span></a>
+		{% endif %}
+		{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="button button--light pagination__next"><span>Older Posts</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+		{% endif %}
+
+	</div>
+
+</section>
+
+{% endif %}

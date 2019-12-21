@@ -11,14 +11,19 @@
 	grid-template-columns: 100vw;
   	grid-template-rows: auto 20vh 30vh;
 
- //  	@include mq(tabletl) {
-	// 	grid-template-columns: auto 55vw;
- //  		grid-template-rows: auto 55vw;
+  	/*@include mq(tabletl) {
+		grid-template-columns: auto 55vw;
+  		grid-template-rows: auto 55vw;
 
- //  		overflow: hidden;
-	// }
+  		overflow: hidden;
+	}*/
 
 	@include mq(laptop) {
+		grid-template-columns: auto 60vmin;
+  		grid-template-rows: auto 40vmin;	
+	}
+
+	@include mq(desktop) {
 		grid-template-columns: auto 80vmin;
   		grid-template-rows: auto 80vmin;	
 	}

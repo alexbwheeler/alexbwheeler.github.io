@@ -1,0 +1,13 @@
+<nav class="content-wrap blog-posts post_catagories">
+
+	<ul class="{% if page.autopages %}category_page{% endif %}">
+
+		<li><a href="/blog/" class="{% if page.title == 'Blog' %}active-link{% endif %}">All</li>
+
+		{% for category in site.categories %}
+				<li><a href="/blog/{{ category[0] | slugify }}" class="{% if page.category == page.title %}active-link{% endif %}"> {{ category[0] }} </li>
+		{% endfor %}
+
+	</ul>
+	
+</nav>

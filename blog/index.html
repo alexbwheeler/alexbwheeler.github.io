@@ -1,16 +1,17 @@
 ---
 layout: default
 title: Blog
-description: Duet includes a simple blog with pagination.
-featured_image: /images/social.jpg
+
+pagination: 
+  enabled: true
 ---
 
-<section class="blog-header">
-	<div class="content-wrap">
-		<h1 id="aw_blog">AW BLOG</h1>
-		<h2 class="title_sub">Experiment & Inspire</h2>
-	</div>
+<section class="intro blog-header">
+	<h1 id="aw_blog">AW BLOG</h1>
+	<h2 class="blue">Experiment & Inspire</h2>
 </section>
+
+{% include blog-categories.html %}
 
 <section>
 
