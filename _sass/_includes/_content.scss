@@ -271,4 +271,6 @@
 .previous_next {
 	display: flex;
 	justify-content: space-between;
+
+	@include narrow_wrap;
 }

@@ -53,6 +53,8 @@
 			$("#navlinks").load(location.href + " #navlinks>*", "");
 			$("#head_logo").load(location.href + " #head_logo>*", "");
 
+			$("title").load(location.href + "title", "");
+
 			setTimeout(function(){ 
 				$("#header").removeClass("hide");
 

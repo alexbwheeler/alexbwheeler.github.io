@@ -76,7 +76,7 @@ autopages:
   categories: 
     layouts: 
        - 'category.html'
-    title: ':cat'
+    title: 'Blog'
     permalink: '/blog/:cat'
     
     slugify:

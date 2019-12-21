@@ -12,9 +12,25 @@
 	
 	<title>
 		{% if page.ref == "index" %}
+
 			{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}
+
 		{% else %}
-			{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}
+
+			{% if page.autopages %}
+
+				{% assign words = page.title | replace: '-', ' ' | split: ' ' %}
+
+				{% capture titlecase %}{% for word in words %}{{ word | capitalize }} {% endfor %}{% endcapture %}
+
+				{{ titlecase }} – {{ site.data.settings.basic_settings.site_title }}
+
+			{% else %}
+
+				{{  page.title }} – {{ site.data.settings.basic_settings.site_title }}
+
+			{% endif %}
+		{% endif %}
 	</title>
 	<meta name="description" content="{{ page.description }}">
 
