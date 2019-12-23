@@ -81,7 +81,7 @@
 		@include wide_wrap;
 	}
 
-	&>p {
+	&>p, &>.previous_next {
 		@include narrow_wrap;
 	}
 
@@ -272,5 +272,5 @@
 	display: flex;
 	justify-content: space-between;
 
-	@include narrow_wrap;
+	margin-top: 1em;
 }

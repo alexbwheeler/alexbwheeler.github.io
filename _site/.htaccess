@@ -1,6 +1,26 @@
 RewriteEngine On 
-RewriteCond %{HTTPS} off 
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+	RewriteCond %{HTTP_HOST} ^alexwheeler\.ca$ [OR]
+	RewriteCond %{HTTP_HOST} ^www\.alexwheeler\.ca$
+	RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+	RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+	RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+	RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule ^about\.php$ "http\:\/\/alexwheeler\.ca\/about" [R=301,L]
+
+	RewriteCond %{HTTP_HOST} ^alexwheeler\.ca$ [OR]
+	RewriteCond %{HTTP_HOST} ^www\.alexwheeler\.ca$
+	RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+	RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+	RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+	RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule ^index\.php$ "http\:\/\/alexwheeler\.ca\/" [R=301,L]
+
+	RewriteCond %{HTTPS} off
+	RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+	RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+	RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+	RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Add correct content-type for fonts
 AddType application/vnd.ms-fontobject .eot
