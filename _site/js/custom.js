@@ -20,6 +20,15 @@
 	// On page load
 	function pageLoad() {
 
+		WebpIsSupported(function(isSupported){
+		    if(isSupported){
+		        console.log("Supported");
+		        $(".noWebp").removeClass("noWebp");
+		    }else{
+		        console.log("Not supported");
+		    }
+		});
+
 		// Fade-ins
 		AOS.init();
 
@@ -286,5 +295,29 @@ function MyIntersectionObserver() {
     
 })(jQuery);
 
+// Detect Webp support
+
+function WebpIsSupported(callback){
+    // If the browser doesn't has the method createImageBitmap, you can't display webp format
+    if(!window.createImageBitmap){
+        callback(false);
+        return;
+    }
+
+    // Base64 representation of a white point image
+    var webpdata = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=';
+
+    // Retrieve the Image in Blob Format
+    fetch(webpdata).then(function(response){
+        return response.blob();
+    }).then(function(blob){
+        // If the createImageBitmap method succeeds, return true, otherwise false
+        createImageBitmap(blob).then(function(){
+            callback(true);
+        }, function(){
+            callback(false);
+        });
+    });
+}
 
 
