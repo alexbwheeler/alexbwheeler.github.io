@@ -8,28 +8,25 @@ $break-phonel: 480px;
 $break-tabletp: 768px;
 $break-tabletl: 1024px;
 $break-laptop: 1220px;
-$break-desktop: 1800px;
-
-// - - - Wrap - - - //
-// Usage: @include wide_wrap;
+$break-desktop: 1600px;
 
 @mixin wide_wrap{
   margin-left: auto; margin-right: auto;
   padding-left: 20px; padding-right: 20px;
   width: 100%;
-  max-width: 1600px;
+  max-width: none;
 
   @include mq(tabletp) {
-    width: 90%;
+    width: 95%;
     padding-right: 0; padding-left: 0;
   }
 
   @include mq(tabletl) {
-    width: 80%;
+    width: 95%;
   }
 
   @include mq(laptop) {
-    width: 75%;
+    width: 90%;
   }
 }
 
@@ -37,22 +34,22 @@ $break-desktop: 1800px;
   margin-left: auto; margin-right: auto;
   padding-left: 20px; padding-right: 20px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1300px;
 
   @include mq(tabletp) {
-    width: 90%;
+    width: 95%;
     padding-right: 0; padding-left: 0;
-    margin-left: 5%
+    //margin-left: 5%
   }
 
   @include mq(tabletl) {
-   width: 80%;
-   margin-left: 10%;
+   width: 95%;
+   //margin-left: 5%;
   }
 
   @include mq(laptop) {
-    width: 75%;
-    margin-left: 12.5%;
+    width: 95%;
+    //margin-left: 5%;
   }
 }
 
@@ -184,5 +181,17 @@ $break-desktop: 1800px;
 }
 
 
+@mixin blue{
+  background: rgb(94,71,204);
+  background: /*url("../images/noise.png"),*/ linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
+  background-size: /*cover,*/ 200% 200%;
+  //background-blend-mode: overlay, normal;
 
+  background-clip: text;
+  -webkit-background-clip: text;
 
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  @include animation('gradient_wash 5s ease infinite;');
+}

@@ -37,6 +37,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/style.css">
 
+	<link rel="preload" href="images/logo-black-wipe.gif" as="image">
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97001089-1"></script>
     <script>
@@ -45,10 +47,7 @@
     	gtag('js', new Date());
 
      	gtag('config', 'UA-97001089-1');
-    </script>
-
-	<link rel="preload" as="image" href="/images/logo-black-wipe.gif">
-	
+    </script>	
 </head>
 
 
@@ -98,19 +97,15 @@
 
 						
 							<li class="menu__list__item">
-								<a href="/work/" class="menu__list__item__link ">Work</a>
+								<a href="/work" class="menu__list__item__link ">Work</a>
 							</li>
 						
 							<li class="menu__list__item">
-								<a href="/blog/" class="menu__list__item__link ">Blog</a>
+								<a href="/blog" class="menu__list__item__link ">Blog</a>
 							</li>
 						
 							<li class="menu__list__item">
-								<a href="/about/" class="menu__list__item__link ">About</a>
-							</li>
-						
-							<li class="menu__list__item">
-								<a href="/contact/" class="menu__list__item__link ">Contact</a>
+								<a href="/contact" class="menu__list__item__link ">Contact</a>
 							</li>
 						
 
@@ -118,11 +113,11 @@
 
 					<!-- Language Toggle -->
 
-					<li class="menu__list__item" id="lang">
+					<!-- <li class="menu__list__item" id="lang">
 
 						
 
-					</li>	
+					</li> -->	
 
 				</ul>
 			</div>
@@ -143,8 +138,6 @@
 	<div class="page">
 
 		<div class="page__content" id="" data-page-title="Blog – Alex Wheeler">
-
-			
 
 			<section class="intro blog-header">
 	<h1 id="aw_blog">AW BLOG</h1>
@@ -173,20 +166,16 @@
 				
 			
 
-			<div class="portfolio-item">
+			<div class="post" data-aos="fade-up">
 
-				<a class="portfolio-item__link" href="/blog/numbah-cover-art/">
+				<a href="/blog/numbah-cover-art/">
 
-					<div class="portfolio-item__image">
+					<div>
 						<img src="/images/blog/post4/numbah-cover.jpg" alt="Numbah Cover Art">
 					</div>
 
-					<div class="portfolio-item__content">
-						<div class="portfolio-item__info">
-							<h2 class="portfolio-item__title">Numbah Cover Art</h2>
-							<p class="portfolio-item__subtitle">Graphic Design</p>
-						</div>
-					</div>
+					<h2>Numbah Cover Art</h2>
+					<p>Graphic Design</p>
 
 				</a>
 
@@ -194,20 +183,16 @@
 
 			
 
-			<div class="portfolio-item">
+			<div class="post" data-aos="fade-up">
 
-				<a class="portfolio-item__link" href="/blog/flurry-cover-art/">
+				<a href="/blog/flurry-cover-art/">
 
-					<div class="portfolio-item__image">
+					<div>
 						<img src="/images/blog/post3/cover.jpg" alt="Flurry Cover Art">
 					</div>
 
-					<div class="portfolio-item__content">
-						<div class="portfolio-item__info">
-							<h2 class="portfolio-item__title">Flurry Cover Art</h2>
-							<p class="portfolio-item__subtitle">Graphic Design</p>
-						</div>
-					</div>
+					<h2>Flurry Cover Art</h2>
+					<p>Graphic Design</p>
 
 				</a>
 
@@ -215,20 +200,16 @@
 
 			
 
-			<div class="portfolio-item">
+			<div class="post" data-aos="fade-up">
 
-				<a class="portfolio-item__link" href="/blog/i-miss-you-cover-art/">
+				<a href="/blog/i-miss-you-cover-art/">
 
-					<div class="portfolio-item__image">
+					<div>
 						<img src="/images/blog/post2/cover.jpg" alt="I Miss You Cover Art">
 					</div>
 
-					<div class="portfolio-item__content">
-						<div class="portfolio-item__info">
-							<h2 class="portfolio-item__title">I Miss You Cover Art</h2>
-							<p class="portfolio-item__subtitle">Graphic Design</p>
-						</div>
-					</div>
+					<h2>I Miss You Cover Art</h2>
+					<p>Graphic Design</p>
 
 				</a>
 
@@ -236,20 +217,16 @@
 
 			
 
-			<div class="portfolio-item">
+			<div class="post" data-aos="fade-up">
 
-				<a class="portfolio-item__link" href="/blog/logo-evolution/">
+				<a href="/blog/logo-evolution/">
 
-					<div class="portfolio-item__image">
+					<div>
 						<img src="/images/blog/post1/cover.jpg" alt="Personal Logo Evolution">
 					</div>
 
-					<div class="portfolio-item__content">
-						<div class="portfolio-item__info">
-							<h2 class="portfolio-item__title">Personal Logo Evolution</h2>
-							<p class="portfolio-item__subtitle">Branding</p>
-						</div>
-					</div>
+					<h2>Personal Logo Evolution</h2>
+					<p>Branding</p>
 
 				</a>
 
@@ -267,13 +244,13 @@
 	</div>
 
 
-	<footer class="footer">
+	<footer class="footer animate">
 
 	<div class="wrap">
 
 		
 
-			© 2019 Alex Wheeler. All rights reserved.
+			© 2020 Alex Wheeler. All rights reserved.
 
 		
 
@@ -285,9 +262,11 @@
 	<!-- Javascript Assets -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="/js/duet-min.js"></script>
+	<script src="/js/vanilla-tilt.min.js"></script>
 	<script src="/js/plugins/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
+
 	<script src="/js/custom.js"></script>
-	<script src="/js/lazy-load.js"></script>
 	
 
 	

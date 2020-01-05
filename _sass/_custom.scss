@@ -10,51 +10,8 @@
   100% { opacity: 1; }
 }
 
-
-.clients {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-
-	flex-wrap: wrap;
-
-	img {
-		height: 120px;
-		width: 25%;
-		min-width: 300px;
-
-		@include mq(tabletp) {
-			height: 150px;
-			min-width: 50px;
-		}
-	}
-}
-
 h1:first-child.about_me {
 	margin-top: 0.5em;
-}
-
-.background {
-	position: fixed;
-	top:0;
-	left: 0;
-
-	width: 100vw;
-	height: 100%;
-
-	background: rgb(94,71,204);
-	background: linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
-	background-size: 200% 200%;
-
-	&.blue {
-		background: rgb(94,71,204);
-		background: linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
-		background-size: 200% 200%;
-	}
-}
-
-#about {
-	color: white;
 }
 
 #leafy {
@@ -70,20 +27,5 @@ h1:first-child.about_me {
 	}
 }
 
-.fancy_title {
-	font-weight: 300;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	text-align: center;
-	margin-bottom: 1em;
-}
-
-.black {
-	color: black;
-}
-
-.white, .white * {
-	color: white;
-}
 
 

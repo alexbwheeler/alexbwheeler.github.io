@@ -1,11 +1,9 @@
 ---
 title: Contact
 
-header: Contact
+subtitle: Hey! Let's talk about your next project.
 
-subtitle: Get in touch to discuss your project.
-
-description: Get in touch to discuss your project receive a quote.
+description: Get in touch to discuss your project and receive a quote.
 
 lang: en
 

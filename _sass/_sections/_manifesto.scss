@@ -1,0 +1,247 @@
+
+
+//	Manifesto Section	//
+
+.about {
+
+	&.visible {
+		opacity: 1;
+
+		h2 span {
+			opacity: 1;
+		}
+
+		h3, p {
+			opacity: 1;
+			top: 0;
+			@include transition(all 0.5s ease 1s);
+		}
+
+		span:nth-child(1) {
+			@include transition(all 1s ease);
+		}
+
+		span:nth-child(2) {
+			@include transition(all 1s ease 0.2s);
+		}
+
+		span.myName {
+			@include transition(all 1s ease 0.4s);
+			@include blue;
+		}
+	}
+
+	padding-top: 0;
+	margin-bottom: 10vh;
+	margin-top: 10vh;
+
+	@include mq(tabletp) {
+		margin-top: 20vh;
+		margin-bottom: 20vh;
+	}
+
+	h2 {
+		text-align:center;
+
+		span {
+			opacity: 0;
+		}
+	}
+
+	h3, p {
+		position: relative;
+		top: 10px;
+	}
+
+	h3 {
+		margin-top: 0.2em;
+		opacity: 0;
+	}
+
+	p {
+		margin: 0 auto;
+		margin-top: 1em;
+
+		max-width: 560px;
+		opacity: 0;
+	}
+}
+
+
+//  Services Section  //
+
+.services {
+
+	@include mq(tabletp) {
+		display: flex;
+		justify-content: space-around;
+	}
+
+
+	& > div {
+		max-width: 320px;
+
+		margin-right: auto;
+		margin-left: auto;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+
+		@include mq(tabletp) {
+			width: 30%;
+		}
+
+
+		h2 {
+			letter-spacing: 0px;
+			font-weight: 400;
+			text-align: center;
+
+			margin-top: 0;
+
+			@include mq(tabletl) {
+				font-size: 30px;
+			}
+		}
+
+		img {
+			display: block;
+
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		p {
+			margin-top: 3px;
+			text-align: center;
+		}
+	}
+}
+
+
+// Clients //
+
+.brands {
+	
+	padding-top: 0;
+	margin: 10vh auto;
+
+	.clients {
+
+		position: relative;
+	  	overflow: hidden;
+	  	display: flex;
+	  	justify-content: center;
+
+	  	max-width: 500px;
+	  	margin: 0 auto;
+	  	margin-top: 20px;
+
+	  	height: 70px;
+
+		@include mq(laptop) {
+			@include narrow_wrap;
+
+			overflow: visible;
+
+			margin-top: 20px;
+			margin-bottom: 100px;
+		}
+
+		@include mq(desktop) {
+			height: 45px;
+		}
+
+	  	img.fade {
+	  		width: 105%;
+	  		max-width: none;
+	  		margin: 0 auto;
+	  		height: 100%;
+	  		z-index: 2;
+
+	  		@include mq(tabletp) {
+	  			display: block;
+	  		}
+
+	  		@include mq(laptop) {
+	  			display: none;
+	  		}
+	  	}
+
+	  	.slideshow {
+			background-image: url("../images/client_logos/client_showcase.png");
+			background-size: contain;
+			background-repeat: repeat-x;
+
+			color: transparent;
+			opacity: 0.3;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+			
+			height: 100%;
+
+			width: 500%;
+
+			transform: translate3d(0, 0, 0);
+			animation: slideshow 20s linear infinite;
+
+			@include keyframes(slideshow) {
+				0% { left: 0; }
+			    100% { left: -250%; }
+			}
+
+			@include mq(laptop) {
+	  			display: none;
+	  		}
+		}
+
+		.individual_logo {
+			height: 35px;
+			margin: 20px;
+
+			display: none;
+
+			@include mq(laptop) {
+	  			display: block;
+	  		}
+		}
+	}
+}
+
+.say_hi {
+	padding-top: 0;
+	padding-bottom: 0;
+
+	h2,h3 {
+		@include transition(all .2s ease);
+	}
+
+	&>div {
+		transform-style: preserve-3d;
+		transform: perspective(1000px);
+
+		padding-top: 10vh;
+		padding-bottom: 10vh;
+	}
+
+	a .top{
+		transform: translateZ(20px);
+	}
+
+	&:hover {
+		h2, h3 {
+			text-shadow: 0 5px 20px rgba(0,0,0,0.1);
+		}
+
+		a .bottom {
+			@include box-shadow(0, 5px, 20px, rgba(0,0,0,0.15));
+		}
+
+	}
+}
+
+
+

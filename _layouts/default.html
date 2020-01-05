@@ -49,6 +49,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/style.css">
 
+	<link rel="preload" href="images/logo-black-wipe.gif" as="image">
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97001089-1"></script>
     <script>
@@ -57,10 +59,7 @@
     	gtag('js', new Date());
 
      	gtag('config', 'UA-97001089-1');
-    </script>
-
-	<link rel="preload" as="image" href="{{ site.baseurl }}/images/logo-black-wipe.gif">
-	
+    </script>	
 </head>
 
 
@@ -80,8 +79,6 @@
 
 		<div class="page__content" id="{{ page.ref }}" data-page-title="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">
 
-			{{ page.background }}
-
 			{{ content }}
 
 		</div>
@@ -95,9 +92,11 @@
 	<!-- Javascript Assets -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="{{ site.baseurl }}/js/duet-min.js"></script>
+	<script src="{{ site.baseurl }}/js/vanilla-tilt.min.js"></script>
 	<script src="{{ site.baseurl }}/js/plugins/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
+
 	<script src="{{ site.baseurl }}/js/custom.js"></script>
-	<script src="{{ site.baseurl }}/js/lazy-load.js"></script>
 	
 
 	{% if site.data.settings.advanced_settings.footer_js %}

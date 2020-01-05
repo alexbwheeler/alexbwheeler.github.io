@@ -10,13 +10,51 @@
 (function ($) {
 	'use strict';
 
-	pageLoad();
-	AOS.init();
-
 	// play showcase slideshow once showcase images have loaded
 	$('.splash').find('#preload_splash').imagesLoaded( { background: true }, function() {
 		splashAutoplay();
 	});
+
+	pageLoad();
+
+	// On page load
+	function pageLoad() {
+
+		// Fade-ins
+		AOS.init();
+
+		// $( 'body, html' ).animate({
+		// 	scrollTop: 0
+		// }, 300);
+
+		MyIntersectionObserver();
+		$("animate").removeClass("visible")
+
+		// Lazy load 
+		var lazyLoadInstance = new LazyLoad({
+		    elements_selector: ".lazy",
+		    threshold: 0,
+		    load_delay: 2000,
+		});
+	
+		// Tilting images
+		VanillaTilt.init(document.querySelectorAll(".portfolio-item__image"), {
+			max: 8,
+		});
+
+		splashTime = 1;
+
+		if(document.getElementById("showcase_previous")!=null){
+			document.getElementById("showcase_next").onclick = function() {showcase_next() };
+			document.getElementById("showcase_previous").onclick = function() {showcase_previous()};
+		}
+
+		setTimeout(function(){ 
+			$("#lang").load(location.href + " #lang>*", "");
+		}, 500);
+
+		//document.getElementById("header").style.top = "0";
+	}
 
 	
 	History.Adapter.bind(window,'statechange',function(){
@@ -30,7 +68,6 @@
 	    setTimeout(function(){ 
 			pageLoad();
 		}, 500);
-
 
 	    // Make sure the header has the right class
 		if (location.pathname == /about/ || location.pathname == '/fr/a-propos/') {
@@ -78,47 +115,28 @@
 	}
 
 
-	// On page load
-	function pageLoad() {
-		AOS.init();
-
-		splashTime = 1;
-
-		if(document.getElementById("showcase_previous")!=null){
-			document.getElementById("showcase_next").onclick = function() {showcase_next() };
-			document.getElementById("showcase_previous").onclick = function() {showcase_previous()};
-		}
-
-		setTimeout(function(){ 
-			$("#lang").load(location.href + " #lang>*", "");
-		}, 500);
-
-		document.getElementById("header").style.top = "0";
-	}
-
-
-
 	// Site logo refresh on mouseover
 	$( "img.header__logo__img" ).mouseover(function() {
 		document.getElementById('site_logo').src='/images/logo-black-wipe.gif'
 	});
 
-
-
-
-	// - - -Auto play splash slideshow - - - //
+	// - - - Auto play splash slideshow - - - //
 	var splashTime = 1;
 
 	function splashAutoplay() {
-		console.log('showcase images have loaded');
 
 		setInterval(checkTime, 1000); 
 
 		function checkTime () {
-			splashTime++;
+			if (document.documentElement.dataset.scroll == 0) {
+				splashTime++;
 
-			if (splashTime == 5) {
-				showcase_next();
+				if (splashTime == 5) {
+					showcase_next();
+				}
+			}
+			else {
+				splashTime == 1;
 			}
 		}
 	}
@@ -178,7 +196,6 @@
 	}
 
 
-
 	// - - - Header hide - - - //
 
 	var prevScrollpos = window.pageYOffset;
@@ -200,7 +217,43 @@
 
 }(jQuery));
 
+function MyIntersectionObserver() {
 
+	//IntersectionObserver
+
+	const config = {
+		root: null,
+		rootMargin: '1000px 1px 20% 1px',
+		threshold: [0,1]
+	};
+
+	const animate = document.querySelectorAll('.animate');
+
+	observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.intersectionRatio == 1 && $(entry.target).hasClass( "slow_lazy" )) {
+				
+				const lazyImage = entry.target;
+
+	            lazyImage.src = lazyImage.dataset.src;
+
+	            if (document.documentElement.clientWidth < 768) {
+	            	observer.unobserve(entry.target);
+	            }
+			} 
+
+			if (entry.intersectionRatio == 1) {
+		      	entry.target.classList.add('visible');
+		    } /*else {
+		    	entry.target.classList.remove('visible');
+		    }*/
+		});
+	}, config);
+
+	animate.forEach(image => {
+	  observer.observe(image);
+	}, config);
+}
 
 
 

@@ -73,7 +73,8 @@
 .contact-form__textarea {
 	width: 100%;
 	margin-top: 8px;
-	border: 1px solid rgba(0,0,0,0.15);
+	border: 1px solid rgba(0,0,0,0.3);
+
 	border-radius: 2px;
 	padding: 10px 12px;
 	background: $background-color;
@@ -81,6 +82,7 @@
 	font-weight: 200;
 	line-height: 1.4;
 	color: $text-dark-color;
+
 	@include transition(all 0.15s ease-in-out);
 
 	@include mq(tabletp) {
@@ -99,16 +101,16 @@
 }
 
 ::-webkit-input-placeholder {
-	color: lighten($text-light-color,15%);
+	color: $text-light-color;
 }
 ::-moz-placeholder {
-	color: lighten($text-light-color,15%);
+	color: $text-light-color;
 }
 :-ms-input-placeholder {
-	color: lighten($text-light-color,15%);
+	color: $text-light-color
 }
 :-moz-placeholder {
-	color: lighten($text-light-color,15%);
+	color: $text-light-color;
 }
 
 .contact-form__textarea {

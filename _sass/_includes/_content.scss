@@ -25,20 +25,33 @@
 
 .blue{
 	background: rgb(94,71,204);
-	background: linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
-	background-size: 200% 200%;
+  	background: /*url("../images/noise.png"),*/ linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
+ 	background-size: /*cover,*/ 200% 200%;
+ 	//background-blend-mode: overlay, normal;
 
-	-webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-box-decoration-break: clone;
+ 	background-clip: text;
+ 	-webkit-background-clip: text;
 
-    @include animation('gradient_wash 5s ease infinite;');
+  	text-fill-color: transparent;
+  	-webkit-text-fill-color: transparent;
+
+  	@include animation('gradient_wash 5s ease infinite;');
+}
+
+.blue-background {
+	background: rgb(94,71,204);
+  	background: url("../images/noise.png"), linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
+ 	background-size: auto, 200% 200%;
+ 	background-repeat: repeat, no-repeat;
+ 	background-blend-mode: overlay, normal;
+
+ 	@include animation('gradient_wash 10s ease infinite;');
 }
 
 @include keyframes(gradient_wash) {
-	0% {background-position:0% 50%}
-    50% {background-position:100% 50%}
-    100% {background-position:0% 50%}
+	0% {background-position: 0 0, 0% 50%}
+	50% {background-position: 0 0, 100% 50%}
+	100% {background-position: 0 0, 0% 50%}
 }
 
 .content-wrap {
@@ -69,8 +82,17 @@
   			position: sticky;
   			
 		    top: 10%;
-		    right: 12.5%;
 		    width: 300px;
+		}
+	}
+}
+
+.intro {
+	@include narrow_wrap;
+
+	&.post {
+		@include mq(desktop) {
+			@include wide_wrap;
 		}
 	}
 }
@@ -78,7 +100,7 @@
 .single {
 
 	&>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>ul, &>ol, &>a {
-		@include wide_wrap;
+		@include narrow_wrap;
 	}
 
 	&>p, &>.previous_next {

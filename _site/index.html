@@ -17,22 +17,24 @@
 
 		
 	</title>
-	<meta name="description" content="Freelance graphic designer and front-end website developer. From montreal, working remotely.">
+	<meta name="description" content="Freelance graphic and web designer from Montreal, working remotely.">
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="Alex Wheeler – Graphic and web designer. Front-end website developer.">
-	<meta name="twitter:description" content="Freelance graphic designer and front-end website developer. From montreal, working remotely.">
+	<meta name="twitter:description" content="Freelance graphic and web designer from Montreal, working remotely.">
 	<meta name="twitter:image:src" content="https://alexwheeler.ca">
 
 	<!-- Facebook OpenGraph -->
 	<meta property="og:title" content="Alex Wheeler – Graphic and web designer. Front-end website developer." />
-	<meta property="og:description" content="Freelance graphic designer and front-end website developer. From montreal, working remotely." />
+	<meta property="og:description" content="Freelance graphic and web designer from Montreal, working remotely." />
 	<meta property="og:image" content="https://alexwheeler.ca" />
 
 	<!-- Styles -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/style.css">
+
+	<link rel="preload" href="images/logo-black-wipe.gif" as="image">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97001089-1"></script>
@@ -42,10 +44,7 @@
     	gtag('js', new Date());
 
      	gtag('config', 'UA-97001089-1');
-    </script>
-
-	<link rel="preload" as="image" href="/images/logo-black-wipe.gif">
-	
+    </script>	
 </head>
 
 
@@ -95,19 +94,15 @@
 
 						
 							<li class="menu__list__item">
-								<a href="/work/" class="menu__list__item__link ">Work</a>
+								<a href="/work" class="menu__list__item__link ">Work</a>
 							</li>
 						
 							<li class="menu__list__item">
-								<a href="/blog/" class="menu__list__item__link ">Blog</a>
+								<a href="/blog" class="menu__list__item__link ">Blog</a>
 							</li>
 						
 							<li class="menu__list__item">
-								<a href="/about/" class="menu__list__item__link ">About</a>
-							</li>
-						
-							<li class="menu__list__item">
-								<a href="/contact/" class="menu__list__item__link ">Contact</a>
+								<a href="/contact" class="menu__list__item__link ">Contact</a>
 							</li>
 						
 
@@ -115,7 +110,7 @@
 
 					<!-- Language Toggle -->
 
-					<li class="menu__list__item" id="lang">
+					<!-- <li class="menu__list__item" id="lang">
 
 						
 
@@ -131,7 +126,7 @@
 
 						
 
-					</li>	
+					</li> -->	
 
 				</ul>
 			</div>
@@ -153,13 +148,11 @@
 
 		<div class="page__content" id="index" data-page-title="Alex Wheeler – Graphic and web designer. Front-end website developer.">
 
-			
+			<section class="splash slide1">
 
-			<section class="intro splash slide1">
-
-	<div class="wrap" data-aos="fade-right" data-aos-delay="500">
+	<div class="wrap" data-aos="fade-right" data-aos-delay="900">
 		<h1>Graphic <br>& Web <br>Design</h1>
-		<p class="blue">Catch eyes and get attention.</p>
+		<h3 class="blue">Catch eyes and get attention.</h3>
 	</div>
 
 	<a href="/work"class="showcase_back showcase"></a>
@@ -172,44 +165,88 @@
 
 </section>
 
-<section class="manifesto">
+<section class="narrow_wrap align_center about animate" data-aos="fade-up">
 
-	<div class="wrap" data-aos="fade-up" data-aos-delay="450" data-aos-once="true">
-		<h2><span class="lead_up">Make an</span> Impact</h2>
-	
-		<div>
-			<p>
-				Making an impact on viewers is what I do best. 
-			</p>
-			<p>
-				With creative design skills and technical front-end development ability, I make sure your brand and your message come through loud and clear.
-			</p>
+	<h2><span>I</span> <span>am</span> <span class="myName">Alex</span></h2>
+	<h3 class="italic">a creative designer ready for a challenge.</h3>
 
-			<a href="/contact" class="button button--large black">Let's Talk</a>
-		</div>
+	<p class="align_center">
+		I help build meaningful brands through design. <br>
+		My goal is to create meaningful, timeless graphics and web experiences.
+	</p>
+
+</section>
+
+<section class="services narrow_wrap">
+
+	<div data-aos="fade-up">
+		<img class="animate slow_lazy" src="images/services/graphic_design.png" data-src="images/services/graphic_design.gif" alt="Graphic design">
+		<!-- <div class="img graphic_design slow_lazy"></div> -->
+		<h2>Graphic Design</h2>
+		<p>Create eye-catching visuals that leave an impression with your brand and your message. I do everything from logo and brand development to poster design.</p>
+	</div>
+
+	<div data-aos="fade-up">
+		<img class="animate slow_lazy" src="images/services/web_design.png" data-src="images/services/web_design.gif" alt="Web design">
+		<!-- <div class="img graphic_design slow_lazy"></div> -->
+		<h2>Web Design</h2>
+		<p>Design beautiful and functional web experiences tailored to your brand. From wireframes to pixel perfect mockups, I’ve got you covered.</p>
+	</div>
+
+	<div data-aos="fade-up">
+		<img class="animate slow_lazy" src="images/services/web_dev.png" data-src="images/services/web_dev.gif" alt="Web development">
+		<!-- <div class="img graphic_design slow_lazy"></div> -->
+		<h2>Web Development</h2>
+		<p>I build custom coded websites and can work with CMS’s such as Wordpress or static site generators. With knowledge of HTML, CSS and Javascript I make sure everything looks and works just right.</p>
 	</div>
 
 </section>
 
-<section class="services">
-	<div class="wrap">
+<section class="brands">
 
-		<h2>What I do</h2>
+	<h3 class="align_center italic" data-aos="fade-up">Some brands I've worked with</h3>
 
-		<div class="icons">
-			<div data-aos="fade-up" data-aos-once="true">
-				<img class="lazy" src="images/services/graphic-design.png" data-src="images/services/graphic-design.gif" alt="Graphic design">
-				<h3>Graphic Design</h3>
-				<p>Create eye-catching visuals that leave an impression with your brand and your message.</p>
-			</div>
+	<a href="/work/" class="clients" data-aos="fade-up">
 
-			<div data-aos="fade-up" data-aos-once="true">
-				<img class="lazy" src="images/services/web-design.png" data-src="images/services/web-design.gif" alt="Web design">
-				<h3>Web Design & Dev</h3>
-				<p>Design and build custom websites that work for you.</p>
-			</div>
+		<div class="slideshow">
+			Client logo slideshow
 		</div>
+		<img src="/images/client_logos/white_fade.png" class="fade">
+
+			<img src="/images/client_logos/la_belle_et_la_boeuf.svg" alt="La Belle et la Boeuf logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="100">
+			<img src="/images/client_logos/beta_bloc.svg" alt="Beta Bloc Climbing logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="150">
+			<img src="/images/client_logos/bacaro.svg" alt="Bacaro Pizzeria logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="200">
+			<img src="/images/client_logos/carlos_and_pepes.svg" alt="Carlos and Pepes logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="250">
+			<img src="/images/client_logos/mcgill.svg" alt="McGill University logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="300">
+			<img src="/images/client_logos/nickels.svg" alt="Nickels logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="350">
+			<img src="/images/client_logos/gatto_matto.svg" alt="Gatto Matto logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="400">
+		
+	</a>
+
+</section>
+
+<section class="blue-background say_hi" data-aos="slide-up">
+
+	<div class="narrow_wrap white center" data-tilt>
+
+		<h2>Let's work together</h2>
+
+		<a href="contact" class="button-retro nav-link">
+
+         	<div class="bottom"></div>
+
+          	<div class="top">
+          		<div class="label">Get in touch</div>
+				<div class="button-border button-border-left"></div>
+				<div class="button-border button-border-top"></div>
+				<div class="button-border button-border-right"></div>
+	            <div class="button-border button-border-bottom"></div>
+        	</div>
+
+        </a>
+		
 	</div>
+
 </section>
 
 		</div>
@@ -217,13 +254,13 @@
 	</div>
 
 
-	<footer class="footer">
+	<footer class="footer animate">
 
 	<div class="wrap">
 
 		
 
-			© 2019 Alex Wheeler. All rights reserved.
+			© 2020 Alex Wheeler. All rights reserved.
 
 		
 
@@ -235,9 +272,11 @@
 	<!-- Javascript Assets -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="/js/duet-min.js"></script>
+	<script src="/js/vanilla-tilt.min.js"></script>
 	<script src="/js/plugins/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
+
 	<script src="/js/custom.js"></script>
-	<script src="/js/lazy-load.js"></script>
 	
 
 	

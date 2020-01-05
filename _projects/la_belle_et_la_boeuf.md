@@ -17,14 +17,14 @@ lang: en
 ## "Fabulous" Billboard Campaign
 
 Billboard campaign launched to promote brand awareness around the Montreal area by highlighting the two main products: food and drinks.
-The concept was to create an image that would make people think "wait, what?" and laught at the over the top nature of our presentation and make a lasting impression.
+The concept was to create an image that would make people think "wait, what?" because of the over the top nature of our presentation and make a lasting impression.
 
 ![](/images/portfolio/belle_et_boeuf/fabuleux.jpg)
 
 
 ## Flyers
 
-Permanent in-store flyer designed to get attention inform clients of specials and events.
+Permanent in-store flyer designed to get attention and inform clients of specials and events.
 
 <div class="gallery" data-columns="3">
 	<img src="/images/portfolio/belle_et_boeuf/bento_box_flyer.jpg">
@@ -37,7 +37,7 @@ Permanent in-store flyer designed to get attention inform clients of specials an
 
 ## Posters
 
-Posters to raise client awareness of limited time promotions menu items.
+Posters to raise client awareness of limited time promotions and menu items.
 
 <div class="gallery" data-columns="3">
 	<img src="/images/portfolio/belle_et_boeuf/miami-vice-poster.jpg">

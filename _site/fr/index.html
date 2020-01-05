@@ -34,6 +34,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/style.css">
 
+	<link rel="preload" href="images/logo-black-wipe.gif" as="image">
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97001089-1"></script>
     <script>
@@ -42,10 +44,7 @@
     	gtag('js', new Date());
 
      	gtag('config', 'UA-97001089-1');
-    </script>
-
-	<link rel="preload" as="image" href="/images/logo-black-wipe.gif">
-	
+    </script>	
 </head>
 
 
@@ -95,19 +94,19 @@
 
 						
 							<li class="menu__list__item">
-								<a href="/fr/travail/" class="menu__list__item__link ">Travail</a>
+								<a href="/fr/travail" class="menu__list__item__link ">Travail</a>
 							</li>
 						
 							<li class="menu__list__item">
-								<a href="/blog/" class="menu__list__item__link ">Blog</a>
+								<a href="/blog" class="menu__list__item__link ">Blog</a>
 							</li>
 						
 							<li class="menu__list__item">
-								<a href="/fr/a-propos/" class="menu__list__item__link ">À propos</a>
+								<a href="/fr/a-propos" class="menu__list__item__link ">À propos</a>
 							</li>
 						
 							<li class="menu__list__item">
-								<a href="/fr/contact/" class="menu__list__item__link ">Contact</a>
+								<a href="/fr/contact" class="menu__list__item__link ">Contact</a>
 							</li>
 						
 
@@ -115,7 +114,7 @@
 
 					<!-- Language Toggle -->
 
-					<li class="menu__list__item" id="lang">
+					<!-- <li class="menu__list__item" id="lang">
 
 						
 
@@ -131,7 +130,7 @@
 
 						
 
-					</li>	
+					</li> -->	
 
 				</ul>
 			</div>
@@ -153,80 +152,92 @@
 
 		<div class="page__content" id="index" data-page-title="Designer graphique et web. Développeur de site web. – Alex Wheeler">
 
-			
+			<section class="splash slide1">
 
-			<section class="intro splash slide1">
-
-	<div class="wrap" data-aos="fade-right" data-aos-delay="500">
+	<div class="wrap" data-aos="fade-right" data-aos-delay="900">
 		<h1>Designer <br>Graphic<br>& web</h1>
-		<p class="blue">Attirer de l'attention.</p>
+		<h3 class="blue">Attirer de l'attention.</h3>
 	</div>
 
-	<a href="/work"class="showcase_back"></a>
-	<a href="/work" class="showcase_front"></a>
+	<a href="/work"class="showcase_back showcase"></a>
+	<a href="/work" class="showcase_front showcase"></a>
 
 	<div class="showcase-switch">
 		<div class="arrow back" id="showcase_previous"></div>
 		<div class="arrow next" id="showcase_next"></div>
 	</div>
 
-	<div id="preload_splash"></div>
-
 </section>
 
-<section class="manifesto">
+<section class="manifesto narrow_wrap align_center" data-aos="fade-up">
 
-	<div class="wrap" data-aos="fade-up" data-aos-delay="450" data-aos-once="true">
-		<h2><span class="lead_up">Avoir un</span> Impact</h2>
-	
-		<div data-aos="fade-left" data-aos-delay="450" data-aos-once="true">
-			<p>
-				Vos idées avec mes talents: un impact extraordinaire.
+	<div class="about animate">
+		<h2><span>I</span> <span>am</span> <span class="myName">Alex</span></h2>
+		<h3 class="italic">a creative designer ready for a challenge.</h3>
 
-			</p>
-			<p>
-				 Avec la créativité d’un designer et l’habilité technique d’un développeur, je fais certain que votre identité et votre message ne peuvent pas être manqué.
-			</p>
-
-			<a href="/fr/contact" class="button button--large black">Me rejoindre</a>
-		</div>
+		<p class="align_center">
+			I help build meaningful brands through design. <br>
+			My goal is to create meaningful, timeless graphics and web experiences.
+		</p>
 	</div>
 
-</section>
-
-<section class="services">
-	<div class="wrap">
-
-		<h2>Mes services</h2>
-
-		<div class="icons">
-			<div data-aos="fade-up">
-				<img class="lazy" src="/images/services/graphic-design.png" data-src="/images/services/graphic-design.gif" alt="Graphic design">
-				<h3>Création graphique</h3>
-				<p>Créer des visuels qui laisse une impression et communique effectivement votre message.</p>
-			</div>
-
-			<div data-aos="fade-up">
-				<img class="lazy" src="/images/services/web-design.png" data-src="/images/services/web-design.gif" alt="Web design">
-				<h3>Conception & développement web</h3>
-				<p>Concept et développent de site web avec votre marque unique.</p>
-			</div>
+	<div class="services narrow_wrap" data-aos="fade-up" data-aos-delay="200">
+		<div>
+			<img class="animate slow_lazy" src="../images/services/graphic_design.png" data-src="../images/services/graphic_design.gif" alt="Graphic design">
+			<!-- <div class="img graphic_design slow_lazy"></div> -->
+			<h2>Graphic Design</h2>
+			<p>Create eye-catching visuals that leave an impression with your brand and your message. I do everything from logo and brand development to poster design.</p>
 		</div>
-	</div>
-</section>
 
+		<div>
+			<img class="animate slow_lazy" src="../images/services/web_design.png" data-src="../images/services/web_design.gif" alt="Web design">
+			<!-- <div class="img graphic_design slow_lazy"></div> -->
+			<h2>Web Design</h2>
+			<p>Design beautiful and functional web experiences tailored to your brand. From wireframes to pixel perfect mockups, I’ve got you covered.</p>
+		</div>
+
+		<div>
+			<img class="animate slow_lazy" src="../images/services/web_dev.png" data-src="../images/services/web_dev.gif" alt="Web development">
+			<!-- <div class="img graphic_design slow_lazy"></div> -->
+			<h2>Web Development</h2>
+			<p>I build custom coded websites and can work with CMS’s such as Wordpress or static site generators. With knowledge of HTML, CSS and Javascript I make sure everything looks and works just right.</p>
 		</div>
 
 	</div>
 
+	<h2 class="align_center italic brands" data-aos="fade-up" data-aos-offset="10">Some brands I've worked with</h2>
 
-	<footer class="footer">
+	<a href="/work/" class="clients">
+
+		<div class="slideshow">
+			Client logo slideshow
+		</div>
+		<img src="/images/client_logos/white_fade.png" class="fade">
+
+			<img src="/images/client_logos/la_belle_et_la_boeuf.svg" alt="La Belle et la Boeuf logo" class="individual_logo" data-aos="fade-up" data-aos-delay="100" data-aos-offset="10">
+			<img src="/images/client_logos/beta_bloc.svg" alt="Beta Bloc Climbing logo" class="individual_logo" data-aos="fade-up" data-aos-delay="150" data-aos-offset="10">
+			<img src="/images/client_logos/bacaro.svg" alt="Bacaro Pizzeria logo" class="individual_logo" data-aos="fade-up" data-aos-delay="200" data-aos-offset="10">
+			<img src="/images/client_logos/carlos_and_pepes.svg" alt="Carlos and Pepes logo" class="individual_logo" data-aos="fade-up" data-aos-delay="250" data-aos-offset="10">
+			<img src="/images/client_logos/mcgill.svg" alt="McGill University logo" class="individual_logo" data-aos="fade-up" data-aos-delay="300" data-aos-offset="10">
+			<img src="/images/client_logos/nickels.svg" alt="Nickels logo" class="individual_logo" data-aos="fade-up" data-aos-delay="350" data-aos-offset="10">
+			<img src="/images/client_logos/gatto_matto.svg" alt="Gatto Matto logo" class="individual_logo" data-aos="fade-up" data-aos-delay="400" data-aos-offset="10">
+		
+	</a>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer animate">
 
 	<div class="wrap">
 
 		
 
-			© 2019 Alex Wheeler. Tous droits réservés.
+			© 2020 Alex Wheeler. Tous droits réservés.
 
 		
 
@@ -238,9 +249,11 @@
 	<!-- Javascript Assets -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="/js/duet-min.js"></script>
+	<script src="/js/vanilla-tilt.min.js"></script>
 	<script src="/js/plugins/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
+
 	<script src="/js/custom.js"></script>
-	<script src="/js/lazy-load.js"></script>
 	
 
 	

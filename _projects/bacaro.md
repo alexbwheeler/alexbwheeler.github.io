@@ -14,7 +14,7 @@ ref: bacaro
 lang: en
 ---
 
-## "I am Pizzatarian" Billboard Campaigne
+## "I am Pizzatarian" Billboard Campaign
 
 Campaign launched to promote Bacaro brand awareness around the Montreal area.
 

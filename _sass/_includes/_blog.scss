@@ -95,58 +95,32 @@
 .blog-posts {
 	max-width: 1000px;
 
-	.portfolio-item__info {
-		text-align: center;
+	text-align: center;
+
+	div.post {
+		margin-bottom: 2em;
 	}
-}
 
-.blog-post__link {
-	position: relative;
-	display: block;
+	h2 {
+		margin-top: 15px;
+	}
 
-	@include mq(tabletl) {
+	p {
+		font-size: $grid-item-subtitle-small;
+		font-weight: $grid-item-subtitle-weight;
+		letter-spacing: $grid-item-subtitle-spacing;
 
-		&:hover {
+		text-transform: uppercase;
+		color: $accent-color;
 
-			.blog-post__content {
-				opacity: 1;
-				visibility: visible;
-			}
+		@include mq(tabletp) {
+			font-size: $grid-item-subtitle-medium;
+		}
+
+		@include mq(laptop) {
+			font-size: $grid-item-subtitle-large;
 		}
 	}
-}
-
-.blog-post__image {
-	width: 100%;
-}
-
-.blog-post__content,{
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba($overlay-background-color, $overlay-opacity);
-
-	opacity: 0;
-	visibility: hidden;
-	@include transition(all 0.2s ease-in-out);
-}
-
-.pagination {
-
-}
-
-.pagination__prev {
-	float: left;
-	margin-right: 10px;
-}
-
-.pagination__next {
-	float: left;
 }
 
 // - - - Related Posts - - - //

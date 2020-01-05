@@ -12,8 +12,9 @@
 	position: fixed;
 	z-index: 991;
 	top: 0;
+	background: white;
 
-	@include transition(all .3s ease);
+	@include transition(all .25s ease);
 
 	padding: $menu-padding-small 0;
 
@@ -30,12 +31,8 @@
 		}
 	}
 
-	&.down {
-		background: white;
-
-		&.transparent {
-			background: transparent;
-		}
+	&.transparent {
+		background: transparent;
 	}
 }
 
@@ -186,7 +183,7 @@
 		padding: 0;
 		position:relative;
 		top: 5px;
-		left: 45px;
+		//left: 45px;
 	}
 }
 

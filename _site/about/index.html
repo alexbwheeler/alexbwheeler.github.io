@@ -37,6 +37,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/css/style.css">
 
+	<link rel="preload" href="images/logo-black-wipe.gif" as="image">
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97001089-1"></script>
     <script>
@@ -45,10 +47,7 @@
     	gtag('js', new Date());
 
      	gtag('config', 'UA-97001089-1');
-    </script>
-
-	<link rel="preload" as="image" href="/images/logo-black-wipe.gif">
-	
+    </script>	
 </head>
 
 
@@ -98,19 +97,15 @@
 
 						
 							<li class="menu__list__item">
-								<a href="/work/" class="menu__list__item__link ">Work</a>
+								<a href="/work" class="menu__list__item__link ">Work</a>
 							</li>
 						
 							<li class="menu__list__item">
-								<a href="/blog/" class="menu__list__item__link ">Blog</a>
+								<a href="/blog" class="menu__list__item__link ">Blog</a>
 							</li>
 						
 							<li class="menu__list__item">
-								<a href="/about/" class="menu__list__item__link active-link">About</a>
-							</li>
-						
-							<li class="menu__list__item">
-								<a href="/contact/" class="menu__list__item__link ">Contact</a>
+								<a href="/contact" class="menu__list__item__link ">Contact</a>
 							</li>
 						
 
@@ -118,7 +113,7 @@
 
 					<!-- Language Toggle -->
 
-					<li class="menu__list__item" id="lang">
+					<!-- <li class="menu__list__item" id="lang">
 
 						
 
@@ -135,7 +130,7 @@
 
 						
 
-					</li>	
+					</li> -->	
 
 				</ul>
 			</div>
@@ -157,19 +152,14 @@
 
 		<div class="page__content" id="about" data-page-title="About – Alex Wheeler">
 
-			<div class="background blue"></div>
-
 			<section class="intro">
 
-	<div class="wrap">
 
+	
 		
-			
-		
+	
 
-		<p></p>
-
-	</div>
+	<p></p>
 
 </section>
 
@@ -183,24 +173,11 @@
 			<img id="leafy" src="/images/leaf.svg">
 		</div>
 
-		<div class="col-6 white">
+		<div class="col-6">
 			<h1 class="about_me">About Me</h1>
 
 			<p>I'm a graphic designer and front-end web developer from Montreal, Canada. <br> I work closely with clients to create beautiful designs and experiences that reflect their brand.</p>
 
-		</div>
-
-	</div>
-
-	<div class="row">
-
-		<h4 class="fancy_title white">Some brands I've worked with</h4>
-
-		<div class="clients">
-			<img src="/images/client_logos/beta_bloc.svg">
-			<img src="/images/client_logos/carlos_and_pepes.svg">
-			<img src="/images/client_logos/la_belle_et_la_boeuf.svg">
-			<img src="/images/client_logos/bacaro.svg">
 		</div>
 
 	</div>
@@ -214,13 +191,13 @@
 	</div>
 
 
-	<footer class="footer">
+	<footer class="footer animate">
 
 	<div class="wrap">
 
 		
 
-			© 2019 Alex Wheeler. All rights reserved.
+			© 2020 Alex Wheeler. All rights reserved.
 
 		
 
@@ -232,9 +209,11 @@
 	<!-- Javascript Assets -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="/js/duet-min.js"></script>
+	<script src="/js/vanilla-tilt.min.js"></script>
 	<script src="/js/plugins/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
+
 	<script src="/js/custom.js"></script>
-	<script src="/js/lazy-load.js"></script>
 	
 
 	

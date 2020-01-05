@@ -16,20 +16,16 @@ layout: default
 				
 			{% for post in paginator.posts %}
 
-			<div class="portfolio-item">
+			<div class="post">
 
-				<a class="portfolio-item__link" href="{{ post.url }}">
+				<a href="{{ post.url }}">
 
-					<div class="portfolio-item__image">
+					<div>
 						<img src="{{ post.featured_image  }}" alt="{{ post.title }}">
 					</div>
 
-					<div class="portfolio-item__content">
-						<div class="portfolio-item__info">
-							<h2 class="portfolio-item__title">{{ post.title }}</h2>
-							<p class="portfolio-item__subtitle">{{ post.categories }}</p>
-						</div>
-					</div>
+					<h2>{{ post.title }}</h2>
+					<p>{{ post.categories }}</p>
 
 				</a>
 

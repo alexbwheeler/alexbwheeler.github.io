@@ -164,11 +164,9 @@ $grid-spacing: {{ site.data.settings.grid_settings.grid_spacing }}px;
 
 @import "_includes/_blog";
 
-@import "_page-sections/_splash";
-@import "_page-sections/_manifesto";
-@import "_page-sections/_services";
-
-@import "_page-sections/_portfolio";
+@import "_sections/_splash";
+@import "_sections/_manifesto";
+@import "_sections/_portfolio";
 
 
 
