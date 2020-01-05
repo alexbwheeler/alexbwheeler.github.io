@@ -23,23 +23,26 @@
 		// Fade-ins
 		AOS.init();
 
-		// $( 'body, html' ).animate({
-		// 	scrollTop: 0
-		// }, 300);
+		if (window.pageYOffset < 100) {
+			$( 'body, html' ).animate({
+				scrollTop: 0
+			}, 300);
+		}
 
 		MyIntersectionObserver();
-		$("animate").removeClass("visible")
 
 		// Lazy load 
 		var lazyLoadInstance = new LazyLoad({
 		    elements_selector: ".lazy",
-		    threshold: 0,
-		    load_delay: 2000,
 		});
 	
 		// Tilting images
 		VanillaTilt.init(document.querySelectorAll(".portfolio-item__image"), {
 			max: 8,
+		});
+
+		VanillaTilt.init(document.querySelectorAll(".say_hi>div"), {
+			
 		});
 
 		splashTime = 1;
@@ -52,8 +55,6 @@
 		setTimeout(function(){ 
 			$("#lang").load(location.href + " #lang>*", "");
 		}, 500);
-
-		//document.getElementById("header").style.top = "0";
 	}
 
 	
@@ -65,19 +66,9 @@
 
 
 	$(document).on("click", "a", function(){
-	    setTimeout(function(){ 
+	    setTimeout(function(){
 			pageLoad();
 		}, 500);
-
-	    // Make sure the header has the right class
-		if (location.pathname == /about/ || location.pathname == '/fr/a-propos/') {
-			$(".header").addClass("transparent");
-		}
-		else {
-			$(".header").removeClass("transparent");
-		}
-
-		$(".header").removeClass("down");
 	});
 
 
@@ -202,58 +193,98 @@
 
 	window.onscroll = function() {
 	  var currentScrollPos = window.pageYOffset;
-	  if (prevScrollpos > currentScrollPos) {
-	    document.getElementById("header").style.top = "0";
+
+	  if (prevScrollpos > currentScrollPos || window.pageYOffset < 30) {
 
 	    $(".header").addClass("down");
 
 	  } else {
-	    document.getElementById("header").style.top = "-140px";
 
 		$(".header").removeClass("down");
+
 	  }
+
 	  prevScrollpos = currentScrollPos;
 	}
 
 }(jQuery));
 
+//Animate when in viewport with IntersectionObserver
+
 function MyIntersectionObserver() {
 
 	//IntersectionObserver
 
-	const config = {
-		root: null,
-		rootMargin: '1000px 1px 20% 1px',
-		threshold: [0,1]
-	};
+	if (('IntersectionObserver' in window) || ('IntersectionObserverEntry' in window) || ('intersectionRatio' in window.IntersectionObserverEntry.prototype)) {
+		const config = {
+			root: null,
+			rootMargin: '1000px 1px 20% 1px',
+			threshold: [0,1]
+		};
 
-	const animate = document.querySelectorAll('.animate');
+		const animate = document.querySelectorAll('.animate');
 
-	observer = new IntersectionObserver((entries) => {
-		entries.forEach(entry => {
-			if (entry.intersectionRatio == 1 && $(entry.target).hasClass( "slow_lazy" )) {
-				
-				const lazyImage = entry.target;
+		observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
 
-	            lazyImage.src = lazyImage.dataset.src;
+				if (entry.intersectionRatio > 0.95) {
 
-	            if (document.documentElement.clientWidth < 768) {
-	            	observer.unobserve(entry.target);
-	            }
-			} 
+					if ($(entry.target).hasClass( "slow_lazy" )) {
+						const lazyImage = entry.target;
 
-			if (entry.intersectionRatio == 1) {
-		      	entry.target.classList.add('visible');
-		    } /*else {
-		    	entry.target.classList.remove('visible');
-		    }*/
+			            lazyImage.src = lazyImage.dataset.src;
+
+			            if (document.documentElement.clientWidth < 768) {
+			            	observer.unobserve(entry.target);
+			            }
+			        }
+
+			        entry.target.classList.add('visible');
+				} 
+			});
+		}, config);
+
+		animate.forEach(image => {
+		  observer.observe(image);
+		}, config);
+
+	} else {
+		//IntersectionObserver Fallback for slow_lazy and animate classes
+		var fallbackLazy = $('.slow_lazy');
+		fallbackLazy.addClass('lazy');
+		fallbackLazy.removeClass('slow_lazy');
+
+		$(window).scroll(function(event) {
+			$('.animate').each(function(i, el) {
+				var el = $(el);
+			    if (el.visible(true)) {
+					el.addClass("visible"); 
+				}
+			 });
 		});
-	}, config);
-
-	animate.forEach(image => {
-	  observer.observe(image);
-	}, config);
+	}
 }
+
+//IntersectionObserver fallback script
+
+(function($) {
+
+  $.fn.visible = function(partial) {
+    
+      var $t            = $(this),
+          $w            = $(window),
+          viewTop       = $w.scrollTop(),
+          viewBottom    = viewTop + $w.height(),
+          _top          = $t.offset().top,
+          _bottom       = _top + $t.height(),
+          compareTop    = partial === true ? _bottom : _top,
+          compareBottom = partial === true ? _top : _bottom;
+    
+    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+  };
+    
+})(jQuery);
 
 
 

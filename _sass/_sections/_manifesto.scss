@@ -32,12 +32,12 @@
 	}
 
 	padding-top: 0;
-	margin-bottom: 10vh;
-	margin-top: 10vh;
+	margin-bottom: 10vmin;
+	margin-top: 10vmin;
 
 	@include mq(tabletp) {
-		margin-top: 20vh;
-		margin-bottom: 20vh;
+		margin-top: 20vmin;
+		margin-bottom: 20vmin;
 	}
 
 	h2 {
@@ -72,14 +72,14 @@
 
 .services {
 
-	@include mq(tabletp) {
+	@include mq(tabletl) {
 		display: flex;
 		justify-content: space-around;
 	}
 
 
 	& > div {
-		max-width: 320px;
+		max-width: 350px;
 
 		margin-right: auto;
 		margin-left: auto;
@@ -88,7 +88,7 @@
 			margin-bottom: 30px;
 		}
 
-		@include mq(tabletp) {
+		@include mq(tabletl) {
 			width: 30%;
 		}
 
@@ -99,6 +99,7 @@
 			text-align: center;
 
 			margin-top: 0;
+			margin-bottom: 0.2em;
 
 			@include mq(tabletl) {
 				font-size: 30px;

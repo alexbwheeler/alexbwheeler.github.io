@@ -11,15 +11,17 @@
 .header {
 	position: fixed;
 	z-index: 991;
-	top: 0;
+	top: -140px;
 	background: white;
-
-	@include transition(all .25s ease);
 
 	padding: $menu-padding-small 0;
 
 	@include mq(tabletp) {
 		padding: $menu-padding-large 0;
+	}
+
+	&.down {
+		top: 0;
 	}
 
 	.menu__wrap .header__logo {
@@ -34,6 +36,10 @@
 	&.transparent {
 		background: transparent;
 	}
+
+	transform: translateZ(100px);
+
+	@include transition(all .25s ease);
 }
 
 .header__logo {
