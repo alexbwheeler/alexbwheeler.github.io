@@ -9,6 +9,8 @@ description: 'Bar surf et taqueria.'
 
 featured_image: '/images/portfolio/carlos/taco-billboard-square.jpg'
 
+preview: carlos
+
 ref: carlos
 
 lang: fr

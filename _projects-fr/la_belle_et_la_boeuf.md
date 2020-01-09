@@ -9,6 +9,8 @@ description: La Belle et La Boeuf est une chaine de restaurant avec beaucoup de 
 
 featured_image: '/images/portfolio/belle_et_boeuf/fabuleux_square.jpg'
 
+preview: belle_et_boeuf
+
 ref: bb
 
 lang: fr

@@ -4,7 +4,7 @@ title: Work
 
 header: My finest work
 
-description: Graphic design, web design and web developement portfolio. Logos, posters, brochures, branding, visual identity, and more.
+description: Graphic and web design portfolio. Logos, posters, brochures, branding, visual identity, and more.
 
 ref: portfolio
 
@@ -16,5 +16,7 @@ lang: en
 
 {% include portfolio.html %}
 
-
+<p class="align_center">
+	<a href="{{ base.url }}/blog" class="button large black center" data-aos="fade-up" data-aos-delay="300">See more recent projects on my blog!</a>
+</p>
 

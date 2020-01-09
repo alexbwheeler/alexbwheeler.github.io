@@ -9,6 +9,8 @@ description: Chaîne de pizza montréalaise, moderne et minimaliste.
 
 featured_image: '/images/portfolio/bacaro/pizzaterien_square.jpg'
 
+preview: bacaro
+
 ref: bacaro
 
 lang: fr

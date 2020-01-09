@@ -34,7 +34,7 @@ body {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Typography
 
 .align_center {
-	text-align: center;
+	text-align: center; 
 }
 
 .white, .white * {
@@ -328,6 +328,33 @@ a {
 				margin-right: 0;
 				margin-left: 8px;
 			}
+		}
+	}
+
+	&.large {
+		padding: 15px 20px 16px;
+
+		display: block;
+		margin: 0 auto;
+
+		width: 100%;
+		max-width: 500px;
+
+		font-size: $p-small;
+		@include mq(tabletp) {
+			font-size: $p-medium;
+		}
+
+		@include mq(laptop) {
+			font-size: $p-large;
+		}
+
+		@include mq(tabletp) {
+			display: inline-block;
+			width: auto;
+
+			padding: 19px 40px 20px;
+			font-size: 17px;
 		}
 	}
 }

@@ -1,17 +1,19 @@
 ---
 title: 'Logofolio'
 
-subtitle: 'Création de logo'
+subtitle: 'Logo design'
 
 date: 2018-06-30 00:00:05
 
-description: Création de logo.
+description: Various Logo designs.
 
 featured_image: '/images/portfolio/quasar/quasar1.jpg'
 
+preview: logofolio
+
 ref: quasar
 
-lang: fr
+lang: en
 ---
 
 <div class="gallery" data-columns="3">

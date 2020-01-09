@@ -9,6 +9,8 @@ description: Travail pour le département de l'avancement de l'Université McGil
 
 featured_image: '/images/portfolio/mcgill/logo-square.jpg'
 
+preview: mcgill
+
 ref: mcgill
 
 lang: fr

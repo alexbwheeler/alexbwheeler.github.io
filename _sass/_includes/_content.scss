@@ -149,7 +149,7 @@
 		padding: 0;
 	}
 
-	p a {
+	p a:not(.button) {
 		font-weight: $bold-weight;
 		border-bottom: 2px solid $accent-color;
 	}

@@ -9,6 +9,8 @@ description: Gymnase d'escalade à Montréal..
 
 featured_image: '/images/portfolio/beta_bloc/poster-square.jpg'
 
+preview: beta_bloc
+
 ref: betabloc
 
 lang: fr

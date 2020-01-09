@@ -22,8 +22,8 @@ menu_settings:
     url: '/fr/travail'
   - title: 'Blog'
     url: '/blog'
-  - title: 'À propos'
-    url: '/fr/a-propos'
+  #- title: 'À propos'
+  #  url: '/fr/a-propos'
   - title: 'Contact'
     url: '/fr/contact'
 
@@ -152,7 +152,7 @@ font_settings:
     line_height: 1.6
 
   p:
-    small_size: 14
+    small_size: 16
     medium_size: 17
     large_size: 20
     weight: 200

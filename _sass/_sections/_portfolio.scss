@@ -70,10 +70,41 @@
 
 .portfolio-item__image {
 	width: 100%;
+	position: relative;
+	overflow: hidden;
 
 	img {
-		@include transition(all .2s ease);
+		@include transition(all .15s ease);
 		margin: 0 auto;
+
+		&.front {
+		    position: absolute;
+		    bottom: -15px;
+		    width: 80%;
+		    left: 0;
+		    right: 0;
+
+		    @include transition(all .2s ease);
+
+		    &.mcgill {
+		    	width: 110%;
+		    	padding-left: 12%;
+		    	max-width: none;
+		    }
+
+		    &.logofolio {
+	    		bottom: 35%;
+	    	}
+		}
+	}
+
+	&:hover img.front {
+		width: 83%;
+
+		&.mcgill {
+	    	width: 113%;
+	    	padding-left: 10%;
+	    }
 	}
 }
 

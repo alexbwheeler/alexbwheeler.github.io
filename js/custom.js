@@ -45,11 +45,7 @@
 		    elements_selector: ".lazy",
 		});
 	
-		// Tilting images
-		VanillaTilt.init(document.querySelectorAll(".portfolio-item__image"), {
-			max: 8,
-		});
-
+		// Tilt
 		VanillaTilt.init(document.querySelectorAll(".say_hi>div"), {
 			
 		});
@@ -64,6 +60,11 @@
 		setTimeout(function(){ 
 			$("#lang").load(location.href + " #lang>*", "");
 		}, 500);
+
+		// Add active-links
+		$(function() {
+		  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+		});
 	}
 
 	

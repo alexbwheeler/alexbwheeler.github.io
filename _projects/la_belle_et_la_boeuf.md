@@ -9,6 +9,8 @@ description: La Belle et La Boeuf (The Beauty and The Beef) is an innovative bur
 
 featured_image: '/images/portfolio/belle_et_boeuf/fabuleux_square.jpg'
 
+preview: belle_et_boeuf
+
 ref: bb
 
 lang: en

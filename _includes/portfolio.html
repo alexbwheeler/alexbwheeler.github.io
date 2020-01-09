@@ -12,7 +12,12 @@
 					<a class="portfolio-item__link" href="{{ project.url }}">
 
 						<div class="portfolio-item__image">
-							<img src="{{ project.featured_image  }}" alt="{{ project.title }}">
+							{% if project.preview %}
+								<img src="/images/portfolio/preview/{{ project.preview}}/front.png" class="front {{ project.preview }}" alt="{{ project.title }} front">
+								<img src="/images/portfolio/preview/{{ project.preview}}/back.jpg" alt="{{ project.title }} background">
+							{% else %}
+								<img src="{{ project.featured_image }}" alt="{{ project.title }}">
+							{% endif %}
 						</div>
 
 						<div class="portfolio-item__content">
@@ -41,7 +46,12 @@
 					<a class="portfolio-item__link" href="{{ project.url }}">
 
 						<div class="portfolio-item__image">
-							<img src="{{ project.featured_image  }}" alt="{{ project.title }}">
+							{% if project.preview %}
+								<img src="/images/portfolio/preview/{{ project.preview}}/front.png" class="front {{ project.preview }}" alt="{{ project.title }} front">
+								<img src="/images/portfolio/preview/{{ project.preview}}/back.jpg" alt="{{ project.title }} background">
+							{% else %}
+								<img src="{{ project.featured_image }}" alt="{{ project.title }}">
+							{% endif %}
 						</div>
 
 						<div class="portfolio-item__content">

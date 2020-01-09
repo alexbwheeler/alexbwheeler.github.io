@@ -9,6 +9,8 @@ description: Montreal pizza chain with modern and minimalist branding.
 
 featured_image: '/images/portfolio/bacaro/pizzaterien_square.jpg'
 
+preview: bacaro
+
 ref: bacaro
 
 lang: en

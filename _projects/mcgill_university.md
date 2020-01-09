@@ -9,6 +9,8 @@ description: Work done for the McGill University Advancement department, who ove
 
 featured_image: '/images/portfolio/mcgill/logo-square.jpg'
 
+preview: mcgill
+
 ref: mcgill
 
 lang: en

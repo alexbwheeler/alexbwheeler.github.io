@@ -2,7 +2,7 @@
 
 	<ul class="{% if page.autopages %}category_page{% endif %}">
 
-		<li><a href="/blog/" class="{% if page.title == 'Blog' %}active-link{% endif %}">All</li>
+		<li><a href="/blog" class="{% if page.title == 'Blog' %}active-link{% endif %}">All</li>
 
 		{% for category in site.categories %}
 				<li><a href="/blog/{{ category[0] | slugify }}" class="{% if page.category == page.autopages.display_name %}active-link{% endif %}"> {{ category[0] }} </li>
