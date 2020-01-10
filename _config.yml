@@ -49,6 +49,7 @@ defaults:
     values:
       layout: "project"
 
+excerpt_separator: <!--more-->
 
 markdown: kramdown
 
@@ -93,6 +94,7 @@ autopages:
 gallery_types:
   carousel: Carousel
   grid: Grid
+
 grid_columns:
   two: Two
   three: Three

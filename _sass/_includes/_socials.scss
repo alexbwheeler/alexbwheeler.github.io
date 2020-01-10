@@ -1,65 +1,15 @@
-// - - - - - - - - - - - - - - - - - -
-
-// Socials
-
-// - - - - - - - - - - - - - - - - - -
-
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Socials
 
-.socials {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
+.social_link {
+	&#instagram {
+		background-image: url("../images/social/instagram.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: auto 70%;
+		color: transparent;
 
-.socials__item {
-	display: block;
-	margin-left: 2px;
-
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 100px;
-
-	@include mq(tabletp) {
-		position: static;
-		display: inline-block;
-	}
-
-	&:first-child {
-		margin-left: 0;
-	}
-}
-
-.socials__item__link {
-	position: relative;
-	border-radius: 100%;
-	height: 100px;
-	background: none;
-	font-size: 40px;
-	line-height: 1;
-	color: white;
-	margin: 0 auto;
-	
-
-	@include mq(tabletp) {
-		color: black;
-		width: 40px;
-		height: 10px;
-		font-size: 20px;
-		margin-bottom: 0;
-	}
-
-	@include mq(tabletl) {
-		display: block;
-	}
-
-	svg {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		@include translate(-50%,-52%);
+		width: 20px;
 	}
 }

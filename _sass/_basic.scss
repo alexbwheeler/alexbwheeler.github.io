@@ -268,8 +268,8 @@ a {
 	font-weight: $button-weight;
 	letter-spacing: $button-spacing;
 	cursor: pointer;
-
 	font-size: $p-small;
+	
 	@include mq(tabletp) {
 		font-size: $p-medium;
 	}

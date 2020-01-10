@@ -71,6 +71,8 @@
 
 .services {
 
+	padding-top: 0;
+
 	@include mq(tabletl) {
 		display: flex;
 		justify-content: space-around;
@@ -126,6 +128,10 @@
 	
 	padding-top: 0;
 	margin: 10vh auto;
+
+	@include mq(tabletl) {
+		margin-bottom: 15vh;
+	}
 
 	.clients {
 

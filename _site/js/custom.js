@@ -22,10 +22,7 @@
 
 		WebpIsSupported(function(isSupported){
 		    if(isSupported){
-		        console.log("Supported");
 		        $(".noWebp").removeClass("noWebp");
-		    }else{
-		        console.log("Not supported");
 		    }
 		});
 
@@ -60,11 +57,6 @@
 		setTimeout(function(){ 
 			$("#lang").load(location.href + " #lang>*", "");
 		}, 500);
-
-		// Add active-links
-		$(function() {
-		  $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
-		});
 	}
 
 	

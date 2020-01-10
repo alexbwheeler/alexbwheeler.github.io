@@ -17,6 +17,6 @@ lang: en
 {% include portfolio.html %}
 
 <p class="align_center">
-	<a href="{{ base.url }}/blog" class="button large black center" data-aos="fade-up" data-aos-delay="300">See more recent projects on my blog!</a>
+	<a href="{{ base.url }}/blog" class="button large black center">See more recent projects on my blog!</a>
 </p>
 

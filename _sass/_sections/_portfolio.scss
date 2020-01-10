@@ -98,13 +98,15 @@
 		}
 	}
 
-	&:hover img.front {
-		width: 83%;
+	@include mq(tabletp){
+		&:hover img.front {
+			width: 83%;
 
-		&.mcgill {
-	    	width: 113%;
-	    	padding-left: 10%;
-	    }
+			&.mcgill {
+		    	width: 113%;
+		    	padding-left: 10%;
+		    }
+		}
 	}
 }
 
