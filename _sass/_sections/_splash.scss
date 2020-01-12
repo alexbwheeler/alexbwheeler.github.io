@@ -2,6 +2,39 @@
 	height: 100vh;
 	transform: translate3d(0, 0, 0);
 
+	#preload_splash {
+		height: 0;
+		width: 0;
+
+		background-image:
+		url("../images/showcase/fabuleux/front.webp"),
+		url("../images/showcase/fabuleux/back.webp"),
+
+		url("../images/showcase/bacaro/front.webp"),
+		url("../images/showcase/bacaro/back.webp"),
+
+		url("../images/showcase/mcgill/front.webp"),
+		url("../images/showcase/mcgill/back.webp"),
+
+		url("../images/showcase/betabloc/front.webp"),
+		url("../images/showcase/betabloc/back.webp");
+
+			&.noWebp {
+				background-image:
+				url("../images/showcase/fabuleux/front.png"),
+				url("../images/showcase/fabuleux/back.jpg"),
+
+				url("../images/showcase/bacaro/front.png"),
+				url("../images/showcase/bacaro/back.jpg"),
+
+				url("../images/showcase/mcgill/front.png"),
+				url("../images/showcase/mcgill/back.jpg"),
+
+				url("../images/showcase/betabloc/front.png"),
+				url("../images/showcase/betabloc/back.jpg");
+			}
+	}
+
 	// Grid //
 
 	display: grid;

@@ -11,7 +11,7 @@
 	'use strict';
 
 	// play showcase slideshow once showcase images have loaded
-	$('.splash').find('#preload_splash').imagesLoaded( { background: true }, function() {
+	$('#preload_splash').imagesLoaded( { background: true }, function() {
 		splashAutoplay();
 	});
 
@@ -124,7 +124,7 @@
 			if (window.scrollY < 100) {
 				splashTime++;
 
-				if (splashTime > 2) {
+				if ( splashTime > 3 ) {
 					showcase_next();
 				}
 			}
@@ -196,7 +196,7 @@
 	window.onscroll = function() {
 	  var currentScrollPos = window.pageYOffset;
 
-	  if (prevScrollpos > currentScrollPos || window.pageYOffset < 30) {
+	  if (prevScrollpos > currentScrollPos || window.scrollY < 50) {
 
 	    $(".header").addClass("down");
 
