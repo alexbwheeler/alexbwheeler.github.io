@@ -29,7 +29,7 @@
 		// Fade-ins
 		AOS.init();
 
-		if (window.pageYOffset < 100) {
+		if (window.scrollY < 100) {
 			$( 'body, html' ).animate({
 				scrollTop: 0
 			}, 300);
@@ -121,15 +121,15 @@
 		setInterval(checkTime, 1000); 
 
 		function checkTime () {
-			if (document.documentElement.dataset.scroll == 0) {
+			if (window.scrollY < 100) {
 				splashTime++;
 
-				if (splashTime == 5) {
+				if (splashTime > 2) {
 					showcase_next();
 				}
 			}
 			else {
-				splashTime == 1;
+				splashTime == 2;
 			}
 		}
 	}

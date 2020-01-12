@@ -269,6 +269,8 @@ a {
 	letter-spacing: $button-spacing;
 	cursor: pointer;
 	font-size: $p-small;
+
+	margin-top: 10px;
 	
 	@include mq(tabletp) {
 		font-size: $p-medium;
@@ -419,6 +421,14 @@ a {
     text-decoration: none;
     position: relative;
     margin-top: 20px;
+
+    @include mq(tabletp) {
+    	margin-top: 30px;
+    }
+
+    @include mq(tabletl) {
+    	margin-top: 40px;
+    }
 
     .top .label {
 	    color: $retro-button2;
@@ -600,7 +610,7 @@ body.loading {
 	clear: both;
 	width: 100%;
 
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 
 }
 
@@ -608,7 +618,7 @@ body.loading {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page sections
 
-section, div.section, aside {
+section, div.section {
 	padding-top: 20px;
 
 	@include mq(tabletp) {

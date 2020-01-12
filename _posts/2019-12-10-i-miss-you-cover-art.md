@@ -1,13 +1,15 @@
 ---
-title: 'I Miss You Cover Art'
-date: 2019-12-10 00:00:00
-
-featured_image: '/images/blog/post2/cover.jpg'
-
-description: Cover art for Yours Truly Music.
-
-categories: [Graphic Design]
-tags: [cover art, music, client]
+title: I Miss You Cover Art
+layout: post
+date: '2019-12-10 00:00:00 +0000'
+featured_image: "/images/blog/post2/cover.jpg"
+description: Cover art for 'I Miss You' single by Yours Truly
+categories:
+- Graphic
+tags:
+- cover art
+- music
+- client
 ---
 
 ![](/images/blog/post2/cover.jpg)

@@ -97,21 +97,66 @@
 
 	text-align: center;
 
-	div.post {
-		margin-bottom: 2em;
+	&.newest {
+		margin-top: 20px;
+		max-width: none;
+
+		@include mq(tabletp) {
+			display: flex;
+
+			.post:nth-child(2) {
+				padding: 0 30px;
+			}
+
+			.post {
+				margin-bottom: 0;
+			}
+		}
 	}
 
-	h2 {
+	.post {
+		margin-bottom: 2em;
+		
+		div {
+			position: relative;
+
+			.categories {
+				display: none;
+
+				@include mq(tabletp) {
+					display: block;
+
+					//@include box-shadow(0, 0, 10px, rgba(0,0,0,0.02));
+					border: 1px solid rgba(0,0,0,0.1);
+					//border-bottom: 1px solid black;
+
+					position: absolute;
+					right: -5px;
+					bottom: 20px;
+					padding: 5px 15px;
+					background: white;
+				}
+
+				@include mq (tabletl) {
+					right: -15px;
+				}
+			}
+		}
+	}
+
+	h2, h3 {
 		margin-top: 15px;
 	}
 
-	p {
+	.categories {
 		font-size: $grid-item-subtitle-small;
 		font-weight: $grid-item-subtitle-weight;
 		letter-spacing: $grid-item-subtitle-spacing;
 
 		text-transform: uppercase;
-		color: $accent-color;
+		color: $text-medium-color;
+
+		margin-top: 5px;
 
 		@include mq(tabletp) {
 			font-size: $grid-item-subtitle-medium;
@@ -121,6 +166,14 @@
 			font-size: $grid-item-subtitle-large;
 		}
 	}
+
+	.description {
+		margin-top: 5px;
+
+		font-style: italic;
+		color: $text-medium-color;
+	}
+
 }
 
 // - - - Related Posts - - - //
@@ -137,7 +190,11 @@
 		border-top: 1px solid black;
 		border-bottom: 1px solid black;
 
-		margin-bottom: 0.3em;
+		margin: 30px 0;
+
+		@include mq(desktop) {
+			margin-top: 0;
+		}
 	}
 
 	article {

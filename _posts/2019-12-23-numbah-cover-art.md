@@ -1,13 +1,15 @@
 ---
-title: 'Numbah Cover Art'
-date: 2019-12-23 00:00:00
-
-featured_image: '/images/blog/post4/numbah-cover.jpg'
-
-description: Cover art for 'Numbah' single by Yours Truly.
-
-categories: [Graphic Design]
-tags: [cover art, music, client]
+title: Numbah Cover Art
+layout: post
+date: '2019-12-23 00:00:00 +0000'
+featured_image: "/images/blog/post4/numbah-cover.jpg"
+description: Cover art for 'Numbah' single by Yours Truly
+categories:
+- Graphic
+tags:
+- cover art
+- music
+- client
 ---
 
 ![](/images/blog/post4/numbah-cover.jpg)
@@ -22,4 +24,3 @@ tags: [cover art, music, client]
 	<img src="/images/blog/post4/numbah1.5.jpg">
 	<img src="/images/blog/post4/numbah2.jpg">
 </div>
-

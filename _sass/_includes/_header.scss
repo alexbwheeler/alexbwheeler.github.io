@@ -26,7 +26,7 @@
 
 	.menu__wrap .header__logo {
 		width: $logo-width;
-		margin: 20px 0 0 20px;
+		margin: 16px 0 0 30px;
 
 		@include mq(tabletp) {
 			display: none;
@@ -123,7 +123,7 @@
 .menu--open .menu__toggle__icon {
 
 	span:before, span:after {
-		background: $overlay-text-color !important;
+		background: black !important;
 	}
 		
 	span {
@@ -151,17 +151,15 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: black;
+	background: white;
 	overflow: auto;
 
-	visibility: hidden;
 	opacity: 0;
-	@include transition(all 0.2s ease-in-out);
+	@include transition(all 0.3s ease);
 
 	@include mq(tabletl) {
 		position: relative;
 		background: transparent;
-		visibility: visible;
 		overflow: visible;
 		opacity: 1;
 		@include transition(none);
@@ -169,9 +167,7 @@
 }
 
 .menu--open .menu__wrap {
-	visibility: visible;
 	opacity: 1;
-
 	height: 100vh;
 }
 
@@ -269,8 +265,9 @@ $menu_show_delay6: 0.8s;
 .menu__list__item__link {
 	font-size: $menu-small;
 	font-weight: $menu-weight;
-	color: white;
+	color: black;
 	text-transform: uppercase;
+	font-family: $title-font;
 
 	padding: 2px 5px;
 
@@ -279,13 +276,12 @@ $menu_show_delay6: 0.8s;
 	}
 
 	@include mq(tabletl) {
-
+		font-family: $body-font;
 		font-size: $menu-medium;
 		font-weight: $menu-weight;
 		color: $text-dark-color;
 		@include box-shadow(0, 0, 0, $overlay-accent-color inset);
 
-		padding: 0 0 3px;
 		display: inline-block;
 		padding: 2px 7px;
 
@@ -293,40 +289,43 @@ $menu_show_delay6: 0.8s;
 		text-transform: none;
 		position: relative;
 
-		&::after {
-			content: "";
-		    display: block;
-		    position: absolute;
-		    height: 0%;
-		    width: 100%;
-		    background: black;
-		    left: 0;
-		    right: 0;
-		    top: 0;
-		    bottom: 0;
-		    z-index: -1;
-		    @include transition(all .2s ease);
-		}
-
-		&:hover, &.active-link:hover, .transparent &:hover {
-			color: white;
+		&:not(.social_link) {
 
 			&::after {
-				height: 100%;
-				top: initial;
+				content: "";
+			    display: block;
+			    position: absolute;
+			    height: 0%;
+			    width: 100%;
+			    background: black;
+			    left: 0;
+			    right: 0;
+			    top: 0;
+			    bottom: 0;
+			    z-index: -1;
+			    @include transition(all .2s ease);
 			}
-		}
 
-		.transparent &.active-link:hover, .transparent & {
-				color: black;
+			&:hover, &.active-link:hover, .transparent &:hover {
+				color: white;
+
+				&::after {
+					height: 100%;
+					top: initial;
+				}
 			}
 
-		&.active-link::after { 
-			background: $overlay-accent-color;
-		}
+			.transparent &.active-link:hover, .transparent & {
+					color: black;
+				}
 
-		.transparent &.active-link::after {
-			background: white;
+			&.active-link::after { 
+				background: $overlay-accent-color;
+			}
+
+			.transparent &.active-link::after {
+				background: white;
+			}
 		}
 	}
 
@@ -335,9 +334,10 @@ $menu_show_delay6: 0.8s;
 	}
 	
 	&.active-link {
-		color: $accent-color;
+		@include blue;
 
 		@include mq(tabletl) {
+			@include no-blue;
 			color: black;
 			@include box-shadow(0, -2px, 0, $overlay-accent-color inset);
 		}
@@ -348,6 +348,28 @@ $menu_show_delay6: 0.8s;
 			@include box-shadow(0, -2px, 0, white inset);
 		}
 	}
+}
+
+li.menu__list__item {
+	position: relative;
+	top: 10px;
+	opacity: 0;
+
+	@include mq(tabletl) {
+		opacity: 1;
+		top: 0;
+		padding: 0 0 3px;
+	}
+}
+
+.menu--open li.menu__list__item {
+	top: 0;
+	opacity: 1;
+
+	&:nth-child(1) { @include transition(all 0.5s ease 0.3s); }
+	&:nth-child(2) { @include transition(all 0.5s ease 0.4s); }
+	&:nth-child(3) { @include transition(all 0.5s ease 0.5s); }
+	&:nth-child(4) { @include transition(all 0.5s ease 0.6s); }
 }
 
 .transparent .socials__item__link:hover {

@@ -12,7 +12,7 @@ $break-desktop: 1600px;
 
 @mixin wide_wrap{
   margin-left: auto; margin-right: auto;
-  padding-left: 20px; padding-right: 20px;
+  padding-left: 30px; padding-right: 30px;
   width: 100%;
   max-width: none;
 
@@ -32,24 +32,21 @@ $break-desktop: 1600px;
 
 @mixin narrow_wrap{
   margin-left: auto; margin-right: auto;
-  padding-left: 20px; padding-right: 20px;
+  padding-left: 30px; padding-right: 30px;
   width: 100%;
   max-width: 1300px;
 
   @include mq(tabletp) {
     width: 95%;
     padding-right: 0; padding-left: 0;
-    //margin-left: 5%
   }
 
   @include mq(tabletl) {
-   width: 95%;
-   //margin-left: 5%;
+    width: 95%;
   }
 
   @include mq(laptop) {
-    width: 95%;
-    //margin-left: 5%;
+    width: 90%;
   }
 }
 
@@ -194,4 +191,13 @@ $break-desktop: 1600px;
   -webkit-text-fill-color: transparent;
 
   @include animation('gradient_wash 5s ease infinite;');
+}
+
+@mixin no-blue{
+  background: none;
+  background-clip: initial;
+  -webkit-background-clip: initial;
+
+  text-fill-color: initial;
+  -webkit-text-fill-color: initial;
 }

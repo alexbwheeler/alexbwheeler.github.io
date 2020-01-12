@@ -35,7 +35,8 @@ ref: index
 
 	<p class="align_center">
 		I help build brands through design whith visuals and websites that stand out. <br>
-		My goal is to create meaningful, timeless graphics and web experiences.
+		My goal is to create meaningful, timeless graphics and web experiences. <br>
+		<a href="/work" class="button black">View my work</a>
 	</p>
 
 </section>
@@ -111,3 +112,35 @@ ref: index
 	</div>
 
 </section>
+
+<section class="narrow_wrap featured-posts align_center ">
+
+	<h2>Constantly Creating</h2>
+	<p>I post personal projects, case studies, and interesting experiments I am working on to build my skill set and inspire others regularly on my blog.</p>
+
+	<div class="blog-posts newest">
+		{% for post in site.posts limit:3 %}
+
+		<div class="post">
+
+			<a href="{{ post.url }}">
+
+				<div>
+					<img src="{{ post.featured_image  }}" alt="{{ post.title }}">
+				</div>
+
+				<h3>{{ post.title }}</h3>
+				<p class="description">{{ post.description }}</p>
+
+			</a>
+
+		</div>
+
+		{% endfor %}
+	</div>
+
+	<a href="/blog" class="button black">See more posts</a>
+
+</section>
+
+

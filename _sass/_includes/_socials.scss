@@ -11,5 +11,12 @@
 		color: transparent;
 
 		width: 20px;
+
+		transition: none;
+
+		&:hover {
+			background-image: url("../images/social/instagram-gradient.svg");
+			background-size: auto 70%;
+		}
 	}
 }

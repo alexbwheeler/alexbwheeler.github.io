@@ -25,10 +25,11 @@ pagination:
 
 					<div>
 						<img src="{{ post.featured_image  }}" alt="{{ post.title }}">
+						<p class="categories" data-aos="fade-left" data-aos-once="true">{{ post.categories }}</p>
 					</div>
 
 					<h2>{{ post.title }}</h2>
-					<p>{{ post.categories }}</p>
+					<p class="description">{{ post.description }}</p>
 
 				</a>
 
