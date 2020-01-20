@@ -5,6 +5,8 @@ subtitle: Hey! Let's talk about your next project.
 
 description: Get in touch to discuss your project and receive a quote.
 
+header: Get in touch
+
 lang: en
 
 ref: contact

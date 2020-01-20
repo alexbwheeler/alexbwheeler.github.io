@@ -43,9 +43,10 @@
 		});
 	
 		// Tilt
-		VanillaTilt.init(document.querySelectorAll(".say_hi>div"), {
-			
-		});
+		if (document.documentElement.clientWidth > 768) {
+			VanillaTilt.init(document.querySelectorAll(".say_hi>div"));
+			VanillaTilt.init(document.querySelectorAll(".portfolio-item__image img.front"));
+		}
 
 		splashTime = 1;
 
@@ -70,7 +71,7 @@
 	$(document).on("click", "a", function(){
 	    setTimeout(function(){
 			pageLoad();
-		}, 500);
+		}, 500); 
 	});
 
 
@@ -218,13 +219,13 @@ function MyIntersectionObserver() {
 	//IntersectionObserver
 
 	if (('IntersectionObserver' in window) || ('IntersectionObserverEntry' in window) || ('intersectionRatio' in window.IntersectionObserverEntry.prototype)) {
-		const config = {
+		config = {
 			root: null,
 			rootMargin: '1000px 1px 20% 1px',
 			threshold: [0,1]
 		};
 
-		const animate = document.querySelectorAll('.animate');
+		animate = document.querySelectorAll('.animate');
 
 		observer = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {

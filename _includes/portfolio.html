@@ -14,7 +14,7 @@
 						<div class="portfolio-item__image">
 							{% if project.preview %}
 								<img src="/images/portfolio/preview/{{ project.preview}}/front.png" class="lazy front {{ project.preview }}" alt="{{ project.title }} front">
-								<img src="/images/portfolio/preview/{{ project.preview}}/back.jpg" class="lazy" alt="{{ project.title }} background">
+								<img src="/images/portfolio/preview/{{ project.preview}}/back.jpg" class="lazy back" alt="{{ project.title }} background">
 							{% else %}
 								<img src="{{ project.featured_image }}" alt="{{ project.title }}">
 							{% endif %}
@@ -48,7 +48,7 @@
 						<div class="portfolio-item__image">
 							{% if project.preview %}
 								<img src="/images/portfolio/preview/{{ project.preview}}/front.png" class="lazy front {{ project.preview }}" alt="{{ project.title }} front">
-								<img src="/images/portfolio/preview/{{ project.preview}}/back.jpg" class="lazy" alt="{{ project.title }} background">
+								<img src="/images/portfolio/preview/{{ project.preview}}/back.jpg" class="lazy back" alt="{{ project.title }} background">
 							{% else %}
 								<img src="{{ project.featured_image }}" alt="{{ project.title }}">
 							{% endif %}

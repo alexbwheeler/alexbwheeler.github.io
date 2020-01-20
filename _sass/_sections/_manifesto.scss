@@ -2,33 +2,44 @@
 
 //	Manifesto Section	//
 
+.manifesto {
+
+	h2 {
+		@include mq(tabletp) {
+			font-size: $h1-medium;
+		}
+
+		@include mq(laptop) {
+			font-size: $h1-large;
+		}
+	}
+}
+
 .about {
 
-	&.visible {
+	&.visible, &.visible * {
 		opacity: 1;
 
-		h2 span {
-			opacity: 1;
-		}
-
 		h3, p {
-			opacity: 1;
 			top: 0;
-			@include transition(all 0.5s ease 1s);
 		}
+	}
 
-		span:nth-child(1) {
-			@include transition(all 1s ease);
-		}
+	h3, p {
+		@include transition(all 0.5s ease 1s);
+	}
 
-		span:nth-child(2) {
-			@include transition(all 1s ease 0.2s);
-		}
+	span:nth-child(1) {
+		@include transition(all 1s ease);
+	}
 
-		span.myName {
-			@include transition(all 1s ease 0.4s);
-			@include blue;
-		}
+	span:nth-child(2) {
+		@include transition(all 1s ease 0.2s);
+	}
+
+	span.myName {
+		@include transition(all 1s ease 0.4s);
+		@include blue;
 	}
 
 	padding-top: 0;
@@ -119,7 +130,7 @@
 		}
 
 		p {
-			margin-top: 3px;
+			margin-top: 15px;
 			text-align: center;
 		}
 	}
@@ -225,7 +236,7 @@
 	padding-top: 0;
 	padding-bottom: 0;
 
-	h2,h3 {
+	h2 {
 		@include transition(all .2s ease);
 	}
 
@@ -235,6 +246,16 @@
 
 		padding-top: 10vh;
 		padding-bottom: 10vh;
+
+		@include mq(laptop) {
+			padding-top: 20vh;
+			padding-bottom: 20vh;
+
+			a {
+				margin-top: 60px;
+				font-size: 30px;
+			}
+		}
 	}
 
 	a .top{
@@ -257,18 +278,30 @@
 	margin-top: 50px;
 
 	&>p {
-		max-width: 500px;
+		max-width: 700px;
+
+		margin-top: 30px;
 		margin-left: auto;
 		margin-right: auto;
-
-		@include mq(tabletp) {
-			max-width: none;
-		}
 	}
 
 	.blog-posts {
-		margin-top: 50px;
 		margin-bottom: 30px;
+	
+		margin-top: 60px;
+		max-width: none;
+
+		@include mq(tabletp) {
+			display: flex;
+
+			.post:nth-child(2) {
+				padding: 0 30px;
+			}
+
+			.post {
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 

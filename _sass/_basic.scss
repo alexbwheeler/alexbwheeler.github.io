@@ -271,14 +271,6 @@ a {
 	font-size: $p-small;
 
 	margin-top: 10px;
-	
-	@include mq(tabletp) {
-		font-size: $p-medium;
-	}
-
-	@include mq(laptop) {
-		font-size: $p-large;
-	}
 
 	@include transition(all 0.2s ease);
 
@@ -427,16 +419,16 @@ a {
     }
 
     @include mq(tabletl) {
-    	margin-top: 40px;
+    	margin-top: 32px;
     }
 
     .top .label {
 	    color: $retro-button2;
 	    line-height: 110%;
 	    text-align: center;
-	    //text-transform: uppercase;
+	    text-transform: uppercase;
 
-	    font-weight: $button-weight;
+	    font-weight: 300;
 		letter-spacing: $button-spacing;
 	    font-size: $p-small;
 	    
@@ -459,6 +451,11 @@ a {
 	    height: 100%;
 	    background-color: $retro-button-accent;
 	    display: block;
+
+	    @include mq(laptop) {
+	    	top: 10px;
+	    	left: 10px;
+	    }
 	    
 	    @include transition(all .15s ease-out);
 	}

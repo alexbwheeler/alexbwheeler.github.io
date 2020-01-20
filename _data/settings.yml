@@ -34,7 +34,7 @@ footer_settings:
 
 grid_settings:
   overlay_opacity: 1
-  grid_spacing: 10
+  grid_spacing: 30
 
 index:
   en:
@@ -63,9 +63,9 @@ color_settings:
 font_settings:
   font_embed:
   title_font: '"Playfair Display", sans-serif'
-  body_font: '"Brandon Grotesque", sans-serif'
-  regular_weight: 200
-  bold_weight: 300
+  body_font: '"Roboto Mono", sans-serif'
+  regular_weight: 300
+  bold_weight: 400
 
   site_title:
     small_size: 20
@@ -77,7 +77,7 @@ font_settings:
   menu:
     small_size: 50
     medium_size: 15
-    large_size: 17
+    large_size: 15
     weight: 200
     letter_spacing: 2
     small_padding: 1
@@ -109,7 +109,7 @@ font_settings:
     small_size: 30
     medium_size: 32
     large_size: 50
-    weight: 700
+    weight: 600
     letter_spacing: -0.01
     line_height: 1
 
@@ -146,12 +146,12 @@ font_settings:
     line_height: 1.6
 
   p:
-    small_size: 16
-    medium_size: 17
-    large_size: 20
+    small_size: 12
+    medium_size: 14
+    large_size: 14
     weight: 200
     letter_spacing: 0
-    line_height: 1.4
+    line_height: 1.6
     max_width: 1000
 
   blockquote:

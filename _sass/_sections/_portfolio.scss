@@ -75,6 +75,8 @@
 	position: relative;
 	overflow: hidden;
 
+	transform-style: preserve-3d;
+
 	img {
 		@include transition(all .15s ease);
 		margin: 0 auto;
@@ -97,6 +99,11 @@
 		    &.logofolio {
 	    		bottom: 35%;
 	    	}
+
+	    	&.cover_art {
+	    		width: 97%;
+	    		bottom: 20%;
+	    	}
 		}
 	}
 
@@ -107,6 +114,10 @@
 			&.mcgill {
 		    	width: 113%;
 		    	padding-left: 10%;
+		    }
+
+		    &.cover_art {
+		    	width: 100%;
 		    }
 		}
 	}

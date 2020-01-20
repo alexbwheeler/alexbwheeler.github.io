@@ -86,29 +86,42 @@
 
 		text-transform: uppercase;
 		line-height: 0.9em;
-		margin-top: 0;
 
 		text-align: center;
+
+		max-width: 350px;
+		margin: 0 auto;
+
+		@include mq(tabletp) {
+			max-width: 450px;
+		}
+
+		@include mq(tabletl) {
+			max-width: 500px;
+		}
 
 		@include mq(laptop) {
 			text-align: left;
+			margin: 0;
 		}
 	}
 
-	h3 {
+	h2 {
 		color: $accent-color;
-		font-size: 20px;
+		font-size: 17px;
 		text-align: center;
-		font-family: Brandon Grotesque, sans-serif;
+		font-family: $body-font;
 		font-weight: 200;
-		margin-top: 10px;
+		margin-top: 15px;
+
+		height: 1.5em;
 
 		@include mq(tabletp) {
-			font-size: 30px;
+			font-size: 20px;
 		}
 
 		@include mq(laptop) {
-			font-size: 1.6em;
+			font-size: 30px;
 			text-align: left;
 		}
 	}
@@ -321,6 +334,10 @@
 	}
 }
 
+@include keyframes(invisible) {
+  0% { opacity: 0; }
+  100% { opacity: 0; }
+}
 
 
 
