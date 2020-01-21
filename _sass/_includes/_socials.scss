@@ -2,21 +2,9 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Socials
 
-.social_link {
-	&#instagram {
-		background-image: url("../images/social/instagram.svg");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: auto 70%;
-		color: transparent;
-
-		width: 20px;
-
-		transition: none;
-
-		&:hover {
-			background-image: url("../images/social/instagram-gradient.svg");
-			background-size: auto 70%;
-		}
+.socials {
+	a {
+		display: inline-block;
+		margin: 0 20px;
 	}
 }

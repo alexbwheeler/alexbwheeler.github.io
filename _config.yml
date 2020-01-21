@@ -17,6 +17,9 @@ collections:
   projects-fr:
     output: true
     permalink: /fr/travail/:slug/
+  favicons:
+    output: true
+    permalink: /
 
 defaults:
   -
@@ -48,8 +51,6 @@ defaults:
       type: "projects-fr"
     values:
       layout: "project"
-
-excerpt_separator: <!--more-->
 
 markdown: kramdown
 
@@ -89,7 +90,6 @@ autopages:
        - 'tag.html'
     title: ':tag'
     permalink: '/tags/:tag'
-
 
 gallery_types:
   carousel: Carousel

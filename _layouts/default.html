@@ -49,6 +49,7 @@
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97001089-1"></script>
+
     <script>
     	window.dataLayer = window.dataLayer || [];
     	function gtag(){dataLayer.push(arguments);}
@@ -57,6 +58,7 @@
      	gtag('config', 'UA-97001089-1');
     </script>	
 </head>
+
 
 
 <body class="loading{% if site.data.settings.advanced_settings.ajax_loading == true %} ajax-loading{% endif %}" data-site-url="{{ site.url }}" data-page-url="{{ page.url | replace: 'index.html', '' }}">
@@ -88,13 +90,21 @@
 	<!-- Javascript Assets -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
-	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
-	<script src="{{ site.baseurl }}/js/duet-min.js"></script>
+	<script src="{{ site.baseurl }}/js/plugins/history.js"></script>
+	<script src="{{ site.baseurl }}/js/plugins/imagesloaded.js"></script>
+	<script src="{{ site.baseurl }}/js/plugins/masonry.js"></script>
+	<script src="{{ site.baseurl }}/js/plugins/debounce.js"></script>
+	<script src="{{ site.baseurl }}/js/plugins/fluidbox.js"></script>
+	<script src="{{ site.baseurl }}/js/plugins/owl.js"></script>
+	<script src="{{ site.baseurl }}/js/plugins/waypoints.js"></script>
+
+	<script src="{{ site.baseurl }}/js/duet.js"></script>
 
 	<script src="{{ site.baseurl }}/js/plugins/vanilla-tilt.min.js"></script>
 	<script src="{{ site.baseurl }}/js/plugins/aos.js"></script>
-	
+
+	<!-- <script src="{{ site.baseurl }}/js/scripts.js"></script> -->
 	<script src="{{ site.baseurl }}/js/custom.js"></script>
 	
 

@@ -121,6 +121,7 @@
 		}
 
 		@include mq(laptop) {
+			margin-top: 30px;
 			font-size: 30px;
 			text-align: left;
 		}

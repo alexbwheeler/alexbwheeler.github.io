@@ -109,9 +109,7 @@
 				@include mq(tabletp) {
 					display: block;
 
-					//@include box-shadow(0, 0, 10px, rgba(0,0,0,0.02));
 					border: 1px solid rgba(0,0,0,0.1);
-					//border-bottom: 1px solid black;
 
 					position: absolute;
 					right: -5px;
@@ -134,9 +132,9 @@
 	.categories {
 		font-size: $grid-item-subtitle-small;
 		font-weight: $grid-item-subtitle-weight;
-		letter-spacing: $grid-item-subtitle-spacing;
+		letter-spacing: 1px;
 
-		text-transform: uppercase;
+		text-transform: lowercase;
 		color: $text-medium-color;
 
 		margin-top: 5px;

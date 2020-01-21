@@ -8,13 +8,13 @@ header_settings:
 
 menu_settings:
   menu_items:
-    - title: 'Work'
+    - title: 'work'
       url: '/work'
-    - title: 'Blog'
+    - title: 'blog'
       url: '/blog'
     # - title: 'About'
     #  url: '/about/'
-    - title: 'Contact'
+    - title: 'contact'
       url: '/contact'
     
   menu_items_fr:
@@ -109,8 +109,8 @@ font_settings:
     small_size: 30
     medium_size: 32
     large_size: 50
-    weight: 600
-    letter_spacing: -0.01
+    weight: 700
+    letter_spacing: 0
     line_height: 1
 
   h3:
