@@ -1,0 +1,649 @@
+// - - - - - - - - - - - - - - - - - -
+
+// Basics
+
+// - - - - - - - - - - - - - - - - - -
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Basics
+
+
+
+html {
+	position: relative;
+	overflow-x: hidden;
+}
+
+body {
+	background: $background-color;
+
+	font-family: $body-font;
+	
+	font-weight: $regular-weight;
+	
+	font-style: normal;
+	
+	line-height: 1;
+	
+	color: $text-medium-color;
+}
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Typography
+
+.align_center {
+	text-align: center; 
+}
+
+.white, .white * {
+	color: white;
+}
+
+.black {
+	color: black;
+}
+
+body * {
+	&::-moz-selection {
+		color: white;
+		background: 1620e4;
+	}
+
+	&::selection { 
+		color: white;
+		background: #1620e4;
+	}
+
+	.blue {
+		&::-moz-selection {
+			color: white;
+			background: #7ea4e8;
+		}
+
+		&::selection { 
+			color: white;
+			background: #7ea4e8;
+		}
+	}
+}
+
+h1.italic, h2.italic, h3.italic, h4.italic {
+	font-style: italic;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $title-font;
+	color: $text-dark-color;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+h1, .h1 {
+	font-size: $h1-small;
+	font-weight: $h1-weight;
+	line-height: $h1-lineheight;
+	letter-spacing: $h1-spacing;
+
+	text-align: center;
+
+	@include mq(tabletp) {
+		font-size: $h1-medium;
+		text-align: left;
+	}
+
+	@include mq(laptop) {
+		font-size: $h1-large;
+	}
+}
+
+h2, .h2 {
+	margin-top: 40px;
+	font-size: $h2-small;
+	font-weight: $h2-weight;
+	line-height: $h2-lineheight;
+	letter-spacing: $h2-spacing;
+
+	@include mq(tabletp) {
+		font-size: $h2-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $h2-large;
+	}
+}
+
+h3, .h3 {
+	margin-top: 30px;
+	font-size: $h3-small;
+	font-weight: $h3-weight;
+	line-height: $h3-lineheight;
+	letter-spacing: $h3-spacing;
+
+	@include mq(tabletp) {
+		font-size: $h3-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $h3-large;
+	}
+}
+
+h4, .h4 {
+	margin-top: 25px;
+	font-size: $h4-small;
+	font-weight: $h4-weight;
+	line-height: $h4-lineheight;
+	letter-spacing: $h4-spacing;
+
+	@include mq(tabletp) {
+		font-size: $h4-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $h4-large;
+	}
+}
+
+h5, .h5 {
+	margin-top: 15px;
+	font-size: $h5-small;
+	font-weight: $h5-weight;
+	line-height: $h5-lineheight;
+	letter-spacing: $h5-spacing;
+
+	@include mq(tabletp) {
+		font-size: $h5-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $h5-large;
+	}
+}
+
+h6, .h6 {
+	margin-top: 15px;
+	font-size: $h6-small;
+	font-weight: $h6-weight;
+	line-height: $h6-lineheight;
+	letter-spacing: $h6-spacing;
+
+	@include mq(tabletp) {
+		font-size: $h6-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $h6-large;
+	}
+}
+
+p, ul, ol, a {
+	margin-top: 15px;
+	font-size: $p-small;
+	font-weight: $p-weight;
+	line-height: $p-lineheight;
+	letter-spacing: $p-spacing;
+
+	@include mq(tabletp) {
+		font-size: $p-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $p-large;
+	}
+
+	strong {
+		font-weight: $bold-weight;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+p, ul, ol {
+	max-width: $p-maxwidth;
+}
+
+ul, ol {
+	list-style-position: inside;
+}
+
+blockquote {
+	margin-top: 15px;
+	border-left: 2px solid $text-dark-color;
+	padding: 10px 0 10px 20px;
+	font-size: $blockquote-small;
+	font-weight: $blockquote-weight;
+	letter-spacing: $blockquote-spacing;
+	line-height: $blockquote-lineheight;
+
+	@include mq(tabletp) {
+		border-left-width: 3px;
+		padding: 15px 0 15px 30px;
+		font-size: $blockquote-medium;
+	}
+
+	@include mq(laptop) {
+		border-left-width: 4px;
+		padding: 20px 0 20px 40px;
+		font-size: $blockquote-large;
+	}
+
+	p {
+		font-size: $blockquote-small;
+		font-weight: $blockquote-weight;
+		letter-spacing: $blockquote-spacing;
+		line-height: $blockquote-lineheight;
+
+		@include mq(tabletp) {
+			font-size: $blockquote-medium;
+		}
+
+		@include mq(laptop) {
+			font-size: $blockquote-large;
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $text-dark-color;
+	font-weight: $bold-weight;
+	@include transition(all 0.15s ease-in-out);
+
+	&:hover {
+		color: $accent-color;
+	}
+}
+
+.button {
+	display: inline-block;
+	padding: 9px 10px 10px;
+	line-height: 1;
+	border: 1px solid $accent-color;
+	background: none;
+	color: $accent-color;
+	font-weight: $button-weight;
+	letter-spacing: $button-spacing;
+	cursor: pointer;
+	font-size: $p-small;
+
+	margin-top: 10px;
+
+	@include transition(all 0.2s ease);
+
+	&.white {
+		border-color: white;
+		color: white;
+
+		&:hover {
+		background: white;
+		color: black;
+		border-color: white;
+	}
+	}
+
+	&.black {
+		border-color: black;
+		color: black;
+
+		&:hover {
+		background: black;
+		color: white;
+		border-color: black;
+	}
+	}
+
+	@include mq(tabletp) {
+		padding: 11px 20px 12px;
+		font-size: 15px;
+	}
+
+	&:hover {
+		background: adjust-hue($accent-color,15%);
+		border-color: adjust-hue($accent-color,15%);
+		color: $background-color;
+	}
+
+	svg {
+		margin-right: 5px;
+
+		&:last-child {
+			margin-right: 0;
+			margin-left: 5px;
+		}
+
+		@include mq(tabletp) {
+			margin-right: 8px;
+
+			&:last-child {
+				margin-right: 0;
+				margin-left: 8px;
+			}
+		}
+	}
+
+	&.large {
+		padding: 15px 20px 16px;
+
+		display: block;
+		margin: 0 auto;
+
+		width: 100%;
+		max-width: 500px;
+
+		font-size: $p-small;
+		@include mq(tabletp) {
+			font-size: $p-medium;
+		}
+
+		@include mq(laptop) {
+			font-size: $p-large;
+		}
+
+		@include mq(tabletp) {
+			display: inline-block;
+			width: auto;
+
+			padding: 19px 40px 20px;
+			font-size: 17px;
+		}
+	}
+}
+
+.button--large {
+	padding: 15px 20px 16px;
+
+	display: block;
+	margin: 0 auto;
+
+	width: 100%;
+	max-width: 500px;
+
+	font-size: $p-small;
+	@include mq(tabletp) {
+		font-size: $p-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $p-large;
+	}
+
+	@include mq(tabletp) {
+		display: inline-block;
+		width: auto;
+
+		padding: 19px 40px 20px;
+		font-size: 17px;
+	}
+}
+
+.button--light {
+	background: transparent;
+	border-color: $text-dark-color;
+	color: $text-dark-color;
+
+	&:hover {
+		background: $accent-color;
+		border-color: $accent-color;
+		color: $background-color;
+	}
+}
+
+.button--overlay {
+	background: transparent;
+	border-color: $overlay-text-color;
+	color: $overlay-text-color;
+
+	&:hover {
+		background: $overlay-text-color;
+		border-color: $overlay-text-color;
+		color: $accent-color;
+	}
+}
+
+.button-retro {
+ 	$retro-button-accent: white;
+ 	$retro-button2: black;
+ 	$retro-button3: transparent;
+
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    margin-top: 20px;
+
+    @include mq(tabletp) {
+    	margin-top: 30px;
+    }
+
+    @include mq(tabletl) {
+    	margin-top: 32px;
+    }
+
+    .top .label {
+	    color: $retro-button2;
+	    line-height: 110%;
+	    text-align: center;
+	    text-transform: uppercase;
+
+	    font-weight: 300;
+		letter-spacing: $button-spacing;
+	    font-size: $p-small;
+	    
+		@include mq(tabletp) {
+			font-size: $p-medium;
+		}
+
+		@include mq(laptop) {
+			font-size: $p-large;
+		}
+
+	    @include transition(all .15s ease-out);
+	}
+
+	.bottom {
+	    position: absolute;
+	    left: 7px;
+	    top: 7px;
+	    width: 100%;
+	    height: 100%;
+	    background-color: $retro-button-accent;
+	    display: block;
+
+	    @include mq(laptop) {
+	    	top: 10px;
+	    	left: 10px;
+	    }
+	    
+	    @include transition(all .15s ease-out);
+	}
+
+	.top {
+	    position: relative;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    border: 2px solid $retro-button2;
+
+	    padding: 15px 20px 16px;
+
+	    @include mq(tabletp) {
+			padding: 19px 40px 20px;
+		}
+	}
+
+	.button-border {
+	    position: absolute;
+	    background-color: $retro-button-accent;
+	    
+	    @include transition(all .15s ease-out);
+	}
+
+	&:hover {
+		.bottom {
+		    left: 0;
+		    top: 0;
+		    background-color: $retro-button3;
+		}
+
+		.top .label {
+		    color: $retro-button-accent;
+		}
+
+		.top {
+			.button-border-left, .button-border-right {
+			    height: calc(100% + 2px);
+			}
+
+			.button-border-top, .button-border-bottom {
+			    width: calc(100% + 2px);
+			}
+		}
+	}
+
+	.button-border-left {
+	    left: -2px;
+	    bottom: -2px;
+	    width: 2px;
+	    height: 0;
+	}
+
+	.button-border-top {
+	    left: -2px;
+	    top: -2px;
+	    width: 0;
+	    height: 2px;
+	}
+
+	.button-border-right {
+	    right: -2px;
+	    top: -2px;
+	    width: 2px;
+	    height: 0;
+	}
+
+	.button-border-bottom {
+	    right: -2px;
+	    bottom: -2px;
+	    width: 0;
+	    height: 2px;
+	}
+}
+
+hr {
+	margin: 40px 0;
+	border: 0;
+	height: 2px;
+	background: $background-alt-color;
+}
+
+::selection 	 { background: $accent-color; color: $background-color; }
+::-moz-selection { background: $accent-color; color: $background-color; }
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page loading
+
+.page-loader {
+	display: none;
+}
+
+.page {
+	@include transition(all 0.6s cubic-bezier(.87,-.41,.19,1.44));
+
+	min-height: 100vh;
+}
+
+body.loading {
+
+	.loader {
+		opacity: 1;
+		visibility: visible;
+		@include transition(all 0.4s ease-in-out 1s);
+	}
+
+	.page {
+		opacity: 0;
+		visibility: hidden;
+		@include transition(all 0.4s ease-in-out, transform 0s ease-in-out 0.4s);
+		@include translate(0,20px);
+	}
+
+	.footer {
+		opacity: 0;
+		visibility: hidden;
+		@include transition(all 0.4s ease-in-out);
+	}
+}
+
+.loader {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	@include translate(-50%,-50%);
+	width: 60px;
+	height: 15px;
+
+	opacity: 0;
+	visibility: hidden;
+	@include transition(all 0.2s ease-in-out);
+
+	svg {
+		width: 100%;
+		height: 100%;
+		fill: rgba($text-dark-color,0.2);
+	}
+
+	.loading_logo {
+		opacity: 0.25;
+	}
+}
+
+.page,
+.page__content {
+	clear: both;
+	width: 100%;
+
+	margin-bottom: 50px;
+
+}
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page sections
+
+section, div.section {
+	padding-top: 20px;
+
+	@include mq(tabletp) {
+		padding-top: 20px;
+	}
+
+	@include mq(tabletl) {
+		padding-top: 30px;
+	}
+
+	@include mq(laptop) {
+		padding-top: 50px;
+	}
+}
+
+.wrap {
+	position: relative;
+	margin: 0 auto;
+	
+	@include wide_wrap;
+}
+
+.narrow_wrap {
+	position: relative;
+	margin: 0 auto;
+	
+	@include narrow_wrap;
+}

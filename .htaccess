@@ -22,6 +22,13 @@ RewriteEngine On
 	RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
 	RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+#Use static gzip compressed files
+RewriteCond "%{HTTP:Accept-encoding}" "gzip"
+RewriteCond "%{REQUEST_FILENAME}\.gz" -s
+RewriteRule "^(.*)\.css" "$1\.css\.gz" [QSA]
+#Dynamic gzip compression for html
+AddOutputFilterByType DEFLATE text/html
+
 # Add correct content-type for fonts
 AddType application/vnd.ms-fontobject .eot
 AddType font/ttf .ttf

@@ -51,7 +51,7 @@ color_settings:
   background_color: '#ffffff'
   background_alt_color: '#f4f5f6'
   text_dark_color: 'black'
-  text_medium_color: '#6C7A89'
+  text_medium_color: 'gba(0,0,0,0.8)'
   text_light_color: 'rgba(0,0,0,0.8)'
   accent_color: '#229aff'
   border_color: '#dddddd'
@@ -87,7 +87,7 @@ font_settings:
     small_size: 40
     medium_size: 40
     large_size: 45
-    weight: 400
+    weight: 700
     letter_spacing: -0.02
 
   grid_item_subtitle:

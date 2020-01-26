@@ -1,0 +1,46 @@
+I"°<p><a href="mailto:design@alexwheeler.ca?http" target="_blank"> design@alexwheeler.ca </a></p>
+
+<div class="contact-form">
+
+	<form action="https://app.99inbound.com/api/e/w2_U9VE7" id="contact-form" method="POST" target="_blank">
+
+		<div class="contact-form__item name">
+			<label class="contact-form__label">
+				<input type="text" name="First Name" placeholder="First Name" class="contact-form__input" />
+			</label>
+
+			<label class="contact-form__label">
+				<input type="text" name="Last Name" placeholder="Last Name" class="contact-form__input" />
+			</label>
+		</div>
+
+		<div class="contact-form__item">
+			<label class="contact-form__label">
+				<input type="text" name="subject" placeholder="Subject" class="contact-form__input" />
+			</label>
+		</div>
+
+		<div class="contact-form__item">
+			<label class="contact-form__label">
+				<input type="text" name="email" placeholder="Email" class="contact-form__input" />
+			</label>
+		</div>
+
+		<div class="contact-form__item">
+			<label class="contact-form__label">
+				<textarea name="message" placeholder="Your message..." class="contact-form__textarea"></textarea>
+			</label>
+		</div>
+
+		<div style="position: absolute; left: -5000px;">
+			<input type="checkbox" name="better_cornflower_blue_satin_window" value="1" tabindex="-1" autocomplete="no" />
+		</div>
+
+		<div class="contact-form__item">
+			<input type="submit" value="Send" class="button black button--large" />
+		</div>
+
+	</form>
+
+</div>
+:ET

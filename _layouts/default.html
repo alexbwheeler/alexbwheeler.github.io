@@ -43,9 +43,9 @@
 
 	<!-- Styles -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="/css/style.css">
+	{% asset style.scss.liquid %}
 
-	<link rel="preload" href="{{ site.baseurl }}/images/logo-black-wipe.gif" as="image">
+	<link rel="prefetch" href="{{ site.baseurl }}/images/logo-black-wipe.gif" as="image">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97001089-1"></script>
@@ -88,25 +88,10 @@
 
 
 	<!-- Javascript Assets -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
 
-	<script src="{{ site.baseurl }}/js/plugins/history.js"></script>
-	<script src="{{ site.baseurl }}/js/plugins/imagesloaded.js"></script>
-	<script src="{{ site.baseurl }}/js/plugins/masonry.js"></script>
-	<script src="{{ site.baseurl }}/js/plugins/debounce.js"></script>
-	<script src="{{ site.baseurl }}/js/plugins/fluidbox.js"></script>
-	<script src="{{ site.baseurl }}/js/plugins/owl.js"></script>
-	<script src="{{ site.baseurl }}/js/plugins/waypoints.js"></script>
-
-	<script src="{{ site.baseurl }}/js/duet.js"></script>
-
-	<script src="{{ site.baseurl }}/js/plugins/vanilla-tilt.min.js"></script>
-	<script src="{{ site.baseurl }}/js/plugins/aos.js"></script>
-
-	<!-- <script src="{{ site.baseurl }}/js/scripts.js"></script> -->
-	<script src="{{ site.baseurl }}/js/custom.js"></script>
-	
+	{% asset main.js %}
 
 	{% if site.data.settings.advanced_settings.footer_js %}
 		<!-- Extra Footer JS Code -->

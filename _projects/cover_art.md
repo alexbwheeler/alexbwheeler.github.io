@@ -3,7 +3,7 @@ title: 'Cover Art'
 
 subtitle: 'Graphic Design'
 
-date: 2018-06-30 00:00:00
+date: 2018-06-30 00:00:06
 
 description: Unique cover art for various artists.
 

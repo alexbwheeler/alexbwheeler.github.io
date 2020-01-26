@@ -8,7 +8,6 @@ description: Freelance graphic and web designer from Montreal, working remotely.
 lang: en
 
 ref: index
-
 ---
 
 <section class="splash slide1 noWebp">
@@ -18,15 +17,13 @@ ref: index
 		<h2 class="blue">catch eyes and get attention</h2>
 	</div>
 
-	<a href="/work"class="showcase_back showcase"></a>
-	<a href="/work" class="showcase_front showcase"></a>
+	<a href="/work"class="showcase_back showcase"><span>Showcase front</span></a>
+	<a href="/work" class="showcase_front showcase"><span>Showcase back</span></a>
 
 	<div class="showcase-switch">
 		<div class="arrow back" id="showcase_previous"></div>
 		<div class="arrow next" id="showcase_next"></div>
 	</div>
-
-	<div id="preload_splash"></div>
 
 </section>
 
@@ -43,7 +40,7 @@ ref: index
 
 </section>
 
-<section class="services manifesto narrow_wrap">
+<section class="services narrow_wrap">
 
 	<div data-aos="fade-up">
 		<img class="animate slow_lazy" src="images/services/graphic_design.png" data-src="images/services/graphic_design.gif" alt="Graphic design">
@@ -77,7 +74,7 @@ ref: index
 		<div class="slideshow">
 			Client logo slideshow
 		</div>
-		<img src="/images/client_logos/white_fade.png" class="fade">
+		<img src="/images/client_logos/white_fade.png" class="fade" alt="client showcase fade">
 
 			<img src="/images/client_logos/la_belle_et_la_boeuf.svg" alt="La Belle et la Boeuf logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="100">
 			<img src="/images/client_logos/beta_bloc.svg" alt="Beta Bloc Climbing logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="150">
@@ -93,7 +90,7 @@ ref: index
 
 <section class="blue-background say_hi manifesto" data-aos="slide-up" data-aos-once="true">
 
-	<div class="narrow_wrap white center">
+	<div class="narrow_wrap white align_center">
 
 		<h2>Let's work together</h2>
 
@@ -118,7 +115,7 @@ ref: index
 <section class="narrow_wrap featured-posts manifesto align_center ">
 
 	<h2>Constantly Creating</h2>
-	<p>I post personal projects, case studies, and interesting experiments I am working on to build my skill set and inspire others regularly on my blog.</p>
+	<p>I post recent client projects and case studies regularly on my blog to inspire others and showcase my recent work.</p>
 
 	<div class="blog-posts newest">
 		{% for post in site.posts limit:3 %}
@@ -128,7 +125,7 @@ ref: index
 			<a href="{{ post.url }}">
 
 				<div>
-					<img src="{{ post.featured_image  }}" alt="{{ post.title }}">
+					<img src="/images/lazy-load-post.svg" data-src="{{ post.featured_image  }}" class="lazy" alt="{{ post.title }}">
 				</div>
 
 				<h3>{{ post.title }}</h3>

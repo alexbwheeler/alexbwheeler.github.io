@@ -1,0 +1,310 @@
+I"` 
+<section class="portfolio">
+
+	<div class="wrap">
+
+		<div class="column" id="portfolio1">
+			<div class="flexy_order">
+				
+				
+
+				<div class="portfolio-item">
+
+					<a class="portfolio-item__link" href="/fr/travail/la-belle-et-la-boeuf/">
+
+						<div class="portfolio-item__image">
+							
+								<img src="/images/portfolio/preview/belle_et_boeuf/front.png" class="lazy front belle_et_boeuf" alt="La Belle et La Boeuf front" />
+								<img src="/images/portfolio/preview/belle_et_boeuf/back.jpg" class="lazy back" alt="La Belle et La Boeuf background" />
+							
+						</div>
+
+						<div class="portfolio-item__content">
+							<div class="portfolio-item__info">
+								<h2 class="portfolio-item__title">La Belle et La Boeuf</h2>
+								<p class="portfolio-item__subtitle">Design imprimé et identité</p>
+							</div>
+						</div>
+
+					</a>
+
+				</div>
+
+				
+
+				<div class="portfolio-item">
+
+					<a class="portfolio-item__link" href="/fr/travail/bacaro/">
+
+						<div class="portfolio-item__image">
+							
+								<img src="/images/portfolio/preview/bacaro/front.png" class="lazy front bacaro" alt="Bacaro Pizzeria front" />
+								<img src="/images/portfolio/preview/bacaro/back.jpg" class="lazy back" alt="Bacaro Pizzeria background" />
+							
+						</div>
+
+						<div class="portfolio-item__content">
+							<div class="portfolio-item__info">
+								<h2 class="portfolio-item__title">Bacaro Pizzeria</h2>
+								<p class="portfolio-item__subtitle">Design imprimé et identité</p>
+							</div>
+						</div>
+
+					</a>
+
+				</div>
+
+				
+
+				<div class="portfolio-item">
+
+					<a class="portfolio-item__link" href="/fr/travail/beta-bloc/">
+
+						<div class="portfolio-item__image">
+							
+								<img src="/images/portfolio/preview/beta_bloc/front.png" class="lazy front beta_bloc" alt="Beta Bloc front" />
+								<img src="/images/portfolio/preview/beta_bloc/back.jpg" class="lazy back" alt="Beta Bloc background" />
+							
+						</div>
+
+						<div class="portfolio-item__content">
+							<div class="portfolio-item__info">
+								<h2 class="portfolio-item__title">Beta Bloc</h2>
+								<p class="portfolio-item__subtitle">Création d'affiches</p>
+							</div>
+						</div>
+
+					</a>
+
+				</div>
+
+				
+
+				<div class="portfolio-item">
+
+					<a class="portfolio-item__link" href="/fr/travail/mcgill-university/">
+
+						<div class="portfolio-item__image">
+							
+								<img src="/images/portfolio/preview/mcgill/front.png" class="lazy front mcgill" alt="McGill University front" />
+								<img src="/images/portfolio/preview/mcgill/back.jpg" class="lazy back" alt="McGill University background" />
+							
+						</div>
+
+						<div class="portfolio-item__content">
+							<div class="portfolio-item__info">
+								<h2 class="portfolio-item__title">McGill University</h2>
+								<p class="portfolio-item__subtitle">Logo et brochure</p>
+							</div>
+						</div>
+
+					</a>
+
+				</div>
+
+				
+
+				<div class="portfolio-item">
+
+					<a class="portfolio-item__link" href="/fr/travail/logofolio/">
+
+						<div class="portfolio-item__image">
+							
+								<img src="/images/portfolio/quasar/quasar1.jpg" alt="Logofolio" />
+							
+						</div>
+
+						<div class="portfolio-item__content">
+							<div class="portfolio-item__info">
+								<h2 class="portfolio-item__title">Logofolio</h2>
+								<p class="portfolio-item__subtitle">Création de logo</p>
+							</div>
+						</div>
+
+					</a>
+
+				</div>
+
+				
+
+				<div class="portfolio-item">
+
+					<a class="portfolio-item__link" href="/fr/travail/carlos-and-pepes/">
+
+						<div class="portfolio-item__image">
+							
+								<img src="/images/portfolio/preview/carlos/front.png" class="lazy front carlos" alt="Carlos and Pepes front" />
+								<img src="/images/portfolio/preview/carlos/back.jpg" class="lazy back" alt="Carlos and Pepes background" />
+							
+						</div>
+
+						<div class="portfolio-item__content">
+							<div class="portfolio-item__info">
+								<h2 class="portfolio-item__title">Carlos and Pepes</h2>
+								<p class="portfolio-item__subtitle">affiches et flyers</p>
+							</div>
+						</div>
+
+					</a>
+
+				</div>
+
+				
+
+			</div>
+		</div>
+
+		<div class="column" id="portfolio2">
+			<div class="flexy_order">
+
+				
+
+				<div class="portfolio-item">
+
+					<a class="portfolio-item__link" href="/fr/travail/la-belle-et-la-boeuf/">
+
+						<div class="portfolio-item__image">
+							
+								<img src="/images/portfolio/preview/belle_et_boeuf/front.png" class="lazy front belle_et_boeuf" alt="La Belle et La Boeuf front" />
+								<img src="/images/portfolio/preview/belle_et_boeuf/back.jpg" class="lazy back" alt="La Belle et La Boeuf background" />
+							
+						</div>
+
+						<div class="portfolio-item__content">
+							<div class="portfolio-item__info">
+								<h2 class="portfolio-item__title">La Belle et La Boeuf</h2>
+								<p class="portfolio-item__subtitle">Design imprimé et identité</p>
+							</div>
+						</div>
+
+					</a>
+
+				</div>
+
+				
+
+				<div class="portfolio-item">
+
+					<a class="portfolio-item__link" href="/fr/travail/bacaro/">
+
+						<div class="portfolio-item__image">
+							
+								<img src="/images/portfolio/preview/bacaro/front.png" class="lazy front bacaro" alt="Bacaro Pizzeria front" />
+								<img src="/images/portfolio/preview/bacaro/back.jpg" class="lazy back" alt="Bacaro Pizzeria background" />
+							
+						</div>
+
+						<div class="portfolio-item__content">
+							<div class="portfolio-item__info">
+								<h2 class="portfolio-item__title">Bacaro Pizzeria</h2>
+								<p class="portfolio-item__subtitle">Design imprimé et identité</p>
+							</div>
+						</div>
+
+					</a>
+
+				</div>
+
+				
+
+				<div class="portfolio-item">
+
+					<a class="portfolio-item__link" href="/fr/travail/beta-bloc/">
+
+						<div class="portfolio-item__image">
+							
+								<img src="/images/portfolio/preview/beta_bloc/front.png" class="lazy front beta_bloc" alt="Beta Bloc front" />
+								<img src="/images/portfolio/preview/beta_bloc/back.jpg" class="lazy back" alt="Beta Bloc background" />
+							
+						</div>
+
+						<div class="portfolio-item__content">
+							<div class="portfolio-item__info">
+								<h2 class="portfolio-item__title">Beta Bloc</h2>
+								<p class="portfolio-item__subtitle">Création d'affiches</p>
+							</div>
+						</div>
+
+					</a>
+
+				</div>
+
+				
+
+				<div class="portfolio-item">
+
+					<a class="portfolio-item__link" href="/fr/travail/mcgill-university/">
+
+						<div class="portfolio-item__image">
+							
+								<img src="/images/portfolio/preview/mcgill/front.png" class="lazy front mcgill" alt="McGill University front" />
+								<img src="/images/portfolio/preview/mcgill/back.jpg" class="lazy back" alt="McGill University background" />
+							
+						</div>
+
+						<div class="portfolio-item__content">
+							<div class="portfolio-item__info">
+								<h2 class="portfolio-item__title">McGill University</h2>
+								<p class="portfolio-item__subtitle">Logo et brochure</p>
+							</div>
+						</div>
+
+					</a>
+
+				</div>
+
+				
+
+				<div class="portfolio-item">
+
+					<a class="portfolio-item__link" href="/fr/travail/logofolio/">
+
+						<div class="portfolio-item__image">
+							
+								<img src="/images/portfolio/quasar/quasar1.jpg" alt="Logofolio" />
+							
+						</div>
+
+						<div class="portfolio-item__content">
+							<div class="portfolio-item__info">
+								<h2 class="portfolio-item__title">Logofolio</h2>
+								<p class="portfolio-item__subtitle">Création de logo</p>
+							</div>
+						</div>
+
+					</a>
+
+				</div>
+
+				
+
+				<div class="portfolio-item">
+
+					<a class="portfolio-item__link" href="/fr/travail/carlos-and-pepes/">
+
+						<div class="portfolio-item__image">
+							
+								<img src="/images/portfolio/preview/carlos/front.png" class="lazy front carlos" alt="Carlos and Pepes front" />
+								<img src="/images/portfolio/preview/carlos/back.jpg" class="lazy back" alt="Carlos and Pepes background" />
+							
+						</div>
+
+						<div class="portfolio-item__content">
+							<div class="portfolio-item__info">
+								<h2 class="portfolio-item__title">Carlos and Pepes</h2>
+								<p class="portfolio-item__subtitle">affiches et flyers</p>
+							</div>
+						</div>
+
+					</a>
+
+				</div>
+
+				
+			</div>
+		</div>
+	</div>
+
+</section>
+
+:ET
