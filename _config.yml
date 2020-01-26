@@ -99,7 +99,6 @@ grid_columns:
 
 assets:
   compression: true
-  gzip: true
   
   compress:
     css: true
