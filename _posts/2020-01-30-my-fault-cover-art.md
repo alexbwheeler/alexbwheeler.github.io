@@ -23,4 +23,4 @@ My direction was to have c47eb being pickup up by a ufo. How I did that was up t
 ![UFO Inspiration](/images/blog/post7/ufo-inspo.jpg)
 
 I started the cover with a photo of [C47eb](https://open.spotify.com/artist/7ikcvK3cd6JrXFfyVMwbHV)  and a general direction, and the rest was up to me.
-For most project I work on I get my images from [UnSplash.com](https://unsplash.com/) because of the quality of the photography and the CC copyright policy. That was the case for this project as well.
+For most projects I work on I get my images from [UnSplash](https://unsplash.com/) because of the quality of the photography and the CC copyright policy. That was the case for this project as well.
