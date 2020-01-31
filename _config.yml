@@ -101,7 +101,6 @@ assets:
   compression: true
   
   compress:
-    css: true
     js: uglifier
     
   features:

@@ -1,5 +1,5 @@
-{% assign maxRelated = 4 %}
-{% assign minCommonTags =  2 %}
+{% assign maxRelated = 3 %}
+{% assign minCommonTags =  3 %}
 {% assign maxRelatedCounter = 0 %}
 
 {% for post in site.posts %}
@@ -22,6 +22,7 @@
 {% endfor %}
 
 {% if maxRelatedCounter >= 1 %}
+{% assign maxRelatedCounter = 0 %}
 
     <div class="related_posts">
 
@@ -56,9 +57,11 @@
             </article>
         
         {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+
         {% if maxRelatedCounter >= maxRelated %}
             {% break %}
         {% endif %}
+
         {% endif %}
 
     {% endfor %}

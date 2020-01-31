@@ -55,6 +55,10 @@ $break-desktop: 1600px;
 // Usage: @include mq(tabletp) {}
 
 @mixin mq($media) {
+  @if $media == phone {
+    @media only screen and (max-width: $break-phonel) { @content; }
+  }
+
 	@if $media == phonel {
 		@media only screen and (min-width: $break-phonel) { @content; }
 	}

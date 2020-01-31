@@ -5,6 +5,8 @@
 .manifesto {
 
 	h2 {
+		font-size: $h1-small;
+
 		@include mq(tabletp) {
 			font-size: $h1-medium;
 		}
@@ -238,6 +240,10 @@
 
 	h2 {
 		@include transition(all .2s ease);
+
+		@include mq(phone) {
+			font-size: 35px;
+		}
 	}
 
 	&>div {

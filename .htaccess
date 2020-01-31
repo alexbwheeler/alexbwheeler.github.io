@@ -69,5 +69,5 @@ ExpiresByType font/woff2 "access plus 1 year"
 ExpiresByType image/svg+xml "access plus 1 year"
 
 <FilesMatch ".(ico|pdf|flv|jpg|jpeg|webp|png|gif|swf|svg|woff|woff2)$">
-    Header set Cache-Control "max-age=604800, public"
+    Header set Cache-Control "max-age=31536000, public"
 </FilesMatch>

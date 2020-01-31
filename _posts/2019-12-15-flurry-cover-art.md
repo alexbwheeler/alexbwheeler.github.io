@@ -10,6 +10,7 @@ tags:
 - cover art
 - music
 - client
+- c47eb
 ---
 
 ![](/images/blog/post3/cover.jpg)
