@@ -5,7 +5,7 @@ date: '2019-12-01 00:00:00 +0000'
 featured_image: "/images/blog/post1/cover.jpg"
 description: Personal logo creation process its evolution over the years.
 categories:
-- Branding
+- branding
 tags:
 - personal project
 - logo

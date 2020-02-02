@@ -3,11 +3,11 @@ title: 'Cover Art'
 
 subtitle: 'Graphic Design'
 
-date: 2018-06-30 00:00:06
+date: 2018-06-30 00:00:00
 
 description: Unique cover art for various artists.
 
-featured_image: '/images/portfolio/cover_art/i-miss-you.jpg'
+featured_image: '/images/portfolio/cover_art/i-miss-you-cover-art.jpg'
 
 preview: cover_art
 
@@ -17,8 +17,8 @@ lang: en
 ---
 
 <div class="gallery" data-columns="2">
-	<img src="/images/portfolio/cover_art/numbah.jpg">
-	<img src="/images/portfolio/cover_art/i-miss-you.jpg">
-	<img src="/images/portfolio/cover_art/flurry.jpg">
-	<img src="/images/portfolio/cover_art/my-fault.jpg">
+	<img src="/images/portfolio/cover_art/my-fault-cover-art.jpg" alt="My Fault Cover Art">
+	<img src="/images/portfolio/cover_art/flurry-cover-art.jpg" alt="Flurry Cover Art">
+	<img src="/images/portfolio/cover_art/i-miss-you-cover-art.jpg" alt="I Miss You Cover Art">
+	<img src="/images/portfolio/cover_art/numbah-cover-art.jpg" alt="Numbah Cover Art">
 </div>

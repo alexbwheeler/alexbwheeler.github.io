@@ -6,7 +6,7 @@ featured_image: '/images/blog/post5/cover.jpg'
 
 description: Personal logo for Yours Truly Music
 
-categories: [Branding]
+categories: [branding]
 tags: [client, logo, sketch, branding]
 ---
 

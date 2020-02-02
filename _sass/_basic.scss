@@ -185,7 +185,6 @@ p, ul, ol, a {
 	margin-top: 15px;
 	font-size: $p-small;
 	font-weight: $p-weight;
-	line-height: $p-lineheight;
 	letter-spacing: $p-spacing;
 
 	@include mq(tabletp) {
@@ -207,6 +206,7 @@ p, ul, ol, a {
 
 p, ul, ol {
 	max-width: $p-maxwidth;
+	line-height: $p-lineheight;
 }
 
 ul, ol {
@@ -261,7 +261,7 @@ a {
 	}
 }
 
-.button {
+.button, a.button {
 	display: inline-block;
 	padding: 9px 10px 10px;
 	line-height: 1;

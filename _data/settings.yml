@@ -1,5 +1,5 @@
 basic_settings:
-  site_title: Alex Wheeler
+  site_title: Alex Wheeler – Graphic & Web Design
   favicon_image: /images/favicon.png
 
 header_settings:
@@ -51,8 +51,8 @@ color_settings:
   background_color: '#ffffff'
   background_alt_color: '#f4f5f6'
   text_dark_color: 'black'
-  text_medium_color: 'rgba(0,0,0,0.6)'
-  text_light_color: 'rgba(0,0,0,0.5)'
+  text_medium_color: 'rgba(0,0,0,0.8)'
+  text_light_color: 'rgba(0,0,0,0.4)'
   accent_color: '#229aff'
   border_color: '#dddddd'
   overlay_background_color: '#F2784B'

@@ -1,5 +1,6 @@
 ---
 layout: default
+type: blog
 ---
 
 <section class="intro blog-header">
@@ -22,7 +23,7 @@ layout: default
 
 					<div>
 						<img src="{{ post.featured_image  }}" alt="{{ post.title }}">
-						<p class="categories" data-aos="fade-left" data-aos-once="true">{{ post.categories }}</p>
+						<p class="categories" data-aos="fade-left" data-aos-once="true"><a href="/blog/{{ post.categories }}">{{ post.categories }}</a></p>
 					</div>
 
 					<h2>{{ post.title }}</h2>

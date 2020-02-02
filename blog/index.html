@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Blog
+description: Alex Wheeler Design Blog. New client work, personal projects, case studies and more! Experiment and inspire.
+type: blog
 
 pagination: 
   enabled: true
@@ -25,7 +27,7 @@ pagination:
 
 					<div>
 						<img src="{{ post.featured_image  }}" alt="{{ post.title }}">
-						<p class="categories" data-aos="fade-left" data-aos-once="true">{{ post.categories }}</p>
+						<p class="categories" data-aos="fade-left" data-aos-once="true"><a href="/blog/{{ post.categories }}">{{ post.categories }}</a></p>
 					</div>
 
 					<h2>{{ post.title }}</h2>

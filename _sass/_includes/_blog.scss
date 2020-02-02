@@ -29,6 +29,10 @@
 
 // Catagories
 
+section.intro.post p {
+	text-transform: lowercase;
+}
+
 .post_catagories {
 
 	padding-top: $menu-padding-small;
@@ -68,7 +72,7 @@
 				font-weight: 200;
 
 				@mixin mq($media) {
-					color: rgba(0,0,0,0.5);
+					color: $text-light-color;
 				}
 			}
 		}
@@ -110,11 +114,14 @@
 					display: block;
 
 					border: 1px solid rgba(0,0,0,0.1);
+					a {color: $text-light-color;}
+
+					line-height: 1em;
 
 					position: absolute;
 					right: -5px;
 					bottom: 20px;
-					padding: 5px 15px;
+					padding: 8px 15px;
 					background: white;
 				}
 
@@ -152,7 +159,7 @@
 		margin-top: 5px;
 
 		font-style: italic;
-		color: $text-medium-color;
+		color: $text-light-color;
 	}
 
 }

@@ -5,7 +5,7 @@ date: '2019-12-15 00:00:00 +0000'
 featured_image: "/images/blog/post3/cover.jpg"
 description: Cover art for 'Flurry' by Montreal rapper C47eb
 categories:
-- Graphic
+- graphic
 tags:
 - cover art
 - music
