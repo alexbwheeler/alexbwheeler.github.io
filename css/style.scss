@@ -1,16 +1,13 @@
 ---
 ---
 
-// - - - - - - - - - - Foundations
+// Breakpoints
 
-
-@import "_reset";
-@import "_mixins";
-@import "_plugins";
-
-
-// - - - - - - - - - - Variables
-
+$break-phonel: {{ site.data.settings.breakpoints.phonel }};
+$break-tabletp: {{ site.data.settings.breakpoints.tabletp }};
+$break-tabletl: {{ site.data.settings.breakpoints.tabletl }};
+$break-laptop: {{ site.data.settings.breakpoints.laptop }};
+$break-desktop: {{ site.data.settings.breakpoints.desktop }};
 
 // Colors
 
@@ -140,7 +137,9 @@ $footer-logo-width: {{ site.data.settings.footer_settings.logo_width }}px;
 $overlay-opacity: {{ site.data.settings.grid_settings.overlay_opacity }};
 $grid-spacing: {{ site.data.settings.grid_settings.grid_spacing }}px;
 
-
+@import "_reset";
+@import "_mixins";
+@import "_plugins";
 
 // - - - - - - - - - - Global styles
 

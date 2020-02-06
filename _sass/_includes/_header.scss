@@ -12,7 +12,7 @@
 	position: fixed;
 	z-index: 991;
 	top: -140px;
-	background: white;
+	//background: white;
 
 	padding: $menu-padding-small 0;
 
@@ -26,10 +26,15 @@
 
 	.menu__wrap .header__logo {
 		width: $logo-width;
-		margin: 15px 0 0 30px;
+		position: fixed;
+		visibility: hidden;
+		transition: visibility 0.1s 0.5s;
+		top: 15px;
+		left: 30px;
 
 		@include mq(tabletp) {
-			margin: 23px 0 0 2.5vw;
+			top: 23px;
+			left: 5vw;
 		}
 
 		@include mq(tabletl) {
@@ -76,7 +81,7 @@
 	}
 }
 
-.menu__toggle {
+.menu_toggle {
 	position: absolute;
 	z-index: 100;
 	top: 50%;
@@ -97,18 +102,20 @@
 	}
 }
 
-.menu__toggle__icon {
+.menu_toggle_icon {
 	float: right;
 	position: relative;
 	width: 24px;
 	height: 20px;
 	margin-left: 8px;
 
+	@include animation ('invisible 0.5s, menu-icon 0.3s ease 0.5s;');
+
 	span, span:before, span:after {
 		content: '';
 		position: absolute;
 		top: 8px;
-		left: 0;
+		right: 0;
 		width: 100%;
 		height: 2px;
 		@include transition(all 0.1s);
@@ -117,14 +124,25 @@
 
 	span:before {
 		top: -8px;
+		
+	}
+
+	span {
+		//visibility: hidden;
 	}
 
 	span:after {
 		top: 8px;
+		width: 80%;
 	}
 }
 
-.menu--open .menu__toggle__icon {
+@include keyframes (menu-icon) {
+	0% {width: 0;}
+	100% {width: 24px;}
+}
+
+.menu--open .menu_toggle_icon {
 
 	span:before, span:after {
 		background: black !important;
@@ -144,7 +162,9 @@
 	}
 
 	span:after {
+		display: block;
 		@include rotate(-45);
+		width: 100%;
 	}
 }
 
@@ -152,18 +172,25 @@
 	position: fixed;
 	z-index: 90;
 	top: 0;
-	right: 0;
+	right: -100vw;
 	bottom: 0;
-	left: 0;
 	background: white;
 	overflow: auto;
-
-	opacity: 0;
+	height: 100vh;
+	width: 100vw;
+	
 	@include transition(all 0.3s ease);
 
 	@include mq(tabletl) {
+		height: initial;
 		position: relative;
 		background: transparent;
+
+		right: 0;
+		left: 0;
+		height: initial;
+		width: initial;
+
 		overflow: visible;
 		opacity: 1;
 		@include transition(none);
@@ -185,12 +212,30 @@
 	}
 }
 
-.menu--open .menu__wrap {
-	opacity: 1;
-	height: 100vh;
+.menu--open {
+	.menu__wrap {
+		opacity: 1;
+		right:0;
+		height: 100vh;
 
-	.socials {
-		display: block;
+		.socials {
+			display: block;
+		}
+
+		.header__logo {
+			visibility: visible;
+			transition: none;
+		}
+	}
+
+	li.menu__list__item {
+		top: 0;
+		opacity: 1;
+
+		&:nth-child(1) { @include transition(all 0.5s ease 0.3s); }
+		&:nth-child(2) { @include transition(all 0.5s ease 0.4s); }
+		&:nth-child(3) { @include transition(all 0.5s ease 0.5s); }
+		&:nth-child(4) { @include transition(all 0.5s ease 0.6s); }
 	}
 }
 
@@ -229,9 +274,19 @@ $menu_show_delay6: 0.8s;
 	text-align: center;
 	max-width: 100vw;
 
+	position: relative;
+	top: 10px;
+	opacity: 0;
+
+	@include transition(all 0.3s ease);
+
 	@include mq(tabletl) {
 		display: inline-block;
 		margin-left: 20px;
+
+		opacity: 1;
+		top: 0;
+		padding: 0 0 3px;
 
 		&#lang {
 			width: 30px;
@@ -295,7 +350,7 @@ $menu_show_delay6: 0.8s;
 	padding: 2px 5px;
 
 	&:hover {
-		color: $overlay-accent-color;
+		color: black;
 	}
 
 	@include mq(tabletl) {
@@ -347,9 +402,27 @@ $menu_show_delay6: 0.8s;
 	@include mq(laptop) {
 		font-size: $menu-large;
 	}
+
+	&:after {
+		content: '';
+	    position: absolute;
+	    top: 50%;
+	    left: -110%;
+	    width: 0;
+	    height: 2px;
+
+	    @include blue-gradient;
+	    transition: all 0.3s ease;
+	}
+
+	.menu--open &.active-link:after {
+		width: 100%;
+		transition: all 0.2s ease 0.9s;
+	}
 	
 	&.active-link {
-		@include blue;
+		//@include blue;
+		position: relative;
 
 		@include mq(tabletl) {
 			@include no-blue;
@@ -359,24 +432,4 @@ $menu_show_delay6: 0.8s;
 	}
 }
 
-li.menu__list__item {
-	position: relative;
-	top: 10px;
-	opacity: 0;
 
-	@include mq(tabletl) {
-		opacity: 1;
-		top: 0;
-		padding: 0 0 3px;
-	}
-}
-
-.menu--open li.menu__list__item {
-	top: 0;
-	opacity: 1;
-
-	&:nth-child(1) { @include transition(all 0.5s ease 0.3s); }
-	&:nth-child(2) { @include transition(all 0.5s ease 0.4s); }
-	&:nth-child(3) { @include transition(all 0.5s ease 0.5s); }
-	&:nth-child(4) { @include transition(all 0.5s ease 0.6s); }
-}

@@ -138,7 +138,15 @@
 		$('.page__content').find('img:first').imagesLoaded( function() {
 	
 			// Portfolio grid layout
-			$('.portfolio-wrap').imagesLoaded( function() {
+			$('.portfolio').imagesLoaded( function() {
+				$('.portfolio-wrap').masonry({
+					itemSelector: '.portfolio-item',
+					transitionDuration: 0
+				});
+			});
+
+			// Portfolio grid layout
+			$('.portfolio').imagesLoaded( function() {
 				$('.portfolio-wrap').masonry({
 					itemSelector: '.portfolio-item',
 					transitionDuration: 0
@@ -167,7 +175,22 @@
 		// Switch active link states
 		$('.active-link').removeClass('active-link');
 
-		$('a[href="' + navTarget + '"]').addClass('active-link');
+		// $('a[href="' + navTarget + '"]').addClass('active-link');
+
+		// str.includes("world");
+
+		for (var i = 0; i < document.links.length; i++) {
+			var link = document.links[i];
+			var linkTarget = document.links[i].href;
+
+		    if (linkTarget == document.URL || linkTarget + "/" == document.URL) {
+		        document.links[i].classList.add('active-link');
+		    }
+
+		    if (link.classList.contains("menu__list__item__link") && document.URL.includes(linkTarget)) {
+		        document.links[i].classList.add('active-link');
+		    }
+		}
 
 
 

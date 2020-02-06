@@ -4,12 +4,6 @@
 // - - - - - - - - - Mixins - - - - - - - - - //
 //                                            //
 
-$break-phonel: 480px;
-$break-tabletp: 768px;
-$break-tabletl: 1024px;
-$break-laptop: 1220px;
-$break-desktop: 1600px;
-
 @mixin wide_wrap{
   margin-left: auto; margin-right: auto;
   padding-left: 30px; padding-right: 30px;
@@ -17,12 +11,12 @@ $break-desktop: 1600px;
   max-width: none;
 
   @include mq(tabletp) {
-    width: 95%;
+    width: 90%;
     padding-right: 0; padding-left: 0;
   }
 
   @include mq(tabletl) {
-    width: 95%;
+    width: 90%;
   }
 
   @include mq(laptop) {
@@ -37,12 +31,12 @@ $break-desktop: 1600px;
   max-width: 1300px;
 
   @include mq(tabletp) {
-    width: 95%;
+    width: 90%;
     padding-right: 0; padding-left: 0;
   }
 
   @include mq(tabletl) {
-    width: 95%;
+    width: 90%;
   }
 
   @include mq(laptop) {
@@ -58,7 +52,6 @@ $break-desktop: 1600px;
   @if $media == phone {
     @media only screen and (max-width: $break-phonel) { @content; }
   }
-
 	@if $media == phonel {
 		@media only screen and (min-width: $break-phonel) { @content; }
 	}
@@ -74,6 +67,12 @@ $break-desktop: 1600px;
 	@else if $media == desktop {
 		@media only screen and (min-width: $break-desktop) { @content; }
 	}
+  @else if $media == landscape {
+    @media only screen and (orientation: landscape) { @content; }
+  }
+  @else if $media == portrait {
+    @media only screen and (orientation: portrait) { @content; }
+  }
 }
 
 
@@ -87,10 +86,6 @@ $break-desktop: 1600px;
   -o-transition: $args;
   transition: $args;
 }
-
-
-// - - - Clip-path - - - ///
-
 
 
 // - - - Animations - - - //
@@ -184,9 +179,8 @@ $break-desktop: 1600px;
 
 @mixin blue{
   background: rgb(94,71,204);
-  background: /*url("../images/noise.png"),*/ linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
-  background-size: /*cover,*/ 200% 200%;
-  //background-blend-mode: overlay, normal;
+  background: linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
+  background-size: 200% 200%;
 
   background-clip: text;
   -webkit-background-clip: text;
@@ -195,6 +189,24 @@ $break-desktop: 1600px;
   -webkit-text-fill-color: transparent;
 
   @include animation('gradient_wash 5s ease infinite;');
+}
+
+@mixin blue-gradient {
+  background: rgb(94,71,204);
+  background: linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
+  background-size: 200% 200%;
+
+  @include animation('gradient_wash_background 10s ease infinite;');
+}
+
+@mixin blue-background {
+  background: rgb(94,71,204);
+  background: url("../images/noise.png"), linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
+  background-size: auto, 200% 200%;
+  background-repeat: repeat, no-repeat;
+  background-blend-mode: overlay, normal;
+
+  @include animation('gradient_wash_background 10s ease infinite;');
 }
 
 @mixin no-blue{

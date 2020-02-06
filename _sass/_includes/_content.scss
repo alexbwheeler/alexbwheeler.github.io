@@ -28,13 +28,7 @@
 }
 
 .blue-background {
-	background: rgb(94,71,204);
-  	background: url("../images/noise.png"), linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
- 	background-size: auto, 200% 200%;
- 	background-repeat: repeat, no-repeat;
- 	background-blend-mode: overlay, normal;
-
- 	@include animation('gradient_wash_backgound 10s ease infinite;');
+	@include blue-background;
 }
 
 @include keyframes(gradient_wash) {
@@ -43,10 +37,15 @@
 	100% {background-position: 0% 50%}
 }
 
-@include keyframes(gradient_wash_backgound) {
+@include keyframes(gradient_wash_background) {
 	0% {background-position: 0 0, 0% 50%}
 	50% {background-position: 0 0, 100% 50%}
 	100% {background-position: 0 0, 0% 50%}
+}
+
+@include keyframes(invisible) {
+  0% { visibility: hidden; }
+  100% { visibility: hidden; }
 }
 
 .double {

@@ -10,21 +10,53 @@ lang: en
 ref: index
 ---
 
-<section class="splash slide1 noWebp">
+<section class="splash">
 
-	<div class="wrap" data-aos="fade-right" data-aos-delay="900">
-		<h1>Graphic & Web Design</h1>
-		<h2 class="blue">catch eyes and get attention</h2>
+	<div class="graphic_wrap">
+		<picture>
+			<source srcset="images/splash/splash-large-laptop-border.png" media="(min-width: {{ site.data.settings.breakpoints.laptop }}) and (orientation: landscape)">
+			<source srcset="images/splash/splash-tabletl-laptop-border.png" media="(orientation: landscape)">
+			<source srcset="images/splash/splash-tabletp-laptop-border.png" media="(min-width: {{ site.data.settings.breakpoints.phonel }}), (max-height: 600px)">
+			<img src="images/splash/splash-mobile-laptop-border.png" class="graphic border" alt="splash laptop border">
+		</picture>
+
+		<div class="background-gradient">
+			<picture>
+				<source srcset="images/splash/splash-large-laptop-border-white.png" media="(min-width: {{ site.data.settings.breakpoints.laptop }}) and (orientation: landscape)">
+				<source srcset="images/splash/splash-tabletl-laptop-border-white.png" media="(orientation: landscape)">
+				<source srcset="images/splash/splash-tabletp-laptop-border-white.png" media="(min-width: {{ site.data.settings.breakpoints.phonel }}), (max-height: 600px)">
+				<img src="images/splash/splash-mobile-laptop-border-white.png" class="graphic" alt="splash laptop border white">
+			</picture>
+		</div>
+
+		<picture>
+			<source srcset="images/splash/splash-large-laptop.png" media="(min-width: {{ site.data.settings.breakpoints.laptop }}) and (orientation: landscape)">
+			<source srcset="images/splash/splash-tabletl-laptop.png" media="(orientation: landscape)">
+			<source srcset="images/splash/splash-tabletp-laptop.png" media="(min-width: {{ site.data.settings.breakpoints.phonel }}), (max-height: 600px)">
+			<img src="images/splash/splash-mobile-laptop.png" class="graphic laptop tilt" alt="splash laptop">
+		</picture>
+
+		<picture>
+			<source srcset="images/splash/splash-large-book.png" media="(min-width: {{ site.data.settings.breakpoints.laptop }}) and (orientation: landscape)">
+			<source srcset="images/splash/splash-tabletl-book.png" media="(orientation: landscape)">
+			<source srcset="images/splash/splash-tabletp-book.png" media="(min-width: {{ site.data.settings.breakpoints.phonel }}), (max-height: 600px)">
+			<img src="images/splash/splash-mobile-book.png" class="graphic book" alt="splash book">
+		</picture>
 	</div>
 
-	<a href="/work"class="showcase_back showcase"><span>Showcase front</span></a>
-	<a href="/work" class="showcase_front showcase"><span>Showcase back</span></a>
-
-	<div class="showcase-switch">
-		<div class="arrow back" id="showcase_previous"></div>
-		<div class="arrow next" id="showcase_next"></div>
+	<div class="title">
+		<h1><span>Graphic</span> <span>& Web</span> <span>Design</span></h1>
+		<h2>catch eyes and get attention</h2>
 	</div>
 
+	<svg id="arrow" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.5 3.31">
+		<defs>
+			<style>.cls-1{fill:none;stroke:#5c63ad;stroke-miterlimit:10;stroke-width:0.41px;}</style>
+		</defs>
+		<title>arrow</title>
+		<polyline class="cls-1" points="0.12 0.17 4.25 3.06 8.38 0.17"/>
+	</svg>
+	
 </section>
 
 <section class="narrow_wrap align_center about manifesto animate" data-aos="fade-up">

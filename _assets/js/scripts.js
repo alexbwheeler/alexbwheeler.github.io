@@ -3,10 +3,10 @@
 (function ($) {
 	'use strict';
 
-	// play showcase slideshow once showcase images have loaded
-	$('#preload_splash').imagesLoaded( { background: true }, function() {
-		splashAutoplay();
-	});
+	// // play showcase slideshow once showcase images have loaded
+	// $('#preload_splash').imagesLoaded( { background: true }, function() {
+	// 	splashAutoplay();
+	// });
 
 	pageLoad();
 
@@ -18,9 +18,6 @@
 		        $(".noWebp").removeClass("noWebp");
 		    }
 		});
-
-		// Fade-ins
-		//AOS.init();
 
 		if (window.scrollY < 100) {
 			$( 'body, html' ).animate({
@@ -34,6 +31,11 @@
 		var lazyLoadInstance = new LazyLoad({
 		    elements_selector: ".lazy",
 		});
+
+		$('.splash .graphic_wrap').imagesLoaded( function() {
+		  console.log ("images loaded");
+		  $(".graphic_wrap").addClass("loaded");
+		});
 	
 		// Tilt
 		if (document.documentElement.clientWidth > 768) {
@@ -41,12 +43,12 @@
 			VanillaTilt.init(document.querySelectorAll(".portfolio-item__image img.front"));
 		}
 
-		splashTime = 1;
+		// splashTime = 1;
 
-		if(document.getElementById("showcase_previous")!=null){
-			document.getElementById("showcase_next").onclick = function() {showcase_next() };
-			document.getElementById("showcase_previous").onclick = function() {showcase_previous()};
-		}
+		// if(document.getElementById("showcase_previous")!=null){
+		// 	document.getElementById("showcase_next").onclick = function() {showcase_next() };
+		// 	document.getElementById("showcase_previous").onclick = function() {showcase_previous()};
+		// }
 
 		setTimeout(function(){ 
 			$("#lang").load(location.href + " #lang>*", "");
@@ -106,6 +108,8 @@
 	$( "img.header__logo__img" ).mouseover(function() {
 		document.getElementById('site_logo').src='/images/logo-black-wipe.gif'
 	});
+
+	/*
 
 	// - - - Auto play splash slideshow - - - //
 	var splashTime = 1;
@@ -181,7 +185,7 @@
 			$(".splash").removeClass("slide4");
 		}
 	}
-
+*/
 
 	// - - - Header hide - - - //
 
@@ -306,5 +310,35 @@ function WebpIsSupported(callback){
         });
     });
 }
+
+// --- HTML Store Scroll Position --- //
+
+// The debounce function receives our function as a parameter
+const debounce = (fn) => {
+  // This holds the requestAnimationFrame reference, so we can cancel it if we wish
+  let frame;
+  // The debounce function returns a new function that can receive a variable number of arguments
+  return (...params) => {
+    // If the frame variable has been defined, clear it now, and queue for next frame
+    if (frame) { 
+      cancelAnimationFrame(frame);
+    }
+    // Queue our function call for the next frame
+    frame = requestAnimationFrame(() => {
+      // Call our function and pass any params we received
+      fn(...params);
+    });
+  } 
+};
+
+// Reads out the scroll position and stores it in the data attribute
+// so we can use it in our stylesheets
+const storeScroll = () => {
+  document.documentElement.dataset.scroll = window.scrollY;
+}
+// Listen for new scroll events, here we debounce our `storeScroll` function
+document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+// Update scroll position for first time
+storeScroll();
 
 

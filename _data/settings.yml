@@ -40,6 +40,13 @@ index:
   en:
   fr: fr/
 
+breakpoints:
+  desktop: 1600px
+  laptop: 1220px
+  tabletl: 1024px
+  tabletp: 768px
+  phonel: 480px
+
 contact_settings:
   form_action: 'https://app.99inbound.com/api/e/w2_U9VE7'
   form_action_fr: 'https://app.99inbound.com/api/e/xAPVnAaV'
