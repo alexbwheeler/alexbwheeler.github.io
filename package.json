@@ -1,0 +1,16 @@
+{
+  "name": "uncss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ubuild": "jekyll build && node build.js",
+    "userve": "jekyll build && node build.js && jekyll serve --skip-initial-build "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^5.0.10",
+    "uncss": "^0.12.1"
+  }
+}

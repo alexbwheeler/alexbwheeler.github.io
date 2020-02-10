@@ -57,11 +57,14 @@ contact_settings:
 color_settings:
   background_color: '#ffffff'
   background_alt_color: '#f4f5f6'
-  text_dark_color: 'black'
-  text_medium_color: 'rgba(0,0,0,0.8)'
+
+  text_dark_color: 'rgba(0,0,0,0.9)'
+  text_medium_color: 'rgba(0,0,0,0.7)'
   text_light_color: 'rgba(0,0,0,0.4)'
+
   accent_color: '#229aff'
   border_color: '#dddddd'
+
   overlay_background_color: '#F2784B'
   overlay_text_color: '#ffffff'
   overlay_accent_color: '#229aff'
@@ -69,7 +72,7 @@ color_settings:
 
 font_settings:
   font_embed:
-  title_font: '"Playfair Display", sans-serif'
+  title_font: '"Brandon Grotesque", sans-serif'
   body_font: '"Roboto Mono", sans-serif'
   regular_weight: 300
   bold_weight: 400
@@ -108,7 +111,7 @@ font_settings:
     small_size: 45
     medium_size: 75
     large_size: 100
-    weight: 900
+    weight: 700
     letter_spacing: -0.02
     line_height: 1.2
 
@@ -116,7 +119,7 @@ font_settings:
     small_size: 30
     medium_size: 32
     large_size: 50
-    weight: 700
+    weight: 600
     letter_spacing: 0
     line_height: 1
 

@@ -5,7 +5,7 @@
 .manifesto {
 
 	h2 {
-		font-size: $h1-small;
+		font-size: $h1-medium;
 
 		@include mq(tabletp) {
 			font-size: $h1-medium;
@@ -19,31 +19,6 @@
 
 .about {
 
-	&.visible, &.visible * {
-		opacity: 1;
-
-		h3, p {
-			top: 0;
-		}
-	}
-
-	h3, p {
-		@include transition(all 0.5s ease 1s);
-	}
-
-	span:nth-child(1) {
-		@include transition(all 1s ease);
-	}
-
-	span:nth-child(2) {
-		@include transition(all 1s ease 0.2s);
-	}
-
-	span.myName {
-		@include transition(all 1s ease 0.4s);
-		@include blue;
-	}
-
 	padding-top: 0;
 	margin-bottom: 10vmin;
 	margin-top: 10vmin;
@@ -53,29 +28,57 @@
 		margin-bottom: 20vmin;
 	}
 
+	&.visible, &.visible * {
+		opacity: 1;
+
+		h3, p {
+			transform: translateY(0);
+		}
+	}
+
+	h3, p {
+		@include transition(all 0.5s ease 1s);
+	}
+
 	h2 {
 		text-align:center;
 
 		span {
 			opacity: 0;
 		}
+
+		span:nth-child(1) {
+			@include transition(all 1s ease);
+		}
+
+		span:nth-child(2) {
+			@include transition(all 1s ease 0.2s);
+		}
+
+		span.myName {
+			@include transition(all 1s ease 0.4s);
+			@include blue;
+		}
 	}
 
 	h3, p {
-		position: relative;
-		top: 10px;
+		transform: translateY(10px);
+		opacity: 0;
 	}
 
 	h3 {
 		margin-top: 0.2em;
-		opacity: 0;
 	}
 
 	p {
 		margin: 0 auto;
 		margin-top: 1em;
 
-		opacity: 0;
+		@include mq (tabletp) {
+			span {
+				display: block;
+			}
+		}
 	}
 
 	.button {

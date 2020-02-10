@@ -106,5 +106,12 @@ assets:
   features:
     liquid: true
 
+exclude:
+  - 'node_modules'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'build.js'
+  - 'package-lock.json'
+  - 'package.json'
 
   

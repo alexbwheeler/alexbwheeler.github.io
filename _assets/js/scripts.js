@@ -13,17 +13,13 @@
 	// On page load
 	function pageLoad() {
 
-		WebpIsSupported(function(isSupported){
-		    if(isSupported){
-		        $(".noWebp").removeClass("noWebp");
-		    }
-		});
-
 		if (window.scrollY < 100) {
 			$( 'body, html' ).animate({
 				scrollTop: 0
 			}, 300);
 		}
+
+		$('.animate').removeClass('visible');
 
 		MyIntersectionObserver();
 
@@ -31,12 +27,7 @@
 		var lazyLoadInstance = new LazyLoad({
 		    elements_selector: ".lazy",
 		});
-
-		$('.splash .graphic_wrap').imagesLoaded( function() {
-		  console.log ("images loaded");
-		  $(".graphic_wrap").addClass("loaded");
-		});
-	
+		
 		// Tilt
 		if (document.documentElement.clientWidth > 768) {
 			VanillaTilt.init(document.querySelectorAll(".say_hi>div"));
@@ -61,7 +52,6 @@
 			pageLoad();
 		}, 500);
 	});
-
 
 	$(document).on("click", "a", function(){
 	    setTimeout(function(){
@@ -90,19 +80,6 @@
 			}, 100);
 		}, 500);
 	});
-
-
-
-	// Parallax Scrolling Portfolio
-	$(window).bind('scroll',function(){
-	    parallaxScroll();
-	});
-
-	function parallaxScroll(){
-	    var scrolled = $(window).scrollTop();
-	    $('#portfolio2').css('top',(100-(scrolled*.15))+'px');
-	}
-
 
 	// Site logo refresh on mouseover
 	$( "img.header__logo__img" ).mouseover(function() {
@@ -198,7 +175,7 @@
 
 	    $(".header").addClass("down");
 
-	  } else {
+	  } else if (!$("body").hasClass("menu--open")) {
 
 		$(".header").removeClass("down");
 
@@ -207,7 +184,40 @@
 	  prevScrollpos = currentScrollPos;
 	}
 
+	// Parallax Scrolling Portfolio
+	$(window).bind('scroll',function(){
+	    parallaxScroll();
+	});
+
+	function parallaxScroll(){
+	    var scrolled = $(window).scrollTop();
+	    $('#portfolio2').css('top',(100-(scrolled*.15))+'px');
+	}
+
 }(jQuery));
+
+
+
+//Typing animation
+function typeMe(typed) {
+	var i = 0;
+	var txt = typed.dataset.text;
+	var speed = 50;
+
+	if (window.matchMedia("(orientation: landscape)").matches) {
+	   setTimeout(function() {typeWriter();}, 2500);
+	} else {
+		setTimeout(function() {typeWriter();}, 1500);
+	}
+
+	function typeWriter() {
+	  if (i < txt.length) {
+	    typed.innerHTML += txt.charAt(i);
+	    i++;
+	    setTimeout(typeWriter, speed);
+	  }
+	}
+}
 
 //Animate when in viewport with IntersectionObserver
 
@@ -229,7 +239,7 @@ function MyIntersectionObserver() {
 
 				if (entry.intersectionRatio > 0.95) {
 
-					if ($(entry.target).hasClass( "slow_lazy" )) {
+					if ($(entry.target).hasClass( "gif" )) {
 						const lazyImage = entry.target;
 
 			            lazyImage.src = lazyImage.dataset.src;
@@ -240,7 +250,7 @@ function MyIntersectionObserver() {
 			        }
 
 			        entry.target.classList.add('visible');
-				} 
+				}
 			});
 		}, config);
 
@@ -250,9 +260,9 @@ function MyIntersectionObserver() {
 
 	} else {
 		//IntersectionObserver Fallback for slow_lazy and animate classes
-		var fallbackLazy = $('.slow_lazy');
+		var fallbackLazy = $('.gif');
 		fallbackLazy.addClass('lazy');
-		fallbackLazy.removeClass('slow_lazy');
+		fallbackLazy.removeClass('gif');
 
 		$(window).scroll(function(event) {
 			$('.animate').each(function(i, el) {
@@ -285,31 +295,6 @@ function MyIntersectionObserver() {
   };
     
 })(jQuery);
-
-
-// Detect Webp support
-function WebpIsSupported(callback){
-    // If the browser doesn't has the method createImageBitmap, you can't display webp format
-    if(!window.createImageBitmap){
-        callback(false);
-        return;
-    }
-
-    // Base64 representation of a white point image
-    var webpdata = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=';
-
-    // Retrieve the Image in Blob Format
-    fetch(webpdata).then(function(response){
-        return response.blob();
-    }).then(function(blob){
-        // If the createImageBitmap method succeeds, return true, otherwise false
-        createImageBitmap(blob).then(function(){
-            callback(true);
-        }, function(){
-            callback(false);
-        });
-    });
-}
 
 // --- HTML Store Scroll Position --- //
 

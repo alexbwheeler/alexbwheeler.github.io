@@ -31,16 +31,16 @@
 	@include blue-background;
 }
 
-@include keyframes(gradient_wash) {
-	0% {background-position: 0% 50%}
-	50% {background-position: 100% 50%}
-	100% {background-position: 0% 50%}
+@include keyframes(gradient-wash) {
+  0% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+  100% {background-position: 0% 50%}
 }
 
-@include keyframes(gradient_wash_background) {
-	0% {background-position: 0 0, 0% 50%}
-	50% {background-position: 0 0, 100% 50%}
-	100% {background-position: 0 0, 0% 50%}
+@include keyframes(gradient-wash-noise) {
+  0% {background-position: 0 0, 0% 50%}
+  50% {background-position: 0 0, 100% 50%}
+  100% {background-position: 0 0, 0% 50%}
 }
 
 @include keyframes(invisible) {

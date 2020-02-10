@@ -188,26 +188,26 @@
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
 
-  @include animation('gradient_wash 5s ease infinite;');
-}
-
-@mixin blue-gradient {
-  background: rgb(94,71,204);
-  background: linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
-  background-size: 200% 200%;
-
-  @include animation('gradient_wash_background 10s ease infinite;');
+  @include animation('gradient-wash 3s ease infinite;');
 }
 
 @mixin blue-background {
   background: rgb(94,71,204);
-  background: url("../images/noise.png"), linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
-  background-size: auto, 200% 200%;
-  background-position: 0 0, 0% 50%;
-  background-repeat: repeat, no-repeat;
-  background-blend-mode: overlay, normal;
+  background: linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
+  background-size: 200%;
+  background-position: 0% 50%;
+  background-attachment: fixed;
+  @include animation('gradient-wash-noise 6s ease infinite;');
 
-  @include animation('gradient_wash_background 10s ease infinite;');
+  @supports (background-blend-mode: overlay) {
+    background: url("../images/noise.png"), linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
+    background-size: auto, 200% 200%;
+    background-position: 0 0, 0% 50%;
+    background-repeat: repeat, no-repeat;
+    background-blend-mode: overlay, normal;
+    background-attachment: fixed, fixed;
+    @include animation('gradient-wash-noise 6s ease infinite;');
+  }
 }
 
 @mixin no-blue{

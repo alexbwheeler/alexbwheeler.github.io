@@ -142,8 +142,7 @@
 	.portfolio-item__title {
 		margin-top: 18px;
 		margin-left: 0;
-
-		font-weight: 700;
+		
 		letter-spacing: $grid-item-title-spacing;
 
 		@include mq(tabletp) {

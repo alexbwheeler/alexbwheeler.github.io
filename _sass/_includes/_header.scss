@@ -8,6 +8,13 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Header
 
+html:not([data-scroll='0']) {
+	.header {
+		background: white;
+		@include transition (top .25s ease, background 0.25s ease 0.3s);
+	}
+}
+
 .header {
 	position: fixed;
 	z-index: 991;
@@ -24,29 +31,9 @@
 		top: 0;
 	}
 
-	.menu__wrap .header__logo {
-		width: $logo-width;
-		position: fixed;
-		visibility: hidden;
-		transition: visibility 0.1s 0.5s;
-		top: 15px;
-		left: 30px;
-
-		@include mq(tabletp) {
-			top: 23px;
-			left: 5vw;
-		}
-
-		@include mq(tabletl) {
-			display: none;
-		}
-	}
-
 	&.transparent {
 		background: transparent;
 	}
-
-	transform: translateZ(100px);
 
 	@include transition(all .25s ease);
 }
@@ -109,8 +96,6 @@
 	height: 20px;
 	margin-left: 8px;
 
-	@include animation ('invisible 0.5s, menu-icon 0.3s ease 0.5s;');
-
 	span, span:before, span:after {
 		content: '';
 		position: absolute;
@@ -124,60 +109,45 @@
 
 	span:before {
 		top: -8px;
-		
+		@include animation ('invisible 0.5s, menu-icon1 0.3s ease 0.5s;');
 	}
 
 	span {
-		//visibility: hidden;
+		@include animation ('invisible 0.7s, menu-icon1 0.3s ease 0.7s;');
 	}
 
 	span:after {
 		top: 8px;
 		width: 80%;
+		@include animation ('invisible 0.8s, menu-icon2 0.3s ease 0.8s;');
 	}
 }
 
-@include keyframes (menu-icon) {
+@include keyframes (menu-icon1) {
 	0% {width: 0;}
-	100% {width: 24px;}
+	100% {width: 100%;}
 }
 
-.menu--open .menu_toggle_icon {
-
-	span:before, span:after {
-		background: black !important;
-	}
-		
-	span {
-		background-color: transparent !important;
-	}
-	
-	span:before,
-	span:after {
-		top: 0;
-	}
-	
-	span:before {
-		@include rotate(45);
-	}
-
-	span:after {
-		display: block;
-		@include rotate(-45);
-		width: 100%;
-	}
+@include keyframes (menu-icon2) {
+	0% {width: 0;}
+	100% {width: 80%;}
 }
 
 .menu__wrap {
 	position: fixed;
 	z-index: 90;
-	top: 0;
-	right: -100vw;
-	bottom: 0;
+
 	background: white;
 	overflow: auto;
 	height: 100vh;
 	width: 100vw;
+
+	transform: translateX(100vw);
+
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	
 	@include transition(all 0.3s ease);
 
@@ -186,6 +156,7 @@
 		position: relative;
 		background: transparent;
 
+		transform: translateX(0);
 		right: 0;
 		left: 0;
 		height: initial;
@@ -196,12 +167,31 @@
 		@include transition(none);
 	}
 
+	.header__logo {
+		width: $logo-width;
+		position: fixed;
+		visibility: hidden;
+		transition: visibility 0.1s 1s, transform 0.3s ease;
+		top: 15px;
+		left: 30px;
+		transform: translateX(-100vw);
+
+		@include mq(tabletp) {
+			top: 23px;
+			left: 5vw;
+		}
+
+		@include mq(tabletl) {
+			display: none;
+		}
+	}
+
 	.socials {
 		text-align: center;
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: 30px;
+		bottom: 10vh;
 		display: none;
 
 		a {
@@ -212,11 +202,13 @@
 	}
 }
 
+// Open Menu //
+
 .menu--open {
 	.menu__wrap {
 		opacity: 1;
-		right:0;
 		height: 100vh;
+		transform: translateX(0);
 
 		.socials {
 			display: block;
@@ -224,7 +216,8 @@
 
 		.header__logo {
 			visibility: visible;
-			transition: none;
+			transition: transform 0.3s ease;
+			transform: translateX(0);
 		}
 	}
 
@@ -236,6 +229,31 @@
 		&:nth-child(2) { @include transition(all 0.5s ease 0.4s); }
 		&:nth-child(3) { @include transition(all 0.5s ease 0.5s); }
 		&:nth-child(4) { @include transition(all 0.5s ease 0.6s); }
+	}
+
+	.menu_toggle_icon {
+		span:before, span:after {
+			background: black !important;
+		}
+			
+		span {
+			background-color: transparent !important;
+		}
+		
+		span:before,
+		span:after {
+			top: 0;
+		}
+		
+		span:before {
+			@include rotate(45);
+		}
+
+		span:after {
+			display: block;
+			@include rotate(-45);
+			width: 100%;
+		}
 	}
 }
 
@@ -330,8 +348,8 @@ $menu_show_delay6: 0.8s;
 }
 
 @include keyframes(menu_show_up) {
-	0% { opacity: 0; position: relative; bottom: 5px;}
-	100% { opacity: 1; bottom: 0px; position: relative;}
+	0% { opacity: 0; transform: translateY(5px);}
+	100% { opacity: 1; transform: translateY(0);}
 }
 
 @include keyframes(hide_me) {
@@ -349,8 +367,54 @@ $menu_show_delay6: 0.8s;
 
 	padding: 2px 5px;
 
-	&:hover {
-		color: black;
+	@include mq(laptop) {
+		font-size: $menu-large;
+	}
+
+	&:after {
+		content: '';
+	    position: absolute;
+	    top: 50%;
+	    left: -110%;
+	    width: 0;
+	    height: 1px;
+
+	    background: linear-gradient(90deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
+	    background-size: 100%;
+	    transition: all 0.3s ease;
+	}
+
+	&:before {
+		content: '';
+	    position: absolute;
+	    top: 50%;
+	    right: -110%;
+	    width: 0;
+	    height: 1px;
+
+	    background: linear-gradient(270deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
+	    transition: all 0.3s ease;
+	}
+
+	.menu--open &.active-link::after {
+		width: 100%;
+		transition: all 0.2s ease 0.5s;
+	}
+
+	.menu--open &.active-link::before {
+		width: 100%;
+		transition: all 0.2s ease 0.5s;
+	}
+	
+	&.active-link {
+		@include blue;
+		position: relative;
+
+		@include mq(tabletl) {
+			@include no-blue;
+			color: black;
+			@include box-shadow(0, -2px, 0, $overlay-accent-color inset);
+		}
 	}
 
 	@include mq(tabletl) {
@@ -367,68 +431,38 @@ $menu_show_delay6: 0.8s;
 		text-transform: none;
 		position: relative;
 
-		&:not(.social_link) {
+		&::after {
+			content: "";
+		    display: block;
+		    position: absolute;
+		    width: 100%;
+		    height: 100%;
+		    background: black;
+		    top: 0;
+		    bottom: 0;
+		    left: 0;
+		    right:0;
+		    z-index: -1;
+
+		    transform-origin: top;
+		    transform: scaleY(0);
+
+		    @include transition(transform .2s ease);
+		}
+
+		&:hover, &.active-link:hover {
+			color: white;
 
 			&::after {
-				content: "";
-			    display: block;
-			    position: absolute;
-			    height: 0%;
-			    width: 100%;
-			    background: black;
-			    left: 0;
-			    right: 0;
-			    top: 0;
-			    bottom: 0;
-			    z-index: -1;
-			    @include transition(all .2s ease);
-			}
-
-			&:hover, &.active-link:hover {
-				color: white;
-
-				&::after {
-					height: 100%;
-					top: initial;
-				}
-			}
-
-			&.active-link::after { 
-				background: $overlay-accent-color;
+				transform: scaleY(1);
+				transform-origin: bottom;
 			}
 		}
-	}
 
-	@include mq(laptop) {
-		font-size: $menu-large;
-	}
-
-	&:after {
-		content: '';
-	    position: absolute;
-	    top: 50%;
-	    left: -110%;
-	    width: 0;
-	    height: 2px;
-
-	    @include blue-gradient;
-	    transition: all 0.3s ease;
-	}
-
-	.menu--open &.active-link:after {
-		width: 100%;
-		transition: all 0.2s ease 0.9s;
-	}
-	
-	&.active-link {
-		//@include blue;
-		position: relative;
-
-		@include mq(tabletl) {
-			@include no-blue;
-			color: black;
-			@include box-shadow(0, -2px, 0, $overlay-accent-color inset);
+		&.active-link::after { 
+			background: $overlay-accent-color;
 		}
+		
 	}
 }
 

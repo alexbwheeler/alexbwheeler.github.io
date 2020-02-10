@@ -1,0 +1,1 @@
+!function(o){"use strict";function n(){var n=o(window).scrollTop();o("#portfolio2").css("top",100-.15*n+"px")}o(window).bind("scroll",function(){n()}),console.log("portfolio")}(jQuery);
