@@ -114,7 +114,10 @@ section.intro.post p {
 					display: block;
 
 					border: 1px solid rgba(0,0,0,0.1);
-					a {color: $text-light-color;}
+					a {
+						color: $text-light-color;
+						border-bottom: none;
+					}
 
 					line-height: 1em;
 
@@ -182,6 +185,7 @@ section.intro.post p {
 
 		@include mq(desktop) {
 			margin-top: 0;
+			font-size: 30px;
 		}
 	}
 
@@ -214,6 +218,9 @@ section.intro.post p {
 
 		h3 {
 			margin-top: 5px;
+			@include mq(desktop) {
+				font-size: 20px;
+			}
 		}
 
 		p {

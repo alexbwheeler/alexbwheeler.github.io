@@ -3,7 +3,6 @@ var glob = require('glob')
 var fs = require('fs')
 
 var stylesheetLocation = '_site/css/'
-var stylesheetSourceLocation = 'css/'
 var stylesheetName = 'main.css'
 
 var jekyllUncss = function() {
@@ -19,7 +18,8 @@ var jekyllUncss = function() {
       {
         raw: css,
         ignore: ['.visible'],
-        ignoreSheets: [/\/css\//]
+        ignoreSheets: [/\/css\//],
+        timeout: 1500
       },
       function(err, output) {
         if (err) {
@@ -27,7 +27,7 @@ var jekyllUncss = function() {
         }
 
         fs.writeFileSync(
-          stylesheetSourceLocation + 'un.' + stylesheetName,
+          stylesheetLocation + 'un.' + stylesheetName,
           output
         )
       }

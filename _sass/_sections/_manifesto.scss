@@ -24,7 +24,7 @@
 	margin-top: 10vmin;
 
 	@include mq(tabletp) {
-		margin-top: 20vmin;
+		margin-top: 10vmin;
 		margin-bottom: 20vmin;
 	}
 
@@ -151,6 +151,12 @@
 
 	@include mq(tabletl) {
 		margin-bottom: 15vh;
+	}
+
+	h3 {
+		text-transform: uppercase;
+		font-weight: 200;
+		letter-spacing: 0.1em;
 	}
 
 	.clients {
@@ -302,13 +308,11 @@
 
 		@include mq(tabletp) {
 			display: flex;
-
-			.post:nth-child(2) {
-				padding: 0 30px;
-			}
+			justify-content: space-between;
 
 			.post {
 				margin-bottom: 0;
+				width: 30%;
 			}
 		}
 	}

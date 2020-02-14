@@ -10,29 +10,30 @@
 
 	pageLoad();
 
+	setTimeout(function(){ 
+		$( 'body, html' ).animate({
+			scrollTop: 0
+		}, 200);
+	}, 500);
+
 	// On page load
 	function pageLoad() {
 
-		if (window.scrollY < 100) {
-			$( 'body, html' ).animate({
-				scrollTop: 0
-			}, 300);
-		}
-
 		$('.animate').removeClass('visible');
-
 		MyIntersectionObserver();
 
+		// AOS.init();
+
 		// Lazy load 
-		var lazyLoadInstance = new LazyLoad({
-		    elements_selector: ".lazy",
-		});
+		// var lazyLoadInstance = new LazyLoad({
+		//     elements_selector: ".lazy",
+		// });
 		
 		// Tilt
-		if (document.documentElement.clientWidth > 768) {
-			VanillaTilt.init(document.querySelectorAll(".say_hi>div"));
-			VanillaTilt.init(document.querySelectorAll(".portfolio-item__image img.front"));
-		}
+		// if (document.documentElement.clientWidth > 768) {
+		// 	VanillaTilt.init(document.querySelectorAll(".say_hi>div"));
+		// 	VanillaTilt.init(document.querySelectorAll(".portfolio-item__image img.front"));
+		// }
 
 		// splashTime = 1;
 
@@ -53,38 +54,32 @@
 		}, 500);
 	});
 
-	$(document).on("click", "a", function(){
-	    setTimeout(function(){
-			pageLoad();
-		}, 500); 
-	});
-
 
 	// Language change
-	$(document).on("click", "#lang a", function(){
+	// $(document).on("click", "#lang a", function(){
 
-		$("#header").addClass("hide");
+	// 	$("#header").addClass("hide");
 
-	    setTimeout(function(){ 
-			$("#navlinks").load(location.href + " #navlinks>*", "");
-			$("#head_logo").load(location.href + " #head_logo>*", "");
+	//     setTimeout(function(){ 
+	// 		$("#navlinks").load(location.href + " #navlinks>*", "");
+	// 		$("#head_logo").load(location.href + " #head_logo>*", "");
 
-			setTimeout(function(){ 
-				$("#header").removeClass("hide");
+	// 		setTimeout(function(){ 
+	// 			$("#header").removeClass("hide");
 
-				document.getElementById('site_logo').src='/images/logo-black.gif';
+	// 			document.getElementById('site_logo').src='/images/logo-black.gif';
 
-				$( "img.header__logo__img" ).mouseover(function() {
-					document.getElementById('site_logo').src='/images/logo-black-wipe.gif'
-				});
-			}, 100);
-		}, 500);
-	});
+	// 			$( "img.header__logo__img" ).mouseover(function() {
+	// 				document.getElementById('site_logo').src='/images/logo-black-wipe.gif'
+	// 			});
+	// 		}, 100);
+	// 	}, 500);
+	// });
 
 	// Site logo refresh on mouseover
-	$( "img.header__logo__img" ).mouseover(function() {
-		document.getElementById('site_logo').src='/images/logo-black-wipe.gif'
-	});
+	// $( "img#site_logo" ).mouseover(function() {
+	// 	document.getElementById('site_logo').src='/images/logo-black-wipe.gif'
+	// });
 
 	/*
 
@@ -166,23 +161,19 @@
 
 	// - - - Header hide - - - //
 
-	var prevScrollpos = window.pageYOffset;
+	// var prevScrollpos = window.pageYOffset;
 
-	window.onscroll = function() {
-	  var currentScrollPos = window.pageYOffset;
+	// window.onscroll = function() {
+	// 	var currentScrollPos = window.pageYOffset;
 
-	  if (prevScrollpos > currentScrollPos || window.scrollY < 50) {
+	// 	if (prevScrollpos > currentScrollPos || window.scrollY < 50) {
+	// 		$(".header").removeClass("up");
+	// 	} else if (!$("body").hasClass("menu--open")) {
+	// 		$(".header").addClass("up");
+	// 	}
 
-	    $(".header").addClass("down");
-
-	  } else if (!$("body").hasClass("menu--open")) {
-
-		$(".header").removeClass("down");
-
-	  }
-
-	  prevScrollpos = currentScrollPos;
-	}
+	// 	prevScrollpos = currentScrollPos;
+	// }
 
 	// Parallax Scrolling Portfolio
 	$(window).bind('scroll',function(){
@@ -196,28 +187,6 @@
 
 }(jQuery));
 
-
-
-//Typing animation
-function typeMe(typed) {
-	var i = 0;
-	var txt = typed.dataset.text;
-	var speed = 50;
-
-	if (window.matchMedia("(orientation: landscape)").matches) {
-	   setTimeout(function() {typeWriter();}, 2500);
-	} else {
-		setTimeout(function() {typeWriter();}, 1500);
-	}
-
-	function typeWriter() {
-	  if (i < txt.length) {
-	    typed.innerHTML += txt.charAt(i);
-	    i++;
-	    setTimeout(typeWriter, speed);
-	  }
-	}
-}
 
 //Animate when in viewport with IntersectionObserver
 

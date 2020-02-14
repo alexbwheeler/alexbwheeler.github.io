@@ -59,14 +59,13 @@ ref: index
 <section class="narrow_wrap align_center about manifesto animate visible" data-aos="fade-up">
 
 	<h2><span>I</span> <span>am</span> <span class="myName" data-text="Alex">Alex</span></h2>
-	<h3 class="italic">a creative designer ready for a challenge</h3>
+<!-- 	<h3 class="italic">a creative designer ready for a challenge</h3> -->
 
 	<p class="align_center">
 		<span>I help build brands through design whith visuals and websites that stand out.</span>
-		<span>My goal is to create meaningful, timeless graphics and web experiences.</span>
+		<span>My goal is to create meaningful, timeless graphics and web experiences.</span> <br>
+		<a href="/work" class="button black">view my work</a>
 	</p>
-
-	<a href="/work" class="button black">view my work</a>
 
 </section>
 
@@ -97,7 +96,7 @@ ref: index
 
 <section class="brands manifesto">
 
-	<h3 class="align_center italic" data-aos="fade-up">Some brands I've worked with</h3>
+	<h3 class="align_center" data-aos="fade-up">Some friends</h3>
 
 	<a href="/work/" class="clients" data-aos="zoom-in" data-aos-delay="100">
 
@@ -118,7 +117,7 @@ ref: index
 
 </section>
 
-<section class="blue-background say_hi manifesto" data-aos="slide-up" data-aos-once="true">
+<section class="blue-background say_hi manifesto" data-aos="slide-up">
 
 	<div class="narrow_wrap white align_center">
 
@@ -142,20 +141,20 @@ ref: index
 
 </section>
 
-<section class="narrow_wrap featured-posts manifesto align_center ">
+<section class="narrow_wrap featured-posts manifesto align_center">
 
-	<h2>Constantly Creating</h2>
-	<p>I post recent client projects and case studies regularly on my blog to inspire others and showcase my recent work.</p>
+	<h2 data-aos="fade-up">Constantly Creating</h2>
+	<p data-aos="fade-up">I post recent client projects and case studies regularly on my blog to inspire others and showcase my recent work.</p>
 
 	<div class="blog-posts newest">
 		{% for post in site.posts limit:3 %}
 
-		<div class="post">
+		<div class="post" data-aos="fade-up">
 
 			<a href="{{ post.url }}">
 
 				<div>
-					<img src="/images/lazy-load-post.svg" data-src="{{ post.featured_image  }}" class="lazy" alt="{{ post.title }}">
+					<img src="/images/lazy/lazy-load-post.svg" data-src="{{ post.featured_image  }}" class="lazy" alt="{{ post.title }}">
 				</div>
 
 				<h3>{{ post.title }}</h3>

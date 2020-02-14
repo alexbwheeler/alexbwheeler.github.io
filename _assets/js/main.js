@@ -5,7 +5,8 @@
 //= require plugins/fluidbox
 //= require plugins/waypoints
 
-//= require duet
-
+//= require plugins/aos
 //= require plugins/vanilla-tilt.min
+
+//= require duet
 //= require scripts

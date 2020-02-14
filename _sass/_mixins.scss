@@ -20,7 +20,7 @@
   }
 
   @include mq(laptop) {
-    width: 90%;
+    width: 80%;
   }
 }
 
@@ -36,11 +36,11 @@
   }
 
   @include mq(tabletl) {
-    width: 90%;
+    width: 80%;
   }
 
   @include mq(laptop) {
-    width: 90%;
+    width: 70%;
   }
 }
 

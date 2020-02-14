@@ -1,21 +1,3 @@
-//
-//
-// Duet JS
-//
-//
-
-
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Plugins
-
-// @codekit-prepend "/plugins/history.js"
-// @codekit-prepend "/plugins/imagesloaded.js"
-// @codekit-prepend "/plugins/masonry.js"
-// @codekit-prepend "/plugins/debounce.js"
-// @codekit-prepend "/plugins/fluidbox.js"
-// @codekit-prepend "/plugins/owl.js"
-// @codekit-prepend "/plugins/waypoints.js"
-
 
 
 (function ($) {
@@ -33,7 +15,6 @@
 	// State change event
 	History.Adapter.bind(window,'statechange',function(){
 		var state = History.getState();
-		// console.log(state);
 
 		// Loading state
 		$('body').addClass('loading');
@@ -41,13 +22,8 @@
 		// Load the page
 		$('.page-loader').load( state.hash + ' .page__content', function() {
 
-			// Scroll to top
-			$( 'body, html' ).animate({
-				scrollTop: 0
-			}, 300);
-
 			// Find transition time
-			var transitionTime = 400;
+			var transitionTime = 350;
 
 			// After current content fades out
 			setTimeout( function() {
@@ -131,53 +107,31 @@
 
 	function pageFunctions() {
 
+		// Scroll to top
 
-		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Show content
+		$( 'body, html' ).animate({
+			scrollTop: 0
+		}, 100);
+
+
+		// --- Show content --- //
 
 		// Wait until first image has loaded
 		$('.page__content').find('img:first').imagesLoaded( function() {
-	
-			// Portfolio grid layout
-			$('.portfolio').imagesLoaded( function() {
-				$('.portfolio-wrap').masonry({
-					itemSelector: '.portfolio-item',
-					transitionDuration: 0
-				});
-			});
-
-			// Portfolio grid layout
-			$('.portfolio').imagesLoaded( function() {
-				$('.portfolio-wrap').masonry({
-					itemSelector: '.portfolio-item',
-					transitionDuration: 0
-				});
-			});
-
-			// Blog grid layout
-			$('.blog-wrap').imagesLoaded( function() {
-				$('.blog-wrap').masonry({
-					itemSelector: '.blog-post',
-					transitionDuration: 0
-				});
-			});
 
 			// Show the content
 			$('body').removeClass('loading');
 
 			// Hide the menu
-			$('body').removeClass('menu--open');
+			$('body').removeClass('menu_open');
 		});
 
 
 
-		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Active links
+		// --- Active links --- //
 
 		// Switch active link states
 		$('.active-link').removeClass('active-link');
-
-		// $('a[href="' + navTarget + '"]').addClass('active-link');
-
-		// str.includes("world");
 
 		for (var i = 0; i < document.links.length; i++) {
 			var link = document.links[i];
@@ -194,7 +148,7 @@
 
 
 
-		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Galleries
+		// --- Galleries --- //
 
 		// Destroy all existing waypoints
 		Waypoint.destroyAll();
@@ -331,7 +285,7 @@
 
 
 
-		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Images
+		// --- Images --- //
 
 		$('.single p > img').each( function() {
 			var thisP = $(this).parent('p');
@@ -342,7 +296,7 @@
 
 
 
-		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Videos
+		// -- Videos -- /
 
 		// For each iframe
 		$('.single iframe').each( function() {
@@ -361,6 +315,21 @@
 
 		});
 
+		// --- Other --- //
+
+		//Tilt
+		if (document.documentElement.clientWidth > 768) {
+			VanillaTilt.init(document.querySelectorAll(".say_hi>div"));
+			VanillaTilt.init(document.querySelectorAll(".portfolio-item__image img.front"));
+		}
+
+		// Lazy Load
+		var lazyLoadInstance = new LazyLoad({
+		    elements_selector: ".lazy",
+		});
+
+		// AOS Animations
+		AOS.init();
 	}
 
 	// Run functions on load
@@ -372,24 +341,65 @@
 	$(document).on('click', '.js-menu-toggle', function (){
 
 		// If already open
-		if ( $('body').hasClass('menu--open') ) {
-			$('body').removeClass('menu--open');
+		if ( $('body').hasClass('menu_open') ) {
+			$('body').removeClass('menu_open');
 		}
 
 		// If not open
 		else {
-			$('body').addClass('menu--open');
+			$('body').addClass('menu_open');
 		}
 	});
 
 	$(document).on('click', '.menu__list__item__link', function (){
 
 		// If menu is open when you click a link on mobile
-		if ( $('.menu').hasClass('menu--open') ) {
-			$('.menu').removeClass('menu--open');
+		if ( $('.menu').hasClass('menu_open') ) {
+			$('.menu').removeClass('menu_open');
 		}
 	});
 
+	// Header hide
+
+	var prevScrollpos = window.pageYOffset;
+
+	window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+
+		if (prevScrollpos > currentScrollPos || window.scrollY < 50) {
+			$(".header").removeClass("up");
+		} else if (!$("body").hasClass("menu--open")) {
+			$(".header").addClass("up");
+		}
+
+		prevScrollpos = currentScrollPos;
+	}
+
+	// Language change
+	$(document).on("click", "#lang a", function(){
+
+		$("#header").addClass("hide");
+
+	    setTimeout(function(){ 
+			$("#navlinks").load(location.href + " #navlinks>*", "");
+			$("#head_logo").load(location.href + " #head_logo>*", "");
+
+			setTimeout(function(){ 
+				$("#header").removeClass("hide");
+
+				document.getElementById('site_logo').src='/images/logo-black.gif';
+
+				$( "img.header__logo__img" ).mouseover(function() {
+					document.getElementById('site_logo').src='/images/logo-black-wipe.gif'
+				});
+			}, 100);
+		}, 500);
+	});
+
+	// Site logo refresh on mouseover
+	$( "img#site_logo" ).mouseover(function() {
+		document.getElementById('site_logo').src='/images/logo-black-wipe.gif'
+	});
 
 
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Contact Form

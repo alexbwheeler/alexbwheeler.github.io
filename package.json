@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "ubuild": "jekyll build && node build.js",
-    "userve": "jekyll build && node build.js && jekyll serve --skip-initial-build "
+    "ubuild": "JEKYLL_ENV=deploy jekyll build && node build.js",
+    "userve": "JEKYLL_ENV=deploy jekyll build && node build.js && jekyll serve --skip-initial-build "
   },
   "author": "",
   "license": "ISC",

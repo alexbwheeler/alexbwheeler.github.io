@@ -1,74 +1,71 @@
-<header class="header down {{ page.header-class }}" id="header">
+<header class="header {{ page.header-class }}" id="header">
 
-	<div class="wrap">
-		<div id="head_logo">
-			<a href="{{ url }}/{{ site.data.settings.index.[page.lang] }}" class="header__logo">
-				<img src="/images/logo-black.gif" class="header__logo__img" id="site_logo" alt="Alex Wheeler Logo">
-			</a>
+	<a href="{{ url }}/{{ site.data.settings.index.[page.lang] }}" class="title">Alex Wheeler</a>
+
+	<a href="{{ url }}/{{ site.data.settings.index.[page.lang] }}" class="header_logo">
+		<img src="/images/logo-black.gif" id="site_logo" alt="Alex Wheeler Logo">
+	</a>
+
+	<div class="menu">
+
+		<div class="menu_toggle js-menu-toggle">
+			<div class="menu_toggle_icon"><span></span></div>
 		</div>
 
-		<div class="menu">
+		<div class="menu__wrap">
+			<!-- <a href="/" class="header__logo">
+				<img src="/images/logo-black.png" class="header__logo__img" alt="Alex Wheeler Logo">
+			</a> -->
 
-			<div class="menu_toggle js-menu-toggle">
-				<div class="menu_toggle_icon"><span></span></div>
-			</div>
+			<ul class="menu__list" id="navlinks">
+				
+				{% if page.lang == 'fr' %}
 
-			<div class="menu__wrap">
-				<a href="/" class="header__logo">
-					<img src="/images/logo-black.png" class="header__logo__img" alt="Alex Wheeler Logo">
-				</a>
+					{% for item in site.data.settings.menu_settings.menu_items_fr %}
+						<li class="menu__list__item">
+							<a href="{{ item.url }}" class="menu__list__item__link">{{ item.title }}</a>
+						</li>
+					{% endfor %}
 
-				<ul class="menu__list" id="navlinks">
-					
-					{% if page.lang == 'fr' %}
+				{% else %}
 
-						{% for item in site.data.settings.menu_settings.menu_items_fr %}
-							<li class="menu__list__item">
-								<a href="{{ item.url }}" class="menu__list__item__link {% if item.url == page.url %}active-link{% endif %}">{{ item.title }}</a>
-							</li>
-						{% endfor %}
+					{% for item in site.data.settings.menu_settings.menu_items %}
+						<li class="menu__list__item">
+							<a href="{{ item.url }}" class="menu__list__item__link">{{ item.title }}</a>
+						</li>
+					{% endfor %}
 
-					{% else %}
+				{% endif %}
 
-						{% for item in site.data.settings.menu_settings.menu_items %}
-							<li class="menu__list__item">
-								<a href="{{ item.url }}" class="menu__list__item__link {% if item.url == page.url %}active-link{% endif %}">{{ item.title }}</a>
-							</li>
-						{% endfor %}
+				<!-- Language Toggle -->
+
+				<!-- <li class="menu__list__item" id="lang">
+
+					{% if page.lang %}
+
+							{% assign pages=site.html_pages | where:"ref", page.ref | where_exp:"item", "item.lang != page.lang" %}
+								
+							{% if pages.size > 0 %}
+								{% for page in pages %}
+									
+										<a href="{{ page.url }}" class="menu__list__item__link lang_toggle">{{ page.lang }}</a>
+									
+								{% endfor %}
+							{% else %}
+								{% assign pages=site.documents | where:"ref", page.ref | where_exp:"item", "item.lang != page.lang" %}
+								{% for page in pages %}
+									
+										<a href="{{ page.url }}" class="menu__list__item__link lang_toggle">{{ page.lang }}</a>
+											
+								{% endfor %}
+							{% endif %}
 
 					{% endif %}
 
-					<!-- Language Toggle -->
+				</li> -->
+			</ul>
 
-					<!-- <li class="menu__list__item" id="lang">
-
-						{% if page.lang %}
-
-								{% assign pages=site.html_pages | where:"ref", page.ref | where_exp:"item", "item.lang != page.lang" %}
-									
-								{% if pages.size > 0 %}
-									{% for page in pages %}
-										
-											<a href="{{ page.url }}" class="menu__list__item__link lang_toggle">{{ page.lang }}</a>
-										
-									{% endfor %}
-								{% else %}
-									{% assign pages=site.documents | where:"ref", page.ref | where_exp:"item", "item.lang != page.lang" %}
-									{% for page in pages %}
-										
-											<a href="{{ page.url }}" class="menu__list__item__link lang_toggle">{{ page.lang }}</a>
-												
-									{% endfor %}
-								{% endif %}
-
-						{% endif %}
-
-					</li> -->
-				</ul>
-
-				{% include socials.html %}
-			</div>
-
+			{% include socials.html %}
 		</div>
 
 	</div>

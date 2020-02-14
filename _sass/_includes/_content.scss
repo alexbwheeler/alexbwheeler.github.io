@@ -68,7 +68,7 @@
   			position: sticky;
   			
 		    top: 10%;
-		    width: 300px;
+		    width: 250px;
 		}
 	}
 }
@@ -238,7 +238,7 @@
 		margin-top: 10px;
 		margin-bottom: 10px;
 
-		@include narrow_wrap;
+		@include wide_wrap;
 
 		@include mq(tabletp) {
 			margin-top: 30px;

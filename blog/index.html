@@ -15,7 +15,7 @@ pagination:
 
 {% include blog-categories.html %}
 
-<section>
+<section class="single">
 
 	<div class="wrap blog-posts">
 				
@@ -26,7 +26,7 @@ pagination:
 				<a href="{{ post.url }}">
 
 					<div>
-						<img src="{{ post.featured_image  }}" alt="{{ post.title }}">
+						<img src="/images/lazy/lazy-load-post.svg" data-src="{{ post.featured_image  }}" class="lazy" alt="{{ post.title }}">
 						<p class="categories" data-aos="fade-left" data-aos-once="true"><a href="/blog/{{ post.categories }}">{{ post.categories }}</a></p>
 					</div>
 

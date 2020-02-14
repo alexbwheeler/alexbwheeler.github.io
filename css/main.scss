@@ -1,6 +1,10 @@
 ---
 ---
 
+// Ease
+
+$main-ease: cubic-bezier(.87,-.41,.19,1.44);
+
 // Breakpoints
 
 $break-phonel: {{ site.data.settings.breakpoints.phonel }};
