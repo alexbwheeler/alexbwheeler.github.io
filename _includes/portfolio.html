@@ -1,73 +1,20 @@
 <section class="portfolio">
+	{% for project in projects %}
 
-	<div class="wrap">
+	<div class="portfolio-item animate once { project.ref }}">
 
-		<div class="column" id="portfolio1">
-			<div class="flexy_order">
-				
-				{% for project in projects %}
+		<a class="featured-image {{ project.ref }}" href="{{ project.url }}">
+		<img src="/images/lazy/lazy-work.svg" data-src="/images/portfolio/preview/{{ project.ref}}.png" class="lazy front" alt="{{ project.title }} front">
+		</a>
 
-				<div class="portfolio-item">
+		<div class="info">
+			<p class="type">{{ project.subtitle }}</p>
+			<h2 class="title">{{ project.title }}</h2>
+			<p class="description">{{ project.description }}</p>
+			<a href="{{ project.url }}" class="button black">details</a>
+		</div>	
 
-					<a class="portfolio-item__link" href="{{ project.url }}">
+	</div>	
 
-						<div class="portfolio-item__image">
-							{% if project.preview %}
-								<img src="/images/lazy/lazy-invisible.png" data-src="/images/portfolio/preview/{{ project.preview}}/front.png" class="lazy front {{ project.preview }}" alt="{{ project.title }} front">
-								<img src="/images/lazy/lazy-load.svg" data-src="/images/portfolio/preview/{{ project.preview}}/back.jpg" class="lazy back" alt="{{ project.title }} background">
-							{% else %}
-								<img src="{{ project.featured_image }}" alt="{{ project.title }}">
-							{% endif %}
-						</div>
-
-						<div class="portfolio-item__content">
-							<div class="portfolio-item__info">
-								<h2 class="portfolio-item__title">{{ project.title }}</h2>
-								<p class="portfolio-item__subtitle">{{ project.subtitle }}</p>
-							</div>
-						</div>
-
-					</a>
-
-				</div>
-
-				{% endfor %}
-
-			</div>
-		</div>
-
-		<div class="column" id="portfolio2">
-			<div class="flexy_order">
-
-				{% for project in projects %}
-
-				<div class="portfolio-item">
-
-					<a class="portfolio-item__link" href="{{ project.url }}">
-
-						<div class="portfolio-item__image">
-							{% if project.preview %}
-								<img src="/images/lazy/lazy-invisible.png" data-src="/images/portfolio/preview/{{ project.preview}}/front.png" class="lazy front {{ project.preview }}" alt="{{ project.title }} front">
-								<img src="/images/lazy/lazy-load.svg" data-src="/images/portfolio/preview/{{ project.preview}}/back.jpg" class="lazy back" alt="{{ project.title }} background">
-							{% else %}
-								<img src="{{ project.featured_image }}" alt="{{ project.title }}">
-							{% endif %}
-						</div>
-
-						<div class="portfolio-item__content">
-							<div class="portfolio-item__info">
-								<h2 class="portfolio-item__title">{{ project.title }}</h2>
-								<p class="portfolio-item__subtitle">{{ project.subtitle }}</p>
-							</div>
-						</div>
-
-					</a>
-
-				</div>
-
-				{% endfor %}
-			</div>
-		</div>
-	</div>
-
+	{% endfor %}
 </section>

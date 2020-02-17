@@ -9,8 +9,6 @@ description: 'Surf bar and taquaria.'
 
 featured_image: '/images/portfolio/carlos/taco-billboard-square.jpg'
 
-preview: carlos
-
 ref: carlos
 
 lang: en

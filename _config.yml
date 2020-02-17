@@ -106,6 +106,15 @@ assets:
   features:
     liquid: true
 
+  sources:
+    - _js
+
+plugins:
+- jekyll-autoprefixer
+
+autoprefixer:
+  only_production: true
+
 exclude:
   - 'node_modules'
   - 'Gemfile'

@@ -32,10 +32,11 @@
 
   @include mq(tabletp) {
     width: 90%;
-    padding-right: 0; padding-left: 0;
+    padding-right: 40px; padding-left: 40px;
   }
 
   @include mq(tabletl) {
+    padding-right: 0; padding-left: 0;
     width: 80%;
   }
 

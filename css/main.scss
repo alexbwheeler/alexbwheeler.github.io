@@ -59,17 +59,17 @@ $menu-spacing: {{ site.data.settings.font_settings.menu.letter_spacing }}em;
 $menu-padding-small: {{ site.data.settings.font_settings.menu.small_padding }}em;
 $menu-padding-large: {{ site.data.settings.font_settings.menu.large_padding }}em;
 
-$grid-item-title-small: {{ site.data.settings.font_settings.grid_item_title.small_size }}px;
-$grid-item-title-medium: {{ site.data.settings.font_settings.grid_item_title.medium_size }}px;
-$grid-item-title-large: {{ site.data.settings.font_settings.grid_item_title.large_size }}px;
-$grid-item-title-weight: {{ site.data.settings.font_settings.grid_item_title.weight }};
-$grid-item-title-spacing: {{ site.data.settings.font_settings.grid_item_title.letter_spacing }}em;
+$blog-item-title-small: {{ site.data.settings.font_settings.blog_item_title.small_size }}px;
+$blog-item-title-medium: {{ site.data.settings.font_settings.blog_item_title.medium_size }}px;
+$blog-item-title-large: {{ site.data.settings.font_settings.blog_item_title.large_size }}px;
+$blog-item-title-weight: {{ site.data.settings.font_settings.blog_item_title.weight }};
+$blog-item-title-spacing: {{ site.data.settings.font_settings.blog_item_title.letter_spacing }}em;
 
-$grid-item-subtitle-small: {{ site.data.settings.font_settings.grid_item_subtitle.small_size }}px;
-$grid-item-subtitle-medium: {{ site.data.settings.font_settings.grid_item_subtitle.medium_size }}px;
-$grid-item-subtitle-large: {{ site.data.settings.font_settings.grid_item_subtitle.large_size }}px;
-$grid-item-subtitle-weight: {{ site.data.settings.font_settings.grid_item_subtitle.weight }};
-$grid-item-subtitle-spacing: {{ site.data.settings.font_settings.grid_item_subtitle.letter_spacing }}em;
+$blog-item-subtitle-small: {{ site.data.settings.font_settings.blog_item_subtitle.small_size }}px;
+$blog-item-subtitle-medium: {{ site.data.settings.font_settings.blog_item_subtitle.medium_size }}px;
+$blog-item-subtitle-large: {{ site.data.settings.font_settings.blog_item_subtitle.large_size }}px;
+$blog-item-subtitle-weight: {{ site.data.settings.font_settings.blog_item_subtitle.weight }};
+$blog-item-subtitle-spacing: {{ site.data.settings.font_settings.blog_item_subtitle.letter_spacing }}em;
 
 $h1-small: {{ site.data.settings.font_settings.h1.small_size }}px;
 $h1-medium: {{ site.data.settings.font_settings.h1.medium_size }}px;

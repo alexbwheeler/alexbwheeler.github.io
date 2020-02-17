@@ -135,13 +135,31 @@ section.intro.post p {
 		}
 	}
 
-	h2, h3 {
-		margin-top: 15px;
+	.title {
+		margin-top: 18px;
+		margin-left: 0;
+		
+		letter-spacing: $blog-item-title-spacing;
+
+		font-size: $blog-item-title-small;
+		font-weight: $blog-item-title-weight;
+
+		@include mq(tabletp) {
+			font-size: $blog-item-title-medium;
+		}
+
+		@include mq(laptop) {
+			font-size: $blog-item-title-large;
+		}
+	}
+
+	.description {
+		margin-top: 5px;
 	}
 
 	.categories {
-		font-size: $grid-item-subtitle-small;
-		font-weight: $grid-item-subtitle-weight;
+		font-size: $blog-item-subtitle-small;
+		font-weight: $blog-item-subtitle-weight;
 		letter-spacing: 1px;
 
 		text-transform: lowercase;
@@ -150,19 +168,12 @@ section.intro.post p {
 		margin-top: 5px;
 
 		@include mq(tabletp) {
-			font-size: $grid-item-subtitle-medium;
+			font-size: $blog-item-subtitle-medium;
 		}
 
 		@include mq(laptop) {
-			font-size: $grid-item-subtitle-large;
+			font-size: $blog-item-subtitle-large;
 		}
-	}
-
-	.description {
-		margin-top: 5px;
-
-		font-style: italic;
-		color: $text-light-color;
 	}
 
 }

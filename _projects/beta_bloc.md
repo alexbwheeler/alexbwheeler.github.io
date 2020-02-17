@@ -3,13 +3,11 @@ title: 'Beta Bloc'
 
 subtitle: 'Poster design'
 
-date: 2018-06-30 00:00:03
+date: 2018-06-30 00:00:04
 
 description: Montreal bouldering gym. 
 
 featured_image: '/images/portfolio/beta_bloc/poster-square.jpg'
-
-preview: beta_bloc
 
 ref: betabloc
 

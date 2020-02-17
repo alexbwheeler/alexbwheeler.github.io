@@ -3,13 +3,11 @@ title: 'La Belle et La Boeuf'
 
 subtitle: 'Print design and branding'
 
-date: 2018-06-30 00:00:01
+date: 2018-06-30 00:00:00
 
 description: La Belle et La Boeuf (The Beauty and The Beef) is an innovative burger bar chain. They're branding is grungy and punk, with a bit of nostalgia. Their stores feature walls covered in graffiti and will always be playing some old-school hip hop music or rock and roll classics.
 
 featured_image: '/images/portfolio/belle_et_boeuf/fabuleux_square.jpg'
-
-preview: belle_et_boeuf
 
 ref: bb
 

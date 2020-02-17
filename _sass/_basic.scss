@@ -82,7 +82,7 @@ h1, .h1 {
 
 	text-align: center;
 
-	@include mq(tabletp) {
+	@include mq(tabletl) {
 		font-size: $h1-medium;
 		text-align: left;
 	}
@@ -99,7 +99,7 @@ h2, .h2 {
 	line-height: $h2-lineheight;
 	letter-spacing: $h2-spacing;
 
-	@include mq(tabletp) {
+	@include mq(tabletl) {
 		font-size: $h2-medium;
 	}
 
@@ -109,13 +109,14 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	margin-top: 30px;
+	margin-top: 0.5em;
 	font-size: $h3-small;
 	font-weight: $h3-weight;
 	line-height: $h3-lineheight;
 	letter-spacing: $h3-spacing;
 
-	@include mq(tabletp) {
+	@include mq(tabletl) {
+		margin-top: 1em;
 		font-size: $h3-medium;
 	}
 
@@ -131,7 +132,7 @@ h4, .h4 {
 	line-height: $h4-lineheight;
 	letter-spacing: $h4-spacing;
 
-	@include mq(tabletp) {
+	@include mq(tabletl) {
 		font-size: $h4-medium;
 	}
 
@@ -147,7 +148,7 @@ h5, .h5 {
 	line-height: $h5-lineheight;
 	letter-spacing: $h5-spacing;
 
-	@include mq(tabletp) {
+	@include mq(tabletl) {
 		font-size: $h5-medium;
 	}
 
@@ -163,7 +164,7 @@ h6, .h6 {
 	line-height: $h6-lineheight;
 	letter-spacing: $h6-spacing;
 
-	@include mq(tabletp) {
+	@include mq(tabletl) {
 		font-size: $h6-medium;
 	}
 
@@ -178,7 +179,7 @@ p, ul, ol, a {
 	font-weight: $p-weight;
 	letter-spacing: $p-spacing;
 
-	@include mq(tabletp) {
+	@include mq(tabletl) {
 		font-size: $p-medium;
 	}
 
@@ -213,7 +214,7 @@ blockquote {
 	letter-spacing: $blockquote-spacing;
 	line-height: $blockquote-lineheight;
 
-	@include mq(tabletp) {
+	@include mq(tabletl) {
 		border-left-width: 3px;
 		padding: 15px 0 15px 30px;
 		font-size: $blockquote-medium;
@@ -231,7 +232,7 @@ blockquote {
 		letter-spacing: $blockquote-spacing;
 		line-height: $blockquote-lineheight;
 
-		@include mq(tabletp) {
+		@include mq(tabletl) {
 			font-size: $blockquote-medium;
 		}
 
@@ -329,7 +330,7 @@ a {
 		max-width: 500px;
 
 		font-size: $p-small;
-		@include mq(tabletp) {
+		@include mq(tabletl) {
 			font-size: $p-medium;
 		}
 
@@ -357,7 +358,7 @@ a {
 	max-width: 500px;
 
 	font-size: $p-small;
-	@include mq(tabletp) {
+	@include mq(tabletl) {
 		font-size: $p-medium;
 	}
 
@@ -426,7 +427,7 @@ a {
 		letter-spacing: $button-spacing;
 	    font-size: $p-small;
 	    
-		@include mq(tabletp) {
+		@include mq(tabletl) {
 			font-size: $p-medium;
 		}
 
@@ -547,12 +548,20 @@ hr {
 
 .page {
 	min-height: 100vh;
+	@include transition(all 0.2s ease);
 }
 
-body:not(.loading) {
-	.page {
-		@include animation(content-in 0.4s $main-ease);
-	}
+body:not(.loading) .page{
+	@include animation(content-in 0.4s $main-ease);
+}
+
+body.menu_open .page{
+	opacity: 0;
+	@include translate(-100px,0);
+}
+
+body {
+	@include transition(background 0.5s ease);
 }
 
 @include keyframes (content-in) {
@@ -577,8 +586,8 @@ body.loading {
 	.page {
 		visibility: hidden;
 		opacity: 0;
-		@include transition(all 0.4s $main-ease, visibility 0s 0.4s);
 		@include translate(50px,0);
+		@include transition(all 0.4s $main-ease, visibility 0s 0.4s);
 	}
 
 	.footer {
@@ -612,7 +621,7 @@ body.loading {
 }
 
 .page,
-.page__content {
+.page_content {
 	clear: both;
 	width: 100%;
 

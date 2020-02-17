@@ -2,7 +2,7 @@
 
 title: Work
 
-header: My finest work
+header: 'My<br><span class="finest">finest</span><br>work'
 
 description: Graphic and web design portfolio. Logos, posters, brochures, branding, visual identity, and more.
 

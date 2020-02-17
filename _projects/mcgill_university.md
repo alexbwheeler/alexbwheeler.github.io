@@ -3,13 +3,11 @@ title: 'McGill University'
 
 subtitle: 'Logo and brochure design'
 
-date: 2018-06-30 00:00:04
+date: 2018-06-30 00:00:05
 
 description: Work done for the McGill University Advancement department, who oversee alumni relations and fund raising.
 
 featured_image: '/images/portfolio/mcgill/logo-square.jpg'
-
-preview: mcgill
 
 ref: mcgill
 

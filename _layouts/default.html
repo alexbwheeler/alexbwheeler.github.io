@@ -8,7 +8,7 @@
 
 
 
-<body class="loading{% if site.data.settings.advanced_settings.ajax_loading == true %} ajax-loading{% endif %}" data-site-url="{{ site.url }}" data-page-url="{{ page.url | replace: 'index.html', '' }}">
+<body class="loading{% if site.data.settings.advanced_settings.ajax_loading == true %} ajax-loading{% endif %}" id="body" data-site-url="{{ site.url }}" data-page-url="{{ page.url | replace: 'index.html', '' }}" data-title="{{ page.title | downcase }}">
 
 	{% include header.html %}
 
@@ -20,7 +20,7 @@
 	
 	<div class="page">
 
-		<div class="page__content" id="{{ page.ref }}" data-page-title="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">
+		<div class="page_content" id="{{ page.ref }}" data-page-title="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">
 
 			{{ content }}
 

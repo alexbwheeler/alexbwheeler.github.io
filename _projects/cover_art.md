@@ -1,17 +1,13 @@
 ---
 title: 'Cover Art'
-
+description: Unique cover art for various artists.
 subtitle: 'Graphic Design'
 
-date: 2018-06-30 00:00:00
-
-description: Unique cover art for various artists.
+date: 2018-06-30 00:00:02
 
 featured_image: '/images/portfolio/cover_art/i-miss-you-cover-art.jpg'
 
-preview: cover_art
-
-ref: betabloc
+ref: cover_art
 
 lang: en
 ---

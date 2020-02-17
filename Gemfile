@@ -10,4 +10,5 @@ group :jekyll_plugins do
   gem 'coffee-script'
   gem 'uglifier'
   gem 'sass'
+  gem 'jekyll-autoprefixer'
 end

@@ -3,13 +3,11 @@ title: 'Bacaro Pizzeria'
 
 subtitle: 'Print design and branding'
 
-date: 2018-06-30 00:00:02
+date: 2018-06-30 00:00:01
 
 description: Montreal pizza chain with modern and minimalist branding.
 
 featured_image: '/images/portfolio/bacaro/pizzaterien_square.jpg'
-
-preview: bacaro
 
 ref: bacaro
 

@@ -9,8 +9,6 @@ description: Various Logo designs.
 
 featured_image: '/images/portfolio/quasar/quasar1.jpg'
 
-preview: logofolio
-
 ref: quasar
 
 lang: en

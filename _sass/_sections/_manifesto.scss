@@ -19,62 +19,53 @@
 
 .about {
 
-	padding-top: 0;
 	margin-bottom: 10vmin;
-	margin-top: 10vmin;
+	margin-top: 5vh;
+	padding: 0;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #283748;
+	    z-index: -1;
+
+		@include transform-origin(bottom);
+		@include transform(scaleY(0));
+		transition: all 0.6s cubic-bezier(.69,-0.01,.07,1) 0.2s;
+	}
+
+	&.visible:after {
+		@include scale(1);
+	}
 
 	@include mq(tabletp) {
-		margin-top: 10vmin;
-		margin-bottom: 20vmin;
+		margin-top: 5vmin;
+		margin-bottom: 10vmin;
 	}
 
-	&.visible, &.visible * {
-		opacity: 1;
-
-		h3, p {
-			transform: translateY(0);
-		}
-	}
-
-	h3, p {
-		@include transition(all 0.5s ease 1s);
+	.narrow_wrap {
+		padding-top: 10vh;
+		padding-bottom: 10vh;
 	}
 
 	h2 {
 		text-align:center;
-
-		span {
-			opacity: 0;
-		}
-
-		span:nth-child(1) {
-			@include transition(all 1s ease);
-		}
-
-		span:nth-child(2) {
-			@include transition(all 1s ease 0.2s);
-		}
-
-		span.myName {
-			@include transition(all 1s ease 0.4s);
-			@include blue;
-		}
-	}
-
-	h3, p {
-		transform: translateY(10px);
-		opacity: 0;
-	}
-
-	h3 {
-		margin-top: 0.2em;
+		color: white;
 	}
 
 	p {
 		margin: 0 auto;
 		margin-top: 1em;
+		color: white;
+		max-width: 500px;
 
-		@include mq (tabletp) {
+		@include mq (tabletl) {
+			max-width: none;
+			
 			span {
 				display: block;
 			}

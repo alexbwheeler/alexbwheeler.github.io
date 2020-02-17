@@ -93,16 +93,16 @@ font_settings:
     small_padding: 1
     large_padding: 1.5
 
-  grid_item_title:
+  blog_item_title:
     small_size: 40
-    medium_size: 40
+    medium_size: 45
     large_size: 45
-    weight: 700
+    weight: 400
     letter_spacing: -0.02
 
-  grid_item_subtitle:
+  blog_item_subtitle:
     small_size: 12
-    medium_size: 12
+    medium_size: 13
     large_size: 15
     weight: 200
     letter_spacing: 0.2
@@ -156,8 +156,8 @@ font_settings:
     line_height: 1.6
 
   p:
-    small_size: 12
-    medium_size: 14
+    small_size: 11
+    medium_size: 13
     large_size: 14
     weight: 200
     letter_spacing: 0
