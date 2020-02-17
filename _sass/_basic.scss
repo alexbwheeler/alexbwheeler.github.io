@@ -548,11 +548,7 @@ hr {
 
 .page {
 	min-height: 100vh;
-	@include transition(all 0.2s ease);
-}
-
-body:not(.loading) .page{
-	@include animation(content-in 0.4s $main-ease);
+	animation: content-in 0.4s $main-ease;
 }
 
 body.menu_open .page{
@@ -564,7 +560,7 @@ body {
 	@include transition(background 0.5s ease);
 }
 
-@include keyframes (content-in) {
+@keyframes content-in {
 	0% {
 		@include translate(-50px,0);
 		opacity: 0;
@@ -588,6 +584,7 @@ body.loading {
 		opacity: 0;
 		@include translate(50px,0);
 		@include transition(all 0.4s $main-ease, visibility 0s 0.4s);
+		animation: none;
 	}
 
 	.footer {

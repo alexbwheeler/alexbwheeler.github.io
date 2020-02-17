@@ -111,13 +111,13 @@ body[data-title="work"] {
 
 		&.animate {
 			&:after {
-				transition: transform 0.5s cubic-bezier(.69,-0.01,.07,1) 1s;
+				transition: transform 0.5s $ease-reveal 1s;
 				transform-origin: top;
 				transform: scaleY(0);
 			}
 
 			.featured-image {
-				transition: background 0.5s ease 0.5s, background-size 0.5s ease 0.5s;
+				transition: background 0s ease 0.5s, background-size 0s ease 0.5s;
 				
 				img, &:after {
 					opacity: 0;
@@ -155,7 +155,7 @@ body[data-title="work"] {
 				}
 
 				.featured-image:before {
-					animation: img-overlay-in 0.5s cubic-bezier(.69,-0.01,.07,1), img-overlay-out 0.5s cubic-bezier(.69,-0.01,.07,1) 0.5s, 
+					animation: img-overlay-in 0.5s $ease-reveal, img-overlay-out 0.5s $ease-reveal 0.5s, 
 				}
 
 				.featured-image {

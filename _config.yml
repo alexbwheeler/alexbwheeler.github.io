@@ -112,9 +112,6 @@ assets:
 plugins:
 - jekyll-autoprefixer
 
-autoprefixer:
-  only_production: true
-
 exclude:
   - 'node_modules'
   - 'Gemfile'
@@ -122,5 +119,3 @@ exclude:
   - 'build.js'
   - 'package-lock.json'
   - 'package.json'
-
-  
