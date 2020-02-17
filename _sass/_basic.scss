@@ -554,6 +554,8 @@ hr {
 body.menu_open .page{
 	opacity: 0;
 	@include translate(-100px,0);
+	@include transition(all 0.2s ease-in-out);
+	animation: none;
 }
 
 body {

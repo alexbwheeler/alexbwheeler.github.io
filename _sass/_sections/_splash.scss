@@ -75,7 +75,7 @@
 			background-size: 200%;
 			background-position: 0% 50%;
 			overflow: hidden;
-			@include animation('invisible 0.7s, splash-gradient-slide 0.7s ease 0.7s, gradient-wash 6s ease 1.4s');
+			@include animation('invisible 0.7s, splash-gradient-slide 0.7s '$ease-reveal' 0.7s, gradient-wash 6s ease 1.4s');
 
 			div.noise {
 				@supports (mix-blend-mode: overlay) {
@@ -88,17 +88,17 @@
 			}
 
 			img, div {
-				@include animation('invisible 0.7s, splash-border 0.7s ease 0.7s');
+				@include animation('invisible 0.7s, splash-border 0.7s '$ease-reveal' 0.7s');
 			}
 
 			@include mq (landscape) {
 				right: -1px;
 				width: 200%;
-				@include animation('invisible 1.3s, splash-gradient-slide 0.6s ease 1.3s, gradient-wash 6s ease 1.9s');
+				@include animation('invisible 1.3s, splash-gradient-slide 0.6s '$ease-reveal' 1.3s, gradient-wash 6s ease 1.9s');
 
 				img, div {
 					width: 100%;
-					@include animation('invisible 0.7s, splash-border 0.6s ease 1.3s');
+					@include animation('invisible 0.7s, splash-border 0.6s '$ease-reveal' 1.3s');
 				}
 			}
 		}
