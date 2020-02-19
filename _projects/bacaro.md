@@ -5,7 +5,7 @@ subtitle: 'Print design and branding'
 
 date: 2018-06-30 00:00:01
 
-description: Montreal pizza chain with modern and minimalist branding.
+description: Montreal pizza chain with modern and minimalist branding. Designed posters, flyers and other promotional material as well as helping to re-brand with a new visual identity.
 
 featured_image: '/images/portfolio/bacaro/pizzaterien_square.jpg'
 
@@ -32,6 +32,8 @@ When I first began working on the brand, it had a more classic and old-school lo
 </div>
 
 ## Branding
+
+Packaging and stationary design to go along with new logo and visual identity I helped create.
 
 <div class="gallery" data-columns="2">
 	<img src="/images/portfolio/bacaro/bacaro_business_card.jpg">

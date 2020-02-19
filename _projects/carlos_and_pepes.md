@@ -5,7 +5,7 @@ subtitle: 'Poster and flyer design'
 
 date: 2018-06-30 00:00:06
 
-description: 'Surf bar and taquaria.'
+description: 'Surf bar and taquaria. Created promotional material for print and web.'
 
 featured_image: '/images/portfolio/carlos/taco-billboard-square.jpg'
 

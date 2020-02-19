@@ -8,7 +8,7 @@
   margin-left: auto; margin-right: auto;
   padding-left: 30px; padding-right: 30px;
   width: 100%;
-  max-width: none;
+  max-width: 1600px;
 
   @include mq(tabletp) {
     width: 90%;
@@ -20,7 +20,7 @@
   }
 
   @include mq(laptop) {
-    width: 80%;
+    width: 75%;
   }
 }
 
@@ -41,7 +41,7 @@
   }
 
   @include mq(laptop) {
-    width: 70%;
+    width: 65%;
   }
 }
 

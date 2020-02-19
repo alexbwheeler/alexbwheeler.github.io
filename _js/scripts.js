@@ -335,11 +335,17 @@
 			$("#lang").load(location.href + " #lang>*", "");
 		}, 500);
 
+		setTimeout(function(){
+			if (window.scrollY < 50) {
+				window.scrollTo(0, 0);
+			}
+		}, 400);
+
 		// Scroll to top
-		// if (window.scrollY < 100) {
+		// if (window.scrollY < 50) {
 		// 	$( 'body, html' ).animate({
 		// 		scrollTop: 0
-		// 	}, 200);
+		// 	}, 100);			
 		// }
 	}
 

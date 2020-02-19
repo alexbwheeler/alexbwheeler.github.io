@@ -71,6 +71,9 @@ $menu_show_delay5: 0.75s;
 
 	&.up {
 		transform: translateY(-140px);
+		.menu__list__item__link {
+			transition: all 0s 0.4s;
+		}
 	}
 
 	@include transition(all .25s ease);
