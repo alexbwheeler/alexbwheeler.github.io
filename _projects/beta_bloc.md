@@ -7,7 +7,7 @@ date: 2018-06-30 00:00:04
 
 description: Freelance poster design work for montreal bouldering gym.
 
-featured_image: '/images/portfolio/beta_bloc/poster-square.jpg'
+featured_image: '/images/portfolio/preview/betabloc.png'
 
 ref: betabloc
 
