@@ -13,6 +13,8 @@ lang: en
 ---
 
 <div class="gallery" data-columns="2">
+	<img src="/images/portfolio/cover_art/gone.jpg" alt="California Cover Art">
+	<img src="/images/portfolio/cover_art/hold-me-close.jpg" alt="California Cover Art">
 	<img src="/images/portfolio/cover_art/california.jpg" alt="California Cover Art">
 	<img src="/images/portfolio/cover_art/hangover-day-cover-art.jpg" alt="Hangover Day Cover Art">
 	<img src="/images/portfolio/cover_art/cold-cover-art.jpg" alt="Cold Cover Art">
