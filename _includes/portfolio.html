@@ -1,4 +1,4 @@
-<section class="portfolio">
+<div class="portfolio">
 	{% for project in projects %}
 
 	<div class="portfolio-item animate once {{ project.ref }}">
@@ -8,7 +8,7 @@
 		</a>
 
 		<div class="info">
-			<p class="type">{{ project.subtitle }}</p>
+			<p class="type">{{ project.subtitle }} </p>
 			<h2 class="title">{{ project.title }}</h2>
 			<p class="description">{{ project.description }}</p>
 			<a href="{{ project.url }}" class="button black">details</a>
@@ -17,4 +17,4 @@
 	</div>	
 
 	{% endfor %}
-</section>
+</div>

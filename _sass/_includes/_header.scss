@@ -82,7 +82,7 @@ $menu_show_delay5: 0.75s;
 		font-size: 15px;
 		letter-spacing: 0.1em;
 		text-transform: lowercase;
-		font-family: $body-font;
+		font-family: $title-font;
 		font-weight: 200;
 
 		z-index: 100;
@@ -399,7 +399,7 @@ $menu_show_delay5: 0.75s;
 	font-weight: $menu-weight;
 	color: $text-dark-color;
 	text-transform: uppercase;
-	font-family: $title-font;
+	font-family: $body-font;
 
 	position: relative;
 	padding: 2px 5px;
@@ -442,7 +442,7 @@ $menu_show_delay5: 0.75s;
 	}
 
 	@include mq(tabletl) {
-		font-family: $body-font;
+		font-family: $title-font;
 		font-size: $menu-medium;
 		font-weight: $menu-weight;
 		color: $text-dark-color;

@@ -293,7 +293,7 @@ a {
 
 	@include mq(tabletp) {
 		padding: 11px 20px 12px;
-		font-size: 15px;
+		font-size: $p-medium;
 	}
 
 	&:hover {
@@ -421,7 +421,6 @@ a {
 	    color: $retro-button2;
 	    line-height: 110%;
 	    text-align: center;
-	    text-transform: uppercase;
 
 	    font-weight: 300;
 		letter-spacing: $button-spacing;

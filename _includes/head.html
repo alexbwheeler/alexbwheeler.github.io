@@ -19,7 +19,7 @@
 <meta name="description" content="{{ page.description }}">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">
+<meta name="twitter:title" content="{% if page.ref == "index" %}{{ site.data.settings.basic_settings.site_title }}{% else %}{{  page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">
 <meta name="twitter:description" content="{{ page.description }}">
 <meta name="twitter:image:src" content="{{ site.url }}{{ page.featured_image }}">
 

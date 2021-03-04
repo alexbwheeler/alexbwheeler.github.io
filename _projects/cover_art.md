@@ -10,6 +10,8 @@ featured_image: '/images/portfolio/cover_art/california.jpg'
 ref: cover_art
 
 lang: en
+
+featured: yes
 ---
 
 <div class="gallery" data-columns="2">

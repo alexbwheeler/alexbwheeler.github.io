@@ -5,15 +5,15 @@
 .manifesto {
 
 	h2 {
-		font-size: $h1-medium;
+		text-align: center;
 
-		@include mq(tabletp) {
+		@include mq(phone) {
 			font-size: $h1-medium;
 		}
 
-		@include mq(laptop) {
-			font-size: $h1-large;
-		}
+		// @include mq(laptop) {
+		// 	font-size: $h1-large;
+		// }
 	}
 }
 
@@ -107,7 +107,6 @@
 
 		h2 {
 			letter-spacing: 0px;
-			font-weight: 400;
 			text-align: center;
 
 			margin-top: 0;
@@ -241,9 +240,6 @@
 	h2 {
 		@include transition(all .2s ease);
 
-		@include mq(phone) {
-			font-size: 35px;
-		}
 	}
 
 	&>div {
@@ -303,9 +299,28 @@
 
 			.post {
 				margin-bottom: 0;
-				width: 30%;
+				width: 32%;
 			}
 		}
+	}
+}
+
+.featured-work {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	a {
+		width: 45%;
+	}
+
+}
+
+
+
+.featured-works {
+	h2 {
+		margin: 1em 0;
 	}
 }
 

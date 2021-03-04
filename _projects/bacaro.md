@@ -3,7 +3,7 @@ title: 'Bacaro Pizzeria'
 
 subtitle: 'Print design and branding'
 
-date: 2018-06-30 00:00:01
+date: 2018-06-30 00:00:02
 
 description: Montreal pizza chain with modern and minimalist branding. Designed posters, flyers and other promotional material as well as helping to re-brand with a new visual identity.
 

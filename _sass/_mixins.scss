@@ -41,6 +41,10 @@
   }
 
   @include mq(laptop) {
+    width: 75%;
+  }
+
+  @include mq(desktop) {
     width: 65%;
   }
 }

@@ -58,7 +58,7 @@ ref: index
 
 <section class="align_center about manifesto animate">
 	<div class="narrow_wrap">
-		<h2>I am Alex</h2>
+		<h2>I'm Alex</h2>
 
 		<p class="align_center">
 			<span>I help build brands through design whith visuals and websites that stand out.</span>
@@ -74,28 +74,28 @@ ref: index
 		<img class="animate gif" src="images/services/graphic_design.png" data-src="images/services/graphic_design.gif" alt="Graphic design">
 		<!-- <div class="img graphic_design slow_lazy"></div> -->
 		<h2>Graphic Design</h2>
-		<p>Create eye-catching visuals that leave an impression with your brand and your message. I do everything from logo and brand development to poster design.</p>
+		<p>Eye-catching visuals that leave an impression with your brand and your message.</p>
 	</div>
 
 	<div data-aos="fade-up">
 		<img class="animate gif" src="images/services/web_design.png" data-src="images/services/web_design.gif" alt="Web design">
 		<!-- <div class="img graphic_design slow_lazy"></div> -->
 		<h2>Web Design</h2>
-		<p>Design beautiful and functional web experiences tailored to your brand. From wireframes to pixel perfect mockups, I’ve got you covered.</p>
+		<p>Beautiful web experiences tailored to your brand. From wireframes to pixel perfect mockups, I’ve got you covered.</p>
 	</div>
 
 	<div data-aos="fade-up">
 		<img class="animate gif" src="images/services/web_dev.png" data-src="images/services/web_dev.gif" alt="Web development">
 		<!-- <div class="img graphic_design slow_lazy"></div> -->
-		<h2>Web Development</h2>
-		<p>I build custom coded websites and can work with CMS’s such as Wordpress or static site generators. With knowledge of HTML, CSS and Javascript I make sure everything looks and works just right.</p>
+		<h2>Web Dev</h2>
+		<p>Custom websites that look and work just right.</p>
 	</div>
 
 </section>
 
 <section class="brands manifesto">
 
-	<h3 class="align_center" data-aos="fade-up">Some friends</h3>
+	<h3 class="align_center" data-aos="fade-up">Proud to have worked with</h3>
 
 	<a href="/work/" class="clients" data-aos="fade-up" data-aos-delay="100">
 
@@ -140,24 +140,25 @@ ref: index
 
 </section>
 
+{% assign projects=site.projects | where:"featured", true %}
+
 <section class="narrow_wrap featured-posts manifesto align_center">
 
-	<h2 data-aos="fade-up">Constantly Creating</h2>
-	<p data-aos="fade-up">I post recent client projects and case studies regularly on my blog to inspire others and showcase my recent work.</p>
+	<h2 data-aos="fade-up">Featured Work</h2>
 
 	<div class="blog-posts newest">
-		{% for post in site.posts limit:3 %}
+		{% for project in projects %}
 
 		<div class="post" data-aos="fade-up">
 
 			<a href="{{ post.url }}">
 
-				<div>
-					<img src="/images/lazy/lazy-load-post.svg" data-src="{{ post.featured_image  }}" class="lazy" alt="{{ post.title }}">
-				</div>
+				<a class="featured-image {{ project.ref }}" href="{{ project.url }}">
+					<img src="/images/lazy/lazy-work.svg" data-src="{{ project.featured_image }}" class="lazy front" alt="{{ project.title }} front">
+				</a>
 
-				<h3>{{ post.title }}</h3>
-				<p class="description">{{ post.description }}</p>
+				<h3>{{ project.title }}</h3>
+				<p class="description">{{ project.subtitle }}</p>
 
 			</a>
 
@@ -166,8 +167,6 @@ ref: index
 		{% endfor %}
 	</div>
 
-	<a href="/blog" class="button black">see more posts</a>
+	<a href="/blog" class="button black">View all work</a>
 
 </section>
-
-

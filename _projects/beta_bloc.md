@@ -12,6 +12,7 @@ featured_image: '/images/portfolio/beta_bloc/preview-beta_bloc.jpg'
 ref: betabloc
 
 lang: en
+
 ---
 
 
