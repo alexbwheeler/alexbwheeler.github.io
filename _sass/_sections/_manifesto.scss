@@ -8,7 +8,15 @@
 		text-align: center;
 
 		@include mq(phone) {
-			font-size: $h1-medium;
+			font-size: 32px;
+		}
+
+		@include mq(tabletp) {
+			font-size: 40px;
+		}
+
+		@include mq(tabletl) {
+			font-size: 50px;
 		}
 
 		// @include mq(laptop) {
@@ -239,6 +247,7 @@
 
 	h2 {
 		@include transition(all .2s ease);
+		margin-bottom: 0.5em;
 
 	}
 
