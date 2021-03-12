@@ -25,7 +25,7 @@ I always really enjoyed creating graphics for La Belle et La Boeuf. Their bold a
 
 Billboard campaign launched to promote brand awareness around the Montreal area by highlighting the two main products: food and drinks.
 The concept was to create an image that would make people think "wait, what?" because of the over the top nature of our presentation and make a lasting impression.
-This project was heavy in photo manipulation. I edited many difference photos together to create the man on the billboard, since there was no photo shoot. 
+This project was heavy in photo manipulation. I edited many different photos together to create the man on the billboard, since there was no photo shoot. 
 
 ![](/images/portfolio/belle_et_boeuf/fabuleux.jpg)
 
