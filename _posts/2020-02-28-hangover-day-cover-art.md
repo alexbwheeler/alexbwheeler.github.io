@@ -10,7 +10,7 @@ tags:
 - cover art
 - music
 - client
-- 
+
 ---
 
 ![](/images/blog/post8/hangover-day-cover-art)

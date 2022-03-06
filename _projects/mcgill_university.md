@@ -1,23 +1,23 @@
 ---
 title: 'McGill University'
+subtitle: 'Logo design'
 
-subtitle: 'Logo and brochure design'
+description: Pin logo and brochure design for McGill University Advancement department.
+
+featured: true
 
 date: 2018-06-30 00:00:05
+location: Montreal
 
-description: Work done for the McGill University Advancement department, who oversee alumni relations and fund raising.
+tags: [logo design]
+category: client
 
-featured_image: '/images/portfolio/preview/mcgill.png'
+featured_image: '/images/portfolio/mcgill/logos.jpg'
 
 ref: mcgill
 
 lang: en
 ---
-
-
-## Chancellor Day Cicle Logo
-
-Logo design for the Chancellor Day Circle, a group founded to acknowledge the faculty’s most significant supporters. Logo illustrated based on the architecture of the actual Chancellor Day Hall building, located on Peel Street Montreal. This logo was made during my design stage at McGill University in the University Advancement department creative team.
 
 <div class="gallery" data-columns="3">
 	<img src="/images/portfolio/mcgill/logo-square.jpg">
@@ -25,8 +25,13 @@ Logo design for the Chancellor Day Circle, a group founded to acknowledge the fa
 	<img src="/images/portfolio/mcgill/pin.jpg">
 </div>
 
-## Martlet Pamphlet
+### Chancellor Day Circle Logo
 
-Pamphlet for the Martlet Foundation and its scholarships. 
+Chancellor Day Circle is a group founded to acknowledge the faculty’s most significant supporters. I illustrated the logo based on the architecture of the actual Chancellor Day Hall building, located on Peel Street in Montreal. Designed during my design stage at McGill University with the University Advancement department creative team.
 
 ![](/images/portfolio/mcgill/martlet-pamphlet-wide.jpg)
+
+### Martlet Pamphlet
+
+Pamphlet for the Martlet Foundation and its scholarships, also done during my stage.
+

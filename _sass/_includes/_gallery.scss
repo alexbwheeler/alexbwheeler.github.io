@@ -1,8 +1,9 @@
-// - - - - - - - - - - - - - - - - - -
 
-// Gallery
+//--------------//
+// Gallery Grid //
+//--------------//
 
-// - - - - - - - - - - - - - - - - - -
+$grid-spacing: 10px;
 
 .single .gallery {
 	@include wide_wrap;
@@ -101,8 +102,12 @@
 	
 	.gallery__item {
 		float: left;
-		width: 50%;
 		padding: $grid-spacing/2;
+		width: 50%;
+
+		img {
+			border-radius: 5px;
+		}
 	}
 
 	.gallery__item__link {
@@ -110,18 +115,26 @@
 		cursor: zoom-in;
 	}
 
-	&[data-columns="3"] {
-
+	&[data-columns="2"] {
 		.gallery__item {
-			width: 33.33%;
+			width: 100%;
+			
+			@include mq(tabletp) {
+				width: 50%;
+			}
 		}
 	}
 
-	&[data-columns="4"] {
+	&[data-columns="3"] {
 
-		.gallery__item {
-			width: 33.33%;
+		@include mq(tabletp) {
+			.gallery__item {
+				width: 33.33%;
+			}
 		}
+	}
+
+	&[data-columns="4"] {		
 
 		@include mq(tabletp) {
 

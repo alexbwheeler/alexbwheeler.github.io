@@ -16,6 +16,7 @@
 		{{  page.title }} – {{ site.data.settings.basic_settings.site_title }}
 	{% endif %}
 </title>
+
 <meta name="description" content="{{ page.description }}">
 
 <meta name="twitter:card" content="summary_large_image">
@@ -38,6 +39,8 @@
 {% else %}
 	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css">
 {% endif %}
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 <link rel="preload" href="{{ site.baseurl }}/images/logo-black-wipe.gif" as="image">
 

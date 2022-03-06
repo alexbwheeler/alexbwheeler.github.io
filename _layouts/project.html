@@ -1,18 +1,60 @@
 ---
 layout: default
+type: project_page
 ---
 
-<section class="intro">
+{% capture the_collection %}{{page.collection}}{% endcapture %}
+  {% if page.collection %}
+    {% assign  document = site[the_collection]  %}
+  {% endif %}
 
-	<h1>{{ page.title }}</h1>
-	<p>{{ page.description }}</p>
+
+{% for links in document  %}
+  {% if links.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prevurl = prev.url %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = document[forloop.index] %}
+      {% assign nexturl = next.url %}
+    {% endunless %}
+  {% endif %}
+  {% assign prev = links %}
+{% endfor %}
+
+<section class="intro project_page">
+
+	<h1 data-aos="fade-right" data-aos-duration="1000">{{ page.title }}</h1>
+	<p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">{{ page.description }}</p>
+
+	{% if page.category == "client" %}
+	<div class="project_info" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+		<div class="project_info_block">
+			<div class="project_info_title">service</div>
+			<div class="project_info_value">{{ page.subtitle }}</div>
+		</div>
+
+		<div class="project_info_block location">
+			<div class="project_info_title">location</div>
+			<div class="project_info_value">{{ page.location }}</div>
+		</div>
+	</div>
+	{% endif %}
+
+	<div class="previous_next"  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
+	  <div class="narrow_wrap">
+	  	{% if prevurl %}<a href="{{prevurl}}" class="previous">{% if page.lang == 'fr' %} < {% else %}Previous{% endif %}</a>{% endif %}
+
+	  	{% if nexturl %}<a href="{{nexturl}}" class="next">{% if page.lang == 'fr' %} > {% else %}Next{% endif %}</a>{% else %} {% endif %}
+	  </div>
+	</div>
 
 </section>
 
-<section class="single">
+<section class="single project" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
 
 	{{ page.content }}
 
-	{% include previous-next.html %}
-
 </section>
+
+{% include previous-next.html %}

@@ -1,11 +1,16 @@
 ---
 title: 'Beta Bloc'
-
-subtitle: 'Poster design'
+subtitle: 'Graphic Design'
 
 date: 2018-06-30 00:00:04
+location: Point Claire
 
-description: Freelance poster design work for montreal bouldering gym.
+tags: [graphic design]
+category: client
+
+featured: true
+
+description: Freelance poster design for montreal bouldering gym.
 
 featured_image: '/images/portfolio/beta_bloc/preview-beta_bloc.jpg'
 
@@ -14,11 +19,11 @@ ref: betabloc
 lang: en
 
 ---
+![](/images/portfolio/beta_bloc/anniv2.jpg)
 
+### Posters
 
-## Posters
-
-<div class="gallery" data-columns="2">
+<div class="gallery" data-columns="4">
 	<img src="/images/portfolio/beta_bloc/coupe_quebec.jpg">
 	<img src="/images/portfolio/beta_bloc/deadpoint4.jpg">
 	<img src="/images/portfolio/beta_bloc/halloween.jpg">

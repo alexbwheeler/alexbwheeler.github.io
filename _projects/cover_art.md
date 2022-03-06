@@ -1,7 +1,7 @@
 ---
-title: 'Cover Art'
+title: 'Music Cover'
 description: Unique cover art for various artists.
-subtitle: 'Graphic Design'
+subtitle: 'Artwork'
 
 date: 2018-06-30 00:00:00
 
@@ -10,8 +10,6 @@ featured_image: '/images/portfolio/cover_art/california.jpg'
 ref: cover_art
 
 lang: en
-
-featured: yes
 ---
 
 <div class="gallery" data-columns="2">

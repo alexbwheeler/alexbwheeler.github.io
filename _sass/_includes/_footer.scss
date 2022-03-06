@@ -9,9 +9,10 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Footer
 
 .footer {
+
 	@include transition(all 0.4s ease-in-out 0.8s);
 	padding: 20px 0;
-	margin-top: 60px;
+	margin-top: 0;
 
 	background: rgba(black, 0.02);
 	color: black;
@@ -34,6 +35,6 @@
 	}
 }
 
-.footer .socials {
+.socials {
 	margin-top: 5px;
 }

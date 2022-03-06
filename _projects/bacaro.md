@@ -1,28 +1,40 @@
 ---
 title: 'Bacaro Pizzeria'
+subtitle: 'Graphic Design'
 
-subtitle: 'Print design and branding'
+description: Montreal pizza chain with modern and minimalist branding.
 
-date: 2018-06-30 00:00:02
+date: 2018-04-25 00:00:02
+location: Montreal
 
-description: Montreal pizza chain with modern and minimalist branding. Designed posters, flyers and other promotional material as well as helping to re-brand with a new visual identity.
-
-featured_image: '/images/portfolio/preview/bacaro.png'
+featured_image: '/images/portfolio/bacaro/pizzaterien.jpg'
 
 ref: bacaro
+
+tags: [graphic design]
+category: client
 
 lang: en
 ---
 
-## "I am Pizzatarian" Billboard Campaign
+![](/images/portfolio/bacaro/pizzaterien.jpg)
+
+### *Je suis Pizzatarian* Billboard
 
 Campaign launched to promote Bacaro brand awareness around the Montreal area.
 
-![](/images/portfolio/bacaro/pizzaterien.jpg)
+<hr>
 
-When I first began working on the brand, it had a more classic and old-school look, with branding that did little to differentiate it. Another designer and I worked together to update the brand with a more modern and recognizable visual identity.
+### Branding and Packaging
 
-## Posters & Flyers
+**Goal:** Clean, minimalist design with focus on illustration. When I first began working on the brand, it had a more classic and old-school look. Our team refreshed the visual identity with new branding. 
+
+<div class="gallery" data-columns="2">
+	<img src="/images/portfolio/bacaro/bacaro_business_card.jpg">
+	<img src="/images/portfolio/bacaro/pizza_box.jpg">
+</div>
+
+### Flyers
 
 <div class="gallery" data-columns="4">
 	<img src="/images/portfolio/bacaro/pizza_friday.jpg">
@@ -31,11 +43,3 @@ When I first began working on the brand, it had a more classic and old-school lo
 	<img src="/images/portfolio/bacaro/impact_combo.jpg">
 </div>
 
-## Branding
-
-Packaging and stationary design to go along with new logo and visual identity I helped create.
-
-<div class="gallery" data-columns="2">
-	<img src="/images/portfolio/bacaro/bacaro_business_card.jpg">
-	<img src="/images/portfolio/bacaro/pizza_box.jpg">
-</div>

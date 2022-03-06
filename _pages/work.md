@@ -2,21 +2,27 @@
 
 title: Work
 
-header: 'My<br><span class="finest">finest</span><br>work'
-
-description: Graphic and web design portfolio. Logos, posters, brochures, branding, visual identity, and more.
+description: Graphic and web design portfolio. Branding and logo design, motion graphics, posters and more.
 
 ref: portfolio
+
+layout: default
 
 lang: en
 
 ---
 
-{% assign projects=site.projects | where:"lang", page.lang %}
+<div class="narrow_wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
 
-{% include portfolio.html %}
+	<div class="intro">
+		<h1>
+			<span data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">My</span>
+			<span data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000">Finest</span>
+			<span class="work" data-aos="fade-right" data-aos-delay="800" data-aos-duration="1000">work</span>
+		</h1>
+	</div>
 
-<p class="align_center">
-	<a href="{{ base.url }}/blog" class="button large black center">See more recent projects on my blog!</a>
-</p>
+	{% assign projects=site.projects | where:"lang", page.lang %}
+	{% include case-studies.html %}
 
+</div>

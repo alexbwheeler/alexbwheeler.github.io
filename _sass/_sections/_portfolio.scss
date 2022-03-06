@@ -1,43 +1,109 @@
-// - - - - - - - - - - - - - - - - - -
-
-// Portfolio
-
-// - - - - - - - - - - - - - - - - - -
 
 body[data-title="work"] {
-	background: #f9f3e7;
+	background: black;
+}
 
-	header {
-		background: #f9f3e7;
+.page_content.project_page {
+	padding-bottom: 0;
+
+	.intro .previous_next {
+		display: none;
 	}
 
-	@include mq(tabletl) {
-		.menu__list__item__link {
-			&.active-link {
-				box-shadow: 0 -2px 0 #283748 inset;
+	@include mq(desktop) {
+		display: flex;
+		padding: 140px 0;
+		justify-content: end;
+		flex-wrap: wrap;
 
-				&::after {
-					background-color: #283748;
+		& > .previous_next { display: none; }
+
+		.intro {
+			position: fixed;
+			width: 24%;	
+			left: 6%;
+
+			.project_info {
+				margin-right: 0;
+				max-width: none;
+			}
+
+			.previous_next { 
+				display:block;
+				background: #fbfbfb;
+
+				.narrow_wrap {
+					width: 100%;
+					justify-content: center;
+					
+					overflow: hidden;
+
+					a {
+						padding: 20px 0;
+						font-size: 16px;
+						width: 50%;
+						display: inline-block;
+
+						&:only-child {
+							width: 100%;
+						}
+
+						&:hover {
+							color: white;
+							background: black;
+						}
+					}
 				}
 			}
+		}
+
+		.single {
+			width: 60%;
+			margin-right: 8%;
+
+			.gallery, .image-wrap { width: 100%; }
 		}
 	}
 }
 
-
-
-.page_content#portfolio {
+#portfolio {
 	.intro {
-		padding-top: 80px;
+		padding: 0;
+		padding-top: 30px;
+		margin-bottom: 60px;
+
+		border-bottom: 1px solid white;
+		width: 100%;
+
+		@include mq(tabletl) {
+			margin-bottom: 110px;
+		}
 	}
 
 	h1 {
 		line-height: 1em;
 		text-transform: uppercase;
 		text-align: left;
+		padding: 8vh 0;
 
-		padding: 10vh 0;
 		font-size: 70px;
+		color: black;
+		letter-spacing: 4px;
+
+		text-shadow:
+			-1px -1px 0 white,
+			1px -1px 0 white,
+			-1px 1px 0 white,
+			1px 1px 0 white;
+
+		span {
+			display: block;
+		}
+
+		span.work {
+			text-shadow: none;
+			color: white;
+		}
 
 		@include mq(tabletp) {
 			padding: 10vh 0;

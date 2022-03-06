@@ -13,9 +13,8 @@ ref: quasar
 
 lang: en
 
-featured: true
-
 ---
+
 
 <div class="gallery" data-columns="2">
 	<img src="/images/portfolio/logofolio/logofolio-06.jpg" alt="Alex Wheeler - Graphic & Web Design Logo">
@@ -26,7 +25,7 @@ featured: true
 	<img src="/images/portfolio/logofolio/logofolio-02.jpg" alt="Yours Truly Logo">
 </div>
 
-## Ski Resorts
+### Ski Resorts
 
 <div class="gallery" data-columns="4">
 	<img src="/images/portfolio/logofolio/ski-hills-01.jpg" alt="Mont Rigaud Logo">

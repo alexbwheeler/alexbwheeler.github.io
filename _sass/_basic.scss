@@ -1,12 +1,7 @@
-
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Basics
-
-
-
 html {
 	position: relative;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -20,11 +15,45 @@ body {
 	overflow: hidden;
 }
 
+//----------------------//
+//		Typography		//
+//----------------------//
 
+// h1
+$h1-small: 35px;
+$h1-medium: 58px;
+$h1-large: 80px;
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Typography
+$h1-weight: 800;
+$h1-lineheight: 0.9;
 
-.align_center {
+// h2
+$h2-small: 40px;
+$h2-medium: 58px;
+$h2-large: 80px;
+
+$h2-weight: 500;
+$h2-lineheight: 1;
+
+//h3
+$h3-small: 35px;
+$h3-medium: 40px;
+$h3-large: 50px;
+
+$h3-weight: 500;
+$h3-lineheight: 0.8;
+
+// p
+$p-small: 14px;
+$p-medium: 16px;
+$p-large: 16px;
+
+$p-weight: 300;
+$p-spacing: 0em;
+$p-lineheight: 1.6;
+$p-maxwidth: 1000px;
+
+.align_center, .center {
 	text-align: center; 
 }
 
@@ -33,7 +62,38 @@ body {
 }
 
 .black {
-	color: black;
+	color: $text-dark-color;
+}
+
+.accent-color {
+	color: $accent-color;
+}
+
+.fancy {
+	position: relative;
+	margin-top: 1em;
+
+	&::before {
+		content: attr(data-pretext);
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -14px;
+		font-size: 11px;
+		font-family: $secondary-font;
+		text-transform: lowercase;
+		text-align: center;
+		letter-spacing: 0.1em;
+
+		@include mq(tabletp) {
+			font-size: $p-medium;
+		}
+
+		@include mq(tabletp) {
+			font-size: $p-large;;
+			top: -20px;
+		}
+	}
 }
 
 body * {
@@ -60,7 +120,7 @@ body * {
 	}
 }
 
-h1.italic, h2.italic, h3.italic, h4.italic {
+.italic {
 	font-style: italic;
 	font-weight: 400;
 }
@@ -68,6 +128,10 @@ h1.italic, h2.italic, h3.italic, h4.italic {
 h1, h2, h3, h4, h5, h6 {
 	font-family: $title-font;
 	color: $text-dark-color;
+
+	letter-spacing: $header-letter-spacing;
+
+	transition: font-size 0.3s ease;
 
 	&:first-child {
 		margin-top: 0;
@@ -78,11 +142,10 @@ h1, .h1 {
 	font-size: $h1-small;
 	font-weight: $h1-weight;
 	line-height: $h1-lineheight;
-	letter-spacing: $h1-spacing;
 
 	text-align: center;
 
-	@include mq(tabletl) {
+	@include mq(tabletp) {
 		font-size: $h1-medium;
 		text-align: left;
 	}
@@ -93,13 +156,12 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	margin-top: 40px;
+	margin-top: 0.8em;
 	font-size: $h2-small;
 	font-weight: $h2-weight;
 	line-height: $h2-lineheight;
-	letter-spacing: $h2-spacing;
 
-	@include mq(tabletl) {
+	@include mq(tabletp) {
 		font-size: $h2-medium;
 	}
 
@@ -109,13 +171,12 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	margin-top: 0.5em;
+	margin-top: 0.8em;
 	font-size: $h3-small;
 	font-weight: $h3-weight;
 	line-height: $h3-lineheight;
-	letter-spacing: $h3-spacing;
 
-	@include mq(tabletl) {
+	@include mq(tabletp) {
 		margin-top: 1em;
 		font-size: $h3-medium;
 	}
@@ -130,9 +191,8 @@ h4, .h4 {
 	font-size: $h4-small;
 	font-weight: $h4-weight;
 	line-height: $h4-lineheight;
-	letter-spacing: $h4-spacing;
 
-	@include mq(tabletl) {
+	@include mq(tabletp) {
 		font-size: $h4-medium;
 	}
 
@@ -145,10 +205,8 @@ h5, .h5 {
 	margin-top: 15px;
 	font-size: $h5-small;
 	font-weight: $h5-weight;
-	line-height: $h5-lineheight;
-	letter-spacing: $h5-spacing;
 
-	@include mq(tabletl) {
+	@include mq(tabletp) {
 		font-size: $h5-medium;
 	}
 
@@ -162,9 +220,8 @@ h6, .h6 {
 	font-size: $h6-small;
 	font-weight: $h6-weight;
 	line-height: $h6-lineheight;
-	letter-spacing: $h6-spacing;
 
-	@include mq(tabletl) {
+	@include mq(tabletp) {
 		font-size: $h6-medium;
 	}
 
@@ -173,13 +230,15 @@ h6, .h6 {
 	}
 }
 
+
+
 p, ul, ol, a {
 	margin-top: 15px;
 	font-size: $p-small;
 	font-weight: $p-weight;
 	letter-spacing: $p-spacing;
 
-	@include mq(tabletl) {
+	@include mq(phonel) {
 		font-size: $p-medium;
 	}
 
@@ -255,17 +314,31 @@ a {
 
 .button, a.button {
 	display: inline-block;
-	padding: 9px 10px 10px;
-	line-height: 1;
-	border: 1px solid $accent-color;
-	background: none;
-	color: $accent-color;
-	font-weight: $button-weight;
-	letter-spacing: $button-spacing;
-	cursor: pointer;
-	font-size: $p-small;
-
+	padding: 9px 60 10px;
 	margin-top: 10px;
+	
+	border: 2px solid $accent-color;
+	padding: 10px;
+	border-radius: 35px;
+
+	background: none;
+	cursor: pointer;
+	
+	text-align: center;
+	font-weight: $button-weight;
+	line-height: 1;
+	color: $accent-color;
+	letter-spacing: $button-spacing;
+
+	font-size: $p-small;
+	@include mq(tabletl) { font-size: $p-medium; }
+	@include mq(laptop) { font-size: $p-large; }
+
+	&:hover {
+		background: adjust-hue($accent-color,15%);
+		border-color: adjust-hue($accent-color,15%);
+		color: $background-color;
+	}
 
 	@include transition(all 0.2s ease);
 
@@ -274,10 +347,10 @@ a {
 		color: white;
 
 		&:hover {
-		background: white;
-		color: black;
-		border-color: white;
-	}
+			background: white;
+			color: black;
+			border-color: white;
+		}
 	}
 
 	&.black {
@@ -285,21 +358,15 @@ a {
 		color: black;
 
 		&:hover {
-		background: black;
-		color: white;
-		border-color: black;
-	}
+			background: black;
+			color: white;
+			border-color: black;
+		}
 	}
 
 	@include mq(tabletp) {
 		padding: 11px 20px 12px;
 		font-size: $p-medium;
-	}
-
-	&:hover {
-		background: adjust-hue($accent-color,15%);
-		border-color: adjust-hue($accent-color,15%);
-		color: $background-color;
 	}
 
 	svg {
@@ -320,82 +387,24 @@ a {
 		}
 	}
 
-	&.large {
-		padding: 15px 20px 16px;
-
-		display: block;
+	&.wide {
+		width: 100%;
+		max-width: 400px;
 		margin: 0 auto;
 
-		width: 100%;
-		max-width: 500px;
-
-		font-size: $p-small;
-		@include mq(tabletl) {
-			font-size: $p-medium;
-		}
-
-		@include mq(laptop) {
-			font-size: $p-large;
-		}
-
 		@include mq(tabletp) {
-			display: inline-block;
 			width: auto;
-
-			padding: 19px 40px 20px;
-			font-size: 17px;
+			margin: 0;
+			padding-left: 60px;
+			padding-right: 60px;
 		}
 	}
-}
 
-.button--large {
-	padding: 15px 20px 16px;
-
-	display: block;
-	margin: 0 auto;
-
-	width: 100%;
-	max-width: 500px;
-
-	font-size: $p-small;
-	@include mq(tabletl) {
-		font-size: $p-medium;
-	}
-
-	@include mq(laptop) {
-		font-size: $p-large;
-	}
-
-	@include mq(tabletp) {
-		display: inline-block;
-		width: auto;
-
-		padding: 19px 40px 20px;
-		font-size: 17px;
-	}
-}
-
-.button--light {
-	background: transparent;
-	border-color: $text-dark-color;
-	color: $text-dark-color;
-
-	&:hover {
-		background: $accent-color;
-		border-color: $accent-color;
-		color: $background-color;
-	}
-}
-
-.button--overlay {
-	background: transparent;
-	border-color: $overlay-text-color;
-	color: $overlay-text-color;
-
-	&:hover {
-		background: $overlay-text-color;
-		border-color: $overlay-text-color;
-		color: $accent-color;
+	&.large {
+		@include mq(phonep) {
+			padding-top: 15px;
+			padding-bottom: 16px;
+		}
 	}
 }
 
@@ -531,7 +540,7 @@ hr {
 	margin: 40px 0;
 	border: 0;
 	height: 2px;
-	background: $background-alt-color;
+	background: #f0f0f0;
 }
 
 ::selection 	 { background: $accent-color; color: $background-color; }
@@ -546,30 +555,28 @@ hr {
 }
 
 .page {
-	min-height: 100vh;
-	animation: content-in 0.4s $main-ease;
-}
+	animation: content-in 0.6s ease;
 
-body.menu_open .page{
-	opacity: 0;
-	@include translate(-100px,0);
-	@include transition(all 0.2s ease-in-out);
-	animation: none;
-}
-
-body {
-	@include transition(background 0.5s ease);
+	@include transition(all 0.4s ease);
 }
 
 @keyframes content-in {
 	0% {
-		@include translate(-50px,0);
 		opacity: 0;
 	}
 	100% {
-		@include translate(0,0);
 		opacity: 1;
 	}
+}
+
+body.menu_open .page{
+	opacity: 0;
+	animation: none;
+	transform: scale(0.95);
+}
+
+body {
+	@include transition(background 0.8s ease);
 }
 
 body.loading {
@@ -583,8 +590,7 @@ body.loading {
 	.page {
 		visibility: hidden;
 		opacity: 0;
-		@include translate(50px,0);
-		@include transition(all 0.4s $main-ease, visibility 0s 0.4s);
+		@include transition(all 0.6s ease, visibility 0s 0.8s);
 		animation: none;
 	}
 
@@ -618,34 +624,31 @@ body.loading {
 	}
 }
 
-.page,
 .page_content {
 	clear: both;
 	width: 100%;
 
-	margin-bottom: 50px;
-
+	padding-bottom: 50px
 }
-
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page sections
 
-section, div.section {
-	padding-top: 20px;
+// section, div.section {
+// 	padding-top: 20px;
 
-	@include mq(tabletp) {
-		padding-top: 20px;
-	}
+// 	@include mq(tabletp) {
+// 		padding-top: 20px;
+// 	}
 
-	@include mq(tabletl) {
-		padding-top: 30px;
-	}
+// 	@include mq(tabletl) {
+// 		padding-top: 30px;
+// 	}
 
-	@include mq(laptop) {
-		padding-top: 50px;
-	}
-}
+// 	@include mq(laptop) {
+// 		padding-top: 50px;
+// 	}
+// }
 
 .wrap {
 	position: relative;

@@ -1,8 +1,8 @@
 
 
-//                                            //
-// - - - - - - - - - Mixins - - - - - - - - - //
-//                                            //
+//--------------------//
+//       Mixins       //
+//--------------------//
 
 @mixin wide_wrap{
   margin-left: auto; margin-right: auto;
@@ -15,12 +15,8 @@
     padding-right: 0; padding-left: 0;
   }
 
-  @include mq(tabletl) {
-    width: 90%;
-  }
-
   @include mq(laptop) {
-    width: 75%;
+    width: 80%;
   }
 }
 
@@ -28,29 +24,20 @@
   margin-left: auto; margin-right: auto;
   padding-left: 30px; padding-right: 30px;
   width: 100%;
-  max-width: 1300px;
+  max-width: 600px;
 
   @include mq(tabletp) {
-    width: 90%;
-    padding-right: 40px; padding-left: 40px;
-  }
-
-  @include mq(tabletl) {
-    padding-right: 0; padding-left: 0;
     width: 80%;
-  }
-
-  @include mq(laptop) {
-    width: 75%;
-  }
-
-  @include mq(desktop) {
-    width: 65%;
+    padding-right: 0; padding-left: 0;
+    max-width: 1300px;
   }
 }
 
 
-// - - - Responsive - - - //
+//---------------------//
+//     Responsive      //
+//---------------------//
+
 // Usage: @include mq(tabletp) {}
 
 @mixin mq($media) {
@@ -58,11 +45,17 @@
     @media only screen and (max-width: $break-phonel) { @content; }
   }
 	@if $media == phonel {
-		@media only screen and (min-width: $break-phonel) { @content; }
+		@media only screen and (min-width: $break-phonel) and (max-height: $break-phonel) and (orientation: landscape) { @content; }
 	}
+  @else if $media == phonep {
+    @media only screen and (min-height: $break-phonel) { @content; }
+  }
 	@else if $media == tabletp {
-		@media only screen and (min-width: $break-tabletp) { @content; }
+		@media only screen and (min-width: $break-tabletp) and (min-height: $break-phonel) { @content; }
 	}
+  @if $media == mobile {
+    @media only screen and (max-width: $break-tabletl) { @content; }
+  }
 	@else if $media == tabletl {
 		@media only screen and (min-width: $break-tabletl) { @content; }
 	}
@@ -73,7 +66,7 @@
 		@media only screen and (min-width: $break-desktop) { @content; }
 	}
   @else if $media == landscape {
-    @media only screen and (orientation: landscape) { @content; }
+    @media only screen and (min-aspect-ratio: 3/2) { @content; }
   }
   @else if $media == portrait {
     @media only screen and (orientation: portrait) { @content; }
@@ -92,18 +85,6 @@
   transition: $args;
 }
 
-
-// - - - Animations - - - //
-/*
- Usage:
-  @include keyframes(slide-down) {
-    0% { opacity: 1; }
-    90% { opacity: 0; }
-  }
-  .element {
-    @include animation('slide-down 5s 3');
-  }
-*/
 
 @mixin keyframes($animation-name) {
     @-webkit-keyframes #{$animation-name} {
@@ -183,17 +164,8 @@
 
 
 @mixin blue{
-  background: rgb(94,71,204);
-  background: linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
-  background-size: 200% 200%;
+  color: $accent-color;
 
-  background-clip: text;
-  -webkit-background-clip: text;
-
-  text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
-
-  @include animation('gradient-wash 3s ease infinite;');
 }
 
 @mixin blue-background {

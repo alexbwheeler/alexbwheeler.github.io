@@ -1,0 +1,67 @@
+
+.about_me {
+	margin-top: 80px;
+
+	@include mq(tabletl) {
+		margin-top: 140px;
+		margin-bottom: 110px;
+	}
+}
+
+
+.double_up {
+	display: flex;
+	flex-wrap: wrap;
+
+	@include mq(tabletl) {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.text {
+		order: 2;
+		margin-top: 30px;
+		margin-bottom: 30px;
+
+		//@include narrow_wrap;
+
+		h1 {
+			text-align: center;
+		}
+
+		@include mq(tabletl) {
+			order: 0;
+			width: 38%;
+			max-width: 390px;
+
+			h1 {text-align: left;}
+		}
+	}
+
+	.image_wrap {
+		border-radius: 10px;
+		overflow: hidden;
+		max-height: 400px;
+
+		@include mq(tabletl) {
+			width: 60%;
+			max-height: none;
+		}
+	}
+}
+
+.skillset {
+	padding: 60px 0 10px 0;
+	margin-bottom: 60px;
+	background: $background-alt-color;
+}
+
+.history {
+	margin-top: 100px;
+	margin-bottom: 20px;
+
+	@include mq(tabletl) {
+		min-height: 500px;
+	}
+}

@@ -1,20 +1,44 @@
 <div class="portfolio">
+	
 	{% for project in projects %}
+	
+	<div class="project" data-aos="fade-up" data-aos-offset="100"> 
+		<a href="{{ post.url }}">
+			<a class="project_image {{ project.ref }}" href="{{ project.url }}">
+				<img src="/images/lazy/lazy-work.svg" data-src="{{ project.featured_image }}" class="lazy front" alt="{{ project.title }} front">
+			</a>
 
-	<div class="portfolio-item animate once {{ project.ref }}">
+			{% if project.category == "case study" %}
 
-		<a class="featured-image {{ project.ref }}" href="{{ project.url }}">
-		<img src="/images/lazy/lazy-work.svg" data-src="{{ project.featured_image }}" class="lazy front" alt="{{ project.title }} front">
+			<div class="project_info">
+				<div class="project_info_block">
+					<div class="project_info_title">client</div>
+					<div class="project_info_value">{{ project.title }}</div>
+				</div>
+
+				<div class="project_info_block">
+					<div class="project_info_title">service</div>
+					<div class="project_info_value">{{ project.subtitle }}</div>
+				</div>
+			</div>
+
+			{% else %}
+
+			<div class="project_info">
+				<div class="project_info_block">
+					<div class="project_info_title">collection</div>
+					<div class="project_info_value">{{ project.title }}</div>
+				</div>
+
+				<div class="project_info_block">
+					<div class="project_info_title">service</div>
+					<div class="project_info_value">{{ project.subtitle }}</div>
+				</div>
+			</div>
+
+			{% endif %}
 		</a>
-
-		<div class="info">
-			<p class="type">{{ project.subtitle }} </p>
-			<h2 class="title">{{ project.title }}</h2>
-			<p class="description">{{ project.description }}</p>
-			<a href="{{ project.url }}" class="button black">details</a>
-		</div>	
-
-	</div>	
+	</div>
 
 	{% endfor %}
 </div>

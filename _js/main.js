@@ -6,5 +6,6 @@
 //= require plugins/waypoints
 
 //= require plugins/vanilla-tilt.min
+//= require plugins/aos
 
 //= require scripts

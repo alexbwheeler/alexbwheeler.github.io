@@ -1,0 +1,159 @@
+.case_studies {
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.project {
+		position: relative;
+		margin-bottom: 7.5vw;
+
+		&.featured {
+			order: -1;
+		}
+
+		@include mq(tabletp) {
+			margin-bottom: 90px;
+		}
+		
+		@include mq(tabletl) {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		.project_image {
+			display: block;
+			overflow: hidden;
+			margin-top: 0;
+			width: 100%;
+
+			border-radius: 10px;
+
+			img {width: 100%;}
+		}
+	}
+}
+
+.project_info {
+
+	text-align: left;
+	display: flex;
+	flex-wrap: wrap;
+	color: white;
+	border: 1px solid rgba(256,256,256,0.35);
+	margin-top: 14px;
+	padding: 15px;
+
+	@include mq(tabletp) {
+		padding: 22px;
+		margin-top: 20px;
+		flex-wrap: nowrap;
+	}
+
+	@include mq(tabletl) {
+		width: 40%;
+		order: -1;
+		margin-right: 30px;
+		margin-top: 5%;
+		display: block;
+	}
+
+	.project_info_block {
+
+		min-width: 50%;
+		margin-top: 0;
+
+		&.description {
+			width: 100%;
+			margin-top: 15px;
+		}
+
+		@include mq(tabletp) {
+			min-width: 28%;
+			&.description {margin-top: 0;}
+		}
+
+		@include mq(tabletl) {
+			margin-top: 30px;
+			&.description {margin-top: 30px;}
+			width: 100%;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+		.project_info_title {
+			font-size: 10px;
+			font-family: $secondary-font;
+			text-transform: lowercase;
+			letter-spacing: 0.1em;
+			opacity: 0.7;
+
+			@include mq(tabletp) {
+				font-size: 11px;
+			}
+		}
+
+		.project_info_value {
+			font-size: 14px;
+			margin-top: 5px;
+			line-height: 1.4em;
+
+			@include mq(tabletp) {
+				font-size: 16px;
+				margin-top: 6px;
+			}
+		}
+	}
+
+	h3, p {color: white; text-align: left;}
+
+	p {
+		margin-top: 10px;
+		
+		
+	}
+}
+
+.hover_gallery {
+	.project_info {
+		width: 35%;
+		display: flex;
+		flex-wrap: wrap;
+
+		.project_info_block {
+			width: 50%;
+			margin-top: 0;
+
+			&.description {
+				margin-top: 15px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.project_page .project_info {
+	color: black;
+	border: 1px solid black;
+
+	@include mq(tabletl) {
+		width: auto;
+		display: flex;
+	}
+
+	.project_info_block {
+		width: 100%;
+		margin-top: 20px;
+		&:first-child {margin-top:0;}
+
+		@include mq(tabletp) {
+			margin-top: 0
+		}
+
+		@include mq(tabletl) {
+			margin-top: 0;
+		}
+	}
+}

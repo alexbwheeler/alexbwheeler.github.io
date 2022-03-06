@@ -279,6 +279,26 @@
 		});
 
 
+		// --- Hover Gallery --- //
+
+		$(".hover_gallery_title").hover(function(){
+
+			let project = "." + $(this).attr("ref");
+
+			console.log(project);
+
+			$(".project_image").removeClass("active");
+			$(project).addClass("active");
+
+			$(".project_info").removeClass("active");
+			$(project).addClass("active");
+
+		});
+
+		$("titles").mouseleave(function(){
+			$(".project_info").removeClass("active");
+		});
+
 
 		// --- Images --- //
 
@@ -312,10 +332,18 @@
 
 		// --- Other --- //
 
-		if (document.documentElement.clientWidth >= 1024) {
-			//Tilt
-			VanillaTilt.init(document.querySelectorAll(".say_hi>div"));
-		}
+		
+
+		// Tilt
+		VanillaTilt.init(document.querySelectorAll("#splash-graphic"), {
+			reverse: true,
+			max: 15,
+			easing: "cubic-bezier(0.555, 0.005, 0.470, 0.995)",
+			speed: 1000,
+			"full-page-listening": true
+		});
+
+		VanillaTilt.init(document.querySelectorAll(".say_hi>div"));
 
 		// Lazy Load
 		var lazyLoadInstance = new LazyLoad({
@@ -323,30 +351,109 @@
 		});
 
 		// AOS Animations
-		//AOS.init();
+		AOS.init();
 
 		$('.animate').removeClass('visible');
 
 		// Animate objects
 		animateMe();
 
-		// Update language toggle
-		setTimeout(function(){ 
-			$("#lang").load(location.href + " #lang>*", "");
-		}, 500);
+		// // Update language toggle
+		// setTimeout(function(){ 
+		// 	$("#lang").load(location.href + " #lang>*", "");
+		// }, 500);
 
-		setTimeout(function(){
-			if (window.scrollY < 50) {
-				window.scrollTo(0, 0);
+		// setTimeout(function(){f
+		// 	if (window.scrollY < 50) {
+		// 		window.scrollTo(0, 0);
+		// 	}
+		// }, 400);
+
+		//Scroll to top
+		if (window.scrollY < 50) {
+					
+		}
+
+		$( 'body, html' ).animate({
+			scrollTop: 0
+		}, 50);	
+
+		// GSAP
+		gsap.registerPlugin(ScrollTrigger);
+
+		ScrollTrigger.saveStyles(".splash_graphic_wrap");
+		ScrollTrigger.saveStyles(".manifesto2");
+
+		ScrollTrigger.matchMedia({
+
+			// mobile
+		  "(max-width: 1023px)": function() {
+
+		  	let tl1 = gsap.timeline({
+		  		scrollTrigger: {
+				    trigger: ".splash2",
+				    start: "-10px top",
+				    end: "+=800",
+				    scrub: 0.2,
+				  },
+		  	})
+
+		  	tl1.to("#blueBox", {duration: 20, width: "90%"});
+		  	tl1.to("#touch_me", {duration: 1, opacity: 0}, "<+0.2");
+		  	tl1.to("#title", {duration: 1, opacity: 0}, "<+0.2");
+
+		  	gsap.to(".splash_graphic_wrap", {
+		  		scrollTrigger: {
+				    trigger: ".splash_graphic_wrap",
+				    start: "top top",
+				    end: "+=250",
+				    pin: true,
+				  },
+		  	});
+		  },
+
+		  // desktop
+		  "(min-width: 1023px)": function() {
+
+		  	let tl = gsap.timeline({
+		  		scrollTrigger: {
+				    trigger: ".splash2",
+				    start: "top top",
+				    end: "+=500",
+				    scrub: 0.5,
+				    pin: true,
+				  },
+		  	})
+
+		  	tl.addLabel("splash")
+		  	tl.to(".splash2", {opacity: 0, duration: 1});
+		  	tl.to("#blueBox", {width: "90%"}, "<");
+
+		  	tl.fromTo(".manifesto2", {opacity: 0}, {opacity: 1, duration: 2});
+		  	tl.from("#myName", {letterSpacing: "50px", duration: 3}, "<");
+		  	tl.to(".candy", {color: "blue"}, "+=1");
+		  	tl.addLabel("manifesto");
+
+		  	gsap.from(".splash_title_text", {
+		  		x: "-40px",
+		  		opacity: 0,
+		  		duration: 0.5,
+		  		delay: 0.5,
+		  		stagger: 0.1,
+		  	});
+		  },
+		});
+
+		let feature = gsap.timeline({
+			scrollTrigger: {
+				trigger: "#featured",
+				scrub: 0.5,
+				start: "bottom bottom"
 			}
-		}, 400);
+		})
 
-		// Scroll to top
-		// if (window.scrollY < 50) {
-		// 	$( 'body, html' ).animate({
-		// 		scrollTop: 0
-		// 	}, 100);			
-		// }
+		feature.fromTo("#featured", {x: "20"}, {x: "-20"});
+		feature.fromTo("#work", { x: "-40"}, { x: "50"}, "<");
 	}
 
 	// Run functions on load
@@ -461,8 +568,14 @@
 		}
 
 	});
+
+
 	
 }(jQuery));
+
+
+
+
 
 //Animate when in viewport with IntersectionObserver
 
@@ -474,7 +587,7 @@ function animateMe() {
 		config = {
 			root: null,
 			rootMargin: '1000% 1px 20% 1px',
-			threshold: [0,1]
+			threshold: [0,0.5,1]
 		};
 
 		animate = document.querySelectorAll('.animate');
@@ -482,7 +595,7 @@ function animateMe() {
 		observer = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {
 
-				if (entry.intersectionRatio > 0.5) {
+				if (entry.intersectionRatio > 0.7) {
 
 					if ($(entry.target).hasClass( "gif" )) {
 						const lazyImage = entry.target;
