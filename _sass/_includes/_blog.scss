@@ -1,33 +1,4 @@
 
-
-
-// - - - AWBLOG - - - //
-
-.blog-header {
-
-	h1 {
-		text-align: center;
-		font-size: 65px;
-	}
-
-	h2 {
-		font-family: $body-font;
-
-		text-transform: uppercase;
-		font-weight: 300;
-		font-size: 20px;
-		letter-spacing: 3px;
-		text-align: center;
-		margin-top: 0.2em;
-
-		@include mq(tabletp) {
-			font-size: 1.1em;
-			letter-spacing: 5px;
-		}	
-	}	
-}
-
-
 // Catagories
 
 section.intro.post p {
@@ -48,8 +19,6 @@ section.intro.post p {
   	position: sticky;
   	top: 0;
   	z-index: 2;
-
-  	background: white;
 
 	ul {
 

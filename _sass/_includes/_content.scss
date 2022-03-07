@@ -6,19 +6,25 @@
 
 .intro {
 
-	padding-top: 110px;
+	padding-top: 90px;
 	padding-bottom: 50px;
+
+	@include mq(tabletl) {
+		padding-top: 110px;
+	}
+
+	@include narrow_wrap;
+
+	&.post {
+		@include mq(desktop) {
+			@include wide_wrap;
+		}
+	}
 	
 	h1 {
 
 		@include mq(tabletp) {
 			white-space: pre-line;
-		}
-	}
-
-	&.blog {
-		h1 {
-			font-size: 5em;
 		}
 	}
 
@@ -92,17 +98,13 @@
 	}
 }
 
-.intro {
-	@include narrow_wrap;
+.single, .double{
 
-	&.post {
-		@include mq(desktop) {
-			@include wide_wrap;
+	@include mq(phone) {
+		&>h1, &>h2, &>h3, &>h4, &>h5, &>h6 {
+			text-align: center;
 		}
 	}
-}
-
-.single, .double {
 
 	&>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>ul, &>ol, &>a {
 		@include narrow_wrap;
@@ -110,7 +112,6 @@
 
 	&>p {
 		@include narrow_wrap;
-		max-width: 1200px;
 	}
 
 	hr {
@@ -153,11 +154,6 @@
 	blockquote p {
 		max-width: 100%;
 		padding: 0;
-	}
-
-	p a:not(.button) {
-		font-weight: $bold-weight;
-		border-bottom: 2px solid $accent-color;
 	}
 
 	p .button {

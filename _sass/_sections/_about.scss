@@ -1,6 +1,7 @@
 
 .about_me {
 	margin-top: 80px;
+	padding-bottom: 20px;
 
 	@include mq(tabletl) {
 		margin-top: 140px;

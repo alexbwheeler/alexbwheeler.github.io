@@ -1,10 +1,17 @@
 
+.page_content#contact{
+	.narrow_wrap {
+		max-width: 550px;
+	}
+}
+
+.page_content#contact .intro{
+	p {max-width: none;}
+}
+
 .contact-form {
 	margin: 20px auto;
 	width: 100%;
-	
-	@include narrow_wrap;
-
 
 	&:first-child {
 		margin-top: 0;
@@ -26,18 +33,9 @@
 		margin-top: 0;
 	}
 
-	&.name {
-		@include mq(tabletp) {
-			display: flex;
-
-			label:first-child {
-				margin-right: 20px;
-			}
-
-			label {
-				flex-grow: 1;
-			}
-		}
+	.button {
+		display: block;
+		margin: 0 auto;
 	}
 }
 
@@ -68,7 +66,7 @@
 .contact-form__textarea {
 	width: 100%;
 	margin-top: 8px;
-	border: 1px solid rgba(0,0,0,0.3);
+	border: 2px solid $text-dark-color;
 
 	border-radius: 2px;
 	padding: 10px 12px;
@@ -96,16 +94,16 @@
 }
 
 ::-webkit-input-placeholder {
-	color: $text-light-color;
+	color: $text-medium-color;
 }
 ::-moz-placeholder {
-	color: $text-light-color;
+	color: $text-medium-color;
 }
 :-ms-input-placeholder {
-	color: $text-light-color
+	color: $text-medium-color
 }
 :-moz-placeholder {
-	color: $text-light-color;
+	color: $text-medium-color;
 }
 
 .contact-form__textarea {

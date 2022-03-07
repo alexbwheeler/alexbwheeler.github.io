@@ -13,6 +13,10 @@ body {
 	color: $text-medium-color;
 	max-width: 100vw;
 	overflow: hidden;
+
+	position: relative;
+	padding-bottom: 150px;
+	min-height: 100vh;
 }
 
 //----------------------//
@@ -20,15 +24,15 @@ body {
 //----------------------//
 
 // h1
-$h1-small: 35px;
+$h1-small: 45px;
 $h1-medium: 58px;
 $h1-large: 80px;
 
-$h1-weight: 800;
+$h1-weight: 700;
 $h1-lineheight: 0.9;
 
 // h2
-$h2-small: 40px;
+$h2-small: 45px;
 $h2-medium: 58px;
 $h2-large: 80px;
 
@@ -52,6 +56,10 @@ $p-weight: 300;
 $p-spacing: 0em;
 $p-lineheight: 1.6;
 $p-maxwidth: 1000px;
+
+// button
+$button-weight: 400;
+$button-spacing: 0;
 
 .align_center, .center {
 	text-align: center; 
@@ -83,14 +91,10 @@ $p-maxwidth: 1000px;
 		font-family: $secondary-font;
 		text-transform: lowercase;
 		text-align: center;
-		letter-spacing: 0.1em;
+		letter-spacing: 5px;
+		color: $accent-color;
 
 		@include mq(tabletp) {
-			font-size: $p-medium;
-		}
-
-		@include mq(tabletp) {
-			font-size: $p-large;;
 			top: -20px;
 		}
 	}
@@ -314,11 +318,11 @@ a {
 
 .button, a.button {
 	display: inline-block;
-	padding: 9px 60 10px;
+	padding: 14px 20px 15px;
 	margin-top: 10px;
+	min-width: 110px;
 	
 	border: 2px solid $accent-color;
-	padding: 10px;
 	border-radius: 35px;
 
 	background: none;
@@ -331,8 +335,7 @@ a {
 	letter-spacing: $button-spacing;
 
 	font-size: $p-small;
-	@include mq(tabletl) { font-size: $p-medium; }
-	@include mq(laptop) { font-size: $p-large; }
+	@include mq(tabletp) { font-size: 17px }
 
 	&:hover {
 		background: adjust-hue($accent-color,15%);
@@ -408,132 +411,8 @@ a {
 	}
 }
 
-.button-retro {
- 	$retro-button-accent: white;
- 	$retro-button2: black;
- 	$retro-button3: transparent;
-
-    display: inline-block;
-    text-decoration: none;
-    position: relative;
-    margin-top: 20px;
-
-    @include mq(tabletp) {
-    	margin-top: 30px;
-    }
-
-    @include mq(tabletl) {
-    	margin-top: 32px;
-    }
-
-    .top .label {
-	    color: $retro-button2;
-	    line-height: 110%;
-	    text-align: center;
-
-	    font-weight: 300;
-		letter-spacing: $button-spacing;
-	    font-size: $p-small;
-	    
-		@include mq(tabletl) {
-			font-size: $p-medium;
-		}
-
-		@include mq(laptop) {
-			font-size: $p-large;
-		}
-
-	    @include transition(all .15s ease-out);
-	}
-
-	.bottom {
-	    position: absolute;
-	    left: 7px;
-	    top: 7px;
-	    width: 100%;
-	    height: 100%;
-	    background-color: $retro-button-accent;
-	    display: block;
-
-	    @include mq(laptop) {
-	    	top: 10px;
-	    	left: 10px;
-	    }
-	    
-	    @include transition(all .15s ease-out);
-	}
-
-	.top {
-	    position: relative;
-	    left: 0;
-	    top: 0;
-	    width: 100%;
-	    height: 100%;
-	    border: 2px solid $retro-button2;
-
-	    padding: 15px 20px 16px;
-
-	    @include mq(tabletp) {
-			padding: 19px 40px 20px;
-		}
-	}
-
-	.button-border {
-	    position: absolute;
-	    background-color: $retro-button-accent;
-	    
-	    @include transition(all .15s ease-out);
-	}
-
-	&:hover {
-		.bottom {
-		    left: 0;
-		    top: 0;
-		    background-color: $retro-button3;
-		}
-
-		.top .label {
-		    color: $retro-button-accent;
-		}
-
-		.top {
-			.button-border-left, .button-border-right {
-			    height: calc(100% + 2px);
-			}
-
-			.button-border-top, .button-border-bottom {
-			    width: calc(100% + 2px);
-			}
-		}
-	}
-
-	.button-border-left {
-	    left: -2px;
-	    bottom: -2px;
-	    width: 2px;
-	    height: 0;
-	}
-
-	.button-border-top {
-	    left: -2px;
-	    top: -2px;
-	    width: 0;
-	    height: 2px;
-	}
-
-	.button-border-right {
-	    right: -2px;
-	    top: -2px;
-	    width: 2px;
-	    height: 0;
-	}
-
-	.button-border-bottom {
-	    right: -2px;
-	    bottom: -2px;
-	    width: 0;
-	    height: 2px;
-	}
+p a:not(.button) {
+	border-bottom: 2px solid $accent-color;
 }
 
 hr {
@@ -548,7 +427,7 @@ hr {
 
 
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page loading
+// Page loading
 
 .page-loader {
 	display: none;
@@ -557,7 +436,7 @@ hr {
 .page {
 	animation: content-in 0.6s ease;
 
-	@include transition(all 0.4s ease);
+	@include transition(all 0.6s ease);
 }
 
 @keyframes content-in {

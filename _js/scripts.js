@@ -389,26 +389,27 @@
 			// mobile
 		  "(max-width: 1023px)": function() {
 
-		  	let tl1 = gsap.timeline({
+		  	gsap.to("#blueBox", {
 		  		scrollTrigger: {
 				    trigger: ".splash2",
 				    start: "-10px top",
 				    end: "+=800",
 				    scrub: 0.2,
-				  },
-		  	})
+				  }, width: "90%",
+		  	});
 
-		  	tl1.to("#blueBox", {duration: 20, width: "90%"});
-		  	tl1.to("#touch_me", {duration: 1, opacity: 0}, "<+0.2");
-		  	tl1.to("#title", {duration: 1, opacity: 0}, "<+0.2");
+		  	gsap.from(".splash_text_title", {
+		  		y: "30px",
+		  		opacity: 0,
+		  		duration: 0.5,
+		  		delay: 0.5,
+		  		stagger: 0.15,
+		  	});
 
-		  	gsap.to(".splash_graphic_wrap", {
-		  		scrollTrigger: {
-				    trigger: ".splash_graphic_wrap",
-				    start: "top top",
-				    end: "+=250",
-				    pin: true,
-				  },
+		  	gsap.from(".splash_button", {
+		  		opacity: 0,
+		  		duration: 0.5,
+		  		delay: 1,
 		  	});
 		  },
 
@@ -427,19 +428,35 @@
 
 		  	tl.addLabel("splash")
 		  	tl.to(".splash2", {opacity: 0, duration: 1});
-		  	tl.to("#blueBox", {width: "90%"}, "<");
+		  	tl.to("#blueBox", {width: "85%", duration: 2}, "<");
 
-		  	tl.fromTo(".manifesto2", {opacity: 0}, {opacity: 1, duration: 2});
-		  	tl.from("#myName", {letterSpacing: "50px", duration: 3}, "<");
-		  	tl.to(".candy", {color: "blue"}, "+=1");
+		  	tl.fromTo(".manifesto2", {opacity: 0}, {opacity: 1, duration: 1}, 1);
+		  	tl.from("#myName", {letterSpacing: "30px", duration: 3}, "<");
+		  	tl.to(".candy", {color: "blue"}, "<2");
 		  	tl.addLabel("manifesto");
 
-		  	gsap.from(".splash_title_text", {
+		  	gsap.to(".manifesto2", {
+		  		scrollTrigger: {
+				    trigger: ".manifesto2",
+				    start: "top top",
+				    end: "bottom top",
+				    scrub: 0.5,
+				  },
+		  		y: "400px"
+		  	});
+
+		  	gsap.from(".splash_text_title", {
 		  		x: "-40px",
 		  		opacity: 0,
 		  		duration: 0.5,
 		  		delay: 0.5,
-		  		stagger: 0.1,
+		  		stagger: 0.15,
+		  	});
+
+		  	gsap.from(".splash_button", {
+		  		opacity: 0,
+		  		duration: 0.5,
+		  		delay: 1,
 		  	});
 		  },
 		});
@@ -452,8 +469,16 @@
 			}
 		})
 
-		feature.fromTo("#featured", {x: "20"}, {x: "-20"});
-		feature.fromTo("#work", { x: "-40"}, { x: "50"}, "<");
+		feature.fromTo("#featured", {x: "25"}, {x: "-20"});
+		feature.fromTo("#work", { x: "-40"}, { x: "45"}, "<");
+
+		gsap.from(".contact-form__item", {
+  		opacity: 0,
+  		y: "20px",
+  		duration: 0.6,
+  		stagger: 0.1,
+  		delay: 0.5,
+  	});
 	}
 
 	// Run functions on load

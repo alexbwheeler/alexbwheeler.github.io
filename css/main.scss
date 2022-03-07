@@ -16,15 +16,15 @@ $break-desktop: 1700px;
 
 // Colors
 
-$accent-color: #131C7E;
+$accent-color: blue;
 $accent-gradient: linear-gradient(47deg, rgba(19,28,126,1) 0%, rgba(67,76,171,1) 100%);
 
 $background-color: #ffffff;
 $background-alt-color: #fbfbfb;
 
 $text-dark-color: #1e1e1e;
-$text-medium-color: rgba(0,0,0,0.9);
-$text-light-color: #E4E4E4;
+$text-medium-color: #535353;
+$text-light-color: #BFBFBF;
 
 $error-color: #D64541;
 
@@ -84,9 +84,6 @@ $blockquote-large: {{ site.data.settings.font_settings.blockquote.large_size }}p
 $blockquote-weight: {{ site.data.settings.font_settings.blockquote.weight }};
 $blockquote-spacing: {{ site.data.settings.font_settings.blockquote.letter_spacing }}em;
 $blockquote-lineheight: {{ site.data.settings.font_settings.blockquote.line_height }};
-
-$button-weight: {{ site.data.settings.font_settings.buttons.weight }};
-$button-spacing: {{ site.data.settings.font_settings.buttons.letter_spacing }}em;
 
 
 // Logo

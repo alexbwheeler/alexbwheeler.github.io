@@ -4,12 +4,9 @@ type: blog
 ---
 
 <section class="intro blog-header">
-	<!-- <h1>{% if page.autopages %}{{page.autopages.display_name}}{% endif %}</h1> -->
-	<h1 id="aw_blog">BLOG</h1>
-	<h2 class="blue">Experiment & Inspire</h2>
+	<h1 id="aw_blog" class="center">Blog</h1>
+	{% include blog-categories.html %}
 </section>
-
-{% include blog-categories.html %}
 
 <section class="mid" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
 

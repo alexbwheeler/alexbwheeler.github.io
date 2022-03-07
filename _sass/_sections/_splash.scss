@@ -2,6 +2,8 @@
 	display: grid;
 	grid-template-rows: 20px 5fr 1fr;
 	grid-template-columns: 1fr;
+	z-index: 2;
+	height: 95vh;
 
 	@include mq(phonel) {
 		grid-template-columns: 2fr 3fr;
@@ -10,9 +12,8 @@
 	@include mq(tabletl) {
 		grid-template-rows: 20px 1fr 10%;
 		grid-template-columns: 2fr 3fr;
+		height: 100vh;
 	}
-
-	height: 100vh;
 
 	.splash_graphic_wrap {
 		place-self: center stretch;
@@ -179,10 +180,6 @@
 		grid-row-start: 3;
 		align-self: end;
 
-		position: relative;
-		top: -250px;
-		z-index: -1;
-
 		@include wide_wrap;
 
 		h1, h2 {text-align: center;}
@@ -212,7 +209,7 @@
 		    position: relative;
 		    margin: 0 auto;
 
-			font-size: 42px;
+			font-size: 11vw;
 			font-weight: 700;
 			line-height: 0.8;
 			color: $text-light-color;
@@ -263,7 +260,7 @@
 
 	svg#arrow {
 		width: 20px;
-	    position: absolute;
+	    position: fixed;
 	    margin-left: auto;
 	    margin-right: auto;
 	    left: 0;
@@ -274,6 +271,12 @@
 	    transition: opacity 0.3s ease;
 	    -webkit-animation: bounce 4s infinite 1s;
 	    animation: bounce 4s infinite 1s;
+
+	    display: none;
+
+	    @include mq(tabletl) {
+	    	display: block;
+	    }
 
 	    .arrow {
 	    	stroke: $accent-color;
@@ -295,7 +298,7 @@
 		height: 100vh;
 		position :absolute;
 		padding: 0;
-		top: 300px;
+		top: 0;
 	}
 
 	@include mq(tabletp) {
@@ -311,6 +314,8 @@
 			margin-top: 40vh;
 			margin-bottom: 0;
 			border: none;
+			position: relative;
+			top: -50px;
 		}
 
 		.image_wrap {
@@ -363,9 +368,12 @@
 		}
 
 		p {
-			font-weight: 600;
+			font-weight: 400;
 			line-height: 1.2;
 			max-width: none;
+
+			color: blue;
+			font-size: 21px;
 
 			@include mq(tabletp) {
 				font-size: 20px;
@@ -373,6 +381,7 @@
 
 			@include mq(tabletl) {
 				font-size: 25px;
+				color: black;
 			}
 		}
 
