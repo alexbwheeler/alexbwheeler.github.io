@@ -18,11 +18,13 @@ menu_settings:
       url: '/contact'
     
   menu_items_fr:
-  - title: 'Travail'
+  - title: 'travail'
     url: '/fr/travail'
-  - title: 'À propos'
+  - title: 'à propos'
     url: '/fr/a-propos'
-  - title: 'Contact'
+  - title: 'blog'
+    url: '/blog'
+  - title: 'contact'
     url: '/fr/contact'
 
 footer_settings:

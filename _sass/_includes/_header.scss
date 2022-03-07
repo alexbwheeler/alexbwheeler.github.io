@@ -436,6 +436,11 @@ $menu-padding-large: 1.5em;
 		opacity: 1;
 		min-width: 55px;
 
+		&.lang_toggle {
+			min-width: none;
+			font-weight: 600;
+		}
+
 		@include box-shadow(0, 0, 0, $accent-color inset);
 
 		@include transition(all 0.2s ease);

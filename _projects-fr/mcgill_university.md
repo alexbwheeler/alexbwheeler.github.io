@@ -11,6 +11,8 @@ featured_image: '/images/portfolio/mcgill/logo-square.jpg'
 
 preview: mcgill
 
+featured: true
+
 ref: mcgill
 
 lang: fr

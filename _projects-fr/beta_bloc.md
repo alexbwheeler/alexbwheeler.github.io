@@ -11,6 +11,8 @@ featured_image: '/images/portfolio/beta_bloc/poster-square.jpg'
 
 preview: beta_bloc
 
+featured: true
+
 ref: betabloc
 
 lang: fr

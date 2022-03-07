@@ -11,6 +11,8 @@ featured_image: '/images/portfolio/belle_et_boeuf/fabuleux_square.jpg'
 
 preview: belle_et_boeuf
 
+featured: true
+
 ref: bb
 
 lang: fr

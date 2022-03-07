@@ -95,6 +95,7 @@ $button-spacing: 0;
 		color: $accent-color;
 
 		@include mq(tabletp) {
+			font-size: 13px;
 			top: -20px;
 		}
 	}
@@ -469,7 +470,7 @@ body.loading {
 	.page {
 		visibility: hidden;
 		opacity: 0;
-		@include transition(all 0.6s ease, visibility 0s 0.8s);
+		@include transition(all 0.4s ease, visibility 0s 0.8s);
 		animation: none;
 	}
 

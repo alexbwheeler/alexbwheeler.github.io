@@ -1,6 +1,12 @@
 
 body[data-title="work"] {
 	background: black;
+
+	.footer {
+		background: #151515;
+
+		p {color: white;}
+	}
 }
 
 .page_content.project_page {
