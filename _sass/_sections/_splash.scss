@@ -311,7 +311,7 @@
 		overflow: hidden;
 
 		@include mq(tabletl) {
-			margin-top: 40vh;
+			margin-top: 10vh;
 			margin-bottom: 0;
 			border: none;
 			position: relative;
@@ -391,26 +391,16 @@
 	}
 }
 
-// splash>manifesto transition
-@include mq(tabletl) {
-	.splash2 {
-		//margin-bottom: 50vh;
-	}
-
-	
-}
-
-.manifesto2 {
-	
-}
-
 .splash_featured {
 	background: black;
-	background: url("../images/noise-dark.png");
 	padding-bottom: 50px;
 
 	@include mq(tabletp) {
 		padding-bottom: 100px;
+	}
+
+	@include mq(tabletl) {
+		margin-top: 40vh;
 	}
 
 	@include mq(laptop) {

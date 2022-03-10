@@ -395,8 +395,20 @@
 				    start: "-10px top",
 				    end: "+=800",
 				    scrub: 0.2,
-				  }, width: "90%",
+				  }, width: "80%",
 		  	});
+
+		  	let tl = gsap.timeline({
+		  		scrollTrigger: {
+				    trigger: ".manifesto2",
+				    start: "top bottom",
+				    end: "bottom 200px",
+				    scrub: 0.5,
+				  }
+				 });
+
+		  	tl.from(".manifesto2", {transform:"scale(0.8)", duration: 3});
+		  	tl.from(".candy", {color: "black", duration: 1}, 1);
 
 		  	gsap.from(".splash_text_title", {
 		  		y: "30px",
@@ -429,21 +441,24 @@
 		  	tl.addLabel("splash")
 		  	tl.to(".splash2", {opacity: 0, duration: 1});
 		  	tl.to("#blueBox", {width: "85%", duration: 2}, "<");
+		  	tl.to(".splash_text", {transform: "scale(0.9)", stagger: 0.2, duration: 2}, "<")
 
 		  	tl.fromTo(".manifesto2", {opacity: 0}, {opacity: 1, duration: 1}, 1);
-		  	tl.from("#myName", {letterSpacing: "30px", duration: 3}, "<");
 		  	tl.to(".candy", {color: "blue"}, "<2");
 		  	tl.addLabel("manifesto");
 
-		  	gsap.to(".manifesto2", {
+		  	let tl2 = gsap.timeline({
 		  		scrollTrigger: {
 				    trigger: ".manifesto2",
 				    start: "top top",
-				    end: "bottom top",
+				    end: "150% top",
 				    scrub: 0.5,
-				  },
-		  		y: "400px"
-		  	});
+				    pin: true,
+				  }
+				 });
+
+		  	tl2.to(".manifesto2", {transform: "scale(1.6)", duration: 3});
+
 
 		  	gsap.from(".splash_text_title", {
 		  		x: "-40px",

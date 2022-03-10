@@ -26,7 +26,7 @@ featured: true
 	<img src="/images/portfolio/acculete/acculete-logo-drafts2.jpg" alt="Acculete logo drafts">
 </div>
 
-**Goal:** Fitness logo with two main themes: measured progress (strength of the mind) and athleticism (strength in the body).
+**Goal:** Fitness logo with two main themes: data driven progress (strength of the mind) and athleticism (strength of the body).
 
 **Process:** I started by having a conversation with Vanessa from <a href="https://www.veevee.ca/">VeeVee Creative Studio</a> about an overall vision for the brand. After getting a good idea of the direction we wanted to go, I began sketching logo concepts. I used the main values we wanted to promote (fitness + measured, data driven progress) as a foundation for the designs. I always start by designing a logo in black and white for maximum usability.
 
