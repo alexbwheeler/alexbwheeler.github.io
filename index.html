@@ -94,7 +94,7 @@ ref: index
 		<h1 id="title">
 		    <span class="splash_text_title splash_text_item">Graphic</span>
 		    <span class="splash_text_title splash_text_item">& Web</span>
-		    <span class="blue design splash_text_title splash_text_item">Designer</span>
+		    <span class="blue design splash_text_title splash_text_item">Design</span>
 		</h1>
 
 		<a class="button large wide splash_button splash_text_item" id="touch_me" href="contact">Get in touch</a>
@@ -134,7 +134,7 @@ ref: index
 		<div class="hover_gallery">
 			<ul class="titles">
 				{% for project in projects %}
-				<li class="hover_gallery_title" ref="{{ project.ref }}" data-aos="fade-right" data-aos-offset="100">
+				<li class="hover_gallery_title" ref="{{ project.ref }}" data-aos="fade-right" data-aos-once="true">
 					<a class="project_image {{ project.ref }}" href="{{ project.url }}">{{ project.title }}</a>
 				</li>
 				{% endfor %}

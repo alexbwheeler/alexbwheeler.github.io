@@ -1,9 +1,11 @@
 ---
-title: 'Music Cover'
-description: Unique cover art for various artists.
+title: 'Cover Art'
+description: Unique album covers for various artists.
 subtitle: 'Artwork'
 
-date: 2018-06-30 00:00:00
+date: 2022-07-30 00:00:03
+
+featured: true
 
 featured_image: '/images/portfolio/cover_art/california.jpg'
 

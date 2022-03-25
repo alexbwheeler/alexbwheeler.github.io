@@ -440,25 +440,24 @@
 
 		  	tl.addLabel("splash")
 		  	tl.to(".splash2", {opacity: 0, duration: 1});
-		  	tl.to("#blueBox", {width: "85%", duration: 2}, "<");
+		  	tl.to("#blueBox", {width: "80%", duration: 1}, "<");
 		  	tl.to(".splash_text", {transform: "scale(0.9)", stagger: 0.2, duration: 2}, "<")
 
 		  	tl.fromTo(".manifesto2", {opacity: 0}, {opacity: 1, duration: 1}, 1);
-		  	tl.to(".candy", {color: "blue"}, "<2");
+		  	tl.to(".candy", {color: "blue"}, "<3");
 		  	tl.addLabel("manifesto");
 
 		  	let tl2 = gsap.timeline({
 		  		scrollTrigger: {
 				    trigger: ".manifesto2",
 				    start: "top top",
-				    end: "150% top",
+				    end: "200% top",
 				    scrub: 0.5,
 				    pin: true,
 				  }
 				 });
 
-		  	tl2.to(".manifesto2", {transform: "scale(1.6)", duration: 3});
-
+		  	tl2.fromTo(".manifesto2", {transform: "scale(0.8)"}, {transform: "scale(1.2)", duration: 3});
 
 		  	gsap.from(".splash_text_title", {
 		  		x: "-40px",
