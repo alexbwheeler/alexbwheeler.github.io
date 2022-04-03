@@ -27,7 +27,7 @@ lang: en
 
 **Process:** Brainstorm concepts with the marketing team. After deciding on the concept, I began looking for source images to photoshop the design. This project was heavy in photo manipulation. I edited *many* different photos together to create the man on the billboard, since there was no photo shoot. 
 
-**Final product:** A design up to pringting spec for *outfornt media*. This billboard was visable in the city and off of highways all around the greater Montreal area.
+**Final product:** A design up to printing spec for *Outfront Media*. This billboard was visible in the city and off of highways all around the greater Montreal area.
 
 ### Flyers
 
