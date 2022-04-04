@@ -116,6 +116,13 @@ compress_html:
 
 plugins:
 - jekyll-autoprefixer
+- jekyll-paginate-v2
+- jekyll-admin
+- jekyll-assets
+- coffee-script
+- uglifier
+- sass
+- jekyll-autoprefixer
 
 exclude:
   - 'node_modules'
