@@ -1,1 +1,1 @@
-Sitemap: https://alexwheeler.ca/sitemap.xml
+Sitemap: wheelerdesign.github.io/sitemap.xml
