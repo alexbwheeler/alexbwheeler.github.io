@@ -15,7 +15,6 @@ body {
 	overflow: hidden;
 
 	position: relative;
-	min-height: 100vh;
 }
 
 //----------------------//
@@ -507,7 +506,8 @@ body.loading {
 	clear: both;
 	width: 100%;
 
-	padding-bottom: 50px
+	padding-bottom: 50px;
+	min-height:100vh;
 }
 
 
