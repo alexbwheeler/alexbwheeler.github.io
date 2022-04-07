@@ -12,8 +12,8 @@ menu_settings:
       url: '/work'
     - title: 'about'
       url: '/about'
-    - title: 'blog'
-      url: '/blog'
+    - title: 'news'
+      url: '/news'
     - title: 'contact'
       url: '/contact'
     
