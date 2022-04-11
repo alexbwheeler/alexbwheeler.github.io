@@ -97,18 +97,6 @@ grid_columns:
   three: Three
   four: Four
 
-assets:
-  compression: true
-  
-  compress:
-    js: uglifier
-    
-  features:
-    liquid: true
-
-  sources:
-    - _js
-
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
@@ -118,7 +106,6 @@ plugins:
 - jekyll-autoprefixer
 - jekyll-paginate-v2
 - jekyll-admin
-- jekyll-assets
 - coffee-script
 - uglifier
 - sass
