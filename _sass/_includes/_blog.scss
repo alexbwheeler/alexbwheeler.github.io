@@ -5,6 +5,10 @@ section.intro.post p {
 	text-transform: lowercase;
 }
 
+.blog-header p {
+	max-width: none;
+}
+
 .post_catagories {
 
 	padding-top: $menu-padding-small;

@@ -11,6 +11,8 @@ featured_image: '/images/portfolio/bacaro/pizzaterien.jpg'
 
 ref: bacaro
 
+featured: true
+
 tags: [graphic design]
 category: client
 

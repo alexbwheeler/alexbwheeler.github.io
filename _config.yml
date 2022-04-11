@@ -10,7 +10,7 @@ collections:
     permalink: /:slug/
   posts:
     output: true
-    permalink: /blog/:slug/
+    permalink: /news/:slug/
   projects:
     output: true
     permalink: /work/:slug/
