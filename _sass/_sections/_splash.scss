@@ -291,6 +291,7 @@
 
 .manifesto2 {
 	padding: 20px 0 90px;
+	z-index: 5;
 
 	@include mq(tabletl) {
 		display: flex;

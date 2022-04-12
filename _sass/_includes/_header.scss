@@ -94,10 +94,6 @@ $menu-padding-large: 1.5em;
 
 	@include transition (all 0.5s ease, border 0.5s ease 0.5s);
 
-	@include mq(tabletl) {
-		height: 80px;
-	}
-
 	&.up {
 		transform: translateY(-140px);
 
@@ -340,8 +336,6 @@ $menu-padding-large: 1.5em;
 		margin: 0;
 		padding: 0;
 		position:relative;
-		top: 5px;
-		//left: 45px;
 	}
 }
 

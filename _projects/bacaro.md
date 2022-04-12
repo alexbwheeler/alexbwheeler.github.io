@@ -4,7 +4,7 @@ subtitle: 'Graphic Design'
 
 description: Montreal pizza chain with modern and minimalist branding.
 
-date: 2018-04-25 00:00:02
+date: 2018-08-25 00:00:02
 location: Montreal
 
 featured_image: '/images/portfolio/bacaro/pizzaterien.jpg'

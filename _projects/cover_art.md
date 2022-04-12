@@ -5,8 +5,6 @@ subtitle: 'Artwork'
 
 date: 2022-07-30 00:00:03
 
-featured: true
-
 featured_image: '/images/portfolio/cover_art/california.jpg'
 
 ref: cover_art

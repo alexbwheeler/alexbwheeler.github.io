@@ -451,13 +451,13 @@
 		  		scrollTrigger: {
 				    trigger: ".manifesto2",
 				    start: "top top",
-				    end: "200% top",
+				    end: "100% top",
 				    scrub: 0.5,
 				    pin: true,
 				  }
 				 });
 
-		  	tl2.fromTo(".manifesto2", {transform: "scale(0.8)"}, {transform: "scale(1.2)", duration: 3});
+		  	tl2.fromTo(".manifesto2", {transform: "scale(0.8)"}, {transform: "scale(1)", duration: 3});
 
 		  	gsap.from(".splash_text_title", {
 		  		x: "-40px",
