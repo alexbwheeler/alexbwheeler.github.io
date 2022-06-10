@@ -9,6 +9,8 @@ featured_image: '/images/portfolio/cover_art/california.jpg'
 
 ref: cover_art
 
+tags: graphic-design music client cover-art
+
 lang: en
 ---
 

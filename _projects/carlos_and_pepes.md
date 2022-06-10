@@ -10,6 +10,7 @@ description: 'Surf bar and taquaria. Created promotional material for print and 
 featured_image: '/images/portfolio/carlos/preview-carlos.jpg'
 
 category: client
+tags: graphic-design poster client billboard
 
 ref: carlos
 

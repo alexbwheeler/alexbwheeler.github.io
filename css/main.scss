@@ -46,20 +46,6 @@ $header-letter-spacing: 0;
 
 // Typography
 
-
-
-$blog-item-title-small: {{ site.data.settings.font_settings.blog_item_title.small_size }}px;
-$blog-item-title-medium: {{ site.data.settings.font_settings.blog_item_title.medium_size }}px;
-$blog-item-title-large: {{ site.data.settings.font_settings.blog_item_title.large_size }}px;
-$blog-item-title-weight: {{ site.data.settings.font_settings.blog_item_title.weight }};
-$blog-item-title-spacing: {{ site.data.settings.font_settings.blog_item_title.letter_spacing }}em;
-
-$blog-item-subtitle-small: {{ site.data.settings.font_settings.blog_item_subtitle.small_size }}px;
-$blog-item-subtitle-medium: {{ site.data.settings.font_settings.blog_item_subtitle.medium_size }}px;
-$blog-item-subtitle-large: {{ site.data.settings.font_settings.blog_item_subtitle.large_size }}px;
-$blog-item-subtitle-weight: {{ site.data.settings.font_settings.blog_item_subtitle.weight }};
-$blog-item-subtitle-spacing: {{ site.data.settings.font_settings.blog_item_subtitle.letter_spacing }}em;
-
 $h4-small: {{ site.data.settings.font_settings.h4.small_size }}px;
 $h4-medium: {{ site.data.settings.font_settings.h4.medium_size }}px;
 $h4-large: {{ site.data.settings.font_settings.h4.large_size }}px;

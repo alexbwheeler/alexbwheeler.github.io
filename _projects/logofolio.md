@@ -11,6 +11,8 @@ featured_image: '/images/portfolio/logofolio/logo-downwrite-showcase.jpg'
 
 ref: quasar
 
+tags: logo
+
 lang: en
 
 ---

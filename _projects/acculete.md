@@ -1,12 +1,12 @@
 ---
 title: Acculete Fitness
-subtitle: Logo design
+subtitle: Logo Design
 
 date: 2021-07-15
 location: Hudson, Quebec
 
 category: client
-tags: graphic design, branding, logo design
+tags: logo branding client
 
 description: Freelance branding and logo design. Collaboration with VeeVee creative studio.
 

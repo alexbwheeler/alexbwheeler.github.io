@@ -7,8 +7,49 @@ html[data-scroll='0'] {
 	}
 }
 
-// White Header
-body[data-title="work"]{
+// Header White/blue Blog page
+html[data-scroll='0'] body[data-title="blog"]:not(.menu_open) {
+
+	header {
+
+		a.title, a.title:hover {color: white}
+
+		.menu_wrap .socials a {
+			color: white;
+		}
+	}
+
+	#site_logo {filter: invert(100%)}
+
+
+	.menu__list__item__link {
+		&:not(.active-link) {color: white;}
+
+		@include mq(tabletl) {
+			&:after {background: rgba(256,256,256,0.1);}
+
+			&.active-link {
+				color: white;
+				box-shadow: 0 -2px 0 white inset;
+				&:hover {color:black}
+				&::after {background-color: white;}
+			}
+		}
+	}
+
+	.menu_toggle_icon span, .menu_toggle_icon span::before, .menu_toggle_icon span::after {
+		background-color: white;
+	}
+}
+
+html:not([data-scroll='0']) body[data-title="blog"]{
+	img#site_logo, a.title, .menu_toggle_icon span, .menu_toggle_icon span::before, .menu_toggle_icon span::after, .menu__list__item__link {
+		@include transition(all 0.5s ease 0.5s);
+	}
+}
+
+// White Header Portfolio Page
+body[data-title="work"] {
 
 	header {
 		background: black;
@@ -84,7 +125,7 @@ $menu-padding-large: 1.5em;
 	top: 0;
 
 	width: 100%;
-	height: 60px;
+	height: 73px;
 	padding-top: $menu-padding-small;
 	padding-bottom: $menu-padding-small;
 
@@ -92,7 +133,7 @@ $menu-padding-large: 1.5em;
 
 	background: white;
 
-	@include transition (all 0.5s ease, border 0.5s ease 0.5s);
+	@include transition (all 0.5s ease, background 0.5s ease 0.5s, border 0.5s ease 0.5s);
 
 	&.up {
 		transform: translateY(-140px);
@@ -126,8 +167,7 @@ $menu-padding-large: 1.5em;
 		img#site_logo {
 			width: 100%;
 			height: auto;
-
-			transition: all 0.2s ease;
+			@include transition(all 0.5s ease);
 		}
 	}
 
@@ -429,6 +469,7 @@ $menu-padding-large: 1.5em;
 		line-height: 1.6em;
 		opacity: 1;
 		min-width: 55px;
+		overflow: hidden;
 
 		&.lang_toggle {
 			min-width: none;
@@ -440,7 +481,7 @@ $menu-padding-large: 1.5em;
 		@include transition(all 0.2s ease);
 		transform: translateY(-0);
 
-		padding: 2px 7px;
+		padding: 5px 15px;
 
 		text-transform: none;
 		position: relative;
@@ -466,6 +507,7 @@ $menu-padding-large: 1.5em;
 
 		&:hover, &.active-link:hover {
 			color: white;
+			border-radius: 5px;
 
 			&::after {
 				transform: scaleY(1);

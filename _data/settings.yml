@@ -1,5 +1,5 @@
 basic_settings:
-  site_title: Alex Wheeler – Graphic & Web Design
+  site_title: Alex Wheeler Design
   favicon_image: /images/favicon.png
 
 header_settings:
@@ -12,8 +12,8 @@ menu_settings:
       url: '/work'
     - title: 'about'
       url: '/about'
-    - title: 'news'
-      url: '/news'
+    - title: 'blog'
+      url: '/blog'
     - title: 'contact'
       url: '/contact'
     
@@ -46,23 +46,6 @@ contact_settings:
 
 
 font_settings:
-
-  blog_item_title:
-    small_size: 40
-    medium_size: 45
-    large_size: 45
-    weight: 400
-    letter_spacing: -0.02
-
-  blog_item_subtitle:
-    small_size: 12
-    medium_size: 13
-    large_size: 15
-    weight: 200
-    letter_spacing: 0.2
-
-
-
   h4:
     small_size: 17
     medium_size: 22

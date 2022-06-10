@@ -7,7 +7,7 @@ description: Cover art for 'Numbah' single by Yours Truly
 categories:
 - graphic
 tags:
-- cover art
+- cover-art
 - music
 - client
 ---

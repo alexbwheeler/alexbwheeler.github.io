@@ -7,7 +7,7 @@ featured_image: '/images/blog/post5/cover.jpg'
 description: Personal logo for Yours Truly Music
 
 categories: [branding]
-tags: [client, logo, sketch, branding]
+tags: [client, logo]
 ---
 
 [Listen to Yours Truly on Spotify](https://open.spotify.com/artist/2rFT993ScLaetNI6Kc4efq)

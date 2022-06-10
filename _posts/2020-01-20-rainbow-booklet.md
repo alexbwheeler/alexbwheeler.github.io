@@ -7,7 +7,7 @@ featured_image: '/images/blog/post6/cover.jpg'
 description: Partner booklet for Rainbow Ski Area
 
 categories: [layout]
-tags: [client, layout, booklet, skiing]
+tags: [client, layout]
 
 ---
 

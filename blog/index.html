@@ -1,0 +1,66 @@
+---
+layout: default
+title: Blog
+description: Alex Wheeler Design Blog. New client work, personal projects, case studies and more!
+type: blog
+ref: blog
+
+pagination: 
+  enabled: true
+---
+
+{% if site.tags != "" %}
+  {% include collect-tags.html %}
+{% endif %}
+
+<section class="intro blog-header" data-aos="fade-down" data-aos-duration="600" data-aos-delay="00">
+	<h1 id="aw_blog" class="center">Blog</h1>
+	<p class="center"><span>Recent projects and career updates.</span> <span>Read all about it.</span></p>
+</section>
+
+<div class="narrow_wrap posts" data-aos="fade-up" data-aos-duration="600" data-aos-delay="00" data-aos-once="true">
+			
+		{% for post in paginator.posts %}
+
+		<div class="post">
+
+			<a href="{{ post.url }}">
+				<img src="/images/lazy/lazy-load-post.svg" data-src="{{ post.featured_image  }}" class="lazy" alt="{{ post.title }}">
+
+				<div class="blog_post_info">
+					<h2 class="title">{{ post.title }}</h2>
+					<p class="description">{{ post.description }}</p>
+					
+					<p class="tags">
+						{% for tag in post.tags %}
+							<a href="/tags/{{ tag }}" class="tag">{{ tag | replace: "-", " "}}</a>
+						{% endfor %}
+					</p>
+					
+					<p class="date">{{ post.date | date_to_string: "ordinal", "US" }}</p>
+				</div>
+			</a>
+		</div>
+
+		{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+
+<section class="pagination">
+
+	<div class="wrap">
+
+		{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="button button--light pagination__prev"><i class="fa fa-angle-left" aria-hidden="true"></i> <span>Newer Posts</span></a>
+		{% endif %}
+		{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="button button--light pagination__next"><span>Older Posts</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+		{% endif %}
+
+	</div>
+
+</section>
+
+{% endif %}
+
+</div>

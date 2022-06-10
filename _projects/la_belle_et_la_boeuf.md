@@ -6,7 +6,8 @@ description: Billboard, poster and packaging design for La Belle et La Boeuf bur
 
 featured: true
 
-tags: graphic design, poster, billboard
+tags: graphic-design billboard packaging client
+
 category: client
 
 date: 2018-06-30 00:00:01
@@ -21,7 +22,7 @@ lang: en
 
 ![](/images/portfolio/belle_et_boeuf/fabuleux.jpg)
 
-### *Fabulous* Billboard
+### *Fabuleux* Billboard
 
 **Goal:** Create an eye-catching billboard design featuring the two main products (burgers and specialty cocktails). Because of the LB&LB's out-of-the-box branding, we wanted something that would stand out and make poeple think "wait, what?".
 

@@ -31,6 +31,12 @@
     padding-right: 0; padding-left: 0;
     max-width: 1300px;
   }
+
+  @include mq(laptop) {
+    width: 70%;
+    padding-right: 0; padding-left: 0;
+    max-width: 1300px;
+  }
 }
 
 
@@ -168,23 +174,42 @@
 
 }
 
-@mixin blue-background {
+@mixin blue_background_gradient {
   background: rgb(94,71,204);
-  background: linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
-  background-size: 200%;
+  background: linear-gradient(219deg, #505ffc, #001aff);
+  background-size: 100%;
   background-position: 0% 50%;
   background-attachment: fixed;
-  @include animation('gradient-wash-noise 6s ease infinite;');
 
-  @supports (background-blend-mode: overlay) {
-    background: url("../images/noise.png"), linear-gradient(23deg, rgba(94,71,204,1) 0%, rgba(38,219,255,1) 100%);
-    background-size: auto, 200% 200%;
-    background-position: 0 0, 0% 50%;
-    background-repeat: repeat, no-repeat;
-    background-blend-mode: overlay, normal;
-    background-attachment: fixed, fixed;
-    @include animation('gradient-wash-noise 6s ease infinite;');
-  }
+  // @supports (background-blend-mode: overlay) {
+  //   background: url("../images/noise.png"), linear-gradient(219deg, #505ffc, #001aff);
+  //   background-size: auto, 200% 200%;
+  //   background-position: 0 0, 0% 50%;
+  //   background-repeat: repeat, no-repeat;
+  //   background-blend-mode: overlay, normal;
+  //   background-attachment: fixed, fixed;
+  //   @include animation('gradient-wash-noise 6s ease infinite;');
+  // }
+}
+
+.blue{
+  @include blue;
+}
+
+.blue_background {
+  @include blue_background_gradient;
+}
+
+@include keyframes(gradient-wash) {
+  0% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+  100% {background-position: 0% 50%}
+}
+
+@include keyframes(gradient-wash-noise) {
+  0% {background-position: 0 0, 0% 50%}
+  50% {background-position: 0 0, 100% 50%}
+  100% {background-position: 0 0, 0% 50%}
 }
 
 @mixin no-blue{

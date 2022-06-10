@@ -6,10 +6,7 @@ featured_image: "/images/blog/post8/hangover-day-cover-art"
 description: New song, new style, new ideas
 categories:
 - graphic
-tags:
-- cover art
-- music
-- client
+tags: cover-art music client
 
 ---
 

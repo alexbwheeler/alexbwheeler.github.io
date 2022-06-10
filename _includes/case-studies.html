@@ -1,49 +1,48 @@
+
 <div class="case_studies">
 	
-	{% for project in projects %}
-	
-	<div class="project {% if project.featured == true %}featured{% endif %}" data-aos="fade-up" data-aos-offset="100"> 
-		<a href="{{ post.url }}">
-			<a class="project_image {{ project.ref }}" href="{{ project.url }}">
-				<img src="/images/lazy/lazy-work.svg" data-src="{{ project.featured_image }}" class="lazy front" alt="{{ project.title }} front">
+	{% for project in projects reversed %}
+		<div class="project visible {% if project.featured == true %}featured{% endif %} {{ project.tags | join: " " }}"> 
+			<a href="{{ post.url }}">
+				<a class="project_image {{ project.ref }}" href="{{ project.url }}">
+					<img src="/images/lazy/lazy-work.svg" data-src="{{ project.featured_image }}" class="lazy front" alt="{{ project.title }} front">
+				</a>
+
+				{% if project.category == "client" %}
+
+				<div class="project_info">
+					<div class="project_info_block title">
+						<div class="project_info_title">client</div>
+						<div class="project_info_value name">{{ project.title }}</div>
+					</div>
+
+					<div class="project_info_block service">
+						<div class="project_info_title">service</div>
+						<div class="project_info_value">{{ project.subtitle }}</div>
+					</div>
+
+					<div class="project_info_block description">
+						<div class="project_info_title">description</div>
+						<div class="project_info_value">{{ project.description }}</div>
+					</div>
+				</div>
+
+				{% else %}
+
+				<div class="project_info">
+					<div class="project_info_block title">
+						<div class="project_info_title">collection</div>
+						<div class="project_info_value name">{{ project.title }}</div>
+					</div>
+
+					<div class="project_info_block service">
+						<div class="project_info_title">service</div>
+						<div class="project_info_value">{{ project.subtitle }}</div>
+					</div>
+				</div>
+
+				{% endif %}
 			</a>
-
-			{% if project.category == "client" %}
-
-			<div class="project_info">
-				<div class="project_info_block title">
-					<div class="project_info_title">client</div>
-					<div class="project_info_value name">{{ project.title }}</div>
-				</div>
-
-				<div class="project_info_block service">
-					<div class="project_info_title">service</div>
-					<div class="project_info_value">{{ project.subtitle }}</div>
-				</div>
-
-				<div class="project_info_block description">
-					<div class="project_info_title">case study</div>
-					<div class="project_info_value">{{ project.description }}</div>
-				</div>
-			</div>
-
-			{% else %}
-
-			<div class="project_info">
-				<div class="project_info_block title">
-					<div class="project_info_title">collection</div>
-					<div class="project_info_value name">{{ project.title }}</div>
-				</div>
-
-				<div class="project_info_block service">
-					<div class="project_info_title">service</div>
-					<div class="project_info_value">{{ project.subtitle }}</div>
-				</div>
-			</div>
-
-			{% endif %}
-		</a>
-	</div>
-
+		</div>
 	{% endfor %}
 </div>

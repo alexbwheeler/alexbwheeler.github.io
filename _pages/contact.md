@@ -8,6 +8,7 @@ description: Get in touch to discuss your project and receive a quote.
 lang: en
 layout: default
 
+scripts: <script src="/js/contact.js"></script>
 ref: contact
 ---
 

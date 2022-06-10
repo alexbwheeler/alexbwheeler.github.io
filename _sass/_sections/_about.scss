@@ -54,13 +54,39 @@
 
 .skillset {
 	padding: 60px 0 10px 0;
-	margin-bottom: 60px;
+
+	#about & { margin-bottom: 60px; }
 	background: $background-alt-color;
+
+	li img {
+		display: inline-block;
+		width: 15px;
+		margin-right: 6px;
+		position: relative;
+		top: 3px;
+	}
+
+	@include mq(tabletp) {
+		.columns {
+			justify-content: center;
+		}
+
+		.category {
+			margin: 30px 5%;
+			width: auto;
+			text-align: left;
+		}
+	}
 }
 
-.history {
+.story {
 	margin-top: 100px;
 	margin-bottom: 20px;
+
+	p {
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 	@include mq(tabletl) {
 		min-height: 500px;

@@ -3,39 +3,37 @@ layout: default
 sitemap: false
 ---
 
-<section class="intro blog-header">
-	<h1>{% if page.autopages %}{{page.autopages.display_name}}{% endif %}</h1>
+<section class="intro tag_page">
+	<h1>{% if page.autopages %}{{ page.autopages.display_name | replace: "-", " " }}{% endif %}</h1>
 </section>
 
-<section>
+<div class="narrow_wrap posts">
+			
+		{% assign posts=paginator.posts | sort: "date" %}
 
-	<div class="wrap blog-posts">
-				
-			{% for post in paginator.posts %}
+		{% for post in posts reversed %}
 
-			<div class="portfolio-item">
+		<div class="post">
 
-				<a class="portfolio-item__link" href="{{ post.url }}">
+			<a href="{{ post.url }}">
+				<img src="/images/lazy/lazy-load-post.svg" data-src="{{ post.featured_image  }}" class="lazy" alt="{{ post.title }}">
 
-					<div class="portfolio-item__image">
-						<img src="{{ post.featured_image  }}" alt="{{ post.title }}">
-					</div>
+				<div class="blog_post_info">
+					<h2 class="title">{{ post.title }}</h2>
+					<p class="description">{{ post.description }}</p>
+					
+					<p class="tags">
+						{% for tag in post.tags %}
+							<a href="/tags/{{ tag }}" class="tag">{{ tag | replace: "-", " " }}</a>
+						{% endfor %}
+					</p>
+					
+					<p class="date">{{ post.date | date_to_string: "ordinal", "US" }}</p>
+				</div>
+			</a>
+		</div>
 
-					<div class="portfolio-item__content">
-						<div class="portfolio-item__info">
-							<h2 class="portfolio-item__title">{{ post.title }}</h2>
-							<p class="portfolio-item__subtitle">{{ post.categories }}</p>
-						</div>
-					</div>
-
-				</a>
-
-			</div>
-
-			{% endfor %}
-	</div>
-
-</section>
+		{% endfor %}
 
 {% if paginator.total_pages > 1 %}
 
@@ -55,3 +53,5 @@ sitemap: false
 </section>
 
 {% endif %}
+
+</div>

@@ -7,10 +7,9 @@ description: Cover art for 'Flurry' by Montreal rapper C47eb
 categories:
 - graphic
 tags:
-- cover art
+- cover-art
 - music
 - client
-- c47eb
 ---
 
 ![](/images/blog/post3/cover.jpg)

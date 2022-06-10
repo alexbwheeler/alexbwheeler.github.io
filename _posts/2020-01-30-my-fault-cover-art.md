@@ -7,7 +7,7 @@ description: Cover art for 'My fault' by Montreal rapper C47eb
 categories:
 - graphic
 tags:
-- cover art
+- cover-art
 - music
 - client
 ---

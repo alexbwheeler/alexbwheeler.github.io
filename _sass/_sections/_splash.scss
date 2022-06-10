@@ -1,3 +1,7 @@
+#index {
+	overflow: hidden;
+}
+
 .splash2 {
 	display: grid;
 	grid-template-rows: 20px 5fr 1fr;
@@ -201,6 +205,11 @@
 			align-self: end;
 
 			text-align: left;
+			margin-bottom: calc(89px - 5vmax);
+		}
+
+		@include mq(laptop) {
+			margin-bottom: 0;
 		}
 
 		h1#title {
@@ -291,7 +300,6 @@
 
 .manifesto2 {
 	padding: 20px 0 90px;
-	z-index: 5;
 
 	@include mq(tabletl) {
 		display: flex;
@@ -522,18 +530,9 @@
 	}
 }
 
-.services2 {
-
-	position: relative;
-
-	padding-top: 50px;
-
-	@include mq(tabletp) {
-		padding-top: 100px;
-	}
-
-	h2 {
-		position: relative;
+#index .skillset {
+	@include mq(tabletl) {
+		padding: 100px 0
 	}
 }
 
@@ -579,101 +578,41 @@
 	}
 }
 
-.brands {
+.client_showcase {
 	
-	padding-top: 0;
-	margin: 10vh auto;
-
-	@include mq(tabletl) {
-		margin-bottom: 15vh;
-	}
-
-	h3 {
-		text-transform: uppercase;
-		font-weight: 200;
-		letter-spacing: 0.1em;
-	}
+	padding: 100px 0;
+	background: $accent-color;
+	margin: 0 auto;
 
 	.clients {
 
 		position: relative;
-	  	overflow: hidden;
 	  	display: flex;
-	  	justify-content: center;
+	  	flex-wrap: wrap;
+	  	justify-content: space-around;
+	  	max-width: 1100px;
 
-	  	max-width: 500px;
 	  	margin: 0 auto;
 	  	margin-top: 20px;
+	  	height: auto;
 
-	  	height: 70px;
-
-		@include mq(laptop) {
-			@include narrow_wrap;
-
-			overflow: visible;
-
-			margin-top: 20px;
-			margin-bottom: 100px;
-		}
-
-		@include mq(desktop) {
-			height: 45px;
-		}
-
-	  	img.fade {
-	  		width: 105%;
-	  		max-width: none;
-	  		margin: 0 auto;
-	  		height: 100%;
-	  		z-index: 2;
-
-	  		@include mq(tabletp) {
-	  			display: block;
-	  		}
-
-	  		@include mq(laptop) {
-	  			display: none;
-	  		}
+	  	@include mq(tabletl) {
+	  		margin-top: 30px;
+	  		justify-content: center;
 	  	}
 
-	  	.slideshow {
-			background-image: url("../images/client_logos/client_showcase.png");
-			background-size: contain;
-			background-repeat: repeat-x;
-
-			color: transparent;
-			opacity: 0.3;
-
-			position: absolute;
-			left: 0;
-			top: 0;
-			
-			height: 100%;
-
-			width: 500%;
-
-			transform: translate3d(0, 0, 0);
-			animation: slideshow 20s linear infinite;
-
-			@include keyframes(slideshow) {
-				0% { left: 0; }
-			    100% { left: -250%; }
-			}
-
-			@include mq(laptop) {
-	  			display: none;
-	  		}
-		}
-
 		.individual_logo {
-			height: 35px;
-			margin: 20px;
+			max-height: 83px;
+			max-width: 155px;
+			padding: 10px 15px;
 
-			display: none;
-
-			@include mq(laptop) {
-	  			display: block;
-	  		}
+			@include mq(tabletl) {
+				max-height: 110px;
+				padding: 20px 30px;
+				max-width: 215px;
+				margin-bottom: 0;
+				&.wide {max-width: 300px;}
+			}
 		}
 	}
 }

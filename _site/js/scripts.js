@@ -3,9 +3,7 @@
 (function ($) {
 	'use strict';
 
-
-
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Navigation
+	// -- Navigation -- //
 
 	// Global vars
 	var navTarget = $('body').attr('data-page-url');
@@ -23,7 +21,7 @@
 		$('.page-loader').load( state.hash + ' .page_content', function() {
 
 			// Find transition time
-			var transitionTime = 350;
+			var transitionTime = 450;
 
 			$('.active-link').removeClass('active-link');
 
@@ -141,7 +139,54 @@
 		    }
 		}
 
+		// ajax load page script
+		gsap.registerPlugin(ScrollTrigger);
+		gsap.registerPlugin(Flip);
+		ScrollTrigger.refresh();
 
+		var pageId = $(".page_content").attr("id");
+		if (pageId == "index") {$.getScript("/js/splash.js");} 
+		else if (pageId == "portfolio") {$.getScript("/js/work.js");}
+		else if (pageId == "contact") {$.getScript("/js/contact.js");}
+
+		var zoomin = gsap.utils.toArray('.zoomin');
+
+		ScrollTrigger.matchMedia({
+			// mobile
+		  "(max-width: 1023px)": function() {
+
+		  	zoomin.forEach((zoomin) => {
+			 		gsap.from(zoomin, { 
+				  	scale: 0.8,
+				    scrollTrigger: {
+				        trigger: zoomin,
+				        start: 'top bottom',
+				        scrub: true,
+				        end: 'top 70%',
+				    }
+					});	  
+				});
+
+		  },
+		  // desktop
+		  "(min-width: 1023px)": function() {
+
+		  	zoomin.forEach((zoomin) => {
+			 		gsap.from(zoomin, { 
+				  	scale: 0.5,
+				    scrollTrigger: {
+			        trigger: zoomin,
+			        start: 'top bottom',
+			        scrub: true,
+			        end: 'bottom top',
+				    }
+					});	  
+				});
+
+		  },
+		});
+
+		
 
 		// --- Galleries --- //
 
@@ -279,27 +324,6 @@
 		});
 
 
-		// --- Hover Gallery --- //
-
-		$(".hover_gallery_title").hover(function(){
-
-			let project = "." + $(this).attr("ref");
-
-			console.log(project);
-
-			$(".project_image").removeClass("active");
-			$(project).addClass("active");
-
-			$(".project_info").removeClass("active");
-			$(project).addClass("active");
-
-		});
-
-		$("titles").mouseleave(function(){
-			$(".project_info").removeClass("active");
-		});
-
-
 		// --- Images --- //
 
 		$('.single p > img').each( function() {
@@ -331,20 +355,7 @@
 		});
 
 		// --- Other --- //
-
 		
-
-		// Tilt
-		VanillaTilt.init(document.querySelectorAll("#splash-graphic"), {
-			reverse: true,
-			max: 15,
-			easing: "cubic-bezier(0.555, 0.005, 0.470, 0.995)",
-			speed: 1000,
-			"full-page-listening": true
-		});
-
-		VanillaTilt.init(document.querySelectorAll(".say_hi>div"));
-
 		// Lazy Load
 		var lazyLoadInstance = new LazyLoad({
 		    elements_selector: ".lazy",
@@ -352,9 +363,7 @@
 
 		// AOS Animations
 		AOS.init();
-
 		$('.animate').removeClass('visible');
-
 		// Animate objects
 		animateMe();
 
@@ -369,137 +378,17 @@
 		// 	}
 		// }, 400);
 
-		//Scroll to top
-		if (window.scrollY < 50) {
-					
-		}
-
 		$( 'body, html' ).animate({
 			scrollTop: 0
 		}, 50);	
-
-		// GSAP
-		gsap.registerPlugin(ScrollTrigger);
-
-		ScrollTrigger.saveStyles(".splash_graphic_wrap");
-		ScrollTrigger.saveStyles(".manifesto2");
-
-		ScrollTrigger.matchMedia({
-
-			// mobile
-		  "(max-width: 1023px)": function() {
-
-		  	gsap.to("#blueBox", {
-		  		scrollTrigger: {
-				    trigger: ".splash2",
-				    start: "-10px top",
-				    end: "+=800",
-				    scrub: 0.2,
-				  }, width: "80%",
-		  	});
-
-		  	let tl = gsap.timeline({
-		  		scrollTrigger: {
-				    trigger: ".manifesto2",
-				    start: "top bottom",
-				    end: "bottom 200px",
-				    scrub: 0.5,
-				  }
-				 });
-
-		  	tl.from(".manifesto2", {transform:"scale(0.8)", duration: 3});
-		  	tl.from(".candy", {color: "black", duration: 1}, 1);
-
-		  	gsap.from(".splash_text_title", {
-		  		y: "30px",
-		  		opacity: 0,
-		  		duration: 0.5,
-		  		delay: 0.5,
-		  		stagger: 0.15,
-		  	});
-
-		  	gsap.from(".splash_button", {
-		  		opacity: 0,
-		  		duration: 0.5,
-		  		delay: 1,
-		  	});
-		  },
-
-		  // desktop
-		  "(min-width: 1023px)": function() {
-
-		  	let tl = gsap.timeline({
-		  		scrollTrigger: {
-				    trigger: ".splash2",
-				    start: "top top",
-				    end: "+=500",
-				    scrub: 0.5,
-				    pin: true,
-				  },
-		  	})
-
-		  	tl.addLabel("splash")
-		  	tl.to(".splash2", {opacity: 0, duration: 1});
-		  	tl.to("#blueBox", {width: "80%", duration: 1}, "<");
-		  	tl.to(".splash_text", {transform: "scale(0.9)", stagger: 0.2, duration: 2}, "<")
-
-		  	tl.fromTo(".manifesto2", {opacity: 0}, {opacity: 1, duration: 1}, 1);
-		  	tl.to(".candy", {color: "blue"}, "<3");
-		  	tl.addLabel("manifesto");
-
-		  	let tl2 = gsap.timeline({
-		  		scrollTrigger: {
-				    trigger: ".manifesto2",
-				    start: "top top",
-				    end: "100% top",
-				    scrub: 0.5,
-				    pin: true,
-				  }
-				 });
-
-		  	tl2.fromTo(".manifesto2", {transform: "scale(0.8)"}, {transform: "scale(1)", duration: 3});
-
-		  	gsap.from(".splash_text_title", {
-		  		x: "-40px",
-		  		opacity: 0,
-		  		duration: 0.5,
-		  		delay: 0.5,
-		  		stagger: 0.15,
-		  	});
-
-		  	gsap.from(".splash_button", {
-		  		opacity: 0,
-		  		duration: 0.5,
-		  		delay: 1,
-		  	});
-		  },
-		});
-
-		let feature = gsap.timeline({
-			scrollTrigger: {
-				trigger: "#featured",
-				scrub: 0.5,
-				start: "bottom bottom"
-			}
-		})
-
-		feature.fromTo("#featured", {x: "25"}, {x: "-20"});
-		feature.fromTo("#work", { x: "-40"}, { x: "45"}, "<");
-
-		gsap.from(".contact-form__item", {
-  		opacity: 0,
-  		y: "20px",
-  		duration: 0.6,
-  		stagger: 0.1,
-  		delay: 0.5,
-  	});
 	}
+
+
 
 	// Run functions on load
 	pageFunctions();
 
-
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Menu
+	// Menu //
 
 	$(document).on('click', '.js-menu-toggle', function (){
 
@@ -529,7 +418,7 @@
 	window.onscroll = function() {
 		var currentScrollPos = window.pageYOffset;
 
-		if (prevScrollpos > currentScrollPos || window.scrollY < 30) {
+		if (prevScrollpos > currentScrollPos || window.scrollY < 50) {
 			$(".header").removeClass("up");
 		} else if (!$("body").hasClass("menu--open")) {
 			$(".header").addClass("up");
@@ -607,14 +496,24 @@
 		}
 
 	});
-
-
 	
 }(jQuery));
 
 
 
-
+// Close the dropdown menu if the user clicks outside of it
+/*window.onclick = function(event) {
+  if (!event.target.matches('.filter')) {
+    var dropdowns = document.getElementsByClassName("filter");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('visible')) {
+        openDropdown.classList.remove('visible');
+      }
+    }
+  }
+}*/
 
 //Animate when in viewport with IntersectionObserver
 

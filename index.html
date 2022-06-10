@@ -1,9 +1,9 @@
 ---
 layout: default
 
-title: Alex Wheeler - Graphic & Web Design
+title: Alex Wheeler // Graphic & Web Design Services
 
-description: Freelance graphic and web designer from Montreal, working remotely.
+description: Graphic and web designer from Montreal.
 
 lang: en
 
@@ -106,19 +106,16 @@ ref: index
 		</style>
 		<polyline class="arrow" points="562.19,39.32 296.54,247.99 30.89,39.32"/>
 	</svg>
-
 </section>
 
 <section class="manifesto2">
-	<div class="card wrap">
+	<div class="card wrap zoomin">
 		<h2 id="myName">
 			<span class="alex">Alex</span>
 			<span class="wheeler">Wheeler</span>
 		</h2>
 		
 		<p class="bold candy">Turning ideas into eye-candy is my business.</p>
-
-		<a href="/about" class="button blue large wide">Learn more</a>
 	</div>
 </section>
 
@@ -126,7 +123,7 @@ ref: index
 
 	<div class="wrap">
 
-		<h2 class="featured_work">
+		<h2 class="featured_work zoomin">
 			<span id="featured">Featured</span>
 			<span id="work">Work</span>
 		</h2>
@@ -135,14 +132,14 @@ ref: index
 
 		<div class="hover_gallery">
 			<ul class="titles">
-				{% for project in projects %}
+				{% for project in projects reversed %}
 				<li class="hover_gallery_title" ref="{{ project.ref }}" data-aos="fade-right" data-aos-once="true">
 					<a class="project_image {{ project.ref }}" href="{{ project.url }}">{{ project.title }}</a>
 				</li>
 				{% endfor %}
 			</ul>
 
-			{% for project in projects %}
+			{% for project in projects reversed %}
 			<div class="project_info {{ project.ref }}">
 
 				<div class="project_info_block service">
@@ -167,7 +164,7 @@ ref: index
 
 			<div class="featured_images" data-aos="fade-up">
 				
-				{% for project in projects %}
+				{% for project in projects reversed %}
 					<a class="project_image {{ project.ref }} {% if project.featured == true %} active {% endif %}" href="{{ project.url }}">
 						<img src="/images/lazy/lazy-work.svg" data-src="{{ project.featured_image }}" class="lazy front" alt="{{ project.title }} front">
 					</a>
@@ -183,71 +180,68 @@ ref: index
 	</div>
 </section>
 
-<section class="services2 narrow_wrap">
-	<h2 class="center fancy" data-pretext="graphic and web design" data-aos="fade-in">
-		Services
-	</h2>
+<section class="skillset">
+	<div class="narrow_wrap zoomin">
+		<h2 class="center fancy" data-pretext="my toolkit">Skill Set</h2>
 
-	<div class="columns">
-		<div class="category" data-aos="fade-in">
-			<h3>Branding</h3>
+		<div class="columns">
+			<div class="category">
+				<h3>Software</h3>
 
-			<ul>
-				<li>Logo design</li>
-				<li>Brand guidelines</li>
-			</ul>
-		</div>
+				<ul>
+					<li><img src="/images/icons/photoshop.png" alt="adobe photoshop">Adobe Photoshop</li>
+					<li><img src="/images/icons/illustrator.png" alt="adobe illustrator">Adobe Illustrator</li>
+					<li><img src="/images/icons/indesign.png" alt="adobe indesign">Adobe InDesign</li>
+					<li><img src="/images/icons/after-effects.png" alt="adobe after effects">Adobe After Effects</li>
+					<li><img src="/images/icons/xd.png" alt="adobe xd">Adobe XD</li>
+					<li><img src="/images/icons/figma.png" alt="figma">Figma</li>
+				</ul>
+			</div>
 
-		<div class="category" data-aos="fade-in">
-			<h3>Motion</h3>
+			<div class="category">
+				<h3>Skills</h3>
 
-			<ul>
-				<li>Social media content</li>
-				<li>Logo animation</li>
-				<li>Motion graphics</li>
-			</ul>
-		</div>
+				<ul>
+					<li><img src="/images/icons/design.png" alt="Graphic Design">Graphic design</li>
+					<li><img src="/images/icons/smartphone.png" alt="Web Design">Web / UI design</li>
+					<li><img src="/images/icons/logo.png" alt="logo design">Logo design & branding</li>
+					<li><img src="/images/icons/magic-wand.png" alt="magic wand">Photo manipulation</li>
+					<li><img src="/images/icons/motion.png" alt="motion graphics">Motion graphics</li>
+					<li><img src="/images/icons/pencil.png" alt="illustration">Illustration</li>
+					<li><img src="/images/icons/book.png" alt="layout">Layout</li>
+				</ul>
+			</div>
 
-		<div class="category" data-aos="fade-in">
-			<h3>Web</h3>
+			<div class="category">
+				<h3>Web</h3>
 
-			<ul>
-				<li>Website design</li>
-				<li>User interface</li>
-				<li>Developement</li>
-			</ul>
-		</div>
-
-		<div class="category" data-aos="fade-in">
-			<h3>Print</h3>
-
-			<ul>
-				<li>Packaging</li>
-				<li>Posters</li>
-				<li>Signage</li>
-			</ul>
+				<ul>
+					<li><img src="/images/icons/html-5.png" alt="HTML5">HTML</li>
+					<li><img src="/images/icons/css-3.png" alt="CSS3">CSS</li>
+					<li><img src="/images/icons/js.png" alt="JavaScript">JavaScript</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </section>
 
-<section class="brands manifesto">
+<section class="client_showcase manifesto">
+	<div class="zoomin">
+		<h2 class="align_center fancy white" data-pretext="some friends">Trusted By</h2>
 
-	<h2 class="align_center">Trusted By</h2>
+		<a href="/work/" class="clients narrow_wrap">
 
-	<a href="/work/" class="clients">
+			<img src="/images/client_logos/secondcup.svg" alt="Second Cup Café" class="individual_logo wide">
+			<img src="/images/client_logos/wizo-media.svg" alt="Wizo Media" class="individual_logo wide" id="wizo-media">
+			<img src="/images/client_logos/strat&bloom.svg" alt="Strat and Bloom" class="individual_logo">
+			<img src="/images/client_logos/veevee.svg" alt="VeeVee Creative Studio" class="individual_logo">
 
-		<div class="slideshow">
-			Client logo slideshow
-		</div>
-		<img src="/images/client_logos/white_fade.png" class="fade" alt="client showcase fade">
-
-			<img src="/images/client_logos/la_belle_et_la_boeuf.svg" alt="La Belle et la Boeuf logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="100">
-			<img src="/images/client_logos/beta_bloc.svg" alt="Beta Bloc Climbing logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="150">
-			<img src="/images/client_logos/bacaro.svg" alt="Bacaro Pizzeria logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="200">
-			<img src="/images/client_logos/carlos_and_pepes.svg" alt="Carlos and Pepes logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="250">
-			<img src="/images/client_logos/mcgill.svg" alt="McGill University logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="300">
-			<img src="/images/client_logos/nickels.svg" alt="Nickels logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="350">
-			<img src="/images/client_logos/gatto_matto.svg" alt="Gatto Matto logo" class="individual_logo" data-aos="zoom-in" data-aos-delay="400">
-		
-	</a>
+			<img src="/images/client_logos/la_belle_et_la_boeuf.svg" alt="La Belle et la Boeuf logo" class="individual_logo">
+			<img src="/images/client_logos/beta_bloc.svg" alt="Beta Bloc Climbing logo" class="individual_logo wide">
+			<img src="/images/client_logos/bacaro.svg" alt="Bacaro Pizzeria logo" class="individual_logo">
+			<img src="/images/client_logos/carlos_and_pepes.svg" alt="Carlos and Pepes logo" class="individual_logo">
+			<img src="/images/client_logos/mcgill.svg" alt="McGill University logo" class="individual_logo">
+			<img src="/images/client_logos/gatto_matto.svg" alt="Gatto Matto logo" class="individual_logo wide">
+		</a>
+	</div>
 </section>

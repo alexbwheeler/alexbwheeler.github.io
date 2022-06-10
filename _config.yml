@@ -10,7 +10,7 @@ collections:
     permalink: /:slug/
   posts:
     output: true
-    permalink: /news/:slug/
+    permalink: /blog/:slug/
   projects:
     output: true
     permalink: /work/:slug/
@@ -62,7 +62,7 @@ sass:
 
 pagination:
   enabled: true
-  per_page: 10
+  per_page: 12
   sort_field: 'date'
   sort_reverse: true
 

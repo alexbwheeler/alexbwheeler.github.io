@@ -5,7 +5,7 @@ subtitle: 'Graphic Design'
 date: 2018-06-30 00:00:04
 location: Point Claire
 
-tags: [graphic design]
+tags: graphic-design poster client
 category: client
 
 featured: true
