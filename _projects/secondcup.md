@@ -26,7 +26,7 @@ lang: en
 ### Social Media Animations
 
 **Goal:** Promote marketing campaigns using animated graphics for Instagram and Facebook. 
-**Tools:** Adobe Photohsop & Adobe After Effects
+**Tools:** Adobe Photoshop & Adobe After Effects
 
 <img src="/images/portfolio/secondcup/animations/cottonCandyTeaser.gif">
 
