@@ -19,8 +19,6 @@ lang: en
 
 ---
 
-### Tasty Coffee Billboard
-
 ![](/images/portfolio/secondcup/sc-billboard-tastycoffee.jpg)
 
 ### Social Media Animations
@@ -48,7 +46,7 @@ lang: en
 		<p>
 			<strong>Goal:</strong> Design drink promo panels for seasonal campaigns with updated branding using brand colours. Yellow is tricky to work with because it can easily overpower the design or not pair well with the drinks.<br>
 
-			<strong>Solution:</strong> Using a gradient I designed brackgrounds that emphasized the products in a modern style while staying consitent Second Cup bradning.
+			<strong>Solution:</strong> Using a gradient I designed backgrounds that emphasized the products in a modern style while staying consistent Second Cup branding.
 		</p>
 	</div>
 
