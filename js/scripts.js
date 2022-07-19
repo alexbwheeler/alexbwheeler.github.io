@@ -1,5 +1,4 @@
 
-
 (function ($) {
 	'use strict';
 
@@ -50,7 +49,6 @@
 
 
 	// On clicking a link
-
 	if ( $('body').hasClass('ajax-loading') ) {
 
 		$(document).on('click', 'a', function (event){

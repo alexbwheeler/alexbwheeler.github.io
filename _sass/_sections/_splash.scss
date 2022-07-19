@@ -1,5 +1,9 @@
 #index {
 	overflow: hidden;
+	background: rgb(255,255,255);
+	background: linear-gradient(142deg, rgba(255,255,255,1) 9%, #e4e4e4 100%);
+
+	padding-bottom: 0;
 }
 
 .splash2 {
@@ -7,7 +11,7 @@
 	grid-template-rows: 20px 5fr 1fr;
 	grid-template-columns: 1fr;
 	z-index: 2;
-	height: 95vh;
+	height: 100vh;
 
 	@include mq(phonel) {
 		grid-template-columns: 2fr 3fr;
@@ -18,6 +22,15 @@
 		grid-template-columns: 2fr 3fr;
 		height: 100vh;
 	}
+
+	// .overlay {
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	background-image: url("../images/noise.png");
+	// 	mix-blend-mode: overlay;
+	// 	z-index: 1;
+	// }
 
 	.splash_graphic_wrap {
 		place-self: center stretch;
@@ -37,6 +50,23 @@
 			grid-row-end: 4;
 			grid-column-start: 2;
 		}
+
+		div.tk-blob {
+			position: absolute;
+			top:0;
+			transform: translate(-50%, -50%,);
+			max-height: 100%;
+			padding: 15%;
+			z-index: -1;
+
+			@include mq(tabletl) {
+				width: 100%;
+			}
+
+			svg path{ 
+				fill:url(#blob_gradient);
+			}
+		}
 		
 		.graphic {
 			transform-style: preserve-3d;
@@ -46,48 +76,56 @@
 			width: 100%;
 
 			svg {
-				width: 120%;
+				width: 100%;
 				position: absolute;
 				top:50%;
 				left:50%;
 				transform: translate(-50%, -50%,);
 				max-height: 100%;
 
+				.st0{fill:url(#SVGID_1_);}
+				.st1{fill:#FFFFFF;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+				.st2{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+				.st3{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+				.st4{fill:url(#SVGID_00000025409485530796576630000018239532173722195073_);stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+				.st5{fill:#060606;}
+				.st6{stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+				.st7{fill:#FFFFFF;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+				.st8{stroke:#000000;stroke-width:2.5606;stroke-linejoin:round;stroke-miterlimit:10;}
+
 				@include mq(tabletl) {
-					width: 100%;
+					width: 80%;
 				}
-
-				.st0{fill:#0F24FB;}
-				.st1{clip-path:url(#macbookClip_00000150812913889582524680000018019707670889219261_);}
-				.st2{fill:#FFFFFF;}
-				.st3{fill:#231F20;}
-				.st4{fill:#BBBDBF;}
-				.st5{fill:#D0D2D3;}
-				.st6{fill:#E6E1DC;}
-				.st7{fill:url(#SVGID_1_);}
-				.st8{fill:url(#SVGID_00000163751089415665745320000012232425605386723200_);}
-
+				
 				&#computer {
 					transform: translate3d(-50%, -50%, 60px);
 
 					@include mq(laptop) {
 						transform: translate3d(-50%, -50%, 100px);
 					}
-
-					g{ 
-						animation: laptop 0.8s 1 cubic-bezier(0.510, 0.000, 0.470, 0.995);
-					}
 				}
 
 				&#book {
 					transform: translate3d(-50%, -50%, 120px);
+					width: 80%;
 
 					@include mq(laptop) {
 						transform: translate3d(-50%, -50%, 200px);
+						width: 70%;
 					}
 
 					g{
-						animation: book 0.8s 1 cubic-bezier(0.510, 0.000, 0.470, 0.995), float 6s ease infinite 3s;
+						animation: float 9s ease infinite 3s;
+					}
+				}
+
+				&#text {
+					@include mq(mobile) {
+						transform: translate(-64%, -60%) scale(1.4);
+					}
+
+					path {
+						fill: blue;
 					}
 				}
 
@@ -103,50 +141,13 @@
 						animation: blueBox 1.3s 1 ease;
 					}
 				}
+				
 			}
 
 			@include keyframes (float) {
 				0% { @include translate(0,0); }
 				50% { @include translate(0,-30px);  }
 				100% {  @include translate(0,0); }
-			}
-
-			@keyframes book {
-				0% {
-					transform: translateX(100px);
-					opacity: 0;
-				}
-				
-				100% {
-					transform: translateX(0%);
-					opacity: 1;
-				}
-			}
-
-			@keyframes laptop {
-				0% {
-					transform: translateX(-100px);
-					opacity: 0;
-				}
-				
-				100% {
-					transform: translateX(0%);
-					opacity: 1;
-				}
-			}
-
-			@keyframes blueBox {
-				0% {
-					stroke-width:0;
-				}
-
-				50% {
-					stroke-width:0;
-				}
-
-				100% {
-					stroke-width:60;
-				}
 			}
 
 			@include keyframes (bounce) {
@@ -180,6 +181,8 @@
 		}
 	}
 
+	background: src("featured_images");
+
 	.splash_text {
 		grid-row-start: 3;
 		align-self: end;
@@ -202,6 +205,9 @@
 			grid-column-start: 1;
 			grid-column-end: 3;
 
+			width: 90% !important;
+			max-width: none !important;
+
 			align-self: end;
 
 			text-align: left;
@@ -218,10 +224,10 @@
 		    position: relative;
 		    margin: 0 auto;
 
-			font-size: 11vw;
+			font-size: 65px;
 			font-weight: 700;
 			line-height: 0.8;
-			color: $text-light-color;
+			color: $text-dark-color;
 
 			text-align: center;
 			text-transform: uppercase;
@@ -243,7 +249,7 @@
 			}
 
 			@include mq(desktop) {
-				font-size: 135px;
+				font-size: 120px;
 			}
 
 			span {
@@ -252,11 +258,27 @@
 
 			span.design {
 				display: block;
+				color: white;
+				text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+			}
+		}
+
+		h2 {
+			font-size: 25px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			margin-top: 10px;
+			color: $text-dark-color;
+
+			@include mq(tabletl) {
+				text-align: left;
 			}
 		}
 
 		a.button {
 			border-radius: 35px;
+			background: white;
+			&:hover { background: $accent-color; }
 
 			margin-bottom: 45px;
 			margin-top: 25px;
@@ -298,8 +320,51 @@
 	}
 }
 
+#grid-one {
+	position: fixed;
+	width: 350px;
+	
+	@include mq(tabletp) {
+		width: 520px;
+	}
+
+	@include mq(tabletl) {
+		width: 600px;
+	}
+
+	top: -140px;
+	left: -80px;
+	z-index: 1;
+	transform: scaleX(1) scaleY(1) scaleZ(0.9) rotateX(-36deg) rotateY(8deg) rotateZ(-59deg) translateX(-1px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
+
+	path {
+		fill: url(#blob_gradient);
+	}
+}
+
+#grid-two {
+	position: fixed;
+	width: 370px;
+
+	@include mq(tabletp) {
+		width: 520px;
+	}
+
+	bottom: -100px;
+	right: -100px;
+	z-index: 1;
+	transform: scaleX(1) scaleY(1) scaleZ(0.9) rotateX(35deg) rotateY(-26deg) rotateZ(-12deg) translateX(-1px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
+
+	path {
+		fill: url(#blob_gradient);
+	}
+}
+
+.splash_grid {
+}
+
 .manifesto2 {
-	padding: 20px 0 90px;
+	padding-top: 20px;
 
 	@include mq(tabletl) {
 		display: flex;
@@ -351,6 +416,8 @@
 			text-transform: uppercase;
 			line-height: 0.9;
 			letter-spacing: 3px;
+			color: white;
+			font-weight: 800;
 
 			@include mq(tabletp) {
 				font-size: 80px;
@@ -364,16 +431,6 @@
 			span {
 				display: block;
 			}
-
-			span.wheeler {
-				color: white;
-				font-weight: 800;
-				text-shadow:
-				-1px -1px 0 black,
-				1px -1px 0 black,
-				-1px 1px 0 black,
-				1px 1px 0 black;
-			}
 		}
 
 		p {
@@ -381,7 +438,7 @@
 			line-height: 1.2;
 			max-width: none;
 
-			color: blue;
+			color: white;
 			font-size: 21px;
 
 			@include mq(tabletp) {
@@ -390,7 +447,7 @@
 
 			@include mq(tabletl) {
 				font-size: 25px;
-				color: black;
+				color: white;
 			}
 		}
 
@@ -401,7 +458,6 @@
 }
 
 .splash_featured {
-	background: black;
 	padding-bottom: 50px;
 
 	@include mq(tabletp) {
@@ -409,7 +465,7 @@
 	}
 
 	@include mq(tabletl) {
-		margin-top: 40vh;
+		margin-top: 10vh;
 	}
 
 	@include mq(laptop) {
@@ -492,31 +548,33 @@
 	}
 
 	h2 {
-		margin-bottom: 20px;
 
 		text-transform: uppercase;
 		font-weight: 800;
-		font-size: 17vw;
+		font-size: 34px;
 		color: white;
 
-		padding: 70px 0 60px 0;
+		padding: 70px 0 40px 0;
+		margin-top: 70px;
+		letter-spacing: 2px;
 
 		text-align: center;
 
 		@include mq(tabletp) {
 			padding: 110px 0 90px 0;
-			font-size: 90px;
+			font-size: 100px;
 
 			text-align: center;
 		}
 
 		@include mq(tabletl) {
-			padding: 120px 0 110px 0;
-			font-size: 140px;
+			margin-top: 0;
+			padding: 120px 0 50px 0;
+			font-size: 110px;
 		}
 
 		span {
-			display: block;
+			display: inline-block;
 		}
 	}
 

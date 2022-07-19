@@ -19,15 +19,13 @@ lang: en
 
 ---
 
-![](/images/portfolio/secondcup/sc-billboard-tastycoffee.jpg)
+<img src="/images/portfolio/secondcup/animations/cottonCandyTeaser.gif">
 
 ### Social Media Animations
 
 **Goal:** Promote marketing campaigns using animated graphics for Instagram and Facebook.
 
 **Tools:** Adobe Photoshop & Adobe After Effects
-
-<img src="/images/portfolio/secondcup/animations/cottonCandyTeaser.gif">
 
 <img src="/images/portfolio/secondcup/animations/newCup.gif">
 

@@ -87,6 +87,44 @@ body[data-title="work"] {
 	}
 }
 
+body.dark {
+
+	header {
+		background: transparent;
+
+		border-bottom: 1px solid rgba(256,256,256,0.1);
+
+		a.title, a.title:hover {color: white}
+
+		.menu_wrap .socials a {
+			color: white;
+		}
+	}
+
+	#site_logo {filter: invert(100%)}
+
+
+	.menu__list__item__link {
+		&:not(.active-link) {color: white;}
+
+		@include mq(tabletl) {
+			&:after {background: rgba(256,256,256,0.1);}
+
+			&.active-link {
+				color: white;
+				box-shadow: 0 -2px 0 white inset;
+				&:hover {color:black}
+				&::after {background-color: white;}
+			}
+		}
+	}
+
+	&.menu_open .menu_toggle_icon span::before, .menu_open .menu_toggle_icon span::after, 
+	&:not(.menu_open) .menu_toggle_icon span, .menu_toggle_icon span::before, .menu_toggle_icon span::after {
+		background-color: white;
+	}
+}
+
 
 @keyframes turn-white {
 	0% { filter: invert(0%) }
@@ -124,7 +162,7 @@ $menu-padding-large: 1.5em;
 	right: 0;	
 	top: 0;
 
-	width: 100%;
+	width: 100vw;
 	height: 73px;
 	padding-top: $menu-padding-small;
 	padding-bottom: $menu-padding-small;
