@@ -3,6 +3,8 @@
 	<div class="wrap">
 		{% include socials.html %}
 
+		<p class="center"><a href="mailto:{{ site.data.settings.contact_settings.contact_email }}?http" target="_blank"> {{ site.data.settings.contact_settings.contact_email }} </a></p>
+
 		<p>
 			{% if page.lang == 'fr' %}
 				© {{ 'now' | date: "%Y" }} {{ site.data.settings.basic_settings.site_title }}.<br>Tous droits réservés.

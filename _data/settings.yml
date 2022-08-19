@@ -12,10 +12,8 @@ menu_settings:
       url: '/work'
     - title: 'about'
       url: '/about'
-    - title: 'blog'
-      url: '/blog'
-    - title: 'contact'
-      url: '/contact'
+    # - title: 'contact'
+    #   url: '/contact'
     
   menu_items_fr:
   - title: 'travail'
