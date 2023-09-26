@@ -44,9 +44,9 @@ $h3-weight: 500;
 $h3-lineheight: 0.8;
 
 // p
-$p-small: 14px;
-$p-medium: 16px;
-$p-large: 16px;
+$p-small: 18px;
+$p-medium: 18px;
+$p-large: 18px;
 
 $p-weight: 300;
 $p-spacing: 0em;
@@ -340,8 +340,8 @@ a {
 	color: $accent-color;
 	letter-spacing: $button-spacing;
 
-	font-size: $p-small;
-	@include mq(tabletp) { font-size: 17px }
+	font-size: 19px;
+	@include mq(tabletp) { font-size: 20px }
 
 	&:hover {
 		background: adjust-hue($accent-color,15%);
@@ -400,6 +400,13 @@ a {
 		width: 100%;
 		max-width: 400px;
 		margin: 0 auto;
+
+		@include mq(phonel) {
+			width: auto;
+			margin: 0;
+			padding-left: 60px;
+			padding-right: 60px;
+		}
 
 		@include mq(tabletp) {
 			width: auto;

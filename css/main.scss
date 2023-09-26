@@ -101,7 +101,7 @@ $footer-logo-width: {{ site.data.settings.footer_settings.logo_width }}px;
 
 @import "_includes/_blog";
 
-@import "_sections/_splash";
+@import "_sections/_hero";
 @import "_sections/_about";
 @import "_sections/_manifesto";
 @import "_sections/_portfolio";

@@ -8,7 +8,7 @@ html[data-scroll='0'] {
 }
 
 // Header White/blue Blog page
-html[data-scroll='0'] body[data-title="blog"]:not(.menu_open) {
+html[data-scroll='0'] body[data-title="blog"]:not(.menu_open), html[data-scroll='0'] body[data-page-url="/"]:not(.menu_open) {
 
 	header {
 
@@ -42,7 +42,7 @@ html[data-scroll='0'] body[data-title="blog"]:not(.menu_open) {
 	}
 }
 
-html:not([data-scroll='0']) body[data-title="blog"]{
+html:not([data-scroll='0']) body[data-title="blog"] header.up, html:not([data-scroll='0']) body[data-page-url="/"]{
 	img#site_logo, a.title, .menu_toggle_icon span, .menu_toggle_icon span::before, .menu_toggle_icon span::after, .menu__list__item__link {
 		@include transition(all 0.5s ease 0.5s);
 	}

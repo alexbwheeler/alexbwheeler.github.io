@@ -143,7 +143,7 @@
 		ScrollTrigger.refresh();
 
 		var pageId = $(".page_content").attr("id");
-		if (pageId == "index") {$.getScript("/js/splash.js");} 
+		if (pageId == "index") {$.getScript("/js/hero.js");} 
 		else if (pageId == "portfolio") {$.getScript("/js/work.js");}
 		else if (pageId == "contact") {$.getScript("/js/contact.js");}
 
@@ -171,12 +171,12 @@
 
 		  	zoomin.forEach((zoomin) => {
 			 		gsap.from(zoomin, { 
-				  	scale: 0.5,
+				  	scale: 0.8,
 				    scrollTrigger: {
 			        trigger: zoomin,
 			        start: 'top bottom',
 			        scrub: true,
-			        end: 'bottom top',
+			        end: 'top 50%',
 				    }
 					});	  
 				});
